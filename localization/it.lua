@@ -47,46 +47,6 @@ return {
                     "1 {C:attention}#2#"
                 }
             },
-            j_sly = {
-                name = "Jolly subdolo",
-                text = {
-                    "{C:chips}+#1#{} fiche se la mano",
-                    "giocata include",
-                    "1 {C:attention}#2#"
-                }
-            },
-            j_wily = {
-                name = "Jolly astuto",
-                text = {
-                    "{C:chips}+#1#{} fiche se la mano",
-                    "giocata include",
-                    "1 {C:attention}#2#"
-                }
-            },
-            j_clever = {
-                name = "Jolly intelligente",
-                text = {
-                    "{C:chips}+#1#{} fiche se la mano",
-                    "giocata include",
-                    "1 {C:attention}#2#"
-                }
-            },
-            j_devious = {
-                name = "Jolly infido",
-                text = {
-                    "{C:chips}+#1#{} fiche se la mano",
-                    "giocata include",
-                    "1 {C:attention}#2#"
-                }
-            },
-            j_crafty = {
-                name = "Jolly furbo",
-                text = {
-                    "{C:chips}+#1#{} fiche se la mano",
-                    "giocata include",
-                    "1 {C:attention}#2#"
-                }
-            },
             j_half = {
                 name = "Mezzo Jolly",
                 text = {
@@ -112,16 +72,15 @@ return {
             j_drunkard = {
                 name = "Beone",
                 text = {
-                    "{C:red}+#1#{} scarto",
-                    "in ogni round"
+                    "{C:red}+#1#{} scarto"
                 }
             },
             j_stone = {
                 name = "Jolly di pietra",
                 text = {
-                    "Dà {C:chips}+#1#{} fiche per",
-                    "ogni {C:attention}carta di pietra",
-                    "nel tuo {C:attention}mazzo completo",
+                    "Questo Jolly guadagna {C:chips}+#1#{} fiche",
+                    "per ogni {C:attention}carta di pietra",
+                    "nel tuo mazzo completo",
                     "{C:inactive}(Attualmente {C:chips}+#2#{C:inactive} fiche)"
                 }
             },
@@ -169,7 +128,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:diamonds}#2#{} danno",
-                    "{C:mult}+#1#{} Molt quando assegnano punti", 
+                    "{C:mult}+#1#{} Molt quando assegnano punti"
                 }
             },
             j_lusty_joker = {
@@ -177,7 +136,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:hearts}#2#{} danno",
-                    "{C:mult}+#1#{} Molt quando assegnano punti", 
+                    "{C:mult}+#1#{} Molt quando assegnano punti"
                 }
             },
             j_wrathful_joker = {
@@ -185,7 +144,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:spades}#2#{} danno",
-                    "{C:mult}+#1#{} Molt quando assegnano punti", 
+                    "{C:mult}+#1#{} Molt quando assegnano punti"
                 }
             },
             j_gluttenous_joker = {
@@ -193,7 +152,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:clubs}#2#{} danno",
-                    "{C:mult}+#1#{} Molt quando assegnano punti", 
+                    "{C:mult}+#1#{} Molt quando assegnano punti"
                 }
             },
             j_ceremonial = {
@@ -241,10 +200,16 @@ return {
             j_8_ball = {
                 name = "Palla 8",
                 text = {
-                    "{C:green}#1# probabilità su #2#{} per ogni",
-                    "{C:attention}8{} giocato di creare un",
-                    "{C:tarot}Tarocco{} quando assegna punti",
+                    "Crea una carta {C:planet}Pianeta{}",
+                    "se la mano giocata include",
+                    "{C:attenetion}#1#{} o più {C:attention}8{}",
                     "{C:inactive}(Serve spazio)"
+                }
+            },
+            j_misprint = {
+                name = "Errore di stampa",
+                text = {
+                    ""
                 }
             },
             j_dusk = {
@@ -255,25 +220,19 @@ return {
                     "{C:attention}finale{} del round"
                 }
             },
+            j_raised_fist = {
+                name = "Pugno alzato",
+                text = {
+                    "Aggiunge il {C:attention}doppio{} del valore",
+                    "della carta {C:attention}più bassa{}",
+                    "in mano a Molt"
+                }
+            },
             j_chaos = {
                 name = "Caos il clown",
                 text = {
                     "{C:attention}#1#{} {C:green}cambio{} gratis",
                     "per negozio"
-                }
-            },
-            j_misprint = {
-                name = "Errore di stampa",
-                text = {
-                    ""
-                }
-            },
-            j_raised_fist = {
-                name = "Pugno alzato",
-                text = {
-                    "Aggiunge il {C:attention}doppio{} del",
-                    "valore della carta {C:attention}più bassa{}",
-                    "in mano al Molt"
                 }
             },
             j_fibonacci = {
@@ -285,11 +244,11 @@ return {
                 }
             },
             j_steel_joker = {
-                name = "Jolly d'acciaio",
+                name = "Jolly di acciaio",
                 text = {
-                    "Dà {X:mult,C:white} X#1# {} Molt",
-                    "per ogni {C:attention}carta d'acciaio",
-                    "nel tuo {C:attention}mazzo completo",
+                    "Questo Jolly guadagna {X:mult,C:white} X#1# {} Molt",
+                    "per ogni {C:attention}carta di acciaio",
+                    "nel tuo mazzo completo",
                     "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
                 }
             },
@@ -317,20 +276,20 @@ return {
                     "entro la fine del round"
                 }
             },
-            j_pareidolia = {
-                name = "Pareidolia",
-                text = {
-                    "Tutte le carte",
-                    "sono considerate",
-                    "{C:attention}figure{}"
-                }
-            },
             j_hack = {
                 name = "Impostore",
                 text = {
                     "Riattiva",
                     "tutti i",
                     "{C:attention}2{}, {C:attention}3{}, {C:attention}4{} o {C:attention}5{} giocati"
+                }
+            },
+            j_pareidolia = {
+                name = "Pareidolia",
+                text = {
+                    "Tutte le carte",
+                    "sono considerate",
+                    "{C:attention}figure{}"
                 }
             },
             j_gros_michel = {
@@ -380,27 +339,18 @@ return {
             j_supernova = {
                 name = "Supernova",
                 text = {
-                    "Aggiunge il numero di volte che",
-                    "è stata giocata una {C:attention}mano di poker{}",
-                    "in questa sessione al Molt"
-                }
-            },
-            j_superposition = {
-                name = "Sovrapposizione",
-                text = {
-                    "Crea un {C:tarot}Tarocco{} se",
-                    "la mano di poker include un",
-                    "{C:attention}Asso{} e una {C:attention}Scala{}",
-                    "{C:inactive}(Serve spazio)"
+                    "Aggiunge il numero di",
+                    "volte che la {C:attention}mano di poker{} è",
+                    "stata giocata a Molt"
                 }
             },
             j_ride_the_bus = {
                 name = "Giro sull'autobus",
                 text = {
-                    "Questo Jolly ottiene {C:mult}+#1#{} Molt",
-                    "per ogni mano {C:attention}consecutiva{}",
-                    "giocata senza",
-                    "una {C:attention}figura{} da punti",
+                    "{C:mult}+#1#{} Molt per",
+                    "ogni mano consecutiva",
+                    "giocata senza usare",
+                    "una {C:attention}figura{}",
                     "{C:inactive}(Attualmente {C:mult}+#2#{C:inactive} Molt)"
                 }
             },
@@ -489,9 +439,8 @@ return {
             j_constellation = {
                 name = "Costellazione",
                 text = {
-                    "Questo Jolly ottiene",
-                    "{X:mult,C:white} X#1# {} Molt ogni volta che",
-                    "viene giocata una carta {C:planet}Pianeta{}",
+                    "Guadagna {X:mult,C:white} X#1# {} Molt",
+                    "per ogni carta {C:planet}Pianeta{} usata",
                     "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
                 }
             },
@@ -512,13 +461,30 @@ return {
                     "allo stesso tempo"
                 }
             },
+            j_green_joker = {
+                name = "Jolly verde",
+                text = {
+                    "{C:mult}+#1#{} Molt per mano giocata",
+                    "{C:mult}-#2#{} Molt per scarto",
+                    "{C:inactive}(Attualmente {C:mult}+#3#{C:inactive} Molt)"
+                }
+            },
+            j_superposition = {
+                name = "Sovrapposizione",
+                text = {
+                    "Crea un {C:tarot}Tarocco{} se",
+                    "la mano di poker include un",
+                    "{C:attention}Asso{} e una {C:attention}Scala{}",
+                    "{C:inactive}(Serve spazio)"
+                }
+            },
             j_todo_list = {
                 name = "Lista del da farsi",
                 text = {
                     "Guadagni {C:money}$#1#{} se la {C:attention}mano di poker{}",
-                    "è una {C:attention}#2#{},",
-                    "la mano di poker cambia",
-                    "alla fine del round"
+                    "è 1 {C:attention}#2#{}.",
+                    "La mano di poker cambia",
+                    "dopo ogni pagamento"
                 }
             },
             j_ticket = {
@@ -570,20 +536,12 @@ return {
                     "{C:inactive}(#2#)"
                 }
             },
-            j_green_joker = {
-                name = "Jolly verde",
-                text = {
-                    "{C:mult}+#1#{} Molt per mano giocata",
-                    "{C:mult}-#2#{} Molt per scarto",
-                    "{C:inactive}(Attualmente {C:mult}+#3#{C:inactive} Molt)"
-                }
-            },
             j_swashbuckler = {
                 name = "Moschettiere",
                 text = {
-                    "Aggiunge il valore di",
-                    "vendita di tutti gli altri",
-                    "{C:attention}Jolly{} posseduti al Molt",
+                    "Aggiunge il valore di vendita di",
+                    "di tutti i {C:attention}Jolly{} rimasti",
+                    "di questa carta a Molt",
                     "{C:inactive}(Attualmente {C:mult}+#1#{C:inactive} Molt)"
                 },
                 unlock = {
@@ -596,7 +554,7 @@ return {
                 name = "Trovatore",
                 text = {
                     "{C:attention}+#1#{} carte della mano,",
-                    "{C:blue}-#2#{} mani in ogni round"
+                    "{C:red}-#2#{} mani per round"
                 },
                 unlock = {
                     "Vinci {C:attention,E:1}#1#{} round",
@@ -648,8 +606,7 @@ return {
                 name = "Scheda non valida",
                 text = {
                     "Riattiva la {C:attention}prima{} carta",
-                    "giocata per ottenere punti",
-                    "{C:attention}#1#{} volte in più"
+                    "giocata usata per segnare punti"
                 },
                 unlock = {
                     "Batti un buio boss",
@@ -661,7 +618,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:diamonds}Quadri{} guadagnano",
-                    "{C:money}$#1#{} quando assegnano punti", 
+                    "{C:money}$#1#{} quando assegnano punti"
                 },
                 unlock = {
                     "Devi avere almeno {E:1,C:attention}#1#",
@@ -675,7 +632,7 @@ return {
                     "{C:green}#1# probabilità su #2#{} che",
                     "le carte giocate con",
                     "seme {C:hearts}Cuori{} diano",
-                    "{X:mult,C:white} X#3# {} Molt quando assegna punti,", 
+                    "{X:mult,C:white} X#3# {} Molt quando assegna punti,"
                 },
                 unlock = {
                     "Devi avere almeno {E:1,C:attention}#1#",
@@ -701,7 +658,7 @@ return {
                 text = {
                     "Le carte giocate con",
                     "seme {C:clubs}Fiori{} danno",
-                    "{C:mult}+#1#{} Molt quando assegnano punti", 
+                    "{C:mult}+#1#{} Molt quando assegnano punti"
                 },
                 unlock = {
                     "Devi avere almeno {E:1,C:attention}#1#",
@@ -712,9 +669,9 @@ return {
             j_glass = {
                 name = "Jolly di vetro",
                 text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
+                    "Guadagna {X:mult,C:white} X#1# {} Molt",
                     "per ogni {C:attention}carta di vetro",
-                    "distrutta",
+                    "che viene distrutta",
                     "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
                 },
                 unlock = {
@@ -739,9 +696,9 @@ return {
                 name = "Vaso di fiori",
                 text = {
                     "{X:mult,C:white} X#1# {} Molt se la mano",
-                    "di poker include una carta",
-                    "{C:diamonds}di Quadri{}, {C:clubs}di Fiori{},",
-                    "{C:hearts}di Cuori{} e {C:spades}di Picche{}"
+                    "giocata ha una carta di",
+                    "{C:diamonds}Quadri{}, una di {C:clubs}Fiori{},",
+                    "una di {C:hearts}Cuori{} e una di {C:spades}Picche{} da punti"
                 },
                 unlock = {
                     "Raggiungi il liv.",
@@ -774,9 +731,8 @@ return {
             j_merry_andy = {
                 name = "Risparmio di scarti",
                 text = {
-                    "{C:red}+#1#{} scarti",
-                    "in ogni round,",
-                    "{C:red}#2#{} carte della mano"
+                    "{C:red}+#1#{} scarti,",
+                    "{C:red}#2#{} carta della mano"
                 },
                 unlock = {
                     "Vinci una sessione in {E:1,C:attention}#1#",
@@ -840,7 +796,7 @@ return {
             j_hit_the_road = {
                 name = "In viaggio",
                 text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
+                    "Guadagna {X:mult,C:white} X#1# {} Molt",
                     "per ogni {C:attention}Fante{}",
                     "scartato in questo round",
                     "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
@@ -936,28 +892,27 @@ return {
             j_red_card = {
                 name = "Carta rossa",
                 text = {
-                    "Questo Jolly ottiene",
-                    "{C:red}+#1#{} Molt quando",
-                    "salti una {C:attention}busta di espansione{}",
+                    "Guadagna {C:red}+#1#{} Molt quando salti una",
+                    "{C:attention}busta di espansione{}",
                     "{C:inactive}(Attualmente {C:red}+#2#{C:inactive} Molt)"
                 }
             },
             j_madness = {
                 name = "Follia",
                 text = {
-                    "Quando selezioni un {C:attention}piccolo buio{} o un {C:attention}grande buio{}",
-                    ", ottieni {X:mult,C:white} X#1# {} Molt",
-                    "e {C:attention}distruggi{} un Jolly casuale",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
+                    "Quando selezioni un {C:attention}buio{},",
+                    "guadagni {X:mult,C:white} X#1# {} Molt e",
+                    "{C:attention}distruggi{} un Jolly casuale",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {} Molt)"
                 }
             },
             j_square = {
                 name = "Jolly squadrato",
                 text = {
-                    "Questo Jolly ottiene {C:chips}+#2#{} fiche",
-                    "se la mano giocata",
-                    "ha esattamente {C:attention}4{} carte",
-                    "{C:inactive}(Attualmente {C:chips}#1#{C:inactive} fiche)"
+                    "Guadagna {C:chips}+#2#{} fiche se",
+                    "la mano giocata ha",
+                    "esattamente {C:attention}4{} carte",
+                    "{C:inactive}(Attualmente {C:chips}#1#{} fiche)"
                 }
             },
             j_seance = {
@@ -973,291 +928,10 @@ return {
                 name = "Marmaglia",
                 text = {
                     "Quando selezioni un {C:attention}buio{},",
-                    "crea {C:attention}#1# Jolly {C:blue}comuni",
+                    "crea {C:attention}$#1# Jolly {C:blue}comuni",
                     "{C:inactive}(Serve spazio)"
                 }
             },
-            j_vampire = {
-                name = "Vampiro",
-                text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
-                    "per ogni {C:attention}carta potenziata{} da punti giocata",
-                    "e rimuove il {C:attention}potenziamento",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
-                }
-            },
-            j_shortcut = {
-                name = "Scorciatoia",
-                text = {
-                    "Consente di fare {C:attention}Scale{} anche",
-                    "con salti di {C:attention}1 valore",
-                    "{C:inactive}(ad es.: {C:attention}10 8 6 5 3{C:inactive})"
-                }
-            },
-            j_hologram = {
-                name = "Ologramma",
-                text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
-                    "ogni volta che una {C:attention}carta da gioco{}",
-                    "viene aggiunta al tuo mazzo",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
-                }
-            },
-            j_vagabond = {
-                name = "Vagabondo",
-                text = {
-                    "Crea un {C:purple}Tarocco{}",
-                    "se giochi la mano",
-                    "con {C:money}$#1#{} o meno"
-                }
-            },
-            j_baron = {
-                name = "Barone",
-                text = {
-                    "Ogni {C:attention}Re{}",
-                    "tenuto in mano",
-                    "dà {X:mult,C:white} X#1# {} Molt"
-
-                }
-            },
-            j_cloud_9 = {
-                name = "Nove nuvoloso",
-                text = {
-                    "Guadagni {C:money}$#1#{} per ogni",
-                    "{C:attention}9{} nel tuo {C:attention}mazzo completo",
-                    "alla fine del round",
-                    "{C:inactive}(Attualmente {C:money}$#2#{}{C:inactive})"
-                }
-            },
-            j_rocket = {
-                name = "Razzo",
-                text = {
-                    "Guadagni {C:money}$#1#{} alla fine del round",
-                    "I pagamenti aumentano di {C:money}$#2#{}",
-                    "quando viene sconfitto il {C:attention}buio boss{}"
-                }
-            },
-            j_obelisk = {
-                name = "Obelisco",
-                text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
-                    "per ogni mano {C:attention}consecutiva{} giocata",
-                    "senza giocare la tua",
-                    "{C:attention}mano di poker più giocata",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
-                }
-            },
-            j_midas_mask = {
-                name = "Maschera di Mida",
-                text = {
-                    "Tutte le {C:attention}figure{} giocate",
-                    "diventano carte {C:attention}dorate{}",
-                    "quando assegnano punti"
-                }
-            },
-            j_luchador = {
-                name = "Luchador",
-                text = {
-                    "Vendi questa carta per",
-                    "disattivare l'attuale",
-                    "{C:attention}buio boss{}"
-                }
-            },
-            j_photograph = {
-                name = "Fotografia",
-                text = {
-                    "La prima {C:attention}figura",
-                    "giocata dà {X:mult,C:white} X#1# {} Molt",
-                    "quando assegna punti"
-                }
-            },
-            j_gift = {
-                name = "Carta regalo",
-                text = {
-                    "Aggiungi {C:money}$#1#{} di {C:attention}valore di vendita",
-                    "a ogni {C:attention}Jolly{} e",
-                    "carta {C:attention}consumabile{} alla",
-                    "fine del round"
-                }
-            },
-            j_turtle_bean = {
-                name = "Fagiolo nero",
-                text = {
-                    "{C:attention}+#1#{} carte della mano,",
-                    "si riducono di",
-                    "{C:red}#2#{} in ogni round"
-                }
-            },
-            j_erosion = {
-                name = "Erosione",
-                text = {
-                    "{C:red}+#1#{} Molt per ogni",
-                    "carta sotto {C:attention}#3#{}",
-                    "nel tuo mazzo completo",
-                    "{C:inactive}(Attualmente {C:red}+#2#{C:inactive} Molt)"
-                }
-            },
-            j_reserved_parking = {
-                name = "Parcheggio riservato",
-                text = {
-                    "Ogni {C:attention}figura{}",
-                    "tenuta in mano ha",
-                    "{C:green}#2# probabilità su #3#{}",
-                    "di dare {C:money}$#1#{}"
-                    
-                }
-            },
-            j_mail = {
-                name = "Offerta per posta",
-                text = {
-                    "Guadagni {C:money}$#1#{} per ogni",
-                    "{C:attention}#2#{} che scarti, il valore",
-                    "è diverso in ogni round"
-                }
-            },
-            j_to_the_moon = {
-                name = "Crescita notevole",
-                text = {
-                    "Guadagni {C:money}$#1#{} in più di",
-                    "{C:attention}interessi{} per ogni {C:money}$5{} che",
-                    "hai alla fine del round"
-                }
-            },
-            j_hallucination = {
-                name = "Allucinazione",
-                text = {
-                    "{C:green}#1# probabilità su #2#{} di creare",
-                    "un {C:tarot}Tarocco{} quando apri una",
-                    "{C:attention}busta di espansione{} qualsiasi",
-                    "{C:inactive}(Serve spazio)"
-                }
-            },
-            j_lucky_cat = {
-                name = "Gatto della fortuna",
-                text = {
-                    "Questo Jolly ottiene {X:mult,C:white} X#1# {} Molt",
-                    "ogni volta che una carta {C:attention}fortunata{}",
-                    "si attiva {C:green}con successo{}",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
-                }
-            },
-            j_baseball = {
-                name = "Carta da baseball",
-                text = {
-                    "I Jolly {C:green}non comuni{}",
-                    "danno {X:mult,C:white} X#1# {} Molt ciascuno"
-                }
-            },
-            j_bull = {
-                name = "Toro",
-                text = {
-                    "{C:chips}+#1#{} fiche per",
-                    "ogni {C:money}$1{} che possiedi",
-                    "{C:inactive}(Attualmente {C:chips}+#2#{C:inactive} fiche)"
-                }
-            },
-            j_diet_cola = {
-                name = "Senza zuccheri",
-                text = {
-                    "Vendi questa carta per",
-                    "creare 1",
-                    "{C:attention}#1#{} gratis"
-                }
-            },
-            j_trading = {
-                name = "Carta collezionabile",
-                text = {
-                    "Se il {C:attention}primo scarto{} del round",
-                    "ha solo {C:attention}1{} carta, distruggila",
-                    "e guadagna {C:money}$#1#"
-                }
-            },
-            j_flash = {
-                name = "Carta alfabeto",
-                text = {
-                    "Questo Jolly ottiene {C:mult}+#1#{} Molt",
-                    "per ogni {C:attention}cambio{} del negozio",
-                    "{C:inactive}(Attualmente {C:mult}+#2#{C:inactive} Molt)"
-                }
-            },
-            j_popcorn= {
-                name = "Popcorn",
-                text = {
-                    "{C:mult}+#1#{} Molt",
-                    "{C:mult}-#2#{} Molt per ogni",
-                    "round giocato"
-                }
-            },
-            j_ramen= {
-                name = "Ramen",
-                text = {
-                    "{X:mult,C:white} X#1# {} Molt,",
-                    "perde {X:mult,C:white} X#2# {} Molt",
-                    "per ogni {C:attention}carta{} scartata"
-                }
-            },
-            j_trousers= {
-                name = "Ricambio",
-                text = {
-                    "Questo Jolly ottiene {C:mult}+#1#{} Molt",
-                    "se la mano giocata include",
-                    "una carta {C:attention}#2#",
-                    "{C:inactive}(Attualmente {C:red}+#3#{C:inactive} Molt)"
-                }
-            },
-            j_ancient= {
-                name = "Jolly antico",
-                text = {
-                    "Ogni carta giocata con",
-                    "seme {V:1}#2#{} dà",
-                    "{X:mult,C:white} X#1# {} Molt quando assegna punti,",
-                    "{s:0.8}il seme cambia alla fine del round"
-                }
-            },
-            j_walkie_talkie = {
-                name = "Walkie-talkie",
-                text = {
-                    "Ogni {C:attention}10{} o {C:attention}4{} giocati",
-                    "danno {C:chips}+#1#{} fiche e",
-                    "{C:mult}+#2#{} Molt quando assegnano punti"
-                },
-            },
-            j_selzer= {
-                name = "Seltz",
-                text = {
-                    "Riattiva tutte",
-                    "le carte giocate",
-                    "per le prossime {C:attention}#1#{} mani"
-                }
-            },
-            j_castle = {
-                name = "Castello",
-                text = {
-                    "Questo Jolly guadagna {C:chips}+#1#{} fiche",
-                    "per ogni {V:1}#2#{} che scarti,",
-                    "il seme è diverso in ogni round",
-                    "{C:inactive}(Attualmente {C:chips}+#3#{C:inactive} fiche)"
-                },
-            },
-            j_smiley = {
-                name = "Volto sorridente",
-                text = {
-                    "Le {C:attention}figure{} giocate",
-                    "danno {C:mult}+#1#{} Molt",
-                    "quando assegnano punti"
-                }
-            },
-            j_campfire = {
-                name = "Falò",
-                text = {
-                    "Questo Jolly guadagna {X:mult,C:white}X#1#{} Molt",
-                    "per ogni carta {C:attention}venduta{}, si ripristina",
-                    "quando sconfiggi il {C:attention}buio boss{}",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
-                }
-            },
-
-
             j_stuntman = {
                 name = "Stuntman",
                 text = {
@@ -1311,9 +985,9 @@ return {
             j_shoot_the_moon = {
                 name = "Cappotto",
                 text = {
-                    "Ogni {C:attention}Regina{}",
-                    "in mano",
-                    "dà {C:mult}+#1#{} Molt"
+                    "{C:mult}+#1#{} Molt per",
+                    "ogni {C:attention}Regina{}",
+                    "tenuta in mano"
                 },
                 unlock = {
                     "Gioca ogni {E:1,C:attention}Cuore",
@@ -1375,8 +1049,7 @@ return {
                 name = "Scarpe ai piedi",
                 text = {
                     "{C:mult}+#1#{} Molt per ogni",
-                    "{C:money}$#2#{} che possiedi",
-                    "{C:inactive}(Attualmente {C:mult}+#3#{C:inactive} Molt)"
+                    "{C:money}$#2#{} che hai"
                 },
                 unlock = {
                     "Devi avere almeno {E:1,C:attention}#1#",
@@ -1386,8 +1059,8 @@ return {
             j_caino = {
                 name = "Canio",
                 text = {
-                    "Questo Jolly guadagna {X:mult,C:white} X#1# {} Molt",
-                    "ogni volta che una {C:attention}figura{}",
+                    "Guadagna {X:mult,C:white} X#1# {} Molt quando",
+                    "una {C:attention}figura{}",
                     "viene distrutta",
                     "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
                 },
@@ -1409,10 +1082,9 @@ return {
             j_yorick = {
                 name = "Yorick",
                 text = {
-                    "Questo Jolly ottiene",
-                    "{X:mult,C:white} X#1# {} Molt per ogni carta {C:attention}#2#{C:inactive} [#3#]{}",
-                    "scartata",
-                    "{C:inactive}(Attualmente {X:mult,C:white} X#4# {C:inactive} Molt)"
+                    "{X:mult,C:white} X#1# {} Molt solo",
+                    "dopo {C:attention}#2#{} scarti",
+                    "{C:inactive}(Scarti rimasti: {C:attention}#3#{C:inactive})"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1438,6 +1110,323 @@ return {
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
+                }
+            },
+            j_sly = {
+                name = "Jolly subdolo",
+                text = {
+                    "{C:chips}+#1#{} fiche se la mano",
+                    "giocata include",
+                    "1 {C:attention}#2#"
+                }
+            },
+            j_wily = {
+                name = "Jolly astuto",
+                text = {
+                    "{C:chips}+#1#{} fiche se la mano",
+                    "giocata include",
+                    "1 {C:attention}#2#"
+                }
+            },
+            j_clever = {
+                name = "Jolly intelligente",
+                text = {
+                    "{C:chips}+#1#{} fiche se la mano",
+                    "giocata include",
+                    "1 {C:attention}#2#"
+                }
+            },
+            j_devious = {
+                name = "Jolly infido",
+                text = {
+                    "{C:chips}+#1#{} fiche se la mano",
+                    "giocata include",
+                    "1 {C:attention}#2#"
+                }
+            },
+            j_crafty = {
+                name = "Jolly furbo",
+                text = {
+                    "{C:chips}+#1#{} fiche se la mano",
+                    "giocata include",
+                    "1 {C:attention}#2#"
+                }
+            },
+            j_vampire = {
+                name = "Vampiro",
+                text = {
+                    "Guadagna {X:mult,C:white} X#1# {} Molt per",
+                    "ogni {C:attention}carta potenziata{} giocata,",
+                    "rimuove {C:attention}potenziamento{} carta",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
+                }
+            },
+            j_shortcut = {
+                name = "Scorciatoia",
+                text = {
+                    "Permette di creare {C:attention}Scale{}",
+                    "saltando {C:attention}1 valore{}",
+                    "{C:inactive}(es.: {C:attention}2 3 5 7 8{C:inactive})"
+                }
+            },
+            j_hologram = {
+                name = "Ologramma",
+                text = {
+                    "Guadagna {X:mult,C:white} X#1# {} Molt",
+                    "per ogni {C:attention}carta da gioco{}",
+                    "aggiunta al mazzo",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
+                }
+            },
+            j_vagabond = {
+                name = "Vagabondo",
+                text = {
+                    "Crea un {C:purple}Tarocco{}",
+                    "se giochi la mano",
+                    "con {C:money}$#1#{} o meno"
+                }
+            },
+            j_baron = {
+                name = "Barone",
+                text = {
+                    "Ogni {C:attention}Re{}",
+                    "tenuto in mano",
+                    "dà {X:mult,C:white} X#1# {} Molt"
+                }
+            },
+            j_cloud_9 = {
+                name = "Nove nuvoloso",
+                text = {
+                    "Guadagni {C:money}$#1#{} per ogni",
+                    "{C:attention}9{} nel tuo {C:attention}mazzo completo",
+                    "alla fine del round",
+                    "{C:inactive}(Attualmente {C:money}$#2#{}{C:inactive})"
+                }
+            },
+            j_rocket = {
+                name = "Razzo",
+                text = {
+                    "Guadagni {C:money}$#1#{} alla fine del",
+                    "del round. Guadagna {C:money}$#2#{} quando",
+                    "sconfiggi il {C:attention}buio boss{}"
+                }
+            },
+            j_obelisk = {
+                name = "Obelisco",
+                text = {
+                    "{X:mult,C:white} X#1# {} Molt per",
+                    "ogni mano consecutiva giocata",
+                    "senza giocare la tua",
+                    "{C:attention}mano di poker{} più giocata",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
+                }
+            },
+            j_midas_mask = {
+                name = "Maschera di Mida",
+                text = {
+                    "Tutte le {C:attention}figure{}",
+                    "diventano carte {C:attention}dorate{}",
+                    "quando sono giocate"
+                }
+            },
+            j_luchador = {
+                name = "Luchador",
+                text = {
+                    "Vendi questa carta per",
+                    "disattivare l'attuale",
+                    "{C:attention}buio boss{}"
+                }
+            },
+            j_photograph = {
+                name = "Fotografia",
+                text = {
+                    "La prima {C:attention}figura",
+                    "giocata dà {X:mult,C:white} X#1# {} Molt",
+                    "quando assegna punti"
+                }
+            },
+            j_gift = {
+                name = "Carta regalo",
+                text = {
+                    "Aggiungi {C:money}$#1#{} di {C:attention}valore di vendita",
+                    "a ogni {C:attention}Jolly{} e",
+                    "carta {C:attention}consumabile{} alla",
+                    "fine del round"
+                }
+            },
+            j_turtle_bean = {
+                name = "Fagiolo nero",
+                text = {
+                    "{C:attention}+#1#{} carte della mano,",
+                    "si riducono di",
+                    "{C:red}#2#{} in ogni round"
+                }
+            },
+            j_erosion = {
+                name = "Erosione",
+                text = {
+                    "{C:red}+#1#{} Molt per ogni",
+                    "carta sotto {C:attention}#3#{}",
+                    "nel tuo mazzo completo",
+                    "{C:inactive}(Attualmente {C:red}+#2#{C:inactive} Molt)"
+                }
+            },
+            j_reserved_parking = {
+                name = "Parcheggio riservato",
+                text = {
+                    "Ogni {C:attention}figura{}",
+                    "tenuta in mano ha",
+                    "{C:green}#2# probabilità su #3#{}",
+                    "di dare {C:money}$#1#{}"
+                }
+            },
+            j_mail = {
+                name = "Offerta per posta",
+                text = {
+                    "Guadagni {C:money}$#1#{} per ogni",
+                    "{C:attention}#2#{} che scarti, il valore",
+                    "è diverso in ogni round"
+                }
+            },
+            j_to_the_moon = {
+                name = "Crescita notevole",
+                text = {
+                    "Guadagni {C:money}$#1#{} in più di",
+                    "{C:attention}interessi{} per ogni {C:money}$5{} che",
+                    "hai alla fine del round"
+                }
+            },
+            j_hallucination = {
+                name = "Allucinazione",
+                text = {
+                    "{C:green}#1# probabilità su #2#{} di creare",
+                    "un {C:tarot}Tarocco{} quando apri una",
+                    "{C:attention}busta di espansione{} qualsiasi",
+                    "{C:inactive}(Serve spazio)"
+                }
+            },
+            j_lucky_cat = {
+                name = "Gatto della fortuna",
+                text = {
+                    "Guadagna {X:mult,C:white} X#1# {} Molt ogni",
+                    "volta che una carta {C:attention}fortunata{}",
+                    "si attiva {C:green}con successo{}",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
+                }
+            },
+            j_baseball = {
+                name = "Carta da baseball",
+                text = {
+                    "I Jolly {C:green}non comuni{}",
+                    "danno {X:mult,C:white} X#1# {} Molt ciascuno"
+                }
+            },
+            j_bull = {
+                name = "Toro",
+                text = {
+                    "{C:chips}+#1#{} fiche per ogni",
+                    "{C:money}dollaro{} che hai",
+                    "{C:inactive}(Attualmente {C:chips}+#2#{C:inactive} fiche)"
+                }
+            },
+            j_diet_cola = {
+                name = "Senza zuccheri",
+                text = {
+                    "Vendi questa carta per",
+                    "creare 1",
+                    "{C:attention}#1#{} gratis"
+                }
+            },
+            j_trading = {
+                name = "Carta collezionabile",
+                text = {
+                    "Se il {C:attention}primo scarto{} del round",
+                    "ha solo {C:attention}1{} carta, distruggila",
+                    "e guadagna {C:money}$#1#"
+                }
+            },
+            j_flash = {
+                name = "Carta alfabeto",
+                text = {
+                    "{C:mult}+#1#{} Molt per ogni",
+                    "{C:attention}cambio{} nel negozio",
+                    "{C:inactive}(Attualmente {C:mult}+#2#{C:inactive} Molt)"
+                }
+            },
+            j_popcorn = {
+                name = "Popcorn",
+                text = {
+                    "{C:mult}+#1#{} Molt",
+                    "{C:mult}-#2#{} Molt per ogni",
+                    "round giocato"
+                }
+            },
+            j_trousers = {
+                name = "Ricambio",
+                text = {
+                    "Guadagna {C:mult}+#1#{} Molt se",
+                    "la mano giocata include",
+                    "1 {C:attention}#2#",
+                    "{C:inactive}(Attualmente {C:red}+#3#{C:inactive} Molt)"
+                }
+            },
+            j_ancient = {
+                name = "Jolly antico",
+                text = {
+                    "Ogni carta giocata con",
+                    "seme {V:1}#2#{} dà",
+                    "{X:mult,C:white} X#1# {} Molt quando assegna punti,",
+                    "{s:0.8}il seme cambia alla fine del round"
+                }
+            },
+            j_ramen = {
+                name = "Ramen",
+                text = {
+                    "{X:mult,C:white} X#1# {} Molt,",
+                    "perde {X:mult,C:white} X#2# {} Molt",
+                    "per ogni {C:attention}carta{} scartata"
+                }
+            },
+            j_walkie_talkie = {
+                name = "Walkie-talkie",
+                text = {
+                    "Ogni {C:attention}10{} o {C:attention}4{} giocati",
+                    "danno {C:chips}+#1#{} fiche e",
+                    "{C:mult}+#2#{} Molt quando assegnano punti"
+                }
+            },
+            j_selzer = {
+                name = "Seltz",
+                text = {
+                    "Riattiva tutte",
+                    "le carte giocate",
+                    "per le prossime {C:attention}#1#{} mani"
+                }
+            },
+            j_castle = {
+                name = "Castello",
+                text = {
+                    "Questo Jolly guadagna {C:chips}+#1#{} fiche",
+                    "per ogni {V:1}#2#{} che scarti,",
+                    "il seme è diverso in ogni round",
+                    "{C:inactive}(Attualmente {C:chips}+#3#{C:inactive} fiche)"
+                }
+            },
+            j_smiley = {
+                name = "Volto sorridente",
+                text = {
+                    "Le {C:attention}figure{} giocate",
+                    "danno {C:mult}+#1#{} Molt",
+                    "quando assegnano punti"
+                }
+            },
+            j_campfire = {
+                name = "Falò",
+                text = {
+                    "Questo Jolly guadagna {X:mult,C:white}X#1#{} Molt",
+                    "per ogni carta {C:attention}venduta{}, si ripristina",
+                    "quando sconfiggi il {C:attention}buio boss{}",
+                    "{C:inactive}(Attualmente {X:mult,C:white} X#2# {C:inactive} Molt)"
                 }
             }
         },
@@ -1513,17 +1502,17 @@ return {
             v_wasteful = {
                 name = "Spreco",
                 text = {
-                    "Guadagna",
+                    "Guadagni",
                     "permanentemente {C:red}+#1#{} scarto",
-                    "in ogni round"
+                    "per round"
                 }
             },
             v_seed_money = {
                 name = "Seme del successo",
                 text = {
-                    "Aumenta il limite sugli",
-                    "interessi guadagnati in",
-                    "ogni round a {C:money}$#1#{}"
+                    "Il limite massimo di",
+                    "interessi guadagnati",
+                    "per round sale a {C:money}$#1#{}"
                 }
             },
             v_blank = {
@@ -1543,9 +1532,10 @@ return {
             v_hieroglyph = {
                 name = "Geroglifico",
                 text = {
-                    "{C:attention}-#1#{} ante,",
+                    "{C:attention}-#1#{} ante",
                     "{C:blue}-#1#{} mano",
-                    "in ogni round"
+                    "per round",
+                    "{C:attention}-#1#{} ante"
                 }
             },
             v_directors_cut = {
@@ -1556,10 +1546,13 @@ return {
                     "{C:money}$#1#{} per cambio"
                 }
             },
-            v_paint_brush = {
-                name = "Pennello",
+            v_pattern = {
+                name = "Schema",
                 text = {
-                    "{C:attention}+#1#{} carte della mano"
+                    "Genera la tua carta",
+                    "{C:attention}consumabile{} più usata",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(Serve spazio)"
                 }
             },
             v_overstock_plus = {
@@ -1685,9 +1678,9 @@ return {
             v_recyclomancy = {
                 name = "Reciclomanzia",
                 text = {
-                    "Guadagna",
+                    "Guadagni",
                     "permanentemente {C:red}+#1#{} scarto",
-                    "in ogni round"
+                    "per round"
                 },
                 unlock = {
                     "Scarta un totale",
@@ -1698,9 +1691,9 @@ return {
             v_money_tree = {
                 name = "Albero di soldi",
                 text = {
-                    "Aumenta il limite sugli",
-                    "interessi guadagnati in",
-                    "ogni round a {C:money}$#1#{}"
+                    "Il limite massimo di",
+                    "interessi guadagnati",
+                    "per round sale a {C:money}$#1#{}"
                 },
                 unlock = {
                     "Massimizzi gli interessi",
@@ -1736,14 +1729,14 @@ return {
             },
             v_petroglyph = {
                 name = "Petroglifo",
-                text = {
-                    "{C:attention}-#1#{} ante,",
-                    "{C:red}-#1#{} scarto",
-                    "in ogni round"
-                },
                 unlock = {
                     "Raggiungi il liv.",
                     "ante {E:1,C:attention}#1#"
+                },
+                text = {
+                    "{C:attention}-#1#{} ante",
+                    "{C:red}-#1#{} scarto",
+                    "per round"
                 }
             },
             v_retcon = {
@@ -1758,14 +1751,37 @@ return {
                     "{C:attention}#1#{} bui"
                 }
             },
+            v_tesselation = {
+                name = "Tassellatura",
+                text = {
+                    "Genera il tuo",
+                    "{C:attention}Jolly{} più usato",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(Serve spazio)"
+                },
+                unlock = {
+                    "Compra l'edizione",
+                    "{C:dark_edition}policroma{} del tuo",
+                    "{C:attention}Jolly{} più usato",
+                    "dal negozio"
+                }
+            },
             v_palette = {
                 name = "Tavolozza",
                 text = {
+                    " {C:attention}+#1#{}",
+                    "limite di carte in mano",
                     "{C:attention}+#1#{} carte della mano"
                 },
                 unlock = {
                     "Riduci le carte della mano",
                     "a {C:attention}#1#{} carte"
+                }
+            },
+            v_paint_brush = {
+                name = "Pennello",
+                text = {
+                    "{C:attention}+#1#{} carte della mano"
                 }
             }
         },
@@ -1782,8 +1798,8 @@ return {
             c_magician = {
                 name = "Il bagatto",
                 text = {
-                    "Potenzia {C:attention}#1#{}",
-                    "carte selezionate a",
+                    "Potenzia {C:attention}#1#{} carta",
+                    "selezionata a",
                     "{C:attention}#2#"
                 }
             },
@@ -1878,8 +1894,8 @@ return {
                 name = "La morte",
                 text = {
                     "Seleziona {C:attention}#1#{} carte,",
-                    "converti la carta a {C:attention}sinistra{}",
-                    "nella carta a {C:attention}destra{}",
+                    "converti la carta {C:attention}sinistra{}",
+                    "nella carta {C:attention}destra{}",
                     "{C:inactive}(Trascina per riordinare)"
                 }
             },
@@ -2057,7 +2073,7 @@ return {
                     "{C:mult}+#3#{} Molt e",
                     "{C:chips}+#4#{} fiche"
                 }
-            },
+            }
         },
         Spectral = {
             c_familiar = {
@@ -2144,6 +2160,22 @@ return {
                     "guadagni {C:money}$#2#"
                 }
             },
+            c_soul = {
+                name = "Anima",
+                text = {
+                    "Crea un",
+                    "Jolly {C:legendary,E:1}leggendario{}",
+                    "{C:inactive}(Serve spazio)"
+                }
+            },
+            c_black_hole = {
+                name = "Buco nero",
+                text = {
+                    "Migliora ogni",
+                    "{C:legendary,E:1}mano di poker",
+                    "di {C:attention}1{} livello"
+                }
+            },
             c_ankh = {
                 name = "Ankh",
                 text = {
@@ -2190,22 +2222,6 @@ return {
                     "Crea {C:attention}#1#{} copie di",
                     "{C:attention}1{} carta selezionata",
                     "nella tua mano"
-                }
-            },
-            c_soul = {
-                name = "Anima",
-                text = {
-                    "Crea un",
-                    "Jolly {C:legendary,E:1}leggendario{}",
-                    "{C:inactive}(Serve spazio)"
-                }
-            },
-            c_black_hole = {
-                name = "Buco nero",
-                text = {
-                    "Migliora ogni",
-                    "{C:legendary,E:1}mano di poker",
-                    "di {C:attention}1{} livello"
                 }
             }
         },
@@ -2274,7 +2290,7 @@ return {
                 }
             },
             m_steel = {
-                name = "Carta d'acciaio",
+                name = "Carta di acciaio",
                 text = {
                     "{X:mult,C:white} X#1# {} Molt",
                     "mentre questa carta",
@@ -2355,17 +2371,16 @@ return {
             stake_orange = {
                 name = "Puntata arancione",
                 text = {
-                    "Il negozio può avere dei Jolly {C:attention}deperibili{}",
-                    "{C:inactive,s:0.8}(Penalizzati dopo 5 round)",
-                    "{s:0.8}Si applica a tutte le puntate precedenti"
+                    "Le {C:attention}buste di espansione{} costano",
+                    "{C:money}$1{} in più per ante",
+                    "{s:0.8}Applica tutte le puntate precedenti"
                 }
             },
             stake_gold = {
                 name = "Puntata dorata",
                 text = {
-                    "Il negozio può avere dei Jolly {C:attention}a noleggio{}",
-                    "{C:inactive,s:0.8}(Costano {C:money,s:0.8}$3{C:inactive,s:0.8} per round)",
-                    "{s:0.8}Si applica a tutte le puntate precedenti"
+                    "{C:red}-1{} carta della mano",
+                    "{s:0.8}Applica tutte le puntate precedenti"
                 }
             }
         },
@@ -2387,33 +2402,29 @@ return {
             tag_negative = {
                 name = "Patto negativo",
                 text = {
-                    "Il prossimo Jolly del negozio",
-                    "dell'edizione base è gratuito e",
-                    "diventa {C:dark_edition}negativo"
+                    "Il negozio ha un",
+                    "{C:dark_edition}Jolly negativo"
                 }
             },
             tag_foil = {
                 name = "Patto foil",
                 text = {
-                    "Il prossimo Jolly del negozio",
-                    "dell'edizione base è gratuito e",
-                    "diventa {C:dark_edition}foil"
+                    "Il negozio ha un",
+                    "{C:dark_edition}Jolly foil"
                 }
             },
             tag_holo = {
                 name = "Patto olografico",
                 text = {
-                    "Il prossimo Jolly del negozio",
-                    "dell'edizione base è gratuito e",
-                    "diventa {C:dark_edition}olografico"
+                    "Il negozio ha un",
+                    "{C:dark_edition}Jolly olografico"
                 }
             },
             tag_polychrome = {
                 name = "Patto policromo",
                 text = {
-                    "Il prossimo Jolly del negozio",
-                    "dell'edizione base è gratuito e",
-                    "diventa {C:dark_edition}policromo"
+                    "Il negozio ha un",
+                    "{C:dark_edition}Jolly policromo"
                 }
             },
             tag_investment = {
@@ -2467,7 +2478,7 @@ return {
                 }
             },
             tag_handy = {
-                name = "/descriptions/Tag/tag_d_six/text/_array_2",
+                name = "Patto alla mano",
                 text = {
                     "Dà {C:money}$#1#{} per",
                     "{C:blue}mano{} giocata in questa sessione",
@@ -2643,7 +2654,7 @@ return {
             bl_tooth = {
                 name = "Il dente",
                 text = {
-                    "Perdi $1 per",
+                    "Prendi $1 per",
                     "carta giocata"
                 }
             },
@@ -2795,7 +2806,7 @@ return {
                 name = "Mazzo magico",
                 text = {
                     "Inizia la sessione con il",
-                    "Buono {C:tarot,T:v_crystal_ball}#1#{}",
+                    "{C:tarot,T:v_crystal_ball}#1#{} Buono",
                     "e {C:attention}2{} copie",
                     "di {C:tarot,T:c_fool}#2#"
                 }
@@ -2804,17 +2815,17 @@ return {
                 name = "Mazzo nebulosa",
                 text = {
                     "Inizia la sessione con il",
-                    "Buono {C:planet,T:v_telescope}#1#{}",
+                    "{C:planet,T:v_telescope}#1#{} Buono",
                     "",
                     "{C:red}#2#{} slot consumabili"
                 }
             },
-            b_ghost = {
-                name = "Mazzo fantasma",
+            b_metal = {
+                name = "Mazzo metallico",
                 text = {
-                    "Le carte {C:spectral}Spettrali{} possono",
-                    "apparire nel negozio,",
-                    "inizi con una carta {C:spectral,T:c_hex}Maledizione{}"
+                    "Inizia la sessione con {C:attention}#1#",
+                    "carte da gioco potenziate",
+                    "a {C:attention}carte di acciaio"
                 }
             },
             b_abandoned = {
@@ -2833,20 +2844,18 @@ return {
                     "{C:attention}26{C:hearts} Cuori{} nel mazzo"
                 }
             },
-            b_zodiac = {
-                name = "Mazzo zodiacale",
+            b_rocky = {
+                name = "Mazzo roccioso",
                 text = {
-                    "Inizia la sessione con",
-                    "{C:tarot,T:v_tarot_merchant}#1#{},",
-                    "{C:planet,T:v_planet_merchant}#2#{},",
-                    "e {C:attention,T:v_overstock_norm}#3#"
+                    "Inizia la sessione con {C:attention}#1#",
+                    "{C:attention}carte di pietra{} in più"
                 }
             },
-            b_painted = {
-                name = "Mazzo dipinto",
+            b_braided = {
+                name = "Mazzo intrecciato",
                 text = {
-                    "{C:attention}+#1#{} carte della mano",
-                    "{C:red}#2#{} slot Jolly"
+                    "La prima mano giocata è",
+                    "migliorata al {C:attention}liv. 3"
                 }
             },
             b_anaglyph = {
@@ -2879,6 +2888,30 @@ return {
                 text = {
                     ""
                 }
+            },
+            b_ghost = {
+                name = "Mazzo fantasma",
+                text = {
+                    "Le carte {C:spectral}Spettrali{} possono",
+                    "apparire nel negozio,",
+                    "inizi con una carta {C:spectral,T:c_hex}Maledizione{}"
+                }
+            },
+            b_zodiac = {
+                name = "Mazzo zodiacale",
+                text = {
+                    "Inizia la sessione con",
+                    "{C:tarot,T:v_tarot_merchant}#1#{},",
+                    "{C:planet,T:v_planet_merchant}#2#{},",
+                    "e {C:attention,T:v_overstock_norm}#3#"
+                }
+            },
+            b_painted = {
+                name = "Mazzo dipinto",
+                text = {
+                    "{C:attention}+#1#{} carte della mano",
+                    "{C:red}#2#{} slot Jolly"
+                }
             }
         },
         Other = {
@@ -2888,52 +2921,6 @@ return {
                     "Guadagni {C:money}$3{} quando questa",
                     "carta è giocata",
                     "e assegna punti"
-                }
-            },
-            red_seal = {
-                name = "Sigillo rosso",
-                text = {
-                    "Riattiva questa",
-                    "carta {C:attention}1{} volta"
-                }
-            },
-            blue_seal = {
-                name = "Sigillo blu",
-                text = {
-                    "Crea la carta {C:planet}Pianeta{}",
-                    "per l'ultima {C:attention}mano di poker{} giocata",
-                    "nel round se {C:attention}tenuta{} in mano",
-                    "{C:inactive}(Serve spazio)"
-                }
-            },
-            purple_seal = {
-                name = "Sigillo viola",
-                text = {
-                    "Crea un {C:tarot}Tarocco{}",
-                    "quando è {C:attention}scartata",
-                    "{C:inactive}(Serve spazio)"
-                }
-            },
-            eternal = {
-                name = "Eterna",
-                text = {
-                    "Invendibile",
-                    "o indistruttibile"
-                }
-            },
-            perishable = {
-                name = "Deperibile",
-                text = {
-                    "Carta penalizzata dopo",
-                    "{C:attention}#1#{} round",
-                    "{C:inactive}({C:attention}#2#{C:inactive} rimanenti)"
-                }
-            },
-            rental = {
-                name = "A noleggio",
-                text = {
-                    "Perdi {C:money}$#1#{} alla",
-                    "fine del round"
                 }
             },
             white_sticker = {
@@ -3002,7 +2989,7 @@ return {
             },
             playing_card = {
                 text = {
-                    " {C:light_black}#1# di {V:1}#2# "
+                    "{C:light_black}#1# di {V:1}#2#"
                 }
             },
             card_chips = {
@@ -3013,12 +3000,6 @@ return {
             card_extra_chips = {
                 text = {
                     "{C:chips}+#1#{} fiche in più"
-                }
-            },
-            remove_negative = {
-                name = "Negativo",
-                text = {
-                    "{C:inactive,s:0.9}(Rimuove {C:dark_edition,s:0.9}Negativo{C:inactive,s:0.9} dalla copia)"
                 }
             },
             locked = {
@@ -3045,15 +3026,6 @@ return {
                 text = {
                     "Non disponibile",
                     "in questa demo"
-                }
-            },
-            challenge_locked = {
-                name = "Bloccato",
-                text = {
-                    "Vinci una sessione con almeno",
-                    "#1# mazzi diversi per sbloccare",
-                    "Modalità sfida",
-                    "{C:attention,s:2}#2#/#1#"
                 }
             },
             demo_shop_locked = {
@@ -3296,6 +3268,45 @@ return {
                     "è fissato nella",
                     "posizione più a sinistra"
                 }
+            },
+            red_seal = {
+                name = "Sigillo rosso",
+                text = {
+                    "Riattiva questa",
+                    "carta {C:attention}1{} volta"
+                }
+            },
+            blue_seal = {
+                name = "Sigillo blu",
+                text = {
+                    "Crea una carta {C:planet}Pianeta{}",
+                    "se questa carta è {C:attention}tenuta{} in",
+                    "mano alla fine del round"
+                }
+            },
+            purple_seal = {
+                name = "Sigillo viola",
+                text = {
+                    "Crea un {C:tarot}Tarocco{}",
+                    "quando è {C:attention}scartata",
+                    "{C:inactive}(Serve spazio)"
+                }
+            },
+            eternal = {
+                name = "Eterna",
+                text = {
+                    "Invendibile",
+                    "o indistruttibile"
+                }
+            },
+            challenge_locked = {
+                name = "Bloccato",
+                text = {
+                    "Vinci una sessione con almeno",
+                    "#1# mazzi diversi per sbloccare",
+                    "Modalità sfida",
+                    "{C:attention,s:2}#2#/#1#"
+                }
             }
         }
     },
@@ -3348,96 +3359,7 @@ return {
             current_streak = "",
             poker_hand = "Mano più giocata"
         },
-        achievement_names = {
-            ante_up = "Aumento di ante!",
-            ante_upper = "Grande aumento di ante!",
-            heads_up = "Testa a testa",
-            low_stakes = "Puntata bassa",
-            mid_stakes = "Puntata media",
-            high_stakes = "Puntata alta",
-            card_player = "Tante giocate",
-            card_discarder = "Tanti scarti",
-            nest_egg = "Gruzzolo",
-            flushed = "Colore multiuso",
-            speedrunner = "Velocista",
-            roi = "ROI",
-            shattered = "A pezzi",
-            royale = "Reale",
-            retrograde = "Retrocessione",
-            _10k = "Diecimila",
-            _1000k = "Un milione",
-            _100000k = "Cento milioni",
-            tiny_hands = "Mani piccole",
-            big_hands = "Mani grandi",
-            you_get_what_you_get = "Accetta ciò che hai",
-            rule_bender = "Regole aggirate",
-            rule_breaker = "Regole infrante",
-            legendary = "Leggendario",
-            astronomy = "Astronomia",
-            cartomancy = "Cartomanzia",
-            clairvoyance = "Chiaroveggenza",
-            extreme_couponer = "Fan dei coupon",
-            completionist = "Perfezionista",
-            completionist_plus = "Perfezionista+",
-            completionist_plus_plus = "Perfezionista++", 
-        },
-        achievement_descriptions = {
-            ante_up = "Raggiungi l'ante 4",
-            ante_upper = "Raggiungi l'ante 8",
-            heads_up = "Vinci una sessione",
-            low_stakes = "Vinci una sessione almeno in difficoltà Puntata rossa",
-            mid_stakes = "Vinci una sessione almeno in difficoltà Puntata nera",
-            high_stakes = "Vinci una sessione almeno in difficoltà Puntata dorata",
-            card_player = "Gioca almeno 2.500 carte",
-            card_discarder = "Scarta almeno 2.500 carte",
-            nest_egg = "Accumula almeno $400 durante una singola sessione",
-            flushed = "Gioca un Colore con 5 carte multiuso",
-            speedrunner = "Vinci una sessione in massimo 12 round",
-            roi = "Compra 5 Buoni prima dell'ante 4",
-            shattered = "Rompi 2 carte di vetro in una singola mano",
-            royale = "Gioca una Scala reale massima",
-            retrograde = "Porta una mano di poker qualsiasi al livello 10",
-            _10k = "Ottieni 10.000 fiche in una singola mano",
-            _1000k = "Ottieni 1.000.000 fiche in una singola mano",
-            _100000k = "Ottieni 100.000.000 fiche in una singola mano",
-            tiny_hands = "Riduci il tuo mazzo a massimo 20 carte",
-            big_hands = "Tieni almeno 80 carte nel tuo mazzo",
-            you_get_what_you_get = "Vinci una sessione senza cambiare il negozio",
-            rule_bender = "Completa una sessione sfida qualsiasi",
-            rule_breaker = "Completa ogni sessione sfida",
-            legendary = "Scopri un Jolly leggendario",
-            astronomy = "Scopri ogni carta Pianeta",
-            cartomancy = "Scopri ogni Tarocco",
-            clairvoyance = "Scopri ogni carta Spettrale",
-            extreme_couponer = "Scopri ogni Buono",
-            completionist = "Scopri il 100% della tua collezione",
-            completionist_plus = "Vinci con ogni mazzo in difficoltà Puntata dorata",
-            completionist_plus_plus = "Guadagna un Adesivo dorato su ogni Jolly", 
-        },
-        challenge_names = {
-            c_omelette_1 = "La frittata",
-            c_city_1 = "Città di 15 minuti",
-            c_rich_1 = "Ricchi sempre più ricchi",
-            c_knife_1 = "Sul filo del rasoio",
-            c_xray_1 = "Visione a raggi X",
-            c_mad_world_1 = "Mondo folle",
-            c_luxury_1 = "Tassa sul lusso",
-            c_non_perishable_1 = "Non deperibile",
-            c_medusa_1 = "Medusa",
-            c_double_nothing_1 = "Lascia o raddoppia",
-            c_typecast_1 = "Caratterista",
-            c_inflation_1 = "Inflazione",
-            c_bram_poker_1 = "Bram Poker",
-            c_fragile_1 = "Fragile",
-            c_monolith_1 = "Monolite",
-            c_blast_off_1 = "Lancio",
-            c_five_card_1 = "Poker tradizionale",
-            c_golden_needle_1 = "Ago dorato",
-            c_cruelty_1 = "Crudeltà",
-            c_jokerless_1 = "Senza Jolly"
-        },
         poker_hands = {
-            ['Flush Five'] = "Colore perfetto",
             ['Flush House'] = "Full colore",
             ['Five of a Kind'] = "Pokerissimo",
             ['Royal Flush'] = "Scala reale massima",
@@ -3449,12 +3371,10 @@ return {
             ['Three of a Kind'] = "Tris",
             ['Two Pair'] = "Doppia coppia",
             ['Pair'] = "Coppia",
-            ['High Card'] = "Carta più alta"
+            ['High Card'] = "Carta più alta",
+            ['Flush Five'] = "Colore perfetto"
         },
         poker_hand_descriptions = {
-            ['Flush Five'] = {
-                "5 carte dello stesso valore e seme"
-            },
             ['Flush House'] = {
                 "Un Tris e una Coppia",
                 "con carte dello stesso seme"
@@ -3498,6 +3418,9 @@ return {
             ['High Card'] = {
                 "Se la mano giocata non è nessuna delle mani qui sopra,",
                 "solo la carta dal valore più alto assegna punti"
+            },
+            ['Flush Five'] = {
+                "5 carte dello stesso valore e seme"
             }
         },
         labels = {
@@ -3514,13 +3437,11 @@ return {
             polychrome = "Policroma",
             negative = "Negativa",
             gold_seal = "Sigillo d'oro",
+            locked = "Bloccato",
             blue_seal = "Sigillo blu",
             red_seal = "Sigillo rosso",
             purple_seal = "Sigillo viola",
-            locked = "Bloccato",
             eternal = "Eterna",
-            perishable = "Deperibile",
-            rental = "A noleggio",
             pinned_left = "Fissato"
         },
         dictionary = {
@@ -3548,7 +3469,6 @@ return {
             b_collection = "Collezione",
             b_seed = "Seed",
             b_copy_seed = "Copia seed",
-            b_copy = "Copia",
             b_credits = "Riconoscimenti",
             b_stats = "Statistiche",
             b_settings = "Impostazioni",
@@ -3559,9 +3479,6 @@ return {
             b_set_gamespeed = "Velocità di gioco",
             b_set_play_discard_pos = "Posizione pulsanti Gioca/Scarta",
             b_set_screenshake = "Vibrazione schermo",
-            b_high_contrast_cards = "Carta ad alto contrasto",
-            b_reduced_motion = "Movimenti ridotti",
-            b_set_rumble = "Vibrazione controller",
             b_set_crash_reports = "Segnalazioni arresti anomali",
             b_set_monitor = "Monitor di visualizzazione",
             b_set_windowmode = "Modalità finestra",
@@ -3598,7 +3515,6 @@ return {
             b_booster_packs = "Buste di espansione",
             b_tags = "Patti",
             b_decks = "Mazzi",
-            b_seals = "Sigilli",
             b_continue = "Continua",
             b_back = "Indietro",
             b_music = "Musica",
@@ -3606,7 +3522,6 @@ return {
             b_imagery = "Immagini",
             b_new_run = "Nuova sessione",
             b_challenges = "Sfide",
-            b_new_challenge = "Inizia nuova sfida",
             b_current_profile = "Profilo attuale",
             b_load_profile = "Carica profilo",
             b_create_profile = "Crea profilo",
@@ -3620,11 +3535,9 @@ return {
             b_collection_cap = "COLLEZIONE",
             b_quit_cap = "ESCI",
             b_cash_out = "Incassa",
-            b_unlock_all = "Sblocca tutto",
             k_unknown = "?????",
             k_compatible = "compatibile",
             k_incompatible = "incompatibile",
-            k_active = "attivo",
             k_round = "Round",
             k_ante = "Ante",
             k_seed = "Seed",
@@ -3644,7 +3557,6 @@ return {
             k_voucher = "Buono",
             k_tarot = "Tarocco",
             k_planet = "Pianeta",
-            k_deck = "Mazzo",
             k_dwarf_planet = "Pianeta nano",
             k_planet_q = "Pianeta?",
             k_spectral = "Spettrale",
@@ -3676,18 +3588,12 @@ return {
             k_x_base = "X base",
             k_not_discovered = "Non scoperto",
             k_unlocked_ex = "Sbloccato!",
-            k_achievement = "Obiettivo",
-            k_trophy = "Trofeo",
             k_challenge_mode = "Modalità sfida",
             k_daily_run = "Sessione giornaliera",
             k_profile = "Profilo",
             k_wins = "Vittorie",
             k_empty_caps = "VUOTO",
             k_collection = "Collezione",
-            k_progress = "Progressi",
-            k_challenges = "Sfide",
-            k_joker_stickers = "Adesivi Jolly",
-            k_deck_stake_wins = "Vittorie puntata mazzo",
             k_stake_level = "Livello puntata",
             k_none = "Nessuno",
             k_game_modifiers = "Modificatori gioco",
@@ -3699,46 +3605,28 @@ return {
             k_best_hand = "Mano migliore",
             k_seeded_run = "Sessione con seed scelto",
             k_enter_seed = "Inserisci seed",
-            k_enter_name = "Inserisci nome",
             k_lvl = "liv.",
             k_skipped_cap = "SALTATO",
             k_no_reward = "Nessuna ricompensa",
             k_reward = "Ricompensa",
             k_nope_ex = "No!",
-            k_not_allowed_ex = "Non concessa!",
             k_or = "o",
-            k_poker_hand = "mano di poker",
-            k_gold = "Dorata",
-            k_card_stats = "Statistiche carte",
             k_balanced = "Bilanciato",
-            k_view = "Vedi",
-            k_all_hands = "Tutte le mani",
-            k_high_score_ex = "Miglior punteggio!",
-            k_demo_version_ex = "Versione demo!",
-            k_playing_as = "Nome giocatore:",
-            k_choose = "Scegli",
-            k_achievements_disabled = "Obiettivi disattivati",
-            k_trophies_disabled = "Trofei disattivati",
             ph_improve_run = "Migliora la tua sessione!",
-            ph_no_boss_active = "nessun boss attivo",
             ph_sneak_peek = "Anteprima",
             ph_deck_preview_stones = "Pietre",
             ph_deck_preview_effective = "Totale effettivo grazie a Jolly, bui e potenziamenti delle carte",
             ph_blind_score_at_least = "Ottieni almeno",
-            ph_blind_reward = "Ricompensa: ",
-            ph_4_7_of_clubs = "quattro 7 di Fiori",
+            ph_blind_reward = "Ricompensa:",
             ph_up_ante_1 = "Aumenta l'ante",
             ph_up_ante_2 = "Incrementa tutti i bui",
             ph_up_ante_3 = "Aggiorna bui",
-            ph_select_challenge = "Seleziona una sfida",
             ph_stat_joker = "Round completati totali con questa carta",
             ph_stat_consumable = "Numero di volte che questa carta è stata usata",
             ph_stat_voucher = "Numero di volte che questo buono è stato riscattato",
             ph_demo_thanks_1 = "Grazie aver giocato alla",
             ph_demo_thanks_2 = "DEMO DI BALATRO",
             ph_game_over = "GAME OVER",
-            ph_you_win = "VITTORIA!",
-            ph_you_win_demo = "VITTORIA NELLA DEMO!",
             ph_vouchers_redeemed = "Buoni riscattati in questa sessione",
             ph_no_vouchers = "Nessun buono riscattato in questa sessione",
             ph_defeat_this_blind_1 = "Sconfiggi questo buio",
@@ -3752,18 +3640,6 @@ return {
             ph_1_level = "+1 livello",
             ph_boss_disabled = "Boss disattivato!",
             ph_most_played = "(mano più giocata)",
-            ph_defeat_the_boss = "Sconfiggi il buio boss",
-            ph_score_furthest_ante = "Ante",
-            ph_score_furthest_round = "Round",
-            ph_score_hand = "Mano migliore",
-            ph_score_poker_hand = "Mano più giocata",
-            ph_score_new_collection = "Nuove scoperte",
-            ph_score_cards_played = "Carte giocate",
-            ph_score_cards_discarded = "Carte scartate",
-            ph_score_times_rerolled = "Numero di cambi",
-            ph_score_cards_purchased = "Carte acquistate",
-            ph_unscored_hand = "La mano non segnerà punti",
-            ph_alert_debuff_confirm = "Premi \"Gioca\" di nuovo per confermare",
             ml_demo_thanks_message = {
                 "Valuta l'opzione di aggiungere Balatro",
                 "alla tua lista dei desideri su Steam e di iscriverti",
@@ -3821,18 +3697,6 @@ return {
                 "Sblocchi e",
                 "scoperte disattivati"
             },
-            ml_edition_seal_enhancement_explanation = {
-                "Ogni carta da gioco può avere",
-                "un potenziamento, un'edizione e un Sigillo"
-            },
-            ml_unlock_all_explanation = {
-                "ATTENZIONE! Sbloccare la collezione completa",
-                "disattiverà gli obiettivi per questo profilo!"
-            },
-            ml_unlock_all_trophies = {
-                "ATTENZIONE! Sbloccare la collezione completa",
-                "disattiverà i trofei per questo profilo!"
-            },
             ['$'] = "$",
             k_redeemed_ex = "Riscatto!",
             k_duplicated_ex = "Duplicazione!",
@@ -3843,7 +3707,6 @@ return {
             k_plus_stone = "+1 Pietre",
             k_plus_planet = "+1 Pianeta",
             k_plus_spectral = "+1 Spettrale",
-            k_plus_joker = "+1 Jolly",
             k_active_ex = "Attivazione!",
             k_level_up_ex = "Aumento di livello!",
             k_upgrade_ex = "Miglioramento!",
@@ -3851,25 +3714,76 @@ return {
             k_val_up = "Aumento di valore!",
             k_reset = "Ripristino",
             k_extinct_ex = "Disattivazione!",
-            k_disabled_ex = "Disattivato!",
             k_safe_ex = "Al sicuro!",
             k_saved_ex = "Salvataggio!",
             k_swapped_ex = "Scambio!",
             k_copied_ex = "Copia!",
             k_melted_ex = "Scioglimento!",
+            b_copy = "Copia",
+            b_high_contrast_cards = "Carta ad alto contrasto",
+            b_set_rumble = "Vibrazione controller",
+            b_seals = "Sigilli",
+            b_new_challenge = "Inizia nuova sfida",
+            b_unlock_all = "Sblocca tutto",
+            k_active = "attivo",
+            k_deck = "Mazzo",
+            k_progress = "Progressi",
+            k_challenges = "Sfide",
+            k_joker_stickers = "Adesivi Jolly",
+            k_deck_stake_wins = "Vittorie puntata mazzo",
+            k_enter_name = "Inserisci nome",
+            k_gold = "Dorata",
+            k_card_stats = "Statistiche carte",
+            k_view = "Vedi",
+            k_all_hands = "Tutte le mani",
+            k_high_score_ex = "Miglior punteggio!",
+            k_demo_version_ex = "Versione demo!",
+            k_playing_as = "Nome giocatore:",
+            k_choose = "Scegli",
+            k_achievements_disabled = "Obiettivi disattivati",
+            ph_no_boss_active = "nessun boss attivo",
+            ph_you_win = "VITTORIA!",
+            ph_you_win_demo = "VITTORIA NELLA DEMO!",
+            ph_defeat_the_boss = "Sconfiggi il buio boss",
+            ph_score_furthest_ante = "Ante",
+            ph_score_furthest_round = "Round",
+            ph_score_hand = "Mano migliore",
+            ph_score_poker_hand = "Mano più giocata",
+            ph_score_new_collection = "Nuove scoperte",
+            ph_score_cards_played = "Carte giocate",
+            ph_score_cards_discarded = "Carte scartate",
+            ph_score_times_rerolled = "Numero di cambi",
+            ph_score_cards_purchased = "Carte acquistate",
+            ml_edition_seal_enhancement_explanation = {
+                "Ogni carta da gioco può avere",
+                "un potenziamento, un'edizione e un Sigillo"
+            },
+            ml_unlock_all_explanation = {
+                "ATTENZIONE! Sbloccare la collezione completa",
+                "disattiverà gli obiettivi per questo profilo!"
+            },
+            k_plus_joker = "+1 Jolly",
             k_eaten_ex = "Consumazione!",
+            k_eroded_ex = "Erosione!",
+            k_achievement = "Obiettivo",
+            ph_unscored_hand = "La mano non segnerà punti",
+            ph_alert_debuff_confirm = "Premi \"Gioca\" di nuovo per confermare",
             k_drank_ex = "Bevuta!",
-            k_eroded_ex = "Erosione!"
+            k_trophy = "Trofeo",
+            k_trophies_disabled = "Trofei disattivati",
+            ml_unlock_all_trophies = {
+                "ATTENZIONE! Sbloccare la collezione completa",
+                "disattiverà i trofei per questo profilo!"
+            },
+            k_poker_hand = "mano di poker",
+            ph_4_7_of_clubs = "quattro 7 di Fiori"
         },
         v_dictionary = {
             a_xmult = " X#1# Molt",
-            a_xmult_minus = "-X#1# Molt",
-            a_mult = "+#1# Molt",
-            a_mult_minus = "-#1# Molt",
+            a_mult = "+#1# Mult",
             a_chips = "+#1#",
             a_chips_minus = "-#1#",
             a_handsize = "+#1# carta della mano",
-            a_handsize_minus = "-#1# di carte della mano",
             a_hands = "+#1# Mani",
             a_sold_tally = "#1#/#2# vendute",
             a_remaining = "#1# rimanenti",
@@ -3879,8 +3793,6 @@ return {
             deck_preview_wheel_singular = "I numeri potrebbero essere inferiori a causa di #1# carta pescata a faccia in giù",
             deck_preview_wheel_plural = "I numeri potrebbero essere inferiori a causa di #1# carte pescate a faccia in giù",
             challenges_completed = "#1#/#2# sfide completate",
-            unlocked = "Sbloccato: #1#/#2#",
-            completed = "Completato: #1#/#2#",
             interest = "$#1# di interessi per ogni $#2# (massimo $#3#)",
             remaining_hand_money = "Mani rimaste ($#1# ciascuna)",
             remaining_discard_money = "Scarti rimasti ($#1# ciascuno)",
@@ -3900,10 +3812,15 @@ return {
                 "Negativa",
                 "+#1# slot Jolly"
             },
+            a_mult_minus = "-#1# Molt",
+            a_handsize_minus = "-#1# di carte della mano",
             ml_negative_consumable_desc = {
                 "Negativa",
                 "+#1# slot consumabili"
-            }
+            },
+            a_xmult_minus = "-X#1# Molt",
+            unlocked = "Sbloccato: #1#/#2#",
+            completed = "Completato: #1#/#2#"
         },
         v_text = {
             ch_m_dollars = {
@@ -3954,9 +3871,6 @@ return {
             ch_c_none = {
                 "{C:inactive}Nessuno"
             },
-            ch_c_no_shop_jokers = {
-                "I Jolly non appaiono più nel {C:attention}negozio"
-            },
             ch_c_inflation = {
                 "Incrementa permanentemente i prezzi di {C:money}$1{} per ogni acquisto"
             },
@@ -3969,11 +3883,14 @@ return {
             ch_c_flipped_cards = {
                 "{C:green}1 carta su #1#{} viene pescata a faccia in giù"
             },
-            ch_c_debuff_played_cards = {
-                "Tutte le carte {C:attention}giocate{} vengono {C:attention}penalizzate{} dopo aver assegnato punti"
-            },
             ch_c_minus_hand_size_per_X_dollar = {
                 "Tieni {C:red}-1{} carta in mano per ogni {C:money}$#1#{} che hai"
+            },
+            ch_c_no_shop_jokers = {
+                "I Jolly non appaiono più nel {C:attention}negozio"
+            },
+            ch_c_debuff_played_cards = {
+                "Tutte le carte {C:attention}giocate{} vengono {C:attention}penalizzate{} dopo aver assegnato punti"
             },
             ch_c_set_eternal_ante = {
                 "Quando il boss dell'ante {C:attention}#1#{} viene sconfitto, tutti i Jolly diventano {C:attention}eterni"
@@ -3981,26 +3898,6 @@ return {
             ch_c_set_joker_slots_ante = {
                 "Quando il boss dell'ante {C:attention}#1#{} viene sconfitto, gli slot Jolly vengono portati a {C:attention}0"
             }
-        },
-        quips = {
-            wq_1 = {"Sei un asso!"},
-            wq_2 = {"Te la sei cavata","piuttosto bene!"},
-            wq_3 = {"Pare che il tuo","non fosse un bluff!"},
-            wq_4 = {"Peccato che queste","fiche sono tutte","virtuali..."},
-            wq_5 = {"Sembra che ti","ho insegnato bene!"},
-            wq_6 = {"Sei abile", "nel testa a testa!"},
-            wq_7 = {"Menomale che","non ho scommesso", "contro di te!"},
-            lq_1 = {"Forse è meglio", "se giochiamo a", "rubamazzetto..."},
-            lq_2 = {"Non abbiamo", "lasciato il segno!"},
-            lq_3 = {"È il momento di", "rinunciare al piatto", "e riprovare!"},
-            lq_4 = {"Sai come", "si dice: il banco", "vince sempre!"},
-            lq_5 = {"Abbiamo scoperto", "chi è il vero", "prodigio del poker!"},
-            lq_6 = {"Oh no,", "stavi bluffando?"},
-            lq_7 = {"Siamo rimasti","a mani vuote!"},
-            lq_8 = {"Se avessi le mani,","avrei coperto", "i miei occhi!"},
-            lq_9 = {"Io sono solo", "un buffone, tu", "che scusa hai?"},
-            lq_10 = {"Che fiasco!"},
-            dq_1 = {"Accidenti! Spero","che tu abbia qualche","asso nella manica per","questa sfida finale!"}
         },
         tutorial = {
             sb_1 = {
@@ -4035,7 +3932,7 @@ return {
                 "Ma tieni d'occhio",
                 "il {C:attention}buio boss{}.",
                 "Ha un'abilità che dovrai",
-                    "tenere in considerazione."
+                "tenere in considerazione."
             },
             bb_4 = {
                 "Se lo batti,",
@@ -4059,7 +3956,7 @@ return {
                 "Trovi le tue {C:attention}mani di poker",
                 "nell'area {C:attention}Dati sessione{},",
                 "insieme ad altri dati",
-                    "sulla sessione attuale"
+                "sulla sessione attuale"
             },
             fh_4 = {
                 "Anche con le carte",
@@ -4075,7 +3972,7 @@ return {
                 "Puoi anche {C:red}'scartare'{} fino",
                 "a {C:attention}5{} carte selezionate",
                 "per provare a creare",
-                    "mani più forti. Provaci!"
+                "mani più forti. Provaci!"
             },
             fh_7 = {
                 "Attenzione! Hai a disposizione",
@@ -4086,13 +3983,13 @@ return {
                 "Guadagna {C:attention}300 fiche{} prima",
                 "di rimanere senza {C:blue}mani",
                 "per vincere il round.",
-                    "Buona fortuna!"
+                "Buona fortuna!"
             },
             sh_1 = {
                 "Quando ottieni più carte,",
                 "ricorda che puoi riordinarle.",
                 "I {C:attention}Jolly{} si attivano",
-                    "da sinistra a destra"
+                "da sinistra a destra"
             },
             sh_2 = {
                 "E assicurati di",
@@ -4102,13 +3999,13 @@ return {
                 "Seleziona fino a {C:attention}2{} carte",
                 "nella tua mano e premi",
                 "{C:attention}'USA'{} sul {C:tarot}Tarocco{}",
-                    "per potenziarle!"
+                "per potenziarle!"
             },
             s_1 = {
                 "Ottimo lavoro! Ora che",
                 "hai le {E:1}mani{} piene di {C:money}soldi{},",
                 "puoi comprare delle nuove",
-                    "carte dal {C:attention}negozio"
+                "carte dal {C:attention}negozio"
             },
             s_2 = {
                 "Compra questo",
@@ -4118,7 +4015,7 @@ return {
                 "Questo è uno dei {C:attention}#1#",
                 "{C:attention}Jolly{} che puoi aggiungere",
                 "alla tua sessione. Ogni {C:attention}Jolly",
-                    "fa qualcosa di diverso"
+                "fa qualcosa di diverso"
             },
             s_4 = {
                 "Questo aggiunge {C:red}+4 Molt{} a",
@@ -4137,7 +4034,7 @@ return {
                 "Questo {C:tarot}Tarocco{} è una",
                 "{C:attention}carta consumabile{}.",
                 "Potenzierà le tue",
-                    "carte! Non perderlo."
+                "carte! Non perderlo."
             },
             s_8 = {
                 "Puoi avere fino a",
@@ -4148,7 +4045,7 @@ return {
                 "Se risparmi abbastanza,",
                 "puoi comprare un {C:attention}Buono{}.",
                 "I {C:attention}Buoni{} migliorano",
-                    "passivamente la sessione!"
+                "passivamente la sessione!"
             },
             s_10 = {
                 "I {C:attention}Buoni{} vengono riassortiti",
@@ -4159,12 +4056,182 @@ return {
                 "E dai un'occhiata a entrambe",
                 "le {C:booster}buste di espansione{} in",
                 "ciascun negozio. Sono",
-                    "piene di carte utili!"
+                "piene di carte utili!"
             },
             s_12 = {
                 "Passiamo",
                 "al {C:attention}prossimo round{}."
             }
+        },
+        achievement_names = {
+            ante_up = "Aumento di ante!",
+            ante_upper = "Grande aumento di ante!",
+            heads_up = "Testa a testa",
+            low_stakes = "Puntata bassa",
+            mid_stakes = "Puntata media",
+            high_stakes = "Puntata alta",
+            card_player = "Tante giocate",
+            card_discarder = "Tanti scarti",
+            nest_egg = "Gruzzolo",
+            flushed = "Colore multiuso",
+            speedrunner = "Velocista",
+            roi = "ROI",
+            shattered = "A pezzi",
+            royale = "Reale",
+            retrograde = "Retrocessione",
+            _10k = "Diecimila",
+            _1000k = "Un milione",
+            _100000k = "Cento milioni",
+            tiny_hands = "Mani piccole",
+            big_hands = "Mani grandi",
+            you_get_what_you_get = "Accetta ciò che hai",
+            rule_bender = "Regole aggirate",
+            rule_breaker = "Regole infrante",
+            legendary = "Leggenda",
+            astronomy = "Astronomia",
+            cartomancy = "Cartomanzia",
+            clairvoyance = "Chiaroveggenza",
+            extreme_couponer = "Fan dei coupon",
+            completionist = "Perfezionista",
+            completionist_plus = "Perfezionista+",
+            completionist_plus_plus = "Perfezionista++"
+        },
+        achievement_descriptions = {
+            ante_up = "Raggiungi l'ante 4",
+            ante_upper = "Raggiungi l'ante 8",
+            heads_up = "Vinci una sessione",
+            low_stakes = "Vinci una sessione almeno in difficoltà Puntata rossa",
+            mid_stakes = "Vinci una sessione almeno in difficoltà Puntata nera",
+            high_stakes = "Vinci una sessione almeno in difficoltà Puntata dorata",
+            card_player = "Gioca almeno 2.500 carte",
+            card_discarder = "Scarta almeno 2.500 carte",
+            nest_egg = "Accumula almeno $400 durante una singola sessione",
+            flushed = "Gioca un Colore con 5 carte multiuso",
+            speedrunner = "Vinci una sessione in massimo 12 round",
+            roi = "Compra 5 Buoni prima dell'ante 4",
+            shattered = "Rompi 2 carte di vetro in una singola mano",
+            royale = "Gioca una Scala reale massima",
+            retrograde = "Porta una mano di poker qualsiasi al livello 10",
+            _10k = "Ottieni 10.000 fiche in una singola mano",
+            _1000k = "Ottieni 1.000.000 fiche in una singola mano",
+            _100000k = "Ottieni 100.000.000 fiche in una singola mano",
+            tiny_hands = "Riduci il tuo mazzo a massimo 20 carte",
+            big_hands = "Tieni almeno 80 carte nel tuo mazzo",
+            you_get_what_you_get = "Vinci una sessione senza cambiare il negozio",
+            rule_bender = "Completa una sessione sfida qualsiasi",
+            rule_breaker = "Completa ogni sessione sfida",
+            legendary = "Scopri un Jolly leggendario",
+            astronomy = "Scopri ogni carta Pianeta",
+            cartomancy = "Scopri ogni Tarocco",
+            clairvoyance = "Scopri ogni carta Spettrale",
+            extreme_couponer = "Scopri ogni Buono",
+            completionist = "Scopri il 100% della tua collezione",
+            completionist_plus = "Vinci con ogni mazzo in difficoltà Puntata dorata",
+            completionist_plus_plus = "Guadagna un Adesivo dorato su ogni Jolly"
+        },
+        quips = {
+            wq_1 = {
+                "Sei un asso!"
+            },
+            wq_2 = {
+                "Te la sei cavata",
+                "piuttosto bene!"
+            },
+            wq_3 = {
+                "Pare che il tuo",
+                "non fosse un bluff!"
+            },
+            wq_4 = {
+                "Peccato che queste",
+                "fiche sono tutte",
+                "virtuali..."
+            },
+            wq_5 = {
+                "Sembra che ti",
+                "ho insegnato bene!"
+            },
+            wq_6 = {
+                "Sei abile",
+                "nel testa a testa!"
+            },
+            wq_7 = {
+                "Menomale che",
+                "non ho scommesso",
+                "contro di te!"
+            },
+            lq_1 = {
+                "Forse è meglio",
+                "se giochiamo a",
+                "rubamazzetto..."
+            },
+            lq_2 = {
+                "Non abbiamo",
+                "lasciato il segno!"
+            },
+            lq_3 = {
+                "È il momento di",
+                "rinunciare al piatto",
+                "e riprovare!"
+            },
+            lq_4 = {
+                "Sai come",
+                "si dice: il banco",
+                "vince sempre!"
+            },
+            lq_5 = {
+                "Abbiamo scoperto",
+                "chi è il vero",
+                "prodigio del poker!"
+            },
+            lq_6 = {
+                "Oh no,",
+                "stavi bluffando?"
+            },
+            lq_7 = {
+                "Siamo rimasti",
+                "a mani vuote!"
+            },
+            lq_8 = {
+                "Se avessi le mani,",
+                "avrei coperto",
+                "i miei occhi!"
+            },
+            lq_9 = {
+                "Io sono solo",
+                "un buffone, tu",
+                "che scusa hai?"
+            },
+            lq_10 = {
+                "Che fiasco!"
+            },
+            dq_1 = {
+                "Accidenti! Spero",
+                "che tu abbia qualche",
+                "asso nella manica per",
+                "questa sfida finale!"
+            }
+        },
+        challenge_names = {
+            c_omelette_1 = "La frittata",
+            c_city_1 = "Città di 15 minuti",
+            c_rich_1 = "Ricchi sempre più ricchi",
+            c_knife_1 = "Sul filo del rasoio",
+            c_xray_1 = "Visione a raggi X",
+            c_mad_world_1 = "Mondo folle",
+            c_luxury_1 = "Tassa sul lusso",
+            c_non_perishable_1 = "Non deperibile",
+            c_medusa_1 = "Medusa",
+            c_double_nothing_1 = "Lascia o raddoppia",
+            c_typecast_1 = "Caratterista",
+            c_inflation_1 = "Inflazione",
+            c_bram_poker_1 = "Bram Poker",
+            c_fragile_1 = "Fragile",
+            c_monolith_1 = "Monolite",
+            c_blast_off_1 = "Lancio",
+            c_five_card_1 = "Poker tradizionale",
+            c_golden_needle_1 = "Ago dorato",
+            c_cruelty_1 = "Crudeltà",
+            c_jokerless_1 = "Senza Jolly"
         }
     }
 }

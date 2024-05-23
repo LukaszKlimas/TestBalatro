@@ -47,46 +47,6 @@ return {
                     "een {C:attention}#2# bevat"
                 }
             },
-            j_sly = {
-                name = "Sluwe Joker",
-                text = {
-                    "{C:chips}+#1#{} fiches als gespeelde",
-                    "hand",
-                    "een {C:attention}#2# bevat"
-                }
-            },
-            j_wily = {
-                name = "Gehaaide Joker",
-                text = {
-                    "{C:chips}+#1#{} fiches als gespeelde",
-                    "hand",
-                    "een {C:attention}#2# bevat"
-                }
-            },
-            j_clever = {
-                name = "Slimme Joker",
-                text = {
-                    "{C:chips}+#1#{} fiches als gespeelde",
-                    "hand",
-                    "een {C:attention}#2# bevat"
-                }
-            },
-            j_devious = {
-                name = "Vileine Joker",
-                text = {
-                    "{C:chips}+#1#{} fiches als gespeelde",
-                    "hand",
-                    "een {C:attention}#2# bevat"
-                }
-            },
-            j_crafty = {
-                name = "Listige Joker",
-                text = {
-                    "{C:chips}+#1#{} fiches als gespeelde",
-                    "hand",
-                    "een {C:attention}#2# bevat"
-                }
-            },
             j_half = {
                 name = "Halve Joker",
                 text = {
@@ -112,17 +72,16 @@ return {
             j_drunkard = {
                 name = "Dronkaard",
                 text = {
-                    "{C:red}+#1#{} weggooimogelijkheid",
-                    "per ronde"
+                    "{C:red}+#1#{} weggooimogelijkheid"
                 }
             },
             j_stone = {
                 name = "Stenen Joker",
                 text = {
-                    "Levert {C:chips}+#1#{} fiches op voor",
-                    "elke {C:attention}steenkaart",
-                    "in je {C:attention}volledige kaartspel",
-                    "{C:inactive}(Momenteel {C:chips}+#2#{C:inactive} fiches)"
+                    "Deze Joker levert {C:attention}+#1#{} fiches op",
+                    "voor elke {C:attention}steenkaart",
+                    "in je volledige kaartspel",
+                    "{C:inactive}(Nu {C:chips}+#2#{C:inactive} fiches)"
                 }
             },
             j_golden = {
@@ -136,7 +95,7 @@ return {
                 name = "Jokerstencil",
                 text = {
                     "{X:red,C:white} X1 {} Multi voor elk",
-                    "leeg {C:attention}Joker{}-vak",
+                    "lege {C:attention}Joker{}-vak",
                     "inclusief het {s:0.8}Jokerstencil",
                     "{C:inactive}(Nu {X:red,C:white} X#1# {C:inactive})"
                 }
@@ -160,8 +119,8 @@ return {
             j_credit_card = {
                 name = "Creditcard",
                 text = {
-                    "Staat een schuld van",
-                    "{C:red}-$#1#{} toe"
+                    "Behaal een schuld van",
+                    "{C:red}-$#1#{}"
                 }
             },
             j_greedy_joker = {
@@ -169,7 +128,7 @@ return {
                 text = {
                     "Gespeelde kaarten met",
                     "de kleur {C:diamonds}#2#{} geven",
-                    "{C:mult}+#1#{} Multi bij scoren", 
+                    "{C:mult}+#1#{} Multi bij scoren"
                 }
             },
             j_lusty_joker = {
@@ -177,7 +136,7 @@ return {
                 text = {
                     "Gespeelde kaarten met",
                     "de kleur {C:hearts}#2#{} geven",
-                    "{C:mult}+#1#{} Multi bij scoren", 
+                    "{C:mult}+#1#{} Multi bij scoren"
                 }
             },
             j_wrathful_joker = {
@@ -185,7 +144,7 @@ return {
                 text = {
                     "Gespeelde kaarten met",
                     "de kleur {C:spades}#2#{} geven",
-                    "{C:mult}+#1#{} Multi bij scoren", 
+                    "{C:mult}+#1#{} Multi bij scoren"
                 }
             },
             j_gluttenous_joker = {
@@ -193,7 +152,7 @@ return {
                 text = {
                     "Gespeelde kaarten met",
                     "de kleur {C:clubs}#2#{} geven",
-                    "{C:mult}+#1#{} Multi bij scoren", 
+                    "{C:mult}+#1#{} Multi bij scoren"
                 }
             },
             j_ceremonial = {
@@ -241,10 +200,16 @@ return {
             j_8_ball = {
                 name = "8-bal",
                 text = {
-                    "Kans van {C:green}#1# op #2#{} voor elke",
-                    "gespeelde {C:attention}8{} om een",
-                    "{C:tarot}tarot{}-kaart te creëren bij scoren",
+                    "Maak een {C:purple}planeet{}-kaart",
+                    "als gespeelde hand {C:attenetion}#1#{}",
+                    "of meer {C:attenetion}8'en{} bevat",
                     "{C:inactive}(Moet ruimte voor zijn)"
+                }
+            },
+            j_misprint = {
+                name = "Drukfout",
+                text = {
+                    ""
                 }
             },
             j_dusk = {
@@ -255,25 +220,19 @@ return {
                     "{C:attention}hand{} van de ronde"
                 }
             },
-            j_chaos = {
-                name = "Chaos de Clown",
-                text = {
-                    "{C:green}#1#{} gratis keer {C:attention}verversen",
-                    "per winkel"
-                }
-            },
-            j_misprint = {
-                name = "Drukfout",
-                text = {
-                    ""
-                }
-            },
             j_raised_fist = {
                 name = "Geheven vuist",
                 text = {
-                    "Voegt de {C:attention}dubbele{} rang",
-                    "van de kaart met de {C:attention}laagste{} rang",
-                    "in de hand toe aan Multi"
+                    "Voegt de {C:attention}dubbele{} rang toe",
+                    "van de {C:attention}laagste{} vastgehouden kaart",
+                    "in de hand naar Multi"
+                }
+            },
+            j_chaos = {
+                name = "Chaos de Clown",
+                text = {
+                    "{C:green}#1#{} gratis keer {C:attention}opnieuw",
+                    "gooien per winkel"
                 }
             },
             j_fibonacci = {
@@ -287,10 +246,10 @@ return {
             j_steel_joker = {
                 name = "Stalen Joker",
                 text = {
-                    "Levert {X:mult,C:white} X#1# {} Multi op",
+                    "Deze Joker levert {X:mult,C:white}X#1#{} Multi op",
                     "voor elke {C:attention}staalkaart",
-                    "in je {C:attention}volledige kaartspel",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "in je volledige kaartspel",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 }
             },
             j_scary_face = {
@@ -317,20 +276,20 @@ return {
                     "aan het einde van de ronde"
                 }
             },
-            j_pareidolia = {
-                name = "Pareidolie",
-                text = {
-                    "Alle kaarten worden",
-                    "beschouwd als",
-                    "{C:attention}plaatjes{}"
-                }
-            },
             j_hack = {
                 name = "Bedrieger",
                 text = {
                     "Reactiveer",
                     "elke gespeelde",
                     "{C:attention}2{}, {C:attention}3{}, {C:attention}4{} of {C:attention}5{}"
+                }
+            },
+            j_pareidolia = {
+                name = "Pareidolie",
+                text = {
+                    "Alle kaarten worden",
+                    "beschouwd als",
+                    "{C:attention}plaatjes{}"
                 }
             },
             j_gros_michel = {
@@ -346,7 +305,7 @@ return {
                 name = "Gelijke Pijke",
                 text = {
                     "Gespeelde kaarten met",
-                    "een {C:attention}even{} rang geven",
+                    "een {C:attention}gelijke{} rang geven",
                     "{C:mult}+#1#{} Multi bij scoren",
                     "{C:inactive}(10, 8, 6, 4, 2)"
                 }
@@ -380,28 +339,19 @@ return {
             j_supernova = {
                 name = "Supernova",
                 text = {
-                    "Voegt het aantal keren dat",
-                    "{C:attention}pokerhand{} is gespeeld",
-                    "in dit spel toe aan Multi"
-                }
-            },
-            j_superposition = {
-                name = "Superpositie",
-                text = {
-                    "Maak een {C:tarot}tarot-{}kaart als",
-                    "pokerhand een",
-                    "{C:attention}aas{} en een {C:attention}straight{} bevat",
-                    "{C:inactive}(Moet ruimte voor zijn)"
+                    "Voegt het aantal keer dat",
+                    "er een {C:attention}pokerhand{} is gespeeld",
+                    "toe aan Multi"
                 }
             },
             j_ride_the_bus = {
                 name = "Met de bus mee",
                 text = {
-                    "Deze joker levert {C:mult}+#1#{} Multi",
-                    "op per {C:attention}opeenvolgende{} hand",
-                    "die wordt gespeeld zonder een",
-                    "scorend {C:attention}plaatje{}",
-                    "{C:inactive}(Momenteel {C:mult}+#2#{C:inactive} Multi)"
+                    "{C:mult}+#1#{} Multi per",
+                    "opeenvolgende hand",
+                    "die gespeeld wordt zonder",
+                    "een {C:attention}plaatje{} te scoren",
+                    "{C:inactive}(Nu {C:mult}+#2#{C:inactive} Multi)"
                 }
             },
             j_space = {
@@ -415,9 +365,9 @@ return {
             j_egg = {
                 name = "Ei",
                 text = {
-                    "Verhoogt {C:attention}verkoopwaarde{}",
-                    "met {C:money}$#1#{}  aan",
-                    "het einde van de ronde"
+                    "Verdient {C:money}$#1#{} van de",
+                    "{C:attention}verkoopwaarde{} aan het",
+                    "einde van ronde"
                 }
             },
             j_burglar = {
@@ -489,10 +439,9 @@ return {
             j_constellation = {
                 name = "Sterrenbeeld",
                 text = {
-                    "Deze joker levert",
-                    "{X:mult,C:white} X#1# {} Multi op telkens als",
-                    "een {C:planet}planeet{}-kaart wordt gebruikt",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "Krijgt {X:mult,C:white} X#1# {} Multi",
+                    "per gebruikte {C:planet}planeet{}-kaart",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 }
             },
             j_hiker = {
@@ -512,13 +461,30 @@ return {
                     "weggegooid"
                 }
             },
+            j_green_joker = {
+                name = "Groene Joker",
+                text = {
+                    "{C:mult}+#1#{} Multi per gespeelde hand",
+                    "{C:mult}+#2#{} Multi per weggegooide kaart",
+                    "{C:inactive}(Nu {C:mult}+#3#{C:inactive} Multi)"
+                }
+            },
+            j_superposition = {
+                name = "Superpositie",
+                text = {
+                    "Maak een {C:tarot}tarot-{}kaart als",
+                    "pokerhand een",
+                    "{C:attention}aas{} en een {C:attention}straight{} bevat",
+                    "{C:inactive}(Moet ruimte voor zijn)"
+                }
+            },
             j_todo_list = {
                 name = "Takenlijst",
                 text = {
                     "Verdien {C:money}$#1#{} als {C:attention}pokerhand{}",
-                    "een {C:attention}#2#{} is.",
-                    "Pokerhand verandert",
-                    "aan het eind van de ronde"
+                    "een {C:attention}#2#{} is,",
+                    "pokerhand verandert",
+                    "bij elke uitbetaling"
                 }
             },
             j_ticket = {
@@ -570,21 +536,13 @@ return {
                     "{C:inactive}(#2#)"
                 }
             },
-            j_green_joker = {
-                name = "Groene Joker",
-                text = {
-                    "{C:mult}+#1#{} Multi per gespeelde hand",
-                    "{C:mult}-#2#{} Multi per weggegooide kaart",
-                    "{C:inactive}(Nu {C:mult}+#3#{C:inactive} Multi)"
-                }
-            },
             j_swashbuckler = {
                 name = "Vrijbuiter",
                 text = {
-                    "Voegt de verkoopwaarde",
-                    "van alle andere",
-                    "{C:attention}jokers{} in bezit toe aan Multi",
-                    "{C:inactive}(Momenteel {C:mult}+#1#{C:inactive} Multi)"
+                    "De verkoopwaarde van alle",
+                    "{C:attention}Jokers{} in bezit, links van",
+                    "deze kaart, wordt aan Multi toegevoegd",
+                    "{C:inactive}(Nu {C:mult}+#1#{C:inactive} Multi)"
                 },
                 unlock = {
                     "Verkoop in totaal",
@@ -596,7 +554,7 @@ return {
                 name = "Troubadour",
                 text = {
                     "{C:attention}+#1#{} handomvang,",
-                    "{C:blue}-#2#{} hand elke ronde"
+                    "{C:red}-#2#{} handen per ronde"
                 },
                 unlock = {
                     "Win {C:attention,E:1}#1#{} opeenvolgende",
@@ -607,10 +565,10 @@ return {
             j_certificate = {
                 name = "Certificaat",
                 text = {
-                    "Als de ronde begint,",
+                    "Als ronde begint,",
                     "wordt een willekeurige {C:attention}speelkaart{}",
-                    "{C:attention}{} met een willekeurige",
-                    "{C:attention}zegel{} aan je hand toegevoegd"
+                    "{C:attention}{} toegevoegd met een willekeurige",
+                    "{C:attention}zegel{} aan je hand toe"
                 },
                 unlock = {
                     "Heb een gouden",
@@ -648,8 +606,7 @@ return {
                 name = "Ongeldige stem",
                 text = {
                     "Reactiveer de {C:attention}eerst{} gespeelde",
-                    "kaart die scoort",
-                    "{C:attention}#1#{} keer extra"
+                    "gebruikte kaart bij het scoren"
                 },
                 unlock = {
                     "Versla een blind van een baas",
@@ -660,8 +617,8 @@ return {
                 name = "Ruwe diamant",
                 text = {
                     "Gespeelde kaarten met",
-                    "de kleur {C:diamonds}ruiten{} leveren",
-                    "{C:money}$#1#{} op bij scoren", 
+                    "de kleur {C:diamonds}ruiten{} levert",
+                    "{C:money}$#1#{} op bij scoren"
                 },
                 unlock = {
                     "Heb ten minste {E:1,C:attention}#1#",
@@ -675,7 +632,7 @@ return {
                     "Kans van {C:mult}#1# op #2#{} voor",
                     "gespeelde kaarten met",
                     "de kleur {C:hearts}harten{} geven",
-                    "{X:mult,C:white} X#3# {} Multi bij scoren,", 
+                    "{X:mult,C:white} X#3# {} Multi bij scoren,"
                 },
                 unlock = {
                     "Heb ten minste {E:1,C:attention}#1#",
@@ -701,7 +658,7 @@ return {
                 text = {
                     "Gespeelde kaarten met",
                     "de kleur {C:clubs}klaveren{} geven",
-                    "{C:mult}+#1#{} Multi bij scoren", 
+                    "{C:mult}+#1#{} Multi bij scoren"
                 },
                 unlock = {
                     "Heb ten minste {E:1,C:attention}#1#",
@@ -712,10 +669,10 @@ return {
             j_glass = {
                 name = "Glazen Joker",
                 text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "voor elke {C:attention}glaskaart",
+                    "Verdient {X:mult,C:white} X#1# {} Multi",
+                    "voor elke {C:attention}glazen kaart",
                     "die wordt vernietigd",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 },
                 unlock = {
                     "Heb ten minste {E:1,C:attention}#1#",
@@ -738,10 +695,10 @@ return {
             j_flower_pot = {
                 name = "Bloempot",
                 text = {
-                    "{X:mult,C:white} X#1# {} Multi als",
-                    "pokerhand een",
-                    "{C:diamonds}ruiten{}-kaart, {C:clubs}klaveren{}-kaart,",
-                    "{C:hearts}harten{}-kaart en {C:spades}schoppen{}-kaart bevat"
+                    "{X:mult,C:white} X#1# {} Multi als gespeelde",
+                    "hand een scorende",
+                    "{C:diamonds}ruiten{}, {C:clubs}klaveren{},",
+                    "{C:hearts}harten{}-kaart en {C:spades}schoppen{}-kaart"
                 },
                 unlock = {
                     "Bereik ante",
@@ -774,8 +731,7 @@ return {
             j_merry_andy = {
                 name = "Vrolijke Andy",
                 text = {
-                    "{C:red}+#1#{} weggooimogelijkheden",
-                    "per ronde,",
+                    "{C:red}+#1#{} weggooimogelijkheden,",
                     "{C:red}#2#{} handomvang"
                 },
                 unlock = {
@@ -813,10 +769,10 @@ return {
             j_seeing_double = {
                 name = "Dubbel zien",
                 text = {
-                    "{X:mult,C:white} X#1# {} Multi als gespeelde hand",
-                    "een scorende {C:clubs}klaveren{}-kaart",
-                    "en een scorende kaart van",
-                    "een andere {C:attention}kleur{} bevat"
+                    "{X:mult,C:white} X#1# {} Multi als gespeelde",
+                    "hand een scorende",
+                    "{C:clubs}klaveren{}-kaart en een scorende",
+                    "kaart van een andere {C:attention}kleur"
                 },
                 unlock = {
                     "Speel een hand",
@@ -840,10 +796,10 @@ return {
             j_hit_the_road = {
                 name = "De boer op",
                 text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "op voor elke weggegooide {C:attention}boer{}",
-                    "deze ronde",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "Levert {X:mult,C:white} X#1# {} Multi op",
+                    "per weggegooide",
+                    "{C:attention}boer{} deze ronde",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 },
                 unlock = {
                     "Gooi {E:1,C:attention}5",
@@ -936,35 +892,34 @@ return {
             j_red_card = {
                 name = "Rode kaart",
                 text = {
-                    "Deze joker levert",
-                    "{C:red}+#1#{} Multi op wanneer een",
-                    "{C:attention}boosterpakket{} wordt overgeslagen",
-                    "{C:inactive}(Momenteel {C:red}+#2#{C:inactive} Multi)"
+                    "Verdient {C:red}+#1#{} Multi als er een",
+                    "{C:attention}Boosterpakket{} is overgeslagen",
+                    "{C:inactive}(Nu {C:red}+#2#{C:inactive} Multi)"
                 }
             },
             j_madness = {
                 name = "Krankzinnigheid",
                 text = {
-                    "Als {C:attention}small blind{} of {C:attention}big blind{}",
-                    "is geselecteerd, krijg {X:mult,C:white} X#1# {} Multi",
-                    "en {C:attention}vernietig{} een willekeurige joker",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "Als {C:attention}blind{} is geselecteerd,",
+                    "verdien je {X:mult,C:white} X #1# {} Multi en",
+                    "{C:attention}vernietig{} je een willekeurige Joker",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {} Multi)"
                 }
             },
             j_square = {
                 name = "Vierkante Joker",
                 text = {
-                    "Deze joker levert {C:chips}+#2#{} fiches",
-                    "op als gespeelde hand",
-                    "precies {C:attention}4{} kaarten bevat",
-                    "{C:inactive}(Momenteel {C:chips}#1#{C:inactive} fiches)"
+                    "Levert {C:chips}+#2#{} fiches op als",
+                    "gespeelde hand",
+                    "precies {C:chips}4{} kaarten heeft",
+                    "{C:inactive}(Nu {C:chips}#1#{} fiches)"
                 }
             },
             j_seance = {
                 name = "Seance",
                 text = {
                     "Als een {C:attention}pokerhand{} een",
-                    "{C:attention}#1#{} is, maak een",
+                    "{C:attention}#1#{}, maak een",
                     "een willekeurige {C:spectral}spectrale{} kaart",
                     "{C:inactive}(Moet ruimte voor zijn)"
                 }
@@ -977,287 +932,6 @@ return {
                     "{C:inactive}(Moet ruimte voor zijn)"
                 }
             },
-            j_vampire = {
-                name = "Vampier",
-                text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "op per scorende gespeelde {C:attention}verbeterde kaart{},",
-                    "verwijdert {C:attention}kaartverbetering",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
-                }
-            },
-            j_shortcut = {
-                name = "Kortere route",
-                text = {
-                    "Staat toe dat {C:attention}straights{} worden",
-                    "gemaakt met leemtes van {C:attention}1 rang",
-                    "{C:inactive}(bijv.: {C:attention}10 8 6 5 3{C:inactive})"
-                }
-            },
-            j_hologram = {
-                name = "Hologram",
-                text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "op wanneer een {C:attention}speelkaart{}",
-                    "aan je kaartspel wordt toegevoegd",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
-                }
-            },
-            j_vagabond = {
-                name = "Vagebond",
-                text = {
-                    "Maak een {C:purple}tarot-{}kaart",
-                    "als een hand wordt gespeeld",
-                    "met maximaal {C:money}$#1#{}"
-                }
-            },
-            j_baron = {
-                name = "Baron",
-                text = {
-                    "Elke {C:attention}heer{}",
-                    "die je in je hand hebt",
-                    "levert {X:mult,C:white} X#1# {} Multi op"
-
-                }
-            },
-            j_cloud_9 = {
-                name = "Op wolkjes",
-                text = {
-                    "Verdient {C:money}$#1#{} voor elke",
-                    "{C:attention}9{} in je {C:attention}volledige kaartspel",
-                    "aan het einde van ronde",
-                    "{C:inactive}(Nu {C:money}$#2#{}{C:inactive})"
-                }
-            },
-            j_rocket = {
-                name = "Raket",
-                text = {
-                    "Verdien {C:money}$#1#{} aan het eind van de ronde",
-                    "Uitbetaling stijgt met {C:money}$#2#{}",
-                    "wanneer een {C:attention}baasblind{} wordt verslagen"
-                }
-            },
-            j_obelisk = {
-                name = "Obelisk",
-                text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "op per {C:attention}opeenvolgende{} gespeelde hand",
-                    "zonder je meest gespeelde",
-                    "{C:attention}pokerhand",
-                    "{C:inactive} te spelen (Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
-                }
-            },
-            j_midas_mask = {
-                name = "Midasmasker",
-                text = {
-                    "Alle gespeelde {C:attention}plaatjes{}",
-                    "worden {C:attention}gouden{} kaarten",
-                    "bij scoren"
-                }
-            },
-            j_luchador = {
-                name = "Luchador",
-                text = {
-                    "Verkoop deze kaart",
-                    "om de huidige",
-                    "{C:attention}Blind van een baas{} uit te schakelen"
-                }
-            },
-            j_photograph = {
-                name = "Foto",
-                text = {
-                    "Eerste gespeelde {C:attention}plaatje",
-                    "levert {X:mult,C:white} X#1# {} Multi op",
-                    "bij scoren"
-                }
-            },
-            j_gift = {
-                name = "Cadeaukaart",
-                text = {
-                    "Voegt {C:money}$#1#{} {C:attention}verkoopwaarde toe",
-                    "aan elke {C:attention}Joker{} en",
-                    "{C:attention}verbruiks{}-kaart bij",
-                    "einde van ronde"
-                }
-            },
-            j_turtle_bean = {
-                name = "Zwarte boon",
-                text = {
-                    "{C:attention}+#1#{} handomvang,",
-                    "vermindert met",
-                    "{C:red}#2#{} per ronde"
-                }
-            },
-            j_erosion = {
-                name = "Erosie",
-                text = {
-                    "{C:red}+#1#{} Multi voor elke",
-                    "kaart onder {C:attention}#3#{}",
-                    "in je volledige kaartspel",
-                    "{C:inactive}(Nu {C:red}+#2#{C:inactive} Multi)"
-                }
-            },
-            j_reserved_parking = {
-                name = "Gereserveerde parkeerplaats",
-                text = {
-                    "Elk {C:attention}plaatje{}",
-                    "dat je in je hand hebt",
-                    "heeft een kans van {C:green}#2# op #3#{}",
-                    "om {C:money}$#1#{} op te leveren"
-                    
-                }
-            },
-            j_mail = {
-                name = "Cashback",
-                text = {
-                    "Verdien {C:money}$#1#{} voor elke",
-                    "weggegooide {C:attention}#2#{}, de rang",
-                    "verandert elke ronde"
-                }
-            },
-            j_to_the_moon = {
-                name = "Naar de maan",
-                text = {
-                    "Verdien {C:money}$#1#{} extra",
-                    "{C:attention}rente{} voor elke {C:money}$ 5{} die je",
-                    "hebt aan het einde van ronde"
-                }
-            },
-            j_hallucination = {
-                name = "Hallucinatie",
-                text = {
-                    "Kans van {C:green}#1# op #2#{} om een",
-                    "{C:tarot}tarot{}-kaart te creëren als er een",
-                    "{C:attention}Boosterpakket{} is geopend",
-                    "{C:inactive}(Moet ruimte voor zijn)"
-                }
-            },
-            j_lucky_cat = {
-                name = "Boffende kat",
-                text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi",
-                    "op telkens als een {C:attention}bof{}-kaart",
-                    "{C:green}succesvol{} activeert",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
-                }
-            },
-            j_baseball = {
-                name = "Honkbalkaart",
-                text = {
-                    "{C:green}Ongewone{} Jokers",
-                    "geven elk {X:mult,C:white} X#1# {} Multi"
-                }
-            },
-            j_bull = {
-                name = "Stier",
-                text = {
-                    "{C:chips}+#1#{} fiches voor",
-                    "elke {C:money}$1{} die je hebt",
-                    "{C:inactive}(Momenteel {C:chips}+#2#{C:inactive} fiches)"
-                }
-            },
-            j_diet_cola = {
-                name = "Cola light",
-                text = {
-                    "Verkoop deze kaart om",
-                    "een gratis",
-                    "{C:attention}#1# te maken"
-                }
-            },
-            j_trading = {
-                name = "Ruilkaart",
-                text = {
-                    "Als {C:attention}eerste weggooimogelijkheid{} van de ronde",
-                    "maar {C:attention}1{} kaart heeft, vernietig",
-                    "deze dan en verdien {C:money}$#1#"
-                }
-            },
-            j_flash = {
-                name = "Flash-kaart",
-                text = {
-                    "Deze joker levert {C:mult}+#1#{} Multi",
-                    "op per {C:attention}verversing{} in de winkel",
-                    "{C:inactive}(Momenteel {C:mult}+#2#{C:inactive} Multi)"
-                }
-            },
-            j_popcorn= {
-                name = "Popcorn",
-                text = {
-                    "{C:mult}+#1#{} Multi",
-                    "{C:mult}-#2#{} Multi per",
-                    "gespeelde ronde"
-                }
-            },
-            j_ramen= {
-                name = "Noedels",
-                text = {
-                    "{X:mult,C:white} X#1# {} Multi,",
-                    "verliest {X:mult,C:white} X#2# {} Multi",
-                    "per weggegooide {C:attention}kaart{}"
-                }
-            },
-            j_trousers= {
-                name = "Reservebroek",
-                text = {
-                    "Deze joker levert {C:mult}+#1#{} Multi",
-                    "op als gespeelde hand",
-                    "een {C:attention}#2#",
-                    "{C:inactive} bevat (Momenteel {C:red}+#3#{C:inactive} Multi)"
-                }
-            },
-            j_ancient= {
-                name = "Oeroude Joker",
-                text = {
-                    "Elke gespeelde kaart met",
-                    "de kleur {V:1}#2#{} geeft",
-                    "{X:mult,C:white} X#1# {} Multi bij scoren,",
-                    "{s:0.8}kleur verandert aan einde van ronde"
-                }
-            },
-            j_walkie_talkie = {
-                name = "Walkietalkie",
-                text = {
-                    "Elke gespeelde {C:attention}10{} of {C:attention}4",
-                    "geeft {C:chips}+#1#{} fiches en",
-                    "{C:mult}+#2#{} Multi bij scoren"
-                },
-            },
-            j_selzer= {
-                name = "Seltzer",
-                text = {
-                    "Reactiveer alle",
-                    "gespeelde kaarten gedurende",
-                    "de volgende {C:attention}#1#{} handen"
-                }
-            },
-            j_castle = {
-                name = "Kasteel",
-                text = {
-                    "Deze Joker verdient {C:chips}+#1#{} fiches",
-                    "per weggegooide {V:1}#2#{} kaart,",
-                    "de kleur verandert elke ronde",
-                    "{C:inactive}(Nu {C:chips}+#3#{C:inactive} fiches)"
-                },
-            },
-            j_smiley = {
-                name = "Smiley",
-                text = {
-                    "Gespeelde {C:attention}plaatjes{}",
-                    "geven {C:mult}+#1#{} Multi",
-                    "bij scoren"
-                }
-            },
-            j_campfire = {
-                name = "Kampvuur",
-                text = {
-                    "Deze Joker verdient {X:mult,C:white}X#1#{} Multi",
-                    "per {C:attention}verkochte{} kaart, reset",
-                    "als {C:attention}blind van een baas{} is verslagen",
-                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
-                }
-            },
-
-
             j_stuntman = {
                 name = "Stuntman",
                 text = {
@@ -1311,9 +985,9 @@ return {
             j_shoot_the_moon = {
                 name = "Bereik de maan",
                 text = {
-                    "Elke {C:attention}vrouw{}",
-                    "in de hand",
-                    "levert {C:mult}+#1#{} Multi op"
+                    "{C:mult}+#1#{} Multi voor elke",
+                    "{C:attention}vrouw{}",
+                    "die je in je hand hebt"
                 },
                 unlock = {
                     "Speel elke {E:1,C:attention}hartenkaart",
@@ -1363,7 +1037,7 @@ return {
                 text = {
                     "Upgrade het level van",
                     "de eerste {C:attention}weggegooide",
-                    "pokerhand elke ronde"
+                    "pokerhand per ronde"
                 },
                 unlock = {
                     "Verkoop in totaal",
@@ -1375,8 +1049,7 @@ return {
                 name = "Bijbenen",
                 text = {
                     "{C:mult}+#1#{} Multi voor elke",
-                    "{C:money}$#2#{} die je hebt",
-                    "{C:inactive}(Momenteel {C:mult}+#3#{C:inactive} Multi)"
+                    "{C:money}$#2#{} die je hebt"
                 },
                 unlock = {
                     "Heb ten minste {E:1,C:attention}#1#",
@@ -1386,10 +1059,10 @@ return {
             j_caino = {
                 name = "Canio",
                 text = {
-                    "Deze joker levert {X:mult,C:white} X#1# {} Multi op",
-                    "wanneer een {C:attention}plaatje{}",
-                    "wordt vernietigd",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#2# {C:inactive} Multi)"
+                    "Levert {X:mult,C:white} X#1# {} Multi op",
+                    "voor elk {C:attention}plaatje{}",
+                    "dat wordt vernietigd",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1409,10 +1082,9 @@ return {
             j_yorick = {
                 name = "Yorick",
                 text = {
-                    "Deze joker levert",
-                    "{X:mult,C:white} X#1# {} Multi op telkens als {C:attention}#2#{C:inactive} [#3#]{}",
-                    "kaarten worden weggegooid",
-                    "{C:inactive}(Momenteel {X:mult,C:white} X#4# {C:inactive} Multi)"
+                    "{X:mult,C:white} X#1# {} Multi alleen",
+                    "na {C:attention}#2#{} weggooide kaarten",
+                    "{C:inactive}(Resterende weggooimogelijkheden: {C:attention}#3#{C:inactive})"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1438,6 +1110,323 @@ return {
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
+                }
+            },
+            j_sly = {
+                name = "Sluwe Joker",
+                text = {
+                    "{C:chips}+#1#{} fiches als gespeelde",
+                    "hand",
+                    "een {C:attention}#2# bevat"
+                }
+            },
+            j_wily = {
+                name = "Gehaaide Joker",
+                text = {
+                    "{C:chips}+#1#{} fiches als gespeelde",
+                    "hand",
+                    "een {C:attention}#2# bevat"
+                }
+            },
+            j_clever = {
+                name = "Slimme Joker",
+                text = {
+                    "{C:chips}+#1#{} fiches als gespeelde",
+                    "hand",
+                    "een {C:attention}#2# bevat"
+                }
+            },
+            j_devious = {
+                name = "Vileine Joker",
+                text = {
+                    "{C:chips}+#1#{} fiches als gespeelde",
+                    "hand",
+                    "een {C:attention}#2# bevat"
+                }
+            },
+            j_crafty = {
+                name = "Listige Joker",
+                text = {
+                    "{C:chips}+#1#{} fiches als gespeelde",
+                    "hand",
+                    "een {C:attention}#2# bevat"
+                }
+            },
+            j_vampire = {
+                name = "Vampier",
+                text = {
+                    "Verdient {X:mult,C:white} X#1# {} Multi per",
+                    "gespeelde {C:attention}verbeterde kaart{},",
+                    "verwijdert {C:attention}verbetering{C:inactive} van de kaart",
+                    "(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
+                }
+            },
+            j_shortcut = {
+                name = "Kortere route",
+                text = {
+                    "Je mag {C:attention}Straights{} maken waarbij",
+                    "je {C:attention}1 rang{C:inactive} overslaat",
+                    "(bijv.: {C:attention}2 3 5 7 8{C:inactive})"
+                }
+            },
+            j_hologram = {
+                name = "Hologram",
+                text = {
+                    "Verdient {X:mult,C:white} X#1# {} Multi",
+                    "per toegevoegde {C:attention}speelkaart{}",
+                    "aan je kaartspel",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
+                }
+            },
+            j_vagabond = {
+                name = "Vagebond",
+                text = {
+                    "Maak een {C:purple}tarot-{}kaart",
+                    "als een hand wordt gespeeld",
+                    "met maximaal {C:money}$#1#{}"
+                }
+            },
+            j_baron = {
+                name = "Baron",
+                text = {
+                    "Elke {C:attention}heer{}",
+                    "die je in je hand hebt",
+                    "levert {X:mult,C:white} X#1# {} Multi op"
+                }
+            },
+            j_cloud_9 = {
+                name = "Op wolkjes",
+                text = {
+                    "Verdient {C:money}$#1#{} voor elke",
+                    "{C:attention}9{} in je {C:attention}volledige kaartspel",
+                    "aan het einde van ronde",
+                    "{C:inactive}(Nu {C:money}$#2#{}{C:inactive})"
+                }
+            },
+            j_rocket = {
+                name = "Raket",
+                text = {
+                    "Verdien {C:money}$#1#{} aan het einde",
+                    "van de ronde. Verdient {C:money}$#2#{} als",
+                    "{C:attention}Blind van een baas{} is uitgeschakeld"
+                }
+            },
+            j_obelisk = {
+                name = "Obelisk",
+                text = {
+                    "{X:mult,C:white} X#1# {} Multi per",
+                    "opeenvolgende gespeelde hand",
+                    "zonder je meest gespeelde",
+                    "{C:attention}pokerhand te spelen",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
+                }
+            },
+            j_midas_mask = {
+                name = "Midasmasker",
+                text = {
+                    "Alle {C:attention}plaatjes{}",
+                    "worden {C:attention}gouden{} kaarten",
+                    "als deze worden gespeeld"
+                }
+            },
+            j_luchador = {
+                name = "Luchador",
+                text = {
+                    "Verkoop deze kaart",
+                    "om de huidige",
+                    "{C:attention}Blind van een baas{} uit te schakelen"
+                }
+            },
+            j_photograph = {
+                name = "Foto",
+                text = {
+                    "Eerste gespeelde {C:attention}plaatje",
+                    "levert {X:mult,C:white} X#1# {} Multi op",
+                    "bij scoren"
+                }
+            },
+            j_gift = {
+                name = "Cadeaukaart",
+                text = {
+                    "Voegt {C:money}$#1#{} {C:attention}verkoopwaarde toe",
+                    "aan elke {C:attention}Joker{} en",
+                    "{C:attention}verbruiks{}-kaart bij",
+                    "einde van ronde"
+                }
+            },
+            j_turtle_bean = {
+                name = "Zwarte boon",
+                text = {
+                    "{C:attention}+#1#{} handomvang,",
+                    "vermindert met",
+                    "{C:red}#2#{} per ronde"
+                }
+            },
+            j_erosion = {
+                name = "Erosie",
+                text = {
+                    "{C:red}+#1#{} Multi voor elke",
+                    "kaart onder {C:attention}#3#{}",
+                    "in je volledige kaartspel",
+                    "{C:inactive}(Nu {C:red}+#2#{C:inactive} Multi)"
+                }
+            },
+            j_reserved_parking = {
+                name = "Gereserveerde parkeerplaats",
+                text = {
+                    "Elk {C:attention}plaatje{}",
+                    "dat je in je hand hebt",
+                    "een kans van {C:green}#2# op #3#{}",
+                    "om {C:money}$#1#{} op te leveren"
+                }
+            },
+            j_mail = {
+                name = "Cashback",
+                text = {
+                    "Verdien {C:money}$#1#{} voor elke",
+                    "weggegooide {C:attention}#2#{}, de rang",
+                    "verandert elke ronde"
+                }
+            },
+            j_to_the_moon = {
+                name = "Naar de maan",
+                text = {
+                    "Verdien {C:money}$#1#{} extra",
+                    "{C:attention}rente{} voor elke {C:money}$ 5{} die je",
+                    "hebt aan het einde van ronde"
+                }
+            },
+            j_hallucination = {
+                name = "Hallucinatie",
+                text = {
+                    "Kans van {C:green}#1# op #2#{} om een",
+                    "{C:tarot}tarot{}-kaart te creëren als er een",
+                    "{C:attention}Boosterpakket{} is geopend",
+                    "{C:inactive}(Moet ruimte voor zijn)"
+                }
+            },
+            j_lucky_cat = {
+                name = "Boffende kat",
+                text = {
+                    "Verdient {X:mult,C:white} X#1# {} Multi per",
+                    "keer dat een {C:attention}bofkaart{}",
+                    "erin {C:green}slaagt{} om te activeren",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
+                }
+            },
+            j_baseball = {
+                name = "Honkbalkaart",
+                text = {
+                    "{C:green}Ongewone{} Jokers",
+                    "geven elk {X:mult,C:white} X#1# {} Multi"
+                }
+            },
+            j_bull = {
+                name = "Stier",
+                text = {
+                    "{C:chips}+#1#{} fiches per",
+                    "{C:money}dollar{} die je hebt",
+                    "{C:inactive}(Nu {C:chips}+#2#{C:inactive} fiches)"
+                }
+            },
+            j_diet_cola = {
+                name = "Cola light",
+                text = {
+                    "Verkoop deze kaart om",
+                    "een gratis",
+                    "{C:attention}#1# te maken"
+                }
+            },
+            j_trading = {
+                name = "Ruilkaart",
+                text = {
+                    "Als {C:attention}eerste weggooimogelijkheid{} van de ronde",
+                    "maar {C:attention}1{} kaart heeft, vernietig",
+                    "deze dan en verdien {C:money}$#1#"
+                }
+            },
+            j_flash = {
+                name = "Flash-kaart",
+                text = {
+                    "{C:mult}+#1#{} Multi per",
+                    "{C:attention}opnieuw gooien{} in de winkel",
+                    "{C:inactive}(Nu {C:mult}+#2#{C:inactive} Multi)"
+                }
+            },
+            j_popcorn = {
+                name = "Popcorn",
+                text = {
+                    "{C:mult}+#1#{} Multi",
+                    "{C:mult}-#2#{} Multi per",
+                    "gespeelde ronde"
+                }
+            },
+            j_trousers = {
+                name = "Reservebroek",
+                text = {
+                    "Verdient {C:mult}+#1#{} Multi als",
+                    "gespeelde hand",
+                    "een {C:attention}#2# bevat",
+                    "{C:inactive}(Nu {C:red}+#3#{C:inactive} Multi)"
+                }
+            },
+            j_ancient = {
+                name = "Oeroude Joker",
+                text = {
+                    "Elke gespeelde kaart met",
+                    "de kleur {V:1}#2#{} geeft",
+                    "{X:mult,C:white} X#1# {} Multi bij scoren,",
+                    "{s:0.8}kleur verandert aan einde van ronde"
+                }
+            },
+            j_ramen = {
+                name = "Noedels",
+                text = {
+                    "{X:mult,C:white} X#1# {} Multi,",
+                    "verliest {X:mult,C:white} X#2# {} Multi",
+                    "per weggegooide {C:attention}kaart{}"
+                }
+            },
+            j_walkie_talkie = {
+                name = "Walkietalkie",
+                text = {
+                    "Elke gespeelde {C:attention}10{} of {C:attention}4",
+                    "geeft {C:chips}+#1#{} fiches en",
+                    "{C:mult}+#2#{} Multi bij scoren"
+                }
+            },
+            j_selzer = {
+                name = "Seltzer",
+                text = {
+                    "Reactiveer alle",
+                    "gespeelde kaarten gedurende",
+                    "de volgende {C:attention}#1#{} handen"
+                }
+            },
+            j_castle = {
+                name = "Kasteel",
+                text = {
+                    "Deze Joker verdient {C:chips}+#1#{} fiches",
+                    "per weggegooide {V:1}#2#{} kaart,",
+                    "de kleur verandert elke ronde",
+                    "{C:inactive}(Nu {C:chips}+#3#{C:inactive} fiches)"
+                }
+            },
+            j_smiley = {
+                name = "Smiley",
+                text = {
+                    "Gespeelde {C:attention}plaatjes{}",
+                    "geven {C:mult}+#1#{} Multi",
+                    "bij scoren"
+                }
+            },
+            j_campfire = {
+                name = "Kampvuur",
+                text = {
+                    "Deze Joker verdient {X:mult,C:white}X#1#{} Multi",
+                    "per {C:attention}verkochte{} kaart, reset",
+                    "als {C:attention}blind van een baas{} is verslagen",
+                    "{C:inactive}(Nu {X:mult,C:white} X#2# {C:inactive} Multi)"
                 }
             }
         },
@@ -1481,9 +1470,9 @@ return {
                 }
             },
             v_reroll_surplus = {
-                name = "Overvloedig verversen",
+                name = "Overvloedig opnieuw gooien",
                 text = {
-                    "Verversen kost",
+                    "Opnieuw gooien kost",
                     "{C:money}$#1#{} minder"
                 }
             },
@@ -1513,7 +1502,7 @@ return {
             v_wasteful = {
                 name = "Verspillend",
                 text = {
-                    "Krijg",
+                    "Verdien",
                     "permanent {C:red}+#1#{} weggooimogelijkheid",
                     "per ronde"
                 }
@@ -1521,9 +1510,9 @@ return {
             v_seed_money = {
                 name = "Startkapitaal",
                 text = {
-                    "Verhoog de limiet",
-                    "voor verdiende rente in",
-                    "elke ronde tot {C:money}$#1#{}"
+                    "Verhoog de max. grens",
+                    "op verdiende rente",
+                    "per ronde naar {C:money}$#1#{}"
                 }
             },
             v_blank = {
@@ -1543,23 +1532,27 @@ return {
             v_hieroglyph = {
                 name = "Hiëroglief",
                 text = {
-                    "{C:attention}-#1#{} Ante,",
+                    "{C:attention}-#1#{} ante",
                     "{C:blue}-#1#{} hand",
-                    "elke ronde"
+                    "per ronde",
+                    "{C:attention}-#1#{} ante"
                 }
             },
             v_directors_cut = {
                 name = "Director's Cut",
                 text = {
-                    "Ververs blind van een baas",
+                    "Gooi blind van een baas",
                     "{C:attention}1{} keer per ante opnieuw,",
                     "{C:money}$#1#{} per gooi"
                 }
             },
-            v_paint_brush = {
-                name = "Penseel",
+            v_pattern = {
+                name = "Patroon",
                 text = {
-                    "{C:attention}+#1#{} handomvang"
+                    "Laat je meest gebruikte",
+                    "{C:attention}verbruiks{}-kaart opnieuw verschijnen",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(Moet ruimte voor zijn)"
                 }
             },
             v_overstock_plus = {
@@ -1629,14 +1622,14 @@ return {
                 }
             },
             v_reroll_glut = {
-                name = "Gulzig verversen",
+                name = "Gulzig opnieuw gooien",
                 text = {
-                    "Verversen kost",
+                    "Opnieuw gooien kost",
                     "{C:money}$#1#{} minder"
                 },
                 unlock = {
-                    "Ververs de winkel in totaal",
-                    "{C:attention}#1#{} keer",
+                    "Gooi de winkel in totaal",
+                    "{C:attention}#1#{} keer opnieuw",
                     "{C:inactive}(#2#)"
                 }
             },
@@ -1685,7 +1678,7 @@ return {
             v_recyclomancy = {
                 name = "Recyclomantie",
                 text = {
-                    "Krijg",
+                    "Verdien",
                     "permanent {C:red}+#1#{} weggooimogelijkheid",
                     "per ronde"
                 },
@@ -1698,9 +1691,9 @@ return {
             v_money_tree = {
                 name = "Geldboompje",
                 text = {
-                    "Verhoog de limiet",
-                    "voor verdiende rente in",
-                    "elke ronde tot {C:money}$#1#{}"
+                    "Verhoog de max. grens",
+                    "op verdiende rente",
+                    "per ronde naar {C:money}$#1#{}"
                 },
                 unlock = {
                     "Maximaliseer de rente",
@@ -1715,8 +1708,8 @@ return {
                     "{C:dark_edition}+1{} Jokervak"
                 },
                 unlock = {
-                    "Verzilver {C:voucher}Blanco{}",
-                    "{C:attention}#1#{} keer in totaal",
+                    "Verzilver {C:voucher}blanco{}",
+                    "{C:attention}#1#{} in totaal",
                     "{C:inactive}(#2#)"
                 }
             },
@@ -1724,7 +1717,7 @@ return {
                 name = "Illusie",
                 text = {
                     "{C:attention}Speelkaarten{} in de winkel",
-                    "kunnen een {C:enhanced}verbetering{},",
+                    "kunnen {C:enhanced}verbeterd{},",
                     "{C:dark_edition}editie{} en/of {C:attention}zegel{} hebben"
                 },
                 unlock = {
@@ -1736,36 +1729,59 @@ return {
             },
             v_petroglyph = {
                 name = "Rotstekening",
-                text = {
-                    "{C:attention}-#1#{} Ante,",
-                    "{C:red}-#1#{} weggooimogelijkheid",
-                    "elke ronde"
-                },
                 unlock = {
                     "Bereik ante",
                     "level {E:1,C:attention}#1#"
+                },
+                text = {
+                    "{C:attention}-#1#{} ante",
+                    "{C:red}-#1#{} weggooimogelijkheid",
+                    "per ronde"
                 }
             },
             v_retcon = {
                 name = "Teruggedraaid",
                 text = {
-                    "Ververs blind van een baas",
+                    "Gooi blind van een baas",
                     "{C:attention}onbeperkt{} aantal keer,",
-                    "{C:money}$#1#{} per keer"
+                    "{C:money}$#1#{} per gooi"
                 },
                 unlock = {
                     "Ontdek",
                     "{C:attention}#1#{} blinds"
                 }
             },
+            v_tesselation = {
+                name = "Betegeling",
+                text = {
+                    "Laat je meest gebruikte",
+                    "{C:attention}Joker{}-kaart verschijnen",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(Moet ruimte voor zijn)"
+                },
+                unlock = {
+                    "Koop de {C:dark_edition}polychrome",
+                    "editie van je",
+                    "meest gebruikte {C:attention}Joker",
+                    "in de winkel"
+                }
+            },
             v_palette = {
                 name = "Palet",
                 text = {
+                    "Houd {C:attention}+#1#{} kaarten",
+                    "in je hand",
                     "{C:attention}+#1#{} handomvang"
                 },
                 unlock = {
                     "Beperk handomvang",
                     "tot {C:attention}#1#{} kaarten"
+                }
+            },
+            v_paint_brush = {
+                name = "Penseel",
+                text = {
+                    "{C:attention}+#1#{} handomvang"
                 }
             }
         },
@@ -1775,16 +1791,16 @@ return {
                 text = {
                     "Maakt de laatste",
                     "{C:tarot}tarot{}- of {C:planet}planeet{}-kaart",
-                    "die in dit spel is gebruikt",
+                    "verschijnen die in dit spel is gebruikt",
                     "met uitzondering van {s:0.8,C:tarot}de dwaas{s:0.8}"
                 }
             },
             c_magician = {
                 name = "De magiër",
                 text = {
-                    "Verbetert {C:attention}#1#{}",
-                    "geselecteerde kaarten naar",
-                    "{C:attention}#2#s"
+                    "Verbetert {C:attention}#1#{} geselecteerde",
+                    "kaart naar een",
+                    "{C:attention}#2#"
                 }
             },
             c_high_priestess = {
@@ -1800,7 +1816,7 @@ return {
                 text = {
                     "Verbetert {C:attention}#1#",
                     "geselecteerde kaarten naar",
-                    "{C:attention}#2#en"
+                    "{C:attention}#2#'en"
                 }
             },
             c_emperor = {
@@ -1816,7 +1832,7 @@ return {
                 text = {
                     "Verbetert {C:attention}#1#",
                     "geselecteerde kaarten naar",
-                    "{C:attention}#2#en"
+                    "{C:attention}#2#'en"
                 }
             },
             c_lovers = {
@@ -1953,7 +1969,7 @@ return {
             c_mercury = {
                 name = "Mercurius",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -1962,7 +1978,7 @@ return {
             c_venus = {
                 name = "Venus",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -1971,7 +1987,7 @@ return {
             c_earth = {
                 name = "Aarde",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -1980,7 +1996,7 @@ return {
             c_mars = {
                 name = "Mars",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -1989,7 +2005,7 @@ return {
             c_jupiter = {
                 name = "Jupiter",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -1998,7 +2014,7 @@ return {
             c_saturn = {
                 name = "Saturnus",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2007,7 +2023,7 @@ return {
             c_uranus = {
                 name = "Uranus",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2016,7 +2032,7 @@ return {
             c_neptune = {
                 name = "Neptunus",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2025,7 +2041,7 @@ return {
             c_pluto = {
                 name = "Pluto",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2034,7 +2050,7 @@ return {
             c_ceres = {
                 name = "Ceres",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2043,7 +2059,7 @@ return {
             c_planet_x = {
                 name = "Planeet X",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog:",
+                    "{S:0.8}({S:0.8,V:1}level#1#{S:0.8}){} Level omhoog:",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
@@ -2052,12 +2068,12 @@ return {
             c_eris = {
                 name = "Eris",
                 text = {
-                    "{S:0.8}({S:0.8,V:1}level #1#{S:0.8}){} Level omhoog",
+                    "{S:0.8}({S:0.8,V:1}lvl.#1#{S:0.8}){} Level omhoog",
                     "{C:attention}#2#",
                     "{C:mult}+#3#{} Multi en",
                     "{C:chips}+#4#{} fiches"
                 }
-            },
+            }
         },
         Spectral = {
             c_familiar = {
@@ -2083,8 +2099,8 @@ return {
                 text = {
                     "Vernietig {C:attention}1{} willekeurige",
                     "kaart in je hand, voeg {C:attention}#1#",
-                    "willekeurige {C:attention}verbeterde cijferkaarten",
-                    "{C:attention}{} aan je hand toe"
+                    "willekeurige {C:attention}verbeterde kaart toe met een getal",
+                    "{C:attention}met een cijfer{} aan je hand toe"
                 }
             },
             c_talisman = {
@@ -2144,6 +2160,22 @@ return {
                     "levert {C:money}$#2# op"
                 }
             },
+            c_soul = {
+                name = "De ziel",
+                text = {
+                    "Creëert een",
+                    "{C:legendary,E:1}mythische{} Joker",
+                    "{C:inactive}(Moet ruimte voor zijn)"
+                }
+            },
+            c_black_hole = {
+                name = "Zwart gat",
+                text = {
+                    "Upgrade elke",
+                    "{C:legendary,E:1}pokerhand",
+                    "met {C:attention}1{} level"
+                }
+            },
             c_ankh = {
                 name = "Ankh",
                 text = {
@@ -2155,7 +2187,7 @@ return {
             c_deja_vu = {
                 name = "Déjà vu",
                 text = {
-                    "Voeg een {C:red}rode zegel{} toe",
+                    "Voeg een {C:red}rood zegel{} toe",
                     "aan {C:attention}1{} geselecteerde",
                     "kaart in je hand"
                 }
@@ -2171,7 +2203,7 @@ return {
             c_trance = {
                 name = "Trance",
                 text = {
-                    "Voeg een {C:blue}blauwe zegel{} toe",
+                    "Voeg een {C:blue}blauw zegel{} toe",
                     "aan {C:attention}1{} geselecteerde",
                     "kaart in je hand"
                 }
@@ -2179,7 +2211,7 @@ return {
             c_medium = {
                 name = "Medium",
                 text = {
-                    "Voeg een {C:purple}paarse zegel{} toe",
+                    "Voeg een {C:purple}paars zegel{} toe",
                     "aan {C:attention}1{} geselecteerde",
                     "kaart in je hand"
                 }
@@ -2190,22 +2222,6 @@ return {
                     "Maak {C:attention}#1#{} kopieën van",
                     "{C:attention}1{} geselecteerde kaart",
                     "in je hand"
-                }
-            },
-            c_soul = {
-                name = "De ziel",
-                text = {
-                    "Creëert een",
-                    "{C:legendary,E:1}mythische{} Joker",
-                    "{C:inactive}(Moet ruimte voor zijn)"
-                }
-            },
-            c_black_hole = {
-                name = "Zwart gat",
-                text = {
-                    "Upgrade elke",
-                    "{C:legendary,E:1}pokerhand",
-                    "met {C:attention}1{} level"
                 }
             }
         },
@@ -2355,16 +2371,15 @@ return {
             stake_orange = {
                 name = "Oranje inzet",
                 text = {
-                    "Winkel kan {C:attention}vergankelijke{} jokers hebben",
-                    "{C:inactive,s:0.8}(Zonder buff na 5 rondes)",
+                    "{C:attention}Boosterpakketten{} kosten",
+                    "{C:money}$ 1{} meer per ante",
                     "{s:0.8}Past alle eerdere inzetten toe"
                 }
             },
             stake_gold = {
                 name = "Gouden inzet",
                 text = {
-                    "Winkel kan {C:attention}huur{}-jokers hebben",
-                    "{C:inactive,s:0.8}(Kosten {C:money,s:0.8}$3{C:inactive,s:0.8} per ronde)",
+                    "{C:attention}-1{} handomvang",
                     "{s:0.8}Past alle eerdere inzetten toe"
                 }
             }
@@ -2373,47 +2388,43 @@ return {
             tag_uncommon = {
                 name = "Ongewone tag",
                 text = {
-                    "Winkel heeft een gratis",
-                    "{C:green}ongewone joker"
+                    "Winkel heeft een",
+                    "{C:green}ongewone Joker"
                 }
             },
             tag_rare = {
                 name = "Zeldzame tag",
                 text = {
-                    "Winkel heeft een gratis",
-                    "{C:red}zeldzame joker"
+                    "Winkel heeft een",
+                    "{C:red}zeldzame Joker"
                 }
             },
             tag_negative = {
                 name = "Negatieve tag",
                 text = {
-                    "Volgende basiseditie-",
-                    "winkeljoker is gratis en",
-                    "wordt {C:dark_edition}negatief"
+                    "Winkel heeft een",
+                    "{C:dark_edition}negatieve Joker"
                 }
             },
             tag_foil = {
                 name = "Folie tag",
                 text = {
-                    "Volgende basiseditie-",
-                    "winkeljoker is gratis en",
-                    "wordt {C:dark_edition}folie"
+                    "Winkel heeft een",
+                    "{C:dark_edition}folie Joker"
                 }
             },
             tag_holo = {
                 name = "Holografische tag",
                 text = {
-                    "Volgende basiseditie-",
-                    "winkeljoker is gratis en",
-                    "wordt {C:dark_edition}holografisch"
+                    "Winkel heeft een",
+                    "{C:dark_edition}holografische Joker"
                 }
             },
             tag_polychrome = {
                 name = "Polychrome tag",
                 text = {
-                    "Volgende basiseditie-",
-                    "winkeljoker is gratis en",
-                    "wordt {C:dark_edition}polychroom"
+                    "Winkel heeft een",
+                    "{C:dark_edition}polychrome Joker"
                 }
             },
             tag_investment = {
@@ -2434,8 +2445,8 @@ return {
             tag_boss = {
                 name = "Baastag",
                 text = {
-                    "Ververst de",
-                    "{C:attention}blind van een baas"
+                    "Gooit de",
+                    "{C:attention}blind van een baas opnieuw"
                 }
             },
             tag_standard = {
@@ -2463,7 +2474,7 @@ return {
                 name = "Lolbroektag",
                 text = {
                     "Levert een gratis",
-                    "{C:attention}Lolbroekenpakket{} op"
+                    "{C:attention}Lolbroekenpakket op"
                 }
             },
             tag_handy = {
@@ -2508,7 +2519,7 @@ return {
             tag_d_six = {
                 name = "D6-tag",
                 text = {
-                    "Ververst in de volgende winkel",
+                    "Opnieuw gooien in de volgende winkel",
                     "begint met {C:money}$ 0"
                 }
             },
@@ -2516,7 +2527,7 @@ return {
                 name = "Bijvultag",
                 text = {
                     "Maakt tot {C:attention}#1#",
-                    "{C:blue}gewone{} Jokers",
+                    "{C:blue}gewone{} Jokers verschijnen",
                     "{C:inactive}(Moet ruimte voor zijn)"
                 }
             },
@@ -2562,8 +2573,8 @@ return {
             bl_hook = {
                 name = "De haak",
                 text = {
-                    "Gooit 2 willekeurige kaarten",
-                    "per gespeelde hand weg"
+                    "Gooit 2 willekeurige",
+                    "kaarten per gespeelde hand"
                 }
             },
             bl_wall = {
@@ -2575,8 +2586,8 @@ return {
             bl_wheel = {
                 name = "Het rad",
                 text = {
-                    " op 7 kaarten worden met de ",
-                    "afbeelding naar beneden getrokken"
+                    " op 7 kaarten worden",
+                    "met de afbeelding naar beneden getrokken"
                 }
             },
             bl_arm = {
@@ -2670,8 +2681,8 @@ return {
             bl_house = {
                 name = "Het huis",
                 text = {
-                    "Eerste hand wordt met de ",
-                    "afbeelding naar beneden getrokken"
+                    "Eerste hand wordt",
+                    "met de afbeelding naar beneden getrokken"
                 }
             },
             bl_club = {
@@ -2770,7 +2781,7 @@ return {
                 name = "Geel kaartspel",
                 text = {
                     "Begin met",
-                    "{C:money}$#1# extra"
+                    "extra {C:money}$#1#"
                 }
             },
             b_green = {
@@ -2801,7 +2812,7 @@ return {
                 }
             },
             b_nebula = {
-                name = "Nevel kaartspel",
+                name = "Nevelkaartspel",
                 text = {
                     "Begin het spel met de",
                     "{C:planet,T:v_telescope}#1#{} voucher",
@@ -2809,12 +2820,12 @@ return {
                     "{C:red}#2#{} verbruiksvak"
                 }
             },
-            b_ghost = {
-                name = "Spokenkaartspel",
+            b_metal = {
+                name = "Metalen kaartspel",
                 text = {
-                    "{C:spectral}Spectrale{} kaarten kunnen",
-                    "verschijnen in de winkel,",
-                    "je begint met een {C:spectral,T:c_hex}Hex{}-kaart"
+                    "Begin het spel met {C:attention}#1#",
+                    "speelkaarten die verbeterd zijn",
+                    "naar {C:attention}staalkaarten"
                 }
             },
             b_abandoned = {
@@ -2833,36 +2844,34 @@ return {
                     "{C:attention}26{C:hearts} harten{} in het kaartspel"
                 }
             },
-            b_zodiac = {
-                name = "Sterrenbeeldkaartspel",
+            b_rocky = {
+                name = "Rotsachtig kaartspel",
                 text = {
-                    "Begin het spel met",
-                    "{C:tarot,T:v_tarot_merchant}#1#{},",
-                    "{C:planet,T:v_planet_merchant}#2#{},",
-                    "en {C:attention,T:v_overstock_norm}#3#"
+                    "Begin het spel met {C:attention}#1#",
+                    "extra {C:attention}steenkaarten"
                 }
             },
-            b_painted = {
-                name = "Geschilderd kaartspel",
+            b_braided = {
+                name = "Gevlochten kaartspel",
                 text = {
-                    "{C:attention}+#1#{} handomvang",
-                    "{C:red}#2#{} Jokervak"
+                    "Eerst gespeelde hand",
+                    "is geüpgraded naar {C:attention}level 3"
                 }
             },
             b_anaglyph = {
-                name = "Anaglyph kaartspel",
+                name = "Anaglyph-kaartspel",
                 text = {
                     "Na het verslaan van elke",
-                    "{C:attention}blind van een baas{}",
-                    "verdien je een {C:attention,T:tag_double}#1#"
+                    "{C:attention}blind van een baas{} verdien je een",
+                    "{C:attention,T:tag_double}#1#"
                 }
             },
             b_plasma = {
                 name = "Plasmakaartspel",
                 text = {
-                    "Breng {C:blue}fiches{} en {C:red}Multi{} in",
-                    "in evenwicht bij berekening",
-                    "van score voor gespeelde hand",
+                    "Breng {C:blue}fiches{} en",
+                    "{C:red}Multi{} in evenwicht bij",
+                    "berekening van score voor gespeelde hand",
                     "{C:red}X#1#{} basisomvang blind"
                 }
             },
@@ -2879,6 +2888,30 @@ return {
                 text = {
                     ""
                 }
+            },
+            b_ghost = {
+                name = "Spokenkaartspel",
+                text = {
+                    "{C:spectral}Spectrale{} kaarten kunnen",
+                    "verschijnt in de winkel,",
+                    "begin met een {C:spectral,T:c_hex}Hex{}-kaart"
+                }
+            },
+            b_zodiac = {
+                name = "Dierenriemkaartspel",
+                text = {
+                    "Begin het spel met",
+                    "{C:tarot,T:v_tarot_merchant}#1#{},",
+                    "{C:planet,T:v_planet_merchant}#2#{},",
+                    "en {C:attention,T:v_overstock_norm}#3#"
+                }
+            },
+            b_painted = {
+                name = "Geschilderd kaartspel",
+                text = {
+                    "{C:attention}+#1#{} handomvang",
+                    "{C:red}#2#{} Jokervak"
+                }
             }
         },
         Other = {
@@ -2888,52 +2921,6 @@ return {
                     "Verdien {C:money}$ 3{} als deze",
                     "kaart wordt gespeeld",
                     "en scoort"
-                }
-            },
-            red_seal = {
-                name = "Rood zegel",
-                text = {
-                    "Reactiveer deze",
-                    "kaart {C:attention}1{} keer"
-                }
-            },
-            blue_seal = {
-                name = "Blauw zegel",
-                text = {
-                    "Creëert de {C:planet}planeet{}-kaart",
-                    "voor laatste gespeelde {C:attention}pokerhand{}",
-                    "van ronde indien in hand {C:attention}gehouden{}",
-                    "{C:inactive}(Moet ruimte voor zijn)"
-                }
-            },
-            purple_seal = {
-                name = "Paars zegel",
-                text = {
-                    "Maakt een {C:tarot}tarot-{}kaart",
-                    "als deze wordt {C:attention}weggegooid",
-                    "{C:inactive}(Moet ruimte voor zijn)"
-                }
-            },
-            eternal = {
-                name = "Eeuwig",
-                text = {
-                    "Kan niet verkocht",
-                    "of vernietigd worden"
-                }
-            },
-            perishable = {
-                name = "Vergankelijk",
-                text = {
-                    "Zonder buff na",
-                    "{C:attention}#1#{} rondes",
-                    "{C:inactive}({C:attention}#2#{C:inactive} resterend)"
-                }
-            },
-            rental = {
-                name = "Huur",
-                text = {
-                    "Verlies {C:money}$#1#{} aan",
-                    "het einde van de ronde"
                 }
             },
             white_sticker = {
@@ -3002,7 +2989,7 @@ return {
             },
             playing_card = {
                 text = {
-                    " {C:light_black}#1# van {V:1}#2# "
+                    "{C:light_black}#1# van {V:1}#2#"
                 }
             },
             card_chips = {
@@ -3015,25 +3002,19 @@ return {
                     "{C:chips}+#1#{} extra fiches"
                 }
             },
-            remove_negative = {
-                name = "Negatief",
-                text = {
-                    "{C:inactief,s:0.9} (Verwijdert {C:dark_edition,s:0.9}Negative{C:inactive,s:0.9} uit kopie)"
-                }
-            },
             locked = {
                 name = "Vergrendeld",
                 text = {}
             },
             debuffed_default = {
-                name = "Zonder buff",
+                name = "Zonder extra",
                 text = {
                     "Alle vaardigheden",
                     "zijn uitgeschakeld"
                 }
             },
             debuffed_playing_card = {
-                name = "Zonder buff",
+                name = "Zonder extra",
                 text = {
                     "Levert geen fiches op",
                     "en alle vaardigheden",
@@ -3045,15 +3026,6 @@ return {
                 text = {
                     "Niet beschikbaar",
                     "in deze demo"
-                }
-            },
-            challenge_locked = {
-                name = "Vergrendeld",
-                text = {
-                    "Win een spel met ten minste",
-                    "#1# verschillende kaartspellen om",
-                    "uitdagingsmodus vrij te spelen",
-                    "{C:attention,s:2}#2#/#1#"
                 }
             },
             demo_shop_locked = {
@@ -3296,6 +3268,45 @@ return {
                     "vastgepind aan de",
                     "meest linkse positie"
                 }
+            },
+            red_seal = {
+                name = "Rood zegel",
+                text = {
+                    "Reactiveer deze",
+                    "kaart {C:attention}1{} keer"
+                }
+            },
+            blue_seal = {
+                name = "Blauw zegel",
+                text = {
+                    "Maakt een {C:planet}planeet{}-kaart",
+                    "als deze kaart wordt {C:attention}vastgehouden{} in",
+                    "hand aan het einde van ronde"
+                }
+            },
+            purple_seal = {
+                name = "Paars zegel",
+                text = {
+                    "Maakt een {C:tarot}tarot-{}kaart",
+                    "als deze wordt {C:attention}weggegooid",
+                    "{C:inactive}(Moet ruimte voor zijn)"
+                }
+            },
+            eternal = {
+                name = "Eeuwig",
+                text = {
+                    "Kan niet verkocht",
+                    "of vernietigd worden"
+                }
+            },
+            challenge_locked = {
+                name = "Vergrendeld",
+                text = {
+                    "Win een spel met ten minste",
+                    "#1# verschillende kaartspellen om",
+                    "uitdagingsmodus vrij te spelen",
+                    "{C:attention,s:2}#2#/#1#"
+                }
             }
         }
     },
@@ -3348,96 +3359,7 @@ return {
             current_streak = "",
             poker_hand = "Meest gespeelde hand"
         },
-        achievement_names = {
-            ante_up = "Verhoog de ante!",
-            ante_upper = "Anteverhoger!",
-            heads_up = "Heads-up",
-            low_stakes = "Lage inzet",
-            mid_stakes = "Gemiddelde inzet",
-            high_stakes = "Hoge inzet",
-            card_player = "Kaartspeler",
-            card_discarder = "Kaartweggooier",
-            nest_egg = "Nestei",
-            flushed = "Geflusht",
-            speedrunner = "Snelheidsduivel",
-            roi = "Rendement",
-            shattered = "Vernietigd",
-            royale = "Royaal",
-            retrograde = "Achteruitgaand",
-            _10k = "10 K",
-            _1000k = "1000 K",
-            _100000k = "100.000 K",
-            tiny_hands = "Kleine handen",
-            big_hands = "Grote handen",
-            you_get_what_you_get = "Pak wat je pakken kunt",
-            rule_bender = "Buig de regels",
-            rule_breaker = "Regelbreker",
-            legendary = "Mythisch",
-            astronomy = "Astronomie",
-            cartomancy = "Kaartenmagie",
-            clairvoyance = "Helderziendheid",
-            extreme_couponer = "Koopjesjager",
-            completionist = "Afronder",
-            completionist_plus = "Afronder+",
-            completionist_plus_plus = "Afronder++", 
-        },
-        achievement_descriptions = {
-            ante_up = "Bereik ante 4",
-            ante_upper = "Bereik ante 8",
-            heads_up = "Win een spel",
-            low_stakes = "Win een spel met ten minste moeilijkheidsgraad rode inzet",
-            mid_stakes = "Win een spel met ten minste moeilijkheidsgraad zwarte inzet",
-            high_stakes = "Win een spel met ten minste moeilijkheidsgraad gouden inzet",
-            card_player = "Speel ten minste 2500 kaarten",
-            card_discarder = "Gooi ten minste 2500 kaarten weg",
-            nest_egg = "Zorg dat je $ 400 of meer hebt in één spel",
-            flushed = "Speel een flush met 5 Wildkaarten",
-            speedrunner = "Win een spel in maximaal 12 rondes",
-            roi = "Koop 5 vouchers vóór ante 4",
-            shattered = "Breek 2 glazen kaarten in één hand",
-            royale = "Speel een royal flush",
-            retrograde = "Bereik level 10 in een pokerhand",
-            _10k = "Scoor 10.000 fiches in één hand",
-            _1000k = "Scoor 1.000.000 fiches in één hand",
-            _100000k = "Scoor 100.000.000 fiches in één hand",
-            tiny_hands = "Dun je kaartspel uit tot maximaal 20 kaarten",
-            big_hands = "Zorg dat je 80 of meer kaarten in je kaartspel hebt",
-            you_get_what_you_get = "Win een spel zonder de winkel te verversen",
-            rule_bender = "Voltooi een uitdagingsspel",
-            rule_breaker = "Voltooi elk uitdagingsspel",
-            legendary = "Ontdek een mythische Joker",
-            astronomy = "Ontdek elke planeetkaart",
-            cartomancy = "Ontdek elke tarotkaart",
-            clairvoyance = "Ontdek elke spectrale kaart",
-            extreme_couponer = "Ontdek elke voucher",
-            completionist = "Ontdek 100% van je verzameling",
-            completionist_plus = "Win met elk kaartspel met moeilijkheidsgraad gouden inzet",
-            completionist_plus_plus = "Verdien een gouden sticker met elke Joker", 
-        },
-        challenge_names = {
-            c_omelette_1 = "De omelet",
-            c_city_1 = "15-minutenstad",
-            c_rich_1 = "Rijken worden rijker",
-            c_knife_1 = "Bloedstollend",
-            c_xray_1 = "Röntgenogen",
-            c_mad_world_1 = "Krankzinnige wereld",
-            c_luxury_1 = "Welvaartsbelasting",
-            c_non_perishable_1 = "Houdbaar",
-            c_medusa_1 = "Medusa",
-            c_double_nothing_1 = "Dubbel of niets",
-            c_typecast_1 = "Beeldvorming",
-            c_inflation_1 = "Inflatie",
-            c_bram_poker_1 = "Bram Poker",
-            c_fragile_1 = "Kwetsbaar",
-            c_monolith_1 = "Monoliet",
-            c_blast_off_1 = "Explosie",
-            c_five_card_1 = "Trekking van vijf kaarten",
-            c_golden_needle_1 = "Gouden naald",
-            c_cruelty_1 = "Wreedheid",
-            c_jokerless_1 = "Zonder jokers"
-        },
         poker_hands = {
-            ['Flush Five'] = "5 flushes",
             ['Flush House'] = "Flush House",
             ['Five of a Kind'] = "Five of a Kind",
             ['Royal Flush'] = "Royal Flush",
@@ -3449,12 +3371,10 @@ return {
             ['Three of a Kind'] = "Three of a Kind",
             ['Two Pair'] = "Two Pair",
             ['Pair'] = "Pair",
-            ['High Card'] = "High Card"
+            ['High Card'] = "High Card",
+            ['Flush Five'] = "5 flushes"
         },
         poker_hand_descriptions = {
-            ['Flush Five'] = {
-                "5 kaarten met dezelfde rang en kleur"
-            },
             ['Flush House'] = {
                 "Een Three of a Kind en een Pair waarbij",
                 "alle kaarten dezelfde kleur hebben"
@@ -3498,6 +3418,9 @@ return {
             ['High Card'] = {
                 "Als de gespeelde hand anders is dan bovenstaande,",
                 "scoort alleen de kaart met de hoogste rang"
+            },
+            ['Flush Five'] = {
+                "5 kaarten met dezelfde rang en kleur"
             }
         },
         labels = {
@@ -3514,13 +3437,11 @@ return {
             polychrome = "Polychroom",
             negative = "Negatief",
             gold_seal = "Gouden zegel",
+            locked = "Vergrendeld",
             blue_seal = "Blauw zegel",
             red_seal = "Rood zegel",
             purple_seal = "Paars zegel",
-            locked = "Vergrendeld",
             eternal = "Eeuwig",
-            perishable = "Vergankelijk",
-            rental = "Huur",
             pinned_left = "Vastgepind"
         },
         dictionary = {
@@ -3539,7 +3460,7 @@ return {
             b_run_info_1 = "Spel",
             b_run_info_2 = "Info",
             b_options = "Opties",
-            b_reroll_boss = "Baas verversen",
+            b_reroll_boss = "Baas opnieuw gooien",
             b_skip_blind = "Blind overslaan",
             b_skip_reward = "Beloning overslaan",
             b_skip = "Overslaan",
@@ -3548,7 +3469,6 @@ return {
             b_collection = "Verzameling",
             b_seed = "Seed",
             b_copy_seed = "Seed kopiëren",
-            b_copy = "Kopiëren",
             b_credits = "Credits",
             b_stats = "Statistieken",
             b_settings = "Instellingen",
@@ -3559,9 +3479,6 @@ return {
             b_set_gamespeed = "Spelsnelheid",
             b_set_play_discard_pos = "Positie speel-/weggooiknop",
             b_set_screenshake = "Scherm schudden",
-            b_high_contrast_cards = "Kaarten met hoog contrast",
-            b_reduced_motion = "Verminderde beweging",
-            b_set_rumble = "Trilling van controller",
             b_set_crash_reports = "Crashmeldingen",
             b_set_monitor = "Monitor weergeven",
             b_set_windowmode = "Venstermodus",
@@ -3598,7 +3515,6 @@ return {
             b_booster_packs = "Boosterpakketten",
             b_tags = "Tags",
             b_decks = "Kaartspellen",
-            b_seals = "Zegels",
             b_continue = "Doorgaan",
             b_back = "Terug",
             b_music = "Muziek",
@@ -3606,7 +3522,6 @@ return {
             b_imagery = "Afbeeldingen",
             b_new_run = "Nieuw spel",
             b_challenges = "Uitdagingen",
-            b_new_challenge = "Nieuwe uitdaging starten",
             b_current_profile = "Huidig profiel",
             b_load_profile = "Profiel laden",
             b_create_profile = "Profiel aanmaken",
@@ -3615,20 +3530,18 @@ return {
             b_rules = "Regels",
             b_restrictions = "Beperkingen",
             b_deck = "Kaartspel",
-            b_play_cap = "SPEEL",
+            b_play_cap = "SPELEN",
             b_options_cap = "OPTIES",
-            b_collection_cap = "COLLECTIE",
-            b_quit_cap = "SLUIT",
+            b_collection_cap = "VERZAMELING",
+            b_quit_cap = "SLUITEN",
             b_cash_out = "Uitbetalen",
-            b_unlock_all = "Alles vrijspelen",
             k_unknown = "?????",
             k_compatible = "compatibel",
             k_incompatible = "incompatibel",
-            k_active = "actief",
             k_round = "Ronde",
             k_ante = "Ante",
             k_seed = "Seed",
-            k_reroll = "Verversen",
+            k_reroll = "Opnieuw gooien",
             k_mult = "Multi",
             k_rank = "Rang",
             k_suit = "Kleur",
@@ -3637,14 +3550,13 @@ return {
             k_uncommon = "Ongewoon",
             k_rare = "Zeldzaam",
             k_legendary = "Mythisch",
-            k_debuffed = "Zonder buff",
+            k_debuffed = "Zonder extra",
             k_locked = "Vergrendeld",
             k_undisovered = "Niet ontdekt",
             k_joker = "Joker",
             k_voucher = "Voucher",
             k_tarot = "Tarot",
             k_planet = "Planeet",
-            k_deck = "Kaartspel",
             k_dwarf_planet = "Dwergplaneet",
             k_planet_q = "Planeet?",
             k_spectral = "Spectraal",
@@ -3676,18 +3588,12 @@ return {
             k_x_base = "X-basis",
             k_not_discovered = "Niet ontdekt",
             k_unlocked_ex = "Vrijgespeeld!",
-            k_achievement = "Prestatie",
-            k_trophy = "Prijs",
             k_challenge_mode = "Uitdagingsmodus",
             k_daily_run = "Dagelijks spel",
             k_profile = "Profiel",
             k_wins = "Gewonnen",
             k_empty_caps = "LEEG",
             k_collection = "Verzameling",
-            k_progress = "Voortgang",
-            k_challenges = "Uitdagingen",
-            k_joker_stickers = "Jokerstickers",
-            k_deck_stake_wins = "Kaartspel inzet gewonnen",
             k_stake_level = "Inzetniveau",
             k_none = "Geen",
             k_game_modifiers = "Spelaanpassingen",
@@ -3699,46 +3605,28 @@ return {
             k_best_hand = "Beste hand",
             k_seeded_run = "Spel met seed",
             k_enter_seed = "Seed invoeren",
-            k_enter_name = "Naam invoeren",
             k_lvl = "level",
             k_skipped_cap = "OVERGESLAGEN",
             k_no_reward = "Geen beloning",
             k_reward = "Beloning",
             k_nope_ex = "Echt niet!",
-            k_not_allowed_ex = "Niet toegestaan!",
             k_or = "of",
-            k_poker_hand = "pokerhand",
-            k_gold = "Goud",
-            k_card_stats = "Kaartstatistieken",
             k_balanced = "Gebalanceerd",
-            k_view = "Weergave",
-            k_all_hands = "Alle handen",
-            k_high_score_ex = "Highscore!",
-            k_demo_version_ex = "Demoversie!",
-            k_playing_as = "Speelt als",
-            k_choose = "Kiezen",
-            k_achievements_disabled = "Prestaties uitgeschakeld",
-            k_trophies_disabled = "Prijzen uitgeschakeld",
             ph_improve_run = "Verbeter je spel!",
-            ph_no_boss_active = "geen baas actief",
             ph_sneak_peek = "Voorproefje",
             ph_deck_preview_stones = "Stenen",
             ph_deck_preview_effective = "Effectief totaal vanwege Jokers, blinds en kaartverbeteringen",
             ph_blind_score_at_least = "Scoor ten minste",
-            ph_blind_reward = "Beloning: ",
-            ph_4_7_of_clubs = "vier 7 van Klaveren",
+            ph_blind_reward = "Beloning:",
             ph_up_ante_1 = "Verhoog de ante",
             ph_up_ante_2 = "Verhoog alle blinds",
             ph_up_ante_3 = "Vernieuw blinds",
-            ph_select_challenge = "Selecteer een uitdaging",
             ph_stat_joker = "Totaal voltooide rondes met deze kaart",
             ph_stat_consumable = "Aantal keer dat deze kaart is gebruikt",
             ph_stat_voucher = "Aantal keer dat deze voucher is verzilverd",
             ph_demo_thanks_1 = "Bedankt voor het spelen van de",
             ph_demo_thanks_2 = "BALATRO-DEMO",
             ph_game_over = "SPEL VOORBIJ",
-            ph_you_win = "JIJ WINT!",
-            ph_you_win_demo = "JIJ WINT DE DEMO!",
             ph_vouchers_redeemed = "Vouchers verzilverd in dit spel",
             ph_no_vouchers = "Geen vouchers verzilverd in dit spel",
             ph_defeat_this_blind_1 = "Versla deze blind",
@@ -3752,18 +3640,6 @@ return {
             ph_1_level = "+1 Niveau",
             ph_boss_disabled = "Baas uitgeschakeld!",
             ph_most_played = "(meest gespeelde hand)",
-            ph_defeat_the_boss = "Versla de blind van een baas",
-            ph_score_furthest_ante = "Ante",
-            ph_score_furthest_round = "Ronde",
-            ph_score_hand = "Beste hand",
-            ph_score_poker_hand = "Meest gespeelde hand",
-            ph_score_new_collection = "Nieuwe ontdekkingen",
-            ph_score_cards_played = "Gespeelde kaarten",
-            ph_score_cards_discarded = "Weggegooide kaarten",
-            ph_score_times_rerolled = "Keer ververst",
-            ph_score_cards_purchased = "Gekochte kaarten",
-            ph_unscored_hand = "Hand geeft geen score",
-            ph_alert_debuff_confirm = "Druk opnieuw op 'Spelen' om te bevestigen",
             ml_demo_thanks_message = {
                 "Overweeg om Balatro op je verlanglijst",
                 "op Steam te zetten en je aan te melden",
@@ -3814,24 +3690,12 @@ return {
                 "Statistieken"
             },
             ml_paste_seed = {
-                "Seed",
-                "plakken"
+                "Plakken",
+                "Seed"
             },
             ml_disabled_seed = {
                 "Alle ontgrendelingen en",
                 "Ontdekkingen uitgeschakeld"
-            },
-            ml_edition_seal_enhancement_explanation = {
-                "Speelkaarten kunnen elk een",
-                "verbetering, editie en zegel hebben"
-            },
-            ml_unlock_all_explanation = {
-                "PAS OP! Als je de complete verzameling ontgrendelt,",
-                "worden prestaties voor dit profiel uitgeschakeld!"
-            },
-            ml_unlock_all_trophies = {
-                "PAS OP! Als je de complete verzameling ontgrendelt,",
-                "schakelt prijzen voor dit profiel uit!"
             },
             ['$'] = "$",
             k_redeemed_ex = "Verzilverd!",
@@ -3843,7 +3707,6 @@ return {
             k_plus_stone = "+1 Stenen",
             k_plus_planet = "+1 Planeet",
             k_plus_spectral = "+1 Spectraal",
-            k_plus_joker = "+1 Joker",
             k_active_ex = "Actief!",
             k_level_up_ex = "Level omhoog!",
             k_upgrade_ex = "Upgrade!",
@@ -3851,25 +3714,76 @@ return {
             k_val_up = "Waarde omhoog!",
             k_reset = "Resetten",
             k_extinct_ex = "Uitgestorven!",
-            k_disabled_ex = "Uitgeschakeld!",
             k_safe_ex = "Veilig!",
             k_saved_ex = "Gered!",
             k_swapped_ex = "Geruild!",
             k_copied_ex = "Gekopieerd!",
             k_melted_ex = "Gesmolten!",
+            b_copy = "Kopiëren",
+            b_high_contrast_cards = "Kaarten met hoog contrast",
+            b_set_rumble = "Trilling van controller",
+            b_seals = "Zegels",
+            b_new_challenge = "Nieuwe uitdaging starten",
+            b_unlock_all = "Alles vrijspelen",
+            k_active = "actief",
+            k_deck = "Kaartspel",
+            k_progress = "Voortgang",
+            k_challenges = "Uitdagingen",
+            k_joker_stickers = "Jokerstickers",
+            k_deck_stake_wins = "Kaartspel inzet gewonnen",
+            k_enter_name = "Naam invoeren",
+            k_gold = "Goud",
+            k_card_stats = "Kaartstatistieken",
+            k_view = "Weergave",
+            k_all_hands = "Alle handen",
+            k_high_score_ex = "Highscore!",
+            k_demo_version_ex = "Demoversie!",
+            k_playing_as = "Speelt als",
+            k_choose = "Kiezen",
+            k_achievements_disabled = "Prestaties uitgeschakeld",
+            ph_no_boss_active = "geen baas actief",
+            ph_you_win = "JIJ WINT!",
+            ph_you_win_demo = "JIJ WINT DE DEMO!",
+            ph_defeat_the_boss = "Versla de blind van een baas",
+            ph_score_furthest_ante = "Ante",
+            ph_score_furthest_round = "Ronde",
+            ph_score_hand = "Beste hand",
+            ph_score_poker_hand = "Meest gespeelde hand",
+            ph_score_new_collection = "Nieuwe ontdekkingen",
+            ph_score_cards_played = "Gespeelde kaarten",
+            ph_score_cards_discarded = "Weggegooide kaarten",
+            ph_score_times_rerolled = "Keer opnieuw gegooid",
+            ph_score_cards_purchased = "Gekochte kaarten",
+            ml_edition_seal_enhancement_explanation = {
+                "Speelkaarten kunnen elk een",
+                "verbetering, editie en zegel hebben"
+            },
+            ml_unlock_all_explanation = {
+                "PAS OP! Als je de complete verzameling ontgrendelt,",
+                "worden prestaties voor dit profiel uitgeschakeld!"
+            },
+            k_plus_joker = "+1 Joker",
             k_eaten_ex = "Opgegeten!",
+            k_eroded_ex = "Geërodeerd!",
+            k_achievement = "Prestatie",
+            ph_unscored_hand = "Hand geeft geen score",
+            ph_alert_debuff_confirm = "Druk opnieuw op 'Spelen' om te bevestigen",
             k_drank_ex = "Opgedronken!",
-            k_eroded_ex = "Geërodeerd!"
+            k_trophy = "Prijs",
+            k_trophies_disabled = "Prijzen uitgeschakeld",
+            ml_unlock_all_trophies = {
+                "PAS OP! Als je de complete verzameling ontgrendelt,",
+                "schakelt prijzen voor dit profiel uit!"
+            },
+            k_poker_hand = "pokerhand",
+            ph_4_7_of_clubs = "vier 7 van Klaveren"
         },
         v_dictionary = {
             a_xmult = "X#1# Multi",
-            a_xmult_minus = "-X#1# Multi",
             a_mult = "+#1# Multi",
-            a_mult_minus = "-#1# Multi",
             a_chips = "+#1#",
             a_chips_minus = "-#1#",
             a_handsize = "+#1#  handomvang",
-            a_handsize_minus = "-#1# handomvang",
             a_hands = "+#1# Handen",
             a_sold_tally = "#1#/#2# verkocht",
             a_remaining = "#1# resterend",
@@ -3879,8 +3793,6 @@ return {
             deck_preview_wheel_singular = "Getallen kunnen lager zijn vanwege #1# kaart die met de afbeelding naar beneden is getrokken",
             deck_preview_wheel_plural = "Getallen kunnen lager zijn vanwege #1# kaarten die met de afbeelding naar beneden is getrokken",
             challenges_completed = "#1#/#2# uitdagingen voltooid",
-            unlocked = "#1#/#2# vrijgespeeld",
-            completed = "#1#/#2# voltooid",
             interest = "#1# rente per $#2# (#3# max)",
             remaining_hand_money = "Resterende handen ($#1# elk)",
             remaining_discard_money = "Resterende weggooimogelijkheden ($#1# per stuk)",
@@ -3900,10 +3812,15 @@ return {
                 "Negatief",
                 "+#1#  Jokervak"
             },
+            a_mult_minus = "-#1# Multi",
+            a_handsize_minus = "-#1# handomvang",
             ml_negative_consumable_desc = {
                 "Negatief",
                 "+#1# verbruiksvak"
-            }
+            },
+            a_xmult_minus = "-X#1# Multi",
+            unlocked = "#1#/#2# vrijgespeeld",
+            completed = "#1#/#2# voltooid"
         },
         v_text = {
             ch_m_dollars = {
@@ -3916,7 +3833,7 @@ return {
                 "{C:red}#1#{} weggooimogelijkheden per ronde"
             },
             ch_m_reroll_cost = {
-                "{C:money}$#1#{} basiskosten van verversen"
+                "{C:money}$#1#{} basiskosten van opnieuw gooien"
             },
             ch_m_joker_slots = {
                 "{C:attention}#1#{} Jokervakken"
@@ -3954,9 +3871,6 @@ return {
             ch_c_none = {
                 "{C:inactive}Geen"
             },
-            ch_c_no_shop_jokers = {
-                "Jokers verschijnen niet meer in de {C:attention}winkel"
-            },
             ch_c_inflation = {
                 "Verhoog prijzen permanent met {C:money}$ 1{} bij elke aankoop"
             },
@@ -3969,11 +3883,14 @@ return {
             ch_c_flipped_cards = {
                 "{C:green}1 op de #1#{} kaarten worden met de afbeelding naar beneden getrokken"
             },
-            ch_c_debuff_played_cards = {
-                "Van alle {C:attention}gespeelde{} kaarten verdwijnen de {C:attention}extra's{} na het scoren"
-            },
             ch_c_minus_hand_size_per_X_dollar = {
                 "Houd {C:red}-1{} kaarten in de hand voor elke {C:money}$#1#{} die je hebt"
+            },
+            ch_c_no_shop_jokers = {
+                "Jokers verschijnen niet meer in de {C:attention}winkel"
+            },
+            ch_c_debuff_played_cards = {
+                "Van alle {C:attention}gespeelde{} kaarten verdwijnen de {C:attention}extra's{} na het scoren"
             },
             ch_c_set_eternal_ante = {
                 "Als ante {C:attention}#1#{} baas is verslagen, worden alle jokers {C:attention}eeuwig"
@@ -3981,26 +3898,6 @@ return {
             ch_c_set_joker_slots_ante = {
                 "Als ante {C:attention}#1#{} baas is verslagen, gaan alle jokervakken terug naar {C:attention}0"
             }
-        },
-        quips = {
-            wq_1 = {"Geweldig gedaan!"},
-            wq_2 = {"Daar ben je goed","mee omgegaan!"},
-            wq_3 = {"Blijkbaar blufte","je toch niet!"},
-            wq_4 = {"Jammer dat die","fiches allemaal","virtueel zijn..."},
-            wq_5 = {"Zo te zien heb ik","je veel geleerd!"},
-            wq_6 = {"Je hebt wat", "heads-up potjes gespeeld!"},
-            wq_7 = {"Maar goed dat","ik niet tegen", "jou heb ingezet!"},
-            lq_1 = {"Misschien kunnen we", "beter gaan", "kwartetten..."},
-            lq_2 = {"We hebben gefold", "als een folder!"},
-            lq_3 = {"Tijd voor een nieuwe", "ronde, en", "nieuwe kansen!"},
-            lq_4 = {"Je weet toch wat ze", "altijd zeggen: het", "huis wint altijd!"},
-            lq_5 = {"Nu zijn we erachter", "wie de echte", "Joker is!"},
-            lq_6 = {"O nee, was jij", "ook aan het bluffen?"},
-            lq_7 = {"Nu staan wij","voor paal!"},
-            lq_8 = {"Als ik handen had,","zou ik ze voor mijn", "ogen houden!"},
-            lq_9 = {"Ik ben letterlijk", "een nar, maar wat", "is jouw excuus?"},
-            lq_10 = {"Wat een flop!"},
-            dq_1 = {"Jemig! Hopelijk heb","je nog wat trucs","in petto voor deze","laatste uitdaging!"}
         },
         tutorial = {
             sb_1 = {
@@ -4011,7 +3908,7 @@ return {
             sb_2 = {
                 "Jouw doel is om",
                 "{C:blue}fiches{} te verdienen om",
-                "de {C:attention}blind{} van de vijand te verslaan"
+                "de {C:attention}blind van de vijand te verslaan"
             },
             sb_3 = {
                 "Dit is een {C:blue}small blind{},",
@@ -4035,7 +3932,7 @@ return {
                 "Maar let op",
                 "de {C:attention}blind van een baas{}. Hij",
                 "heeft een kracht waar je",
-                    "omheen moet plannen."
+                "omheen moet plannen."
             },
             bb_4 = {
                 "Als je hem verslaat, gaat de",
@@ -4048,7 +3945,7 @@ return {
             },
             fh_1 = {
                 "Je verdient fiches door",
-                "{C:attention}pokerhanden{} te spelen"
+                "{C:attention}pokerhanden te spelen"
             },
             fh_2 = {
                 "Elke {C:attention}pokerhand{} levert een",
@@ -4059,7 +3956,7 @@ return {
                 "Bekijk je {C:attention}pokerhanden",
                 "in het {C:attention}spelinfo{}-gebied,",
                 "net als andere informatie",
-                    "over je huidige spel"
+                "over je huidige spel"
             },
             fh_4 = {
                 "Kaarten leveren je ook",
@@ -4075,7 +3972,7 @@ return {
                 "Je kunt ook {C:red}Weggooien{} tot",
                 "maximaal {C:attention}5{} geselecteerde kaarten",
                 "om een nog sterkere hand",
-                    "te krijgen. Probeer maar!"
+                "te krijgen. Probeer maar!"
             },
             fh_7 = {
                 "Voorzichtig! Je hebt maar een",
@@ -4084,15 +3981,15 @@ return {
             },
             fh_8 = {
                 "Verdien {C:attention}300 fiches{} voor",
-                "je geen {C:blue}handen{} meer hebt",
+                "je geen {C:blue}handen meer hebt",
                 "om deze ronde te winnen.",
-                    "Succes!"
+                "Succes!"
             },
             sh_1 = {
                 "Als je meer kaarten krijgt,",
                 "denk er dan aan dat je ze kunt",
                 "herschikken. {C:attention}Jokers{} activeren",
-                    "van links naar rechts"
+                "van links naar rechts"
             },
             sh_2 = {
                 "En zorg ervoor dat je",
@@ -4102,13 +3999,13 @@ return {
                 "Selecteer maximaal {C:attention}2{} kaarten",
                 "in je hand en druk op",
                 "{C:attention}gebruiken{} op de {C:tarot}tarot{}-kaart",
-                    "om ze te verbeteren!"
+                "om ze te verbeteren!"
             },
             s_1 = {
                 "Goed gedaan! Nu je",
                 "met {C:money}geld{} {E:1}overspoeld{} wordt,",
                 "kun je wat nieuwe",
-                    "kaarten uit de {C:attention}winkel{} kopen"
+                "kaarten uit de {C:attention}winkel kopen"
             },
             s_2 = {
                 "Probeer deze knappe",
@@ -4118,7 +4015,7 @@ return {
                 "Dit is een van de {C:attention}#1#",
                 "{C:attention}Jokers{} die je aan je spel kunt",
                 "toevoegen. Elke {C:attention}Joker",
-                    "heeft een ander effect"
+                "heeft ander effect"
             },
             s_4 = {
                 "Deze voegt {C:red}+4 Multi{} toe aan",
@@ -4137,7 +4034,7 @@ return {
                 "Deze {C:tarot}tarot{}-kaart is een",
                 "{C:attention}verbruiksartikel{}. Deze",
                 "verbetert je speelkaarten!",
-                    "Houd deze vast."
+                "Houd deze vast."
             },
             s_8 = {
                 "Je kunt maximaal",
@@ -4148,7 +4045,7 @@ return {
                 "Als je genoeg hebt gespaard,",
                 "kun je een {C:attention}voucher{} kopen.",
                 "{C:attention}Vouchers{} upgraden",
-                    "je spel vanzelf!"
+                "je spel vanzelf!"
             },
             s_10 = {
                 "{C:attention}Vouchers{} worden aangevuld",
@@ -4158,13 +4055,183 @@ return {
             s_11 = {
                 "En bekijk de",
                 "beide {C:booster}Boosterpakketten{} in",
-                "elke winkel. Ze zitten",
-                    "boordevol handigheidjes!"
+                "elke winkel eens. Ze zitten",
+                "boordevol handigheidjes!"
             },
             s_12 = {
                 "Laten we naar",
                 "de {C:attention}volgende ronde{} gaan."
             }
+        },
+        achievement_names = {
+            ante_up = "Verhoog de ante!",
+            ante_upper = "Anteverhoger!",
+            heads_up = "Heads-up",
+            low_stakes = "Lage inzet",
+            mid_stakes = "Gemiddelde inzet",
+            high_stakes = "Hoge inzet",
+            card_player = "Kaartspeler",
+            card_discarder = "Kaartweggooier",
+            nest_egg = "Nestei",
+            flushed = "Geflusht",
+            speedrunner = "Snelheidsduivel",
+            roi = "Rendement",
+            shattered = "Vernietigd",
+            royale = "Royaal",
+            retrograde = "Achteruitgaand",
+            _10k = "10 K",
+            _1000k = "1000 K",
+            _100000k = "100.000 K",
+            tiny_hands = "Kleine handen",
+            big_hands = "Grote handen",
+            you_get_what_you_get = "Pak wat je pakken kunt",
+            rule_bender = "Buig de regels",
+            rule_breaker = "Regelbreker",
+            legendary = "Mythisch",
+            astronomy = "Astronomie",
+            cartomancy = "Kaartenmagie",
+            clairvoyance = "Helderziendheid",
+            extreme_couponer = "Koopjesjager",
+            completionist = "Afronder",
+            completionist_plus = "Afronder+",
+            completionist_plus_plus = "Afronder++"
+        },
+        achievement_descriptions = {
+            ante_up = "Bereik ante 4",
+            ante_upper = "Bereik ante 8",
+            heads_up = "Win een spel",
+            low_stakes = "Win een spel met ten minste moeilijkheidsgraad rode inzet",
+            mid_stakes = "Win een spel met ten minste moeilijkheidsgraad zwarte inzet",
+            high_stakes = "Win een spel met ten minste moeilijkheidsgraad gouden inzet",
+            card_player = "Speel ten minste 2500 kaarten",
+            card_discarder = "Gooi ten minste 2500 kaarten weg",
+            nest_egg = "Zorg dat je $ 400 of meer hebt in één spel",
+            flushed = "Speel een flush met 5 Wildkaarten",
+            speedrunner = "Win een spel in maximaal 12 rondes",
+            roi = "Koop 5 vouchers vóór ante 4",
+            shattered = "Breek 2 glazen kaarten in één hand",
+            royale = "Speel een royal flush",
+            retrograde = "Bereik level 10 in een pokerhand",
+            _10k = "Scoor 10.000 fiches in één hand",
+            _1000k = "Scoor 1.000.000 fiches in één hand",
+            _100000k = "Scoor 100.000.000 fiches in één hand",
+            tiny_hands = "Dun je kaartspel uit tot maximaal 20 kaarten",
+            big_hands = "Zorg dat je 80 of meer kaarten in je kaartspel hebt",
+            you_get_what_you_get = "Win een spel zonder de winkel opnieuw te gooien",
+            rule_bender = "Voltooi een uitdagingsspel",
+            rule_breaker = "Voltooi elk uitdagingsspel",
+            legendary = "Ontdek een mythische Joker",
+            astronomy = "Ontdek elke planeetkaart",
+            cartomancy = "Ontdek elke tarotkaart",
+            clairvoyance = "Ontdek elke spectrale kaart",
+            extreme_couponer = "Ontdek elke voucher",
+            completionist = "Ontdek 100% van je verzameling",
+            completionist_plus = "Win met elk kaartspel met moeilijkheidsgraad gouden inzet",
+            completionist_plus_plus = "Verdien een gouden sticker met elke Joker"
+        },
+        quips = {
+            wq_1 = {
+                "Geweldig gedaan!"
+            },
+            wq_2 = {
+                "Daar ben je goed",
+                "mee omgegaan!"
+            },
+            wq_3 = {
+                "Blijkbaar blufte",
+                "je toch niet!"
+            },
+            wq_4 = {
+                "Jammer dat die",
+                "fiches allemaal",
+                "virtueel zijn..."
+            },
+            wq_5 = {
+                "Zo te zien heb ik",
+                "je veel geleerd!"
+            },
+            wq_6 = {
+                "Je hebt wat",
+                "heads-up potjes gespeeld!"
+            },
+            wq_7 = {
+                "Maar goed dat",
+                "ik niet tegen",
+                "jou heb ingezet!"
+            },
+            lq_1 = {
+                "Misschien kunnen we",
+                "beter gaan",
+                "kwartetten..."
+            },
+            lq_2 = {
+                "We hebben gefold",
+                "als een folder!"
+            },
+            lq_3 = {
+                "Tijd voor een nieuwe",
+                "ronde, en",
+                "nieuwe kansen!"
+            },
+            lq_4 = {
+                "Je weet toch wat ze",
+                "altijd zeggen: het",
+                "huis wint altijd!"
+            },
+            lq_5 = {
+                "Nu zijn we erachter",
+                "wie de echte",
+                "Joker is!"
+            },
+            lq_6 = {
+                "O nee, was jij",
+                "ook aan het bluffen?"
+            },
+            lq_7 = {
+                "Nu staan wij",
+                "voor paal!"
+            },
+            lq_8 = {
+                "Als ik handen had,",
+                "zou ik ze voor mijn",
+                "ogen houden!"
+            },
+            lq_9 = {
+                "Ik ben letterlijk",
+                "een nar, maar wat",
+                "is jouw excuus?"
+            },
+            lq_10 = {
+                "Wat een flop!"
+            },
+            dq_1 = {
+                "Jemig! Hopelijk heb",
+                "je nog wat trucs",
+                "in petto voor deze",
+                "laatste uitdaging!"
+            }
+        },
+        challenge_names = {
+            c_omelette_1 = "De omelet",
+            c_city_1 = "15-minutenstad",
+            c_rich_1 = "Rijken worden rijker",
+            c_knife_1 = "Bloedstollend",
+            c_xray_1 = "Röntgenogen",
+            c_mad_world_1 = "Krankzinnige wereld",
+            c_luxury_1 = "Welvaartsbelasting",
+            c_non_perishable_1 = "Houdbaar",
+            c_medusa_1 = "Medusa",
+            c_double_nothing_1 = "Dubbel of niets",
+            c_typecast_1 = "Beeldvorming",
+            c_inflation_1 = "Inflatie",
+            c_bram_poker_1 = "Bram Poker",
+            c_fragile_1 = "Kwetsbaar",
+            c_monolith_1 = "Monoliet",
+            c_blast_off_1 = "Explosie",
+            c_five_card_1 = "Trekking van vijf kaarten",
+            c_golden_needle_1 = "Gouden naald",
+            c_cruelty_1 = "Wreedheid",
+            c_jokerless_1 = "Zonder jokers"
         }
     }
 }

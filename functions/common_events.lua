@@ -843,8 +843,8 @@ function card_eval_status_text(card, eval_type, amt, percent, dir, extra)
     elseif eval_type == 'dollars' then 
         sound = 'coin3'
         amt = amt
-        text = (amt <-0.01 and '-' or '')..localize("$")..tostring(math.abs(amt))
-        colour = amt <-0.01 and G.C.RED or G.C.MONEY
+        text = localize("$")..tostring(amt)
+        colour = G.C.MONEY
     elseif eval_type == 'swap' then 
         sound = 'generic1'
         amt = amt
@@ -877,7 +877,7 @@ function card_eval_status_text(card, eval_type, amt, percent, dir, extra)
     end
     delay = delay*1.25
 
-    if amt > 0 or amt < 0 then
+    if amt > 0 then
         if extra and extra.instant then
             if extrafunc then extrafunc() end
             attention_text({
@@ -1127,16 +1127,16 @@ end
 function update_canvas_juice(dt)
     G.JIGGLE_VIBRATION = G.ROOM.jiggle or 0
     if not G.SETTINGS.screenshake or (type(G.SETTINGS.screenshake) ~= 'number') then
-        G.SETTINGS.screenshake = G.SETTINGS.reduced_motion and 0 or 50
+        G.SETTINGS.screenshake = 50
     end
-    local shake_amt = (G.SETTINGS.reduced_motion and 0 or 1)*math.max(0,G.SETTINGS.screenshake-30)/100
+    local shake_amt = math.max(0,G.SETTINGS.screenshake-30)/100
     G.ARGS.eased_cursor_pos = G.ARGS.eased_cursor_pos or {x=G.CURSOR.T.x,y=G.CURSOR.T.y, sx = G.CONTROLLER.cursor_position.x, sy = G.CONTROLLER.cursor_position.y}
     G.ARGS.eased_cursor_pos.x = G.ARGS.eased_cursor_pos.x*(1-3*dt) + 3*dt*(shake_amt*G.CURSOR.T.x + (1-shake_amt)*G.ROOM.T.w/2)
     G.ARGS.eased_cursor_pos.y = G.ARGS.eased_cursor_pos.y*(1-3*dt) + 3*dt*(shake_amt*G.CURSOR.T.y + (1-shake_amt)*G.ROOM.T.h/2)
     G.ARGS.eased_cursor_pos.sx = G.ARGS.eased_cursor_pos.sx*(1-3*dt) + 3*dt*(shake_amt*G.CONTROLLER.cursor_position.x + (1-shake_amt)*G.WINDOWTRANS.real_window_w/2)
     G.ARGS.eased_cursor_pos.sy = G.ARGS.eased_cursor_pos.sy*(1-3*dt) + 3*dt*(shake_amt*G.CONTROLLER.cursor_position.y + (1-shake_amt)*G.WINDOWTRANS.real_window_h/2)
 
-    shake_amt = (G.SETTINGS.reduced_motion and 0 or 1)*G.SETTINGS.screenshake/100*3
+    shake_amt = G.SETTINGS.screenshake/100*3
     if shake_amt < 0.05 then shake_amt = 0 end
 
     G.ROOM.jiggle = (G.ROOM.jiggle or 0)*(1-5*dt)*(shake_amt > 0.05 and 1 or 0)
@@ -1216,7 +1216,7 @@ function check_for_unlock(args)
         if highest_win >= 8 then 
             unlock_achievement('high_stakes')
         end
-        if G.PROGRESS and G.PROGRESS.deck_stakes.tally/G.PROGRESS.deck_stakes.of >=1 then 
+        if lowest_win >= 8 then 
             unlock_achievement('completionist_plus')
         end
         if G.PROGRESS and G.PROGRESS.joker_stickers.tally/G.PROGRESS.joker_stickers.of >=1 then
@@ -1942,10 +1942,6 @@ function create_playing_card(card_init, area, skip_materialize, silent, colours)
 end
 
 function get_pack(_key, _type)
-    if not G.GAME.first_shop_buffoon and not G.GAME.banned_keys['p_buffoon_normal_1'] then
-        G.GAME.first_shop_buffoon = true
-        return G.P_CENTERS['p_buffoon_normal_'..(math.random(1, 2))]
-    end
     local cume, it, center = 0, 0, nil
     for k, v in ipairs(G.P_CENTER_POOLS['Booster']) do
         if (not _type or _type == v.kind) and not G.GAME.banned_keys[v.key] then cume = cume + (v.weight or 1 ) end
@@ -1968,7 +1964,7 @@ function get_current_pool(_type, _rarity, _legendary, _append)
         if _type == 'Joker' then 
             local rarity = _rarity or pseudorandom('rarity'..G.GAME.round_resets.ante..(_append or '')) 
             rarity = (_legendary and 4) or (rarity > 0.95 and 3) or (rarity > 0.7 and 2) or 1
-            _starting_pool, _pool_key = G.P_JOKER_RARITY_POOLS[rarity], 'Joker'..rarity..((not _legendary and _append) or '')
+            _starting_pool, _pool_key = G.P_JOKER_RARITY_POOLS[rarity], 'Joker'..rarity..(_append or '')
         else _starting_pool, _pool_key = G.P_CENTER_POOLS[_type], _type..(_append or '')
         end
     
@@ -2038,7 +2034,7 @@ function get_current_pool(_type, _rarity, _legendary, _append)
         --if pool is empty
         if _pool_size == 0 then
             _pool = EMPTY(G.ARGS.TEMP_POOL)
-            if _type == 'Tarot' or _type == 'Tarot_Planet' then _pool[#_pool + 1] = "c_strength"
+            if _type == 'Tarot' or _type == 'Tarot_Planet' then _pool[#_pool + 1] = "c_fool"
             elseif _type == 'Planet' then _pool[#_pool + 1] = "c_pluto"
             elseif _type == 'Spectral' then _pool[#_pool + 1] = "c_incantation"
             elseif _type == 'Joker' then _pool[#_pool + 1] = "j_joker"
@@ -2049,7 +2045,7 @@ function get_current_pool(_type, _rarity, _legendary, _append)
             end
         end
 
-        return _pool, _pool_key..(not _legendary and G.GAME.round_resets.ante or '')
+        return _pool, _pool_key..G.GAME.round_resets.ante
 end
 
 function poll_edition(_key, _mod, _no_neg, _guaranteed)
@@ -2134,15 +2130,9 @@ function create_card(_type, area, legendary, _rarity, skip_materialize, soulable
         if G.GAME.modifiers.all_eternal then
             card:set_eternal(true)
         end
-        if (area == G.shop_jokers) or (area == G.pack_cards) then 
-            local eternal_perishable_poll = pseudorandom((area == G.pack_cards and 'packetper' or 'etperpoll')..G.GAME.round_resets.ante)
-            if G.GAME.modifiers.enable_eternals_in_shop and eternal_perishable_poll > 0.7 then
+        if area == G.shop_jokers then 
+            if G.GAME.modifiers.enable_eternals_in_shop and pseudorandom('stake_shop_joker_eternal'..G.GAME.round_resets.ante) > 0.7 then
                 card:set_eternal(true)
-            elseif G.GAME.modifiers.enable_perishables_in_shop and ((eternal_perishable_poll > 0.4) and (eternal_perishable_poll <= 0.7)) then
-                card:set_perishable(true)
-            end
-            if G.GAME.modifiers.enable_rentals_in_shop and pseudorandom((area == G.pack_cards and 'packssjr' or 'ssjr')..G.GAME.round_resets.ante) > 0.7 then
-                card:set_rental(true)
             end
         end
 
@@ -2301,11 +2291,7 @@ function reset_mail_rank()
 end
 
 function reset_ancient_card()
-    local ancient_suits = {}
-    for k, v in ipairs({'Spades','Hearts','Clubs','Diamonds'}) do
-        if v ~= G.GAME.current_round.ancient_card.suit then ancient_suits[#ancient_suits + 1] = v end
-    end
-    local ancient_card = pseudorandom_element(ancient_suits, pseudoseed('anc'..G.GAME.round_resets.ante))
+    local ancient_card = pseudorandom_element({'Spades','Hearts','Clubs','Diamonds'}, pseudoseed('anc'..G.GAME.round_resets.ante))
     G.GAME.current_round.ancient_card.suit = ancient_card
 end
 
@@ -2320,18 +2306,6 @@ function reset_castle_card()
     if valid_castle_cards[1] then 
         local castle_card = pseudorandom_element(valid_castle_cards, pseudoseed('cas'..G.GAME.round_resets.ante))
         G.GAME.current_round.castle_card.suit = castle_card.base.suit
-    end
-end
-
-function reset_blinds()
-    G.GAME.round_resets.blind_states = G.GAME.round_resets.blind_states or {Small = 'Select', Big = 'Upcoming', Boss = 'Upcoming'}
-    if G.GAME.round_resets.blind_states.Boss == 'Defeated' then
-        G.GAME.round_resets.blind_states.Small = 'Upcoming'
-        G.GAME.round_resets.blind_states.Big = 'Upcoming'
-        G.GAME.round_resets.blind_states.Boss = 'Upcoming'
-        G.GAME.blind_on_deck = 'Small'
-        G.GAME.round_resets.blind_choices.Boss = get_new_boss()
-        G.GAME.round_resets.boss_rerolled = false
     end
 end
 
@@ -2355,9 +2329,6 @@ function get_new_boss()
         elseif v.boss.showdown and (G.GAME.round_resets.ante)%G.GAME.win_ante == 0 and G.GAME.round_resets.ante >= 2 then
             eligible_bosses[k] = true
         end
-    end
-    for k, v in pairs(G.GAME.banned_keys) do
-        if eligible_bosses[k] then eligible_bosses[k] = nil end
     end
 
     local min_use = 100
@@ -2444,7 +2415,7 @@ function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, h
     end
 
     if _c.set == 'Other' then
-        localize{type = 'other', key = _c.key, nodes = desc_nodes, vars = specific_vars or _c.vars}
+        localize{type = 'other', key = _c.key, nodes = desc_nodes, vars = specific_vars}
     elseif card_type == 'Locked' then
         if _c.wip then localize{type = 'other', key = 'wip_locked', set = 'Other', nodes = desc_nodes, vars = loc_vars}
         elseif _c.demo and specific_vars then localize{type = 'other', key = 'demo_shop_locked', nodes = desc_nodes, vars = loc_vars}  
@@ -2731,8 +2702,6 @@ function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, h
             if v == 'red_seal' then info_queue[#info_queue+1] = {key = 'red_seal', set = 'Other'} end
             if v == 'purple_seal' then info_queue[#info_queue+1] = {key = 'purple_seal', set = 'Other'} end
             if v == 'eternal' then info_queue[#info_queue+1] = {key = 'eternal', set = 'Other'} end
-            if v == 'perishable' then info_queue[#info_queue+1] = {key = 'perishable', set = 'Other', vars = {G.GAME.perishable_rounds or 1, specific_vars.perish_tally or G.GAME.perishable_rounds}} end
-            if v == 'rental' then info_queue[#info_queue+1] = {key = 'rental', set = 'Other', vars = {G.GAME.rental_rate or 1}} end
             if v == 'pinned_left' then info_queue[#info_queue+1] = {key = 'pinned_left', set = 'Other'} end
         end
     end

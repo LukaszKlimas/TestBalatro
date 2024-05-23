@@ -55,7 +55,7 @@ G.CHALLENGES = {
                 {id = 'tag_handy'},
             },
             banned_other = {
-                {id = 'bl_wall', type = 'blind'}
+
             }
         }
     },]]--
@@ -246,7 +246,6 @@ G.CHALLENGES = {
             banned_tags = {
             },
             banned_other = {
-                {id = 'bl_plant', type = 'blind'},
             }
         }
     },
@@ -315,7 +314,6 @@ G.CHALLENGES = {
             banned_tags = {
             },
             banned_other = {
-                {id = 'bl_final_leaf', type = 'blind'},
             }
         }
     },
@@ -403,7 +401,6 @@ G.CHALLENGES = {
             banned_tags = {
             },
             banned_other = {
-                {id = 'bl_final_leaf', type = 'blind'},
             }
         }
     },
@@ -712,7 +709,6 @@ G.CHALLENGES = {
                 {id = 'c_judgement'},
                 {id = 'c_wraith'},
                 {id = 'c_soul'},
-                {id = 'v_antimatter'},
                 {id = 'p_buffoon_normal_1', ids = {
                     'p_buffoon_normal_1','p_buffoon_normal_2','p_buffoon_jumbo_1','p_buffoon_mega_1',
                 }},
@@ -725,13 +721,8 @@ G.CHALLENGES = {
                 {id = 'tag_negative'},
                 {id = 'tag_foil'},
                 {id = 'tag_buffoon'},
-                {id = 'tag_top_up'},
-
             },
             banned_other = {
-                {id = 'bl_final_acorn', type = 'blind'},
-                {id = 'bl_final_heart', type = 'blind'},
-                {id = 'bl_final_leaf', type = 'blind'}
             }
         }
     },

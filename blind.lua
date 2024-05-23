@@ -212,7 +212,7 @@ function Blind:set_blind(blind, reset, silent)
         if not reset then self:debuff_card(v, true) end
     end
 
-    G.ARGS.spin.real = (G.SETTINGS.reduced_motion and 0 or 1)*(self.config.blind.boss and (self.config.blind.boss.showdown and 0.5 or 0.25) or 0)
+    G.ARGS.spin.real = (self.config.blind.boss and (self.config.blind.boss.showdown and 0.5 or 0.25) or 0)
 end
 
 function Blind:alert_debuff(first)
@@ -727,7 +727,7 @@ function Blind:load(blindTable)
     self.only_hand = blindTable.only_hand
     self.triggered = blindTable.triggered
 
-    G.ARGS.spin.real = (G.SETTINGS.reduced_motion and 0 or 1)*(self.config.blind.boss and (self.config.blind.boss.showdown and 1 or 0.3) or 0)
+    G.ARGS.spin.real = (self.config.blind.boss and (self.config.blind.boss.showdown and 1 or 0.3) or 0)
 
     if G.P_BLINDS[blindTable.config_blind] then
         self.blind_set = true

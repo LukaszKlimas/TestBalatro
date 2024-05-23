@@ -122,7 +122,7 @@ function Tag:apply_to_run(_context)
                     end)
                 self.triggered = true
                 return {
-                    dollars = self.config.dollars,
+                    dollars = 15,
                     condition = localize('ph_defeat_the_boss'),
                     pos = self.pos,
                     tag = self
@@ -337,8 +337,6 @@ function Tag:apply_to_run(_context)
                     return true
                 end)
                 G.hand:change_size(self.config.h_size)
-                G.GAME.round_resets.temp_handsize = (G.GAME.round_resets.temp_handsize or 0) + self.config.h_size
-                self.triggered = true
                 return true
             end
         elseif _context.type == 'store_joker_create' then 
@@ -358,8 +356,6 @@ function Tag:apply_to_run(_context)
                     card.states.visible = false
                     self:yep('+', G.C.RED,function() 
                         card:start_materialize()
-                        card.ability.couponed = true
-                        card:set_cost()
                         return true
                     end)
                 else
@@ -372,8 +368,6 @@ function Tag:apply_to_run(_context)
                     card.states.visible = false
                     self:yep('+', G.C.GREEN,function() 
                         card:start_materialize()
-                        card.ability.couponed = true
-                        card:set_cost()
                         return true
                     end)
                 end
@@ -398,9 +392,7 @@ function Tag:apply_to_run(_context)
                 if self.name == 'Foil Tag' then
                     _context.card.temp_edition = true
                     self:yep('+', G.C.DARK_EDITION,function() 
-                        _context.card:set_edition({foil = true}, true)
-                        _context.card.ability.couponed = true
-                        _context.card:set_cost()
+                        _context.card:set_edition({negative = true}, true)
                         _context.card.temp_edition = nil
                         G.CONTROLLER.locks[lock] = nil
                         return true
@@ -410,9 +402,7 @@ function Tag:apply_to_run(_context)
                     _context.card.temp_edition = true
                     self:yep('+', G.C.DARK_EDITION,function() 
                         _context.card.temp_edition = nil
-                        _context.card:set_edition({holo = true}, true)
-                        _context.card.ability.couponed = true
-                        _context.card:set_cost()
+                        _context.card:set_edition({negative = true}, true)
                         G.CONTROLLER.locks[lock] = nil
                         return true
                     end)
@@ -421,9 +411,7 @@ function Tag:apply_to_run(_context)
                     _context.card.temp_edition = true
                     self:yep('+', G.C.DARK_EDITION,function() 
                         _context.card.temp_edition = nil
-                        _context.card:set_edition({polychrome = true}, true)
-                        _context.card.ability.couponed = true
-                        _context.card:set_cost()
+                        _context.card:set_edition({negative = true}, true)
                         G.CONTROLLER.locks[lock] = nil
                         return true
                     end)
@@ -433,8 +421,6 @@ function Tag:apply_to_run(_context)
                     self:yep('+', G.C.DARK_EDITION,function() 
                         _context.card.temp_edition = nil
                         _context.card:set_edition({negative = true}, true)
-                        _context.card.ability.couponed = true
-                        _context.card:set_cost()
                         G.CONTROLLER.locks[lock] = nil
                         return true
                     end)

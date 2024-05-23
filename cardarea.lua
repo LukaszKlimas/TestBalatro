@@ -15,7 +15,7 @@ function CardArea:init(X, Y, W, H, config)
     self.cards = {}
     self.children = {}
     self.highlighted = {}
-    self.config.highlighted_limit = config.highlight_limit or 5
+    self.config.highlighted_limit = config.highlight_limit or 10
     self.config.card_limit = config.card_limit or 52
     self.config.temp_limit = self.config.card_limit
     self.config.card_count = 0
@@ -336,7 +336,7 @@ function CardArea:draw()
                     end
                 end
             end
-            for i = 1, #self.cards do  
+            for i = 1, #self.cards do 
                 if self.cards[i] ~= G.CONTROLLER.focused.target then
                     if self.cards[i].highlighted then
                         if G.CONTROLLER.dragging.target ~= self.cards[i] then self.cards[i]:draw(v) end
@@ -436,12 +436,12 @@ function CardArea:align_cards()
     if self.config.type == 'hand' and (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK  or G.STATE == G.STATES.PLANET_PACK) then
         for k, card in ipairs(self.cards) do
             if not card.states.drag.is then 
-                card.T.r = 0.4*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
+                card.T.r = 0.4*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ 0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
                 local max_cards = math.max(#self.cards, self.config.temp_limit)
                 card.T.x = self.T.x + (self.T.w-self.card_w)*((k-1)/math.max(max_cards-1, 1) - 0.5*(#self.cards-max_cards)/math.max(max_cards-1, 1)) + 0.5*(self.card_w - card.T.w)
                 local highlight_height = G.HIGHLIGHT_H
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = G.hand.T.y - 1.8*card.T.h - highlight_height + (G.SETTINGS.reduced_motion and 0 or 1)*0.1*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(1.3*(-#self.cards/2 + k-0.5)/(#self.cards))^2-0.3
+                card.T.y = G.hand.T.y - 1.8*card.T.h - highlight_height + 0.1*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(1.3*(-#self.cards/2 + k-0.5)/(#self.cards))^2-0.3
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end
@@ -451,13 +451,13 @@ function CardArea:align_cards()
 
         for k, card in ipairs(self.cards) do
             if not card.states.drag.is then 
-                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
+                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ 0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
                 local max_cards = math.max(#self.cards, self.config.temp_limit)
                 card.T.x = self.T.x + (self.T.w-self.card_w)*((k-1)/math.max(max_cards-1, 1) - 0.5*(#self.cards-max_cards)/math.max(max_cards-1, 1)) + 0.5*(self.card_w - card.T.w)
 
                 local highlight_height = G.HIGHLIGHT_H
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + (G.SETTINGS.reduced_motion and 0 or 1)*0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-0.2
+                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + 0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-0.2
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end
@@ -466,12 +466,12 @@ function CardArea:align_cards()
     if self.config.type == 'title' or (self.config.type == 'voucher' and #self.cards == 1) then
         for k, card in ipairs(self.cards) do
             if not card.states.drag.is then 
-                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
+                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ 0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
                 local max_cards = math.max(#self.cards, self.config.temp_limit)
                 card.T.x = self.T.x + (self.T.w-self.card_w)*((k-1)/math.max(max_cards-1, 1) - 0.5*(#self.cards-max_cards)/math.max(max_cards-1, 1)) + 0.5*(self.card_w - card.T.w)
                 local highlight_height = G.HIGHLIGHT_H
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + (G.SETTINGS.reduced_motion and 0 or 1)*0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-(#self.cards>1 and 0.2 or 0)
+                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + 0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-(#self.cards>1 and 0.2 or 0)
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end
@@ -481,12 +481,12 @@ function CardArea:align_cards()
         local self_w = math.max(self.T.w, 3.2)
         for k, card in ipairs(self.cards) do
             if not card.states.drag.is then 
-                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+card.T.x+card.T.y) + (k%2 == 0 and 1 or -1)*0.08
+                card.T.r = 0.2*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ 0.02*math.sin(2*G.TIMERS.REAL+card.T.x+card.T.y) + (k%2 == 0 and 1 or -1)*0.08
                 local max_cards = math.max(#self.cards, self.config.temp_limit)
                 card.T.x = self.T.x + (self_w-self.card_w)*((k-1)/math.max(max_cards-1, 1) - 0.5*(#self.cards-max_cards)/math.max(max_cards-1, 1)) + 0.5*(self.card_w - card.T.w) + (k%2 == 1 and 1 or -1)*0.27 + (self.T.w-self_w)/2
                 local highlight_height = G.HIGHLIGHT_H
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + (G.SETTINGS.reduced_motion and 0 or 1)*0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-(#self.cards>1 and 0.2 or 0)
+                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + 0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x) + math.abs(0.5*(-#self.cards/2 + k-0.5)/(#self.cards))-(#self.cards>1 and 0.2 or 0)
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end
@@ -509,7 +509,7 @@ function CardArea:align_cards()
     if self.config.type == 'joker' or self.config.type == 'title_2' then
         for k, card in ipairs(self.cards) do
             if not card.states.drag.is then 
-                card.T.r = 0.1*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
+                card.T.r = 0.1*(-#self.cards/2 - 0.5 + k)/(#self.cards)+ 0.02*math.sin(2*G.TIMERS.REAL+card.T.x)
                 local max_cards = math.max(#self.cards, self.config.temp_limit)
                 card.T.x = self.T.x + (self.T.w-self.card_w)*((k-1)/math.max(max_cards-1, 1) - 0.5*(#self.cards-max_cards)/math.max(max_cards-1, 1)) + 0.5*(self.card_w - card.T.w)
                 if #self.cards > 2 or (#self.cards > 1 and self == G.consumeables) or (#self.cards > 1 and self.config.spread) then
@@ -521,7 +521,7 @@ function CardArea:align_cards()
                 end
                 local highlight_height = G.HIGHLIGHT_H/2
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height+ (G.SETTINGS.reduced_motion and 0 or 1)*0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x)
+                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height+ 0.03*math.sin(0.666*G.TIMERS.REAL+card.T.x)
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end
@@ -537,7 +537,7 @@ function CardArea:align_cards()
                 end
                 local highlight_height = G.HIGHLIGHT_H
                 if not card.highlighted then highlight_height = 0 end
-                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + (not card.highlighted and (G.SETTINGS.reduced_motion and 0 or 1)*0.05*math.sin(2*1.666*G.TIMERS.REAL+card.T.x) or 0)
+                card.T.y = self.T.y + self.T.h/2 - card.T.h/2 - highlight_height + (not card.highlighted and 0.05*math.sin(2*1.666*G.TIMERS.REAL+card.T.x) or 0)
                 card.T.x = card.T.x + card.shadow_parrallax.x/30
             end
         end

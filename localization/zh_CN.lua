@@ -10,77 +10,76 @@ return {
             j_jolly = {
                 name = "开心小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#{}",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_zany = {
                 name = "古怪小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#{}",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_mad = {
                 name = "疯狂小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#{}",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_crazy = {
                 name = "狂野小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#{}",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_droll = {
                 name = "滑稽小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#{}",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_half = {
                 name = "半张小丑",
                 text = {
-                    "如果打出的牌",
-                    "少于等于{C:attention}#2#{}张",
+                    "如果出牌包含",
+                    "{C:attention}#2#{}张或更少的牌，",
                     "{C:red}+#1#{}倍率"
                 }
             },
             j_fortune_teller = {
                 name = "占卜师",
                 text = {
-                    "本赛局内每使用过一张{C:purple}塔罗牌{}",
-                    "这张小丑获得{C:red}+#1#{}倍率",
+                    "本赛局每使用一张{C:purple}塔罗牌{}",
+                    "{C:red}+#1#{}倍率",
                     "{C:inactive}（当前为{C:red}+#2#{C:inactive}）"
                 }
             },
             j_juggler = {
                 name = "杂耍师",
                 text = {
-                    "手牌上限{C:attention}+#1#{}"
+                    "{C:attention}+#1#{}手牌大小"
                 }
             },
             j_drunkard = {
                 name = "醉汉",
                 text = {
-                    "每回合",
-                    "弃牌次数{C:red}+#1#{}"
+                    "{C:red}+#1#{}次弃牌数"
                 }
             },
             j_stone = {
                 name = "石头小丑",
                 text = {
-                    "{C:attention}完整牌组{}内每有一张",
-                    "{C:attention}石头牌",
+                    "为牌组内的",
+                    "每张{C:attention}石头牌",
                     "{C:chips}+#1#{}筹码",
                     "{C:inactive}（当前为{C:chips}+#2#{C:inactive}筹码）"
                 }
@@ -96,8 +95,8 @@ return {
                 name = "模具小丑",
                 text = {
                     "每个空的{C:attention}小丑牌{}槽位",
-                    "获得{X:red,C:white} X1{}倍率",
-                    "{s:0.8}模具小丑算作空位",
+                    "获得{X:red,C:white} X1{}倍率。",
+                    "{s:0.8}包括模具小丑",
                     "（当前为{X:red,C:white} X#1# {C:inactive}）"
                 }
             },
@@ -106,64 +105,64 @@ return {
                 text = {
                     "所有{C:attention}同花{}和",
                     "{C:attention}顺子{}都可以",
-                    "由{C:attention}4{}张牌组成"
+                    "由{C:attention}4{}张牌组成。"
                 }
             },
             j_mime = {
                 name = "哑剧演员",
                 text = {
                     "重新触发所有",
-                    "{C:attention}留在手牌中的",
-                    "{C:attention}牌{}的能力"
+                    "所有手中{C:attention}持有的",
+                    "{C:attention}手牌{}的能力"
                 }
             },
             j_credit_card = {
                 name = "信用卡",
                 text = {
-                    "可以负债",
-                    "最多{C:red}-$#1#{}"
+                    "负债限额",
+                    "最多可至{C:red}-$#1#{}"
                 }
             },
             j_greedy_joker = {
                 name = "贪婪小丑",
                 text = {
-                    "打出的",
-                    "{C:diamonds}#2#{}花色牌",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "每打出一张",
+                    "{C:diamonds}#2#{}花色的牌，",
+                    "计分时{C:mult}+#1#{}倍率"
                 }
             },
             j_lusty_joker = {
                 name = "色欲小丑",
                 text = {
-                    "打出的",
-                    "{C:hearts}#2#{}花色牌",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "每打出一张",
+                    "{C:hearts}#2#{}花色的牌",
+                    "计分时{C:mult}+#1#{}倍率"
                 }
             },
             j_wrathful_joker = {
                 name = "愤怒小丑",
                 text = {
-                    "打出的",
-                    "{C:spades}#2#{}花色牌",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "每打出一张",
+                    "{C:spades}#2#{}花色的牌",
+                    "计分时{C:mult}+#1#{}倍率"
                 }
             },
             j_gluttenous_joker = {
                 name = "暴食小丑",
                 text = {
-                    "打出的",
-                    "{C:clubs}#2#{}花色牌",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "每打出一张",
+                    "{C:clubs}#2#{}花色的牌",
+                    "计分时{C:mult}+#1#{}倍率"
                 }
             },
             j_ceremonial = {
-                name = "仪式匕首",
+                name = "恐怖匕首",
                 text = {
-                    "在选择{C:attention}盲注{}时",
-                    "摧毁右侧的小丑牌",
-                    "并将其售价的{C:attention}两倍",
-                    "永久添加至这张牌的{C:attention}倍率",
-                    "{C:inactive}（当前为{C:mult}+#1#{C:inactive}倍）"
+                    "当选择 {C:attention}盲注{}时，",
+                    "摧毁右侧的小丑牌，",
+                    "并永久将其售价{C:attention}加倍",
+                    "添加至当前{C:attention}倍率",
+                    "{C:inactive}（当前为 {C:mult}+#1#{C:inactive}倍）"
                 }
             },
             j_banner = {
@@ -178,7 +177,7 @@ return {
                 name = "神秘之峰",
                 text = {
                     "当剩余{C:attention}#2#{}次",
-                    "弃牌次数",
+                    "弃牌次数，",
                     "{C:mult}+#1#{}倍率"
                 }
             },
@@ -193,17 +192,17 @@ return {
             j_loyalty_card = {
                 name = "积分卡",
                 text = {
-                    "每第{C:attention}#2#{}次出牌时",
-                    "给予{X:red,C:white} X#1# {}倍率",
-                    "{C:inactive}（#3#）"
+                    "每出牌{C:attention}#2#{}次",
+                    "倍率{X:red,C:white}X#1#{}",
+                    "{C:inactive}#3#次"
                 }
             },
             j_8_ball = {
                 name = "八号球",
                 text = {
-                    "打出的每一张{C:attention}8{}",
-                    "有{C:green}#1#/#2#{}几率在计分时",
-                    "生成一张{C:tarot}塔罗牌{}",
+                    "打出{C:attenetion}#1#{}张",
+                    "或更多张数字{C:attention}8{}，",
+                    "则获得一张{C:planet}星球牌{}",
                     "{C:inactive}（必须有空位）"
                 }
             },
@@ -214,19 +213,19 @@ return {
                 }
             },
             j_dusk = {
-                name = "黄昏",
+                name = "黄昏卡",
                 text = {
-                    "每回合的",
-                    "{C:attention}最后一次出牌{}时",
-                    "所有打出的牌会被触发两次"
+                    "每回合",
+                    "{C:attention}最后一次出牌{}",
+                    "该手牌会被触发两次"
                 }
             },
             j_raised_fist = {
                 name = "致胜之拳",
                 text = {
-                    "将留在手牌中点数{C:attention}最小{}牌",
-                    "点数的{C:attention}两倍{}",
-                    "加到倍率上"
+                    "将手中持有的 {C:attention}最小{}牌的",
+                    "点数 {C:attention}翻倍{}，",
+                    "并应用到倍率上"
                 }
             },
             j_chaos = {
@@ -239,32 +238,32 @@ return {
             j_fibonacci = {
                 name = "斐波那契",
                 text = {
-                    "打出的每一张",
-                    "{C:attention}A{}、{C:attention}2{}、{C:attention}3{}、{C:attention}5{}、{C:attention}8{}",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "每打出一张",
+                    "{C:attention}A{}、{C:attention}2{}、{C:attention}3{}、{C:attention}5{}或{C:attention}8{}时",
+                    "计分时{C:mult}+#1#{}倍率"
                 }
             },
             j_steel_joker = {
                 name = "钢铁小丑",
                 text = {
-                    "{C:attention}完整牌组{}内每有一张",
-                    "{C:attention}钢铁牌{}",
-                    "给予{X:mult,C:white} X#1# {}倍率",
+                    "牌组内的",
+                    "每张{C:attention}钢铁牌",
+                    "可使倍率{X:mult,C:white}X#1#",
                     "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             },
             j_scary_face = {
                 name = "恐怖面孔",
                 text = {
-                    "打出的{C:attention}人头牌{}",
-                    "在计分时",
-                    "给予{C:chips}+#1#{}筹码"
+                    "打出{C:attention}人头牌{}时，",
+                    "计分时",
+                    "获得{C:chips}{C:chips}+#1#{}"
                 }
             },
             j_abstract = {
                 name = "抽象小丑",
                 text = {
-                    "每有一张{C:attention}小丑牌{}",
+                    "每张{C:attention}小丑牌{}",
                     "{C:mult}+#1#{}倍率",
                     "{C:inactive}（当前为{C:red}+#2#{C:inactive}倍率）"
                 }
@@ -282,7 +281,7 @@ return {
                 text = {
                     "重新触发",
                     "所有打出的",
-                    "{C:attention}2{}、{C:attention}3{}、{C:attention}4{}和{C:attention}5{}"
+                    "{C:attention}2{}、{C:attention}3{}、{C:attention}4{}和 {C:attention}5{}"
                 }
             },
             j_pareidolia = {
@@ -294,7 +293,7 @@ return {
                 }
             },
             j_gros_michel = {
-                name = "大麦克香蕉",
+                name = "格罗斯·米歇尔",
                 text = {
                     "{C:mult}+#1#{}倍率",
                     "回合结束时",
@@ -305,26 +304,26 @@ return {
             j_even_steven = {
                 name = "偶数史蒂文",
                 text = {
-                    "打出的点数为",
-                    "{C:attention}偶数{}的牌",
-                    "在计分时给予{C:mult}+#1#{}倍率",
+                    "每打出一张计分的",
+                    "{C:attention}偶数{}点的牌，",
+                    "{C:mult}+#1#{}倍率",
                     "{C:inactive}（10、8、6、4、2）"
                 }
             },
             j_odd_todd = {
                 name = "奇数托德",
                 text = {
-                    "打出的点数为",
-                    "{C:attention}奇数{}的牌",
-                    "在计分时给予{C:chips}+#1#{}筹码",
+                    "每打出一张计分的",
+                    "{C:attention}奇数{}点的牌，",
+                    "获得 {C:chips}+#1#{}筹码",
                     "{C:inactive}（A、9、7、5、3）"
                 }
             },
             j_scholar = {
                 name = "学者",
                 text = {
-                    "打出的{C:attention}A{}牌",
-                    "在计分时给予",
+                    "计分时",
+                    "每打出一张{C:attention}A{}",
                     "{C:mult}+#1#{}倍率",
                     "和{C:chips}+#2#{}筹码"
                 }
@@ -332,7 +331,7 @@ return {
             j_business = {
                 name = "名片",
                 text = {
-                    "打出的{C:attention}人头牌{}在计分时",
+                    "计分时，打出的{C:attention}人头牌{}",
                     "有{C:green}#1#/#2#{}的几率",
                     "获得{C:money}$2{}"
                 }
@@ -340,18 +339,18 @@ return {
             j_supernova = {
                 name = "超新星",
                 text = {
-                    "将{C:attention}牌型{}在本赛局内",
-                    "被{C:attention}打出过{}的次数",
+                    "将{C:attention}牌型{}的",
+                    "{C:attention}出牌{}次数",
                     "添加至倍率"
                 }
             },
             j_ride_the_bus = {
                 name = "搭乘巴士",
                 text = {
-                    "连续打出没有",
-                    "计分{C:attention}人头牌{}的牌时",
-                    "这张小丑牌获得{C:mult}+#1#{}倍率",
-                    "失败将会重置倍率",
+                    "若连续打出",
+                    "没有{C：attention}人头牌{}的",
+                    "計分手牌，",
+                    "每次{C:mult}+#1#{}倍率",
                     "{C:inactive}（当前为{C:mult}+#2#{C:inactive}倍率）"
                 }
             },
@@ -367,14 +366,14 @@ return {
                 name = "鸡蛋",
                 text = {
                     "在回合结束时",
-                    "本卡的{c:attention}出售价值",
-                    "增加{c:money}$#1#"
+                    "本卡的{C：attention}出售价值",
+                    "增加{C：money}$#1#"
                 }
             },
             j_burglar = {
                 name = "窃贼",
                 text = {
-                    "选择{C:attention}盲注{}后",
+                    "选择{C:attention}盲注{}后，",
                     "出牌次数{C:red}+#1#{}，并",
                     "{C:attention}失去所有弃牌次数"
                 }
@@ -382,25 +381,25 @@ return {
             j_blackboard = {
                 name = "黑板",
                 text = {
-                    "如果留在手牌中的",
-                    "所有牌都是{C:spades}#2#{}或{C:clubs}#3#{}",
-                    "则{X:red,C:white} X#1# {}倍率"
+                    "倍率{X:red,C:white}X#1# {}，若手牌中",
+                    "未出手的牌",
+                    "都是{C:spades}#2#{}或{C:clubs}#3#{}"
                 }
             },
             j_runner = {
                 name = "跑步选手",
                 text = {
-                    "如果打出的牌中包含",
+                    "每次打出一手",
                     "{C:attention}顺子{}",
-                    "这张小丑获得{C:chips}+#2#{}筹码",
-                    "{C:inactive}（当前为{C:chips}+#1#{C:inactive}筹码）"
+                    "{C:chips}+#2#{}筹码",
+                    "{C:inactive}（当前 {C:chips}+#1#{C:inactive}筹码）"
                 }
             },
             j_ice_cream = {
                 name = "冰淇淋",
                 text = {
                     "{C:chips}+#1#{}筹码",
-                    "每次出牌后",
+                    "每次出牌",
                     "{C:chips}-#2#{}筹码"
                 }
             },
@@ -408,16 +407,16 @@ return {
                 name = "DNA",
                 text = {
                     "如果回合的{C:attention}第一次出牌{}",
-                    "只有{C:attention}1{}张牌，则将其",
-                    "永久复制到牌组，并将",
-                    "复制牌放到{C:attention}手牌中"
+                    "只有 {C:attention}1{}张牌，则将其",
+                    "永久复制到牌组",
+                    "并放到{C:attention}手牌中"
                 }
             },
             j_splash = {
                 name = "飞溅",
                 text = {
                     "每张{C:attention}打出的牌",
-                    "都可以计分"
+                    "都计入得分"
                 }
             },
             j_blue_joker = {
@@ -431,9 +430,9 @@ return {
             j_sixth_sense = {
                 name = "第六感",
                 text = {
-                    "如果回合的{C:attention}第一次出牌{}",
-                    "是一张单独的{C:attention}6{}",
-                    "则将其销毁并生成一张{C:spectral}幻灵牌{}",
+                    "若此回合第一次出牌",
+                    "为一张单独的{C:attention}6{}",
+                    "就将其销毁并创建一张{C:spectral}幻灵牌{}",
                     "{C:inactive}（必须有空位）"
                 }
             },
@@ -441,16 +440,16 @@ return {
                 name = "星座",
                 text = {
                     "每使用一张{C:planet}星球牌{}",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
+                    "倍率{X:mult,C:white}X#1#{}",
+                    "{C:inactive}（当前为倍率{X:mult,C:white}X#2#{C:inactive}）"
                 }
             },
             j_hiker = {
                 name = "徒步者",
                 text = {
-                    "打出的每一张牌",
-                    "在{c:attention}计分{}时",
-                    "会永久获得{C:chips}+#1#{}筹码"
+                    "每张打出的",
+                    "{C：attention}計分牌{}可永久",
+                    "增加{C:chips}+#1#{}筹码"
                 }
             },
             j_faceless = {
@@ -458,44 +457,44 @@ return {
                 text = {
                     "如果同时弃掉",
                     "{C:attention}#2#{}张或更多张",
-                    "{C:attention}人头牌{}",
+                    "{C:attention}人头牌{}，",
                     "获得{C:money}$#1#{}"
                 }
             },
             j_green_joker = {
                 name = "绿色小丑",
                 text = {
-                    "每次出牌，这张小丑牌{C:mult}+#1#{}倍率",
-                    "每次弃牌，这张小丑牌{C:mult}-#2#{}倍率",
-                    "{C:inactive}（当前为{C:mult}+#3#{C:inactive}倍）"
+                    "每次出牌，{C:mult}+#1#{}倍率",
+                    "每次弃牌，{C:mult}-#2#{}倍率",
+                    "{C:inactive}（当前为 {C:mult}+#3#{C:inactive}倍）"
                 }
             },
             j_superposition = {
-                name = "叠加态",
+                name = "叠加",
                 text = {
-                    "如果打出的牌中包含",
+                    "如果出牌中计分的牌包含",
                     "一张{C:attention}A{}和一个{C:attention}顺子{}",
-                    "生成一张{C:tarot}塔罗牌{}",
+                    "产生一张{C:tarot}塔罗牌{}",
                     "{C:inactive}（必须有空位）"
                 }
             },
             j_todo_list = {
                 name = "待办清单",
                 text = {
-                    "如果{C:attention}出牌牌型{}为{C:attention}#2#{}",
-                    "获得{C:money}$#1#{}",
-                    "每回合结束时",
+                    "如果{C:attention}出牌牌型{}為{C:attention}#2#{}，",
+                    "獲得{C:money}$#1#{}",
+                    "每次支付时",
                     "牌型都会改变"
                 }
             },
             j_ticket = {
                 name = "黄金门票",
                 text = {
-                    "打出的{C:attention}黃金牌{}",
-                    "在计分时获得{C:money}$#1#{}"
+                    "打出{C:attention}黃金牌{}，",
+                    "计分时，{C:money}$#1#{}"
                 },
                 unlock = {
-                    "打出一手五张",
+                    "当打出一手五张",
                     "只包含",
                     "{C:attention,E:1}黃金牌{}的牌"
                 }
@@ -503,25 +502,25 @@ return {
             j_mr_bones = {
                 name = "骷髅先生",
                 text = {
-                    "如果最终得到的",
-                    "筹码至少是",
+                    "若计分的筹码",
+                    "至少是",
                     "所需筹码的{C:attention}25%",
                     "则不会死亡",
                     "{S:1.1,C:red,E:2}自毁{}"
                 },
                 unlock = {
-                    "输掉{C:attention,E:1}#1#{}局游戏",
+                    "失去{C:attention,E:1}#1#{}局",
                     "{C:inactive}(#2#)"
                 }
             },
             j_acrobat = {
                 name = "杂技演员",
                 text = {
-                    "每回合的最后一次",
-                    "{C:attention}出牌{}时，{X:red,C:white} X#1# {}倍率"
+                    "回合的最后一次",
+                    "{C:attention}出牌{}中，倍率{X:red,C:white}X#1#"
                 },
                 unlock = {
-                    "打出{C:attention,E:1}#1#{}次牌",
+                    "打出{C:attention,E:1}#1#{}张牌",
                     "{C:inactive}(#2#)"
                 }
             },
@@ -540,7 +539,7 @@ return {
             j_swashbuckler = {
                 name = "侠盗",
                 text = {
-                    "将拥有的所有其他",
+                    "将此卡左侧所有",
                     "{C:attention}小丑牌{}的总售价",
                     "添加至倍率",
                     "{C:inactive}（当前为{C:mult}+#1#{C:inactive}倍率）"
@@ -554,11 +553,11 @@ return {
             j_troubadour = {
                 name = "游吟诗人",
                 text = {
-                    "{C:attention}+#1#{}手牌上限",
-                    "每回合出牌次数{C:blue}-#2#{}"
+                    "{C:attention}+#1#{}手牌大小",
+                    "每回合出牌次数{C:red}-#2#{}"
                 },
                 unlock = {
-                    "连续赢得{C:attention,E:1}#1#{}回合",
+                    "连续赢得{C:attention,E:1}#1#{}回合，",
                     "且每回合只使用",
                     "一次出牌次数"
                 }
@@ -580,9 +579,9 @@ return {
             j_smeared = {
                 name = "模糊小丑",
                 text = {
-                    "{C:hearts}红桃{}和{C:diamonds}方片",
+                    "{C:diamonds}红桃{}和{C:diamonds}方片",
                     "视作同一花色，",
-                    "{C:spades}黑桃{}和{C:clubs}梅花",
+                    "{C:spades}黑桃{}和{C:spades}梅花",
                     "也视作同一花色"
                 },
                 unlock = {
@@ -596,7 +595,7 @@ return {
                 text = {
                     "本赛局内每跳过一次",
                     "{C:attention}盲注{}，获得{X:mult,C:white}X#1#{}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white} X#2# {C:inactive}倍率）"
+                    "{C:inactive}（当前为 {X:mult,C:white}X#2#{C:inactive}倍）"
                 },
                 unlock = {
                     "从主菜单中选择继续",
@@ -604,11 +603,10 @@ return {
                 }
             },
             j_hanging_chad = {
-                name = "未断选票",
+                name = "悬垂查德",
                 text = {
-                    "打出的牌中",
-                    "{C:attention}第一张{}计分牌",
-                    "额外触发{C:attention}#1#{}次"
+                    "重新触发得分中",
+                    "使用的{C:attention}第一张{}牌"
                 },
                 unlock = {
                     "用{E:1,C:attention}#1#",
@@ -618,53 +616,53 @@ return {
             j_rough_gem = {
                 name = "璞玉",
                 text = {
-                    "打出的",
-                    "{C:diamonds}方块{}花色牌",
-                    "在计分时给予{C:money}$#1#{}", 
+                    "计分时{C:mult}+#1#{}",
+                    "若每打出一张带有",
+                    "{C:diamonds}方片{}花色的卡牌"
                 },
                 unlock = {
                     "在你的牌组中",
-                    "拥有至少{E:1,C:attention}#1#张",
+                    "至少要有{E:1,C:attention}#1#张",
                     "带有{E:1,C:attention}#2#花色的卡牌"
                 }
             },
             j_bloodstone = {
                 name = "血石",
                 text = {
-                    "打出的",
-                    "{C:hearts}红桃{}花色牌",
-                    "在计分时有{c:green}#1#/#2#{}几率",
-                    "给予{X:mult,C:white}X#3#{}倍率"
+                    "若每打出一张带有",
+                    "{C:hearts}红桃{}花色的卡牌",
+                    "有{C：green}#1#/#2#{}的机率",
+                    "获得{X:mult,C:white}X#3#{}倍率"
                 },
                 unlock = {
                     "在你的牌组中",
-                    "拥有至少{E:1,C:attention}#1#张",
+                    "至少要有{E:1,C:attention}#1#张",
                     "带有{E:1,C:attention}#2#花色的卡牌"
                 }
             },
             j_arrowhead = {
                 name = "箭头",
                 text = {
-                    "打出的",
-                    "{C:spades}黑桃{}花色牌",
-                    "在计分时给予{C:chips}+#1#{}筹码",
+                    "若每打出一张带有",
+                    "{C:spades}黑桃{}花色的卡牌",
+                    "计分时{C:mult}+#1#{}筹码"
                 },
                 unlock = {
                     "在你的牌组中",
-                    "拥有至少{E:1,C:attention}#1#张",
+                    "至少要有{E:1,C:attention}#1#张",
                     "带有{E:1,C:attention}#2#花色的卡牌"
                 }
             },
             j_onyx_agate = {
                 name = "缟玛瑙",
                 text = {
-                    "打出的",
-                    "{C:clubs}梅花{}花色牌",
-                    "在计分时给予{C:mult}+#1#{}倍率"
+                    "若每打出一张带有",
+                    "{C:clubs}梅花{}花色的牌",
+                    "计分时{C:mult}+#1#{}倍率"
                 },
                 unlock = {
                     "在你的牌组中",
-                    "拥有至少{E:1,C:attention}#1#张",
+                    "至少要有{E:1,C:attention}#1#张",
                     "带有{E:1,C:attention}#2#花色的卡牌"
                 }
             },
@@ -673,12 +671,12 @@ return {
                 text = {
                     "每摧毁一张",
                     "{C:attention}玻璃牌",
-                    "这张小丑获得{X:mult,C:white}X#1#{}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white} X#2#{C:inactive}倍率）"
+                    "获得{C:mult}+#1#{}倍率",
+                    "{C:inactive}（当前为 {X:mult,C:white} X#2#{C:inactive}倍）"
                 },
                 unlock = {
                     "在你的牌组中",
-                    "拥有{E:1,C:attention}#1#张",
+                    "拥有{E:1,C:attention}#1#个",
                     "{E:1,C:attention}#2#{}"
                 }
             },
@@ -686,8 +684,8 @@ return {
                 name = "马戏团长",
                 text = {
                     "{C:attention}小丑牌{}、{C:tarot}塔罗牌{}、{C:planet}星球牌{}",
-                    "和{C:planet}幻灵牌{}可以同时",
-                    "出现复数张"
+                    "和{C:planet}幻灵牌{}会出现",
+                    "多次"
                 },
                 unlock = {
                     "达到底注",
@@ -697,10 +695,10 @@ return {
             j_flower_pot = {
                 name = "花盆",
                 text = {
-                    "如果打出的牌型中，包含",
-                    "{C:diamonds}方片{}、{C:clubs}梅花{}、",
-                    "{C:hearts}红桃{}、{C:spades}黑桃{}牌各一张，",
-                    "则{X:mult,C:white} X#1# {}倍率"
+                    "{X:mult,C:white} X#1# {}倍率，若",
+                    "出牌中，计分的牌",
+                    "含有{C:diamonds}方片{}、{C:clubs}梅花{}",
+                    "{C:hearts}红桃{}和{C:spades}黑桃{}"
                 },
                 unlock = {
                     "达到底注",
@@ -720,34 +718,33 @@ return {
             j_wee = {
                 name = "小小丑",
                 text = {
-                    "每有一张打出的{C:attention}2{}计分时",
-                    "这张小丑牌获得",
-                    "{C:chips}+#2#{}筹码",
+                    "每打出一张{C:attention}2{}并得分时",
+                    "此小丑牌获得",
+                    "获得{C:chips}+#2#{}筹码",
                     "{C:inactive}（当前为{C:chips}+#1#{C:inactive}筹码）"
                 },
                 unlock = {
-                    "在{E:1,C:attention}#1#{}回合",
+                    "在{E:1,C:attention}#1#回合",
                     "或更少回合内赢得一局"
                 }
             },
             j_merry_andy = {
                 name = "快乐安迪",
                 text = {
-                    "每回合",
-                    "弃牌次数{C:red}+#1#{}",
-                    "手牌上限{C:red}#2#{}"
+                    "{C:red}+#1#{}次弃牌",
+                    "{C:red}#2#{}手牌大小"
                 },
                 unlock = {
-                    "在{E:1,C:attention}#1#{}回合",
+                    "在{E:1,C:attention}#1#回合",
                     "或更少回合内赢得一局"
                 }
             },
             j_oops = {
                 name = "六六大顺",
                 text = {
-                    "将所有以{C:attention}数字标注{}出的",
-                    "{C:green,E:1,S:1.1}几率{}翻倍",
-                    "{C:inactive}（例如：{C:green}1/3{C:inactive}几率 -> {C:green}2/3{C:inactive}几率）"
+                    "全部加倍{C:attention}列出的",
+                    "{C:green,E:1,S:1.1}几率",
+                    "{C:inactive}（例如：{C:green}3中1{C:inactive} -> {C:green}3中2{C:inactive}）"
                 },
                 unlock = {
                     "在一次出牌中",
@@ -758,9 +755,9 @@ return {
             j_idol = {
                 name = "偶像",
                 text = {
-                    "每张打出的{V:1}#3#{}{C:attention}#2#",
-                    "在计分时",
-                    "给予{X:mult,C:white} X#1# {}倍率",
+                    "计分时在{V:1}#3#{}中",
+                    "每打出的{C:attention}#2#",
+                    "{X:mult,C:white} X#1#{}倍率",
                     "{s:0.8}每回合卡牌都会变动"
                 },
                 unlock = {
@@ -770,15 +767,15 @@ return {
                 }
             },
             j_seeing_double = {
-                name = "重影",
+                name = "双重视角",
                 text = {
-                    "如果打出的牌中，包含",
-                    "一张计分的{C:clubs}梅花{}牌和",
-                    "一张计分的任何其他{C:attention}花色{}牌",
-                    "则{X:mult,C:white} X#1# {}倍率"
+                    "出牌中，计分的牌若",
+                    "含有{C:clubs}梅花{}和",
+                    "任何其他{C:attention}花色{}，",
+                    "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
-                    "打出一手",
+                    "当打一手",
                     "包含",
                     "{E:1,C:attention}#1#的牌"
                 }
@@ -786,35 +783,35 @@ return {
             j_matador = {
                 name = "斗牛士",
                 text = {
-                    "如果出牌触发了",
-                    "{C:attention}Boss盲注{}的限制条件",
+                    "若出牌触发了",
+                    "{C:attention}Boss盲注{}的限制条件，",
                     "获得{C:money}$#1#{}"
                 },
                 unlock = {
-                    "不使用弃牌且",
-                    "只用{E:1,C:attention}一次出牌{}",
-                    "打赢Boss盲注"
+                    "打赢Boss盲注",
+                    "在{E:1,C:attention}一手之内{}且没有",
+                    "使用任何弃牌"
                 }
             },
             j_hit_the_road = {
-                name = "上路吧杰克",
+                name = "上路",
                 text = {
-                    "本回合中，每弃掉一张",
-                    "{C:attention}J{}牌",
-                    "这张小丑牌获得{X:mult,C:white}X#1# {}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white} X#2#{C:inactive}倍率）"
+                    "每弃掉一张",
+                    "{C:attention}J{}牌，本回合",
+                    "获得{X:mult,C:white}X#1# {}倍率",
+                    "{C:inactive}（当前为 {X:mult,C:white} X#2#{C:inactive}倍）"
                 },
                 unlock = {
-                    "一次弃掉",
-                    "{E:1,C:attention}5张{}{E:1,C:attention}J",
-                    ""
+                    "同时将{E:1,C:attention}5张",
+                    "{E:1,C:attention}J",
+                    "全部弃掉"
                 }
             },
             j_duo = {
                 name = "二重奏",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "若出牌包含",
+                    "{C:attention}#2#",
                     "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -826,8 +823,8 @@ return {
             j_trio = {
                 name = "三重奏",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "若出牌包含",
+                    "{C:attention}#2#",
                     "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -839,8 +836,8 @@ return {
             j_family = {
                 name = "一家人",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "若出牌包含",
+                    "{C:attention}#2#",
                     "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -852,8 +849,8 @@ return {
             j_order = {
                 name = "秩序",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "若出牌包含",
+                    "{C:attention}#2#",
                     "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -865,8 +862,8 @@ return {
             j_tribe = {
                 name = "部落",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "若出牌包含",
+                    "{C:attention}#2#",
                     "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -887,42 +884,42 @@ return {
             j_card_sharp = {
                 name = "老千小丑",
                 text = {
-                    "如果打出的{C:attention}牌型{}已经",
-                    "在本回合打出过",
-                    "则{X:mult,C:white}X#1#{}倍率"
+                    "若该{C:attention}牌型{}已经",
+                    "在本回合打出过，",
+                    "{X:mult,C:white}X#1#{}倍率"
                 }
             },
             j_red_card = {
                 name = "红牌",
                 text = {
                     "当跳过任一{C:attention}补充包{}时",
-                    "这张小丑牌获得{C:red}+#1#{}倍率",
-                    "{C:inactive}（当前为{C:red}+#2#{C:inactive}倍率）"
+                    "{C:red}+#1#{}倍率",
+                    "{C:inactive}（当前为 {C:red}+#2#{C:inactive}倍）"
                 }
             },
             j_madness = {
                 name = "疯狂",
                 text = {
-                    "在{C:attention}小盲注{}或{C:attention}大盲注{}被选中时",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "然后随机{C:attention}摧毁{}一张小丑牌",
-                    "{C:inactive}（当前为{X:mult,C:white}X#2#{}倍率）"
+                    "当选择 {C:attention}盲注{}时，",
+                    "{X:mult,C:white}X#1#{}倍率并且",
+                    "随机{C:attention}消灭{}一个小丑",
+                    "{C:inactive}（当前为{X:mult,C:white}X#2#{}倍）"
                 }
             },
             j_square = {
                 name = "方形小丑",
                 text = {
-                    "如果打出的牌",
-                    "正好是{C:attention}4{}张牌",
-                    "这张小丑牌获得{C:chips}+#2#{}筹码",
-                    "{C:inactive}（当前为{C:chips}+#1#{C:inactive}筹码）"
+                    "若打出的手牌",
+                    "恰好有{C:attention}4{}张牌",
+                    "那么获得",
+                    "{C:chips}+#2#{}筹码"
                 }
             },
             j_seance = {
                 name = "通灵",
                 text = {
                     "如果{C:attention}牌型{}为",
-                    "{C:attention}#1#{}，随机生成",
+                    "{C:attention}#1#{}，随机产生",
                     "一张{C:spectral}幻灵牌{}",
                     "{C:inactive}（必须有空位）"
                 }
@@ -930,8 +927,8 @@ return {
             j_riff_raff = {
                 name = "乌合之众",
                 text = {
-                    "在选择{C:attention}盲注{}时",
-                    "生成{C:attention}#1#张{C:blue}普通{C:attention}小丑牌",
+                    "当选择{C:attention}盲注{}时，",
+                    "产生{C:attention}#1#张{C:blue}常规{C:attention}小丑牌",
                     "{C:inactive}（必须有空间）"
                 }
             },
@@ -939,7 +936,7 @@ return {
                 name = "特技演员",
                 text = {
                     "{C:chips}+#1#{}筹码",
-                    "手牌上限{C:attention}-#2#{}"
+                    "{C:attention}-#2#{}手牌大小"
                 },
                 unlock = {
                     "在一次出牌中",
@@ -950,13 +947,13 @@ return {
             j_invisible = {
                 name = "隐形小丑",
                 text = {
-                    "经过{C:attention}#1#{}个回合后",
-                    "售出此卡牌可以",
+                    "{C:attention}#1#{}个回合后，",
+                    "卖掉此卡牌就可以",
                     "随机{C:attention}复制{}一张小丑牌",
                     "{C:inactive}(当前为{C:attention}#2#{C:inactive}/#1#)"
                 },
                 unlock = {
-                    "赢一局",
+                    "赢一局，",
                     "且从未拥有超过",
                     "{E:1,C:attention}4张小丑牌{}"
                 }
@@ -965,17 +962,17 @@ return {
                 name = "头脑风暴",
                 text = {
                     "复制最左边的",
-                    "{C:attention}小丑牌的能力"
+                    "{C:attention}小丑牌的技能"
                 },
                 unlock = {
-                    "弃掉一手",
+                    "弃掉一张",
                     "{E:1,C:attention}皇家同花顺"
                 }
             },
             j_satellite = {
                 name = "卫星",
                 text = {
-                    "本赛局每使用过一种",
+                    "本赛局每使用一张",
                     "{C:planet}星球牌{}，每回合结束时",
                     "可得到{C:money}$#1#{}",
                     "{C:inactive}（当前{C:money}$#2#{C:inactive}）"
@@ -988,22 +985,22 @@ return {
             j_shoot_the_moon = {
                 name = "射月",
                 text = {
-                    "留在手牌中的",
-                    "每一张{C:attention}Q",
-                    "给予{C:mult}+#1#{}倍率"
+                    "若每持有一张{C:attention}Q",
+                    "在手牌中",
+                    "{C:mult}+#1#{}倍率"
                 },
                 unlock = {
                     "在单个回合中",
                     "打出牌组里的",
-                    "所有{E:1,C:attention}红桃"
+                    "{E:1,C:attention}红桃"
                 }
             },
             j_drivers_license = {
                 name = "驾驶执照",
                 text = {
-                    "如果牌组中至少有",
-                    "{C:attention}16张增强卡牌，",
-                    "则{X:mult,C:white} X#1# {}倍率",
+                    "{X:mult,C:white} X#1# {}倍率，如果牌组",
+                    "至少有{C:attention}16张",
+                    "增强卡牌",
                     "{C:inactive}（当前{C:attention}#2#{C:inactive}）"
                 },
                 unlock = {
@@ -1014,8 +1011,8 @@ return {
             j_cartomancer = {
                 name = "卡牌术士",
                 text = {
-                    "在选择{C:attention}盲注{}时",
-                    "生成一张{C:tarot}塔罗牌{}",
+                    "当选择{C:attention}盲注{}时",
+                    "产生一张{C:tarot}塔罗牌{}",
                     "{C:inactive}（必须有空位）"
                 },
                 unlock = {
@@ -1027,11 +1024,11 @@ return {
                 name = "天文学家",
                 text = {
                     "所有{C:planet}星球牌{}",
-                    "和{C:planet}天体补充包{}",
-                    "在商店内都{C:attention}免费"
+                    "和{C:planet}天体包{}",
+                    "在商店内的都{C:attention}免费"
                 },
                 unlock = {
-                    "发现所有",
+                    "找到所有",
                     "{E:1,C:planet}星球牌{}"
                 }
             },
@@ -1039,8 +1036,8 @@ return {
                 name = "烧焦小丑",
                 text = {
                     "升级每回合",
-                    "第一次{C:attention}被弃掉的",
-                    "牌型的等级"
+                    "首次{C:attention}被弃掉的",
+                    "扑克手牌的等级"
                 },
                 unlock = {
                     "售出所有",
@@ -1051,21 +1048,20 @@ return {
             j_bootstraps = {
                 name = "提靴带",
                 text = {
-                    "每拥有{C:money}$#2#{}",
-                    "{C:mult}+#1#{}倍率",
-                    "{C:inactive}（当前为{C:mult}+#3#{C:inactive}倍率）"
+                    "每拥有{C:money}$#2#{}，",
+                    "{C:mult}+#1#{}倍率"
                 },
                 unlock = {
-                    "在你的牌组中拥有至少",
-                    "{E:1,C:attention}#1#{}张{C:dark_edition}多彩{}小丑"
+                    "在你的牌组中",
+                    "{C:dark_edition}多彩{}小丑"
                 }
             },
             j_caino = {
-                name = "卡尼奥",
+                name = "卡伊诺",
                 text = {
-                    "每当一张{C:attention}人头牌{}",
-                    "被摧毁时",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
+                    "每有一张被摧毁的",
+                    "{C:attention}人头牌{}时",
+                    "获得{X:mult,C:white}X#1#{}倍率",
                     "{C:inactive}（当前为{X:mult,C:white} X#2#{C:inactive}倍率）"
                 },
                 unlock = {
@@ -1076,8 +1072,8 @@ return {
                 name = "特里布莱",
                 text = {
                     "打出的{C:attention}K{}和{C:attention}Q",
-                    "在计分时",
-                    "给予{X:mult,C:white}X#1#{}倍率"
+                    "各自获得",
+                    "{X:mult,C:white}X#1#{}倍率"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1086,18 +1082,18 @@ return {
             j_yorick = {
                 name = "约里克",
                 text = {
-                    "每弃掉{C:attention}#2#{C:inactive}[#3#]{}张牌",
-                    "这张小丑牌获得{X:mult,C:white} X#1# {}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white} X#4# {C:inactive}倍率）"
+                    "使用{C:attention}#2#{}次弃牌后",
+                    "获得{X:mult,C:white}X#1#{}倍数",
+                    "{C:inactive}（弃牌剩余：{C:attention}#3#{C:inactive}）"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
                 }
             },
             j_chicot = {
-                name = "希科",
+                name = "奇科特",
                 text = {
-                    "所有{C:attention}Boss盲注",
+                    "每个{C:attention}Boss盲注",
                     "限制条件消失"
                 },
                 unlock = {
@@ -1105,9 +1101,9 @@ return {
                 }
             },
             j_perkeo = {
-                name = "帕奇欧",
+                name = "佩尔科欧",
                 text = {
-                    "在离开商店时",
+                    "在结束商店后",
                     "随机复制{C:attention}1{}张",
                     "拥有的{C:attention}消耗牌{}",
                     "并给那张牌{C:dark_edition}负片{}效果"
@@ -1119,58 +1115,58 @@ return {
             j_sly = {
                 name = "奸诈小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "如果出牌中",
+                    "包含一个{C:attention}#2#，",
                     "{C:chips}+#1#{}筹码"
                 }
             },
             j_wily = {
                 name = "狡猾小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "如果出牌中",
+                    "包含一个{C:attention}#2#，",
                     "{C:chips}+#1#{}筹码"
                 }
             },
             j_clever = {
                 name = "聪敏小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "如果出牌中",
+                    "包含一个{C:attention}#2#，",
                     "{C:chips}+#1#{}筹码"
                 }
             },
             j_devious = {
                 name = "阴险小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "如果出牌中",
+                    "包含一个{C:attention}#2#，",
                     "{C:chips}+#1#{}筹码"
                 }
             },
             j_crafty = {
                 name = "精明小丑",
                 text = {
-                    "如果打出的牌中",
-                    "包含{C:attention}#2#",
+                    "如果出牌中",
+                    "包含一个{C:attention}#2#，",
                     "{C:chips}+#1#{}筹码"
                 }
             },
             j_vampire = {
                 name = "吸血鬼",
                 text = {
-                    "每打出一张计分的{C:attention}增强卡牌{}",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "并移除卡牌的{C:attention}增强效果",
-                    "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
+                    "每打出一张{C:attention}增强卡牌{}",
+                    "即可获得{X:mult,C:white}X#1#{}倍率，",
+                    "並移除卡牌{C:attention}增强效果",
+                    "{C:inactive}（当前为 {X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             },
             j_shortcut = {
                 name = "捷径",
                 text = {
                     "让{C:attention}顺子{}可以",
-                    "相隔{C:attention}1个点数{}组成",
-                    "{C:inactive}（例如：{C:attention}10 8 6 5 3{C:inactive}）"
+                    "相隔{C:attention}1个点数",
+                    "{C:inactive}（例如：{C:attention}2 3 5 7 8{C:inactive}）"
                 }
             },
             j_hologram = {
@@ -1178,133 +1174,134 @@ return {
                 text = {
                     "每添加一张{C:attention}卡牌{}",
                     "到你的牌组中，",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
+                    "获得{X:mult,C:white}X#1#{}倍率",
+                    "{C:inactive}（当前为 {X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             },
             j_vagabond = {
                 name = "流浪者",
                 text = {
-                    "如果在出牌时",
-                    "资金少于等于{C:money}$#1#{}",
-                    "则获得一张{C:purple}塔罗牌{}"
+                    "若在出牌时当下",
+                    "拥有{C:money}$#1#{}或更少的金钱",
+                    "获得一张{C:purple}塔罗牌{}"
                 }
             },
             j_baron = {
                 name = "男爵",
                 text = {
-                    "留在手牌中的",
-                    "每一张{C:attention}K{}",
-                    "会给予{X:mult,C:white} X#1# {}倍率"
+                    "手牌中，",
+                    "每持有一张{C:attention}K{}，",
+                    "获得{X:mult,C:white}X#1#{}倍率"
                 }
             },
             j_cloud_9 = {
                 name = "9霄云外",
                 text = {
-                    "每个回合结束时",
-                    "你{C:attention}完整牌组{}内的每张{C:attention}9{}",
-                    "使你获得{C:money}$#1#{}",
+                    "每张牌组内的数字{C:attention}9{}",
+                    "在每回合结束时",
+                    "获得{C:money}$#1#{}",
                     "{C:inactive}(当前{C:money}$#2#{}{C:inactive})"
                 }
             },
             j_rocket = {
                 name = "火箭",
                 text = {
-                    "每个回合结束时你获得{C:money}$#1#{}",
+                    "每回合结束时获得{C:money}$#1#{}。",
                     "击败{C:attention}Boss盲注{}",
-                    "会使这一金额增加{C:money}$#2#{}"
+                    "获得 {C:money}$#2#{}"
                 }
             },
             j_obelisk = {
                 name = "方尖石塔",
                 text = {
-                    "连续打出不是你",
-                    "最常用的{C:attention}牌型{}时",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "失败将会重置倍率",
+                    "每次连续不使用",
+                    "你最常用的{C:attention}牌型",
+                    "即可获得",
+                    "{X:mult,C:white}X#1#{}倍率",
                     "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             },
             j_midas_mask = {
                 name = "迈达斯面具",
                 text = {
-                    "打出的所有{C:attention}人头牌{}",
-                    "在计分时",
-                    "变为{C:attention}黄金牌{}"
+                    "所有的{C:attention}人头牌{}",
+                    "在打出的时候",
+                    "都会变成{C:attention}黄金牌{}"
                 }
             },
             j_luchador = {
-                name = "摔跤手",
+                name = "斗士",
                 text = {
-                    "售出这张小丑牌",
-                    "会消除当前回合中",
-                    "{C:attention}Boss盲注{}的限制条件"
+                    "卖掉此卡牌就可以",
+                    "消除当前的",
+                    "{C:attention}Boss盲注{}限制功能"
                 }
             },
             j_photograph = {
                 name = "照片",
                 text = {
-                    "打出的第一张{C:attention}人头牌{}",
-                    "在计分时",
-                    "会给予{X:mult,C:white} X#1# {}倍率"
+                    "计分时第一张打出的",
+                    "{C:attention}人头牌{}",
+                    "获得 {X:mult,C:white}X#1#{}倍率"
                 }
             },
             j_gift = {
                 name = "礼品卡",
                 text = {
                     "在每回合结束时",
-                    "使拥有的每张{C:attention}小丑牌{}",
-                    "和{C:attention}消耗牌{}",
-                    "{C:attention}售价{}增加{C:money}$#1#{}"
+                    "每张拥有的{C:attention}小丑牌{}",
+                    "及{C:attention}消耗牌{}",
+                    "{C:attention}售价{}加{C:money}$#1#{}"
                 }
             },
             j_turtle_bean = {
-                name = "黑龟豆",
+                name = "海龟豆",
                 text = {
-                    "手牌上限{C:attention}+#1#{}",
-                    "每回合结束时减{C:red}#2#{}"
+                    "{C:attention}+#1#{}手牌大小",
+                    "每回合",
+                    "减少{C:red}#2#{}张"
                 }
             },
             j_erosion = {
-                name = "侵蚀",
+                name = "腐蚀",
                 text = {
-                    "在你的牌组中",
-                    "每比完整的{C:attention}#3#{}张牌少一张",
-                    "就获得{C:red}+#1#{}倍率",
+                    "在你的完整牌组中",
+                    "每张低于 {C:attention}#3#{}张的牌",
+                    "均可获得 {C:red}+#1#{}倍率",
                     "{C:inactive}（当前为{C:red}+#2#{C:inactive}倍率）"
                 }
             },
             j_reserved_parking = {
                 name = "私人车位",
                 text = {
-                    "留在手牌中的",
-                    "每一张{C:attention}人头牌{}",
-                    "有{C:green}#2#/#3#{}几率",
+                    "手牌中持有的",
+                    "每持有一张 {C:attention}人头牌{}",
+                    "有{C:green}#2#/#3#{}的几率",
                     "给予{C:money}$#1#{}"
                 }
             },
             j_mail = {
                 name = "邮件回扣",
                 text = {
-                    "每弃掉一张{C:attention}#2#{}",
-                    "即可获得{C:money}$#1#{}",
+                    "每弃掉一张{C:attention}#2#{}，",
+                    "即可获得{C:money}$#1#{}，",
                     "每个回合点数都会变"
                 }
             },
             j_to_the_moon = {
                 name = "冲向月球",
                 text = {
-                    "回合结束时",
-                    "每拥有{C:money}$5{}",
-                    "可以额外获得{C:money}$#1#{}的{C:attention}利息{}"
+                    "回合结束时，",
+                    "每拥有{C:money}$5{}，",
+                    "都可额外获得{C:money}$#1#{}的{C:attention}利息{}"
                 }
             },
             j_hallucination = {
                 name = "幻觉",
                 text = {
-                    "打开任一{C:attention}补充包{}时",
-                    "有{C:green}#1#/#2#{}几率",
-                    "生成一张{C:attention}塔罗牌{}",
+                    "打开任一{C:attention}补充包{}时，",
+                    "有{C:green}#1#/#2#{}的机会能够",
+                    "创建一张{C:attention}塔罗牌{}",
                     "{C:inactive}（必须有空位）"
                 }
             },
@@ -1312,47 +1309,47 @@ return {
                 name = "招财猫",
                 text = {
                     "每次{C:green}成功{}触发",
-                    "一张{C:attention}幸运牌{}时",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
+                    "一张{C:attention}幸运牌{}",
+                    "即可获得{X:mult,C:white}X#1#{}倍率",
                     "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             },
             j_baseball = {
                 name = "棒球卡",
                 text = {
-                    "每张{C:green}罕见{}小丑牌",
-                    "会给予{X:mult,C:white} X#1# {}倍率"
+                    "每张拥有的{C:green}罕见{}小丑牌",
+                    "获得{X:mult,C:white}X#1#{}倍率"
                 }
             },
             j_bull = {
                 name = "斗牛",
                 text = {
                     "每拥有{C:money}$1{}",
-                    "{C:chips}+#1#{}筹码",
+                    "均可获得 {C:chips}+#1#{}筹码",
                     "{C:inactive}（当前为{C:chips}+#2#{C:inactive}筹码）"
                 }
             },
             j_diet_cola = {
                 name = "零糖可乐",
                 text = {
-                    "售出这牌就可以",
-                    "创建一个免费的",
+                    "卖掉此卡牌就可以",
+                    "创建一张免费的",
                     "{C:attention}#1#"
                 }
             },
             j_trading = {
                 name = "交易卡",
                 text = {
-                    "如果每回合的{C:attention}第一次弃牌{}",
-                    "只有{C:attention}1{}张牌，则将其",
-                    "摧毁并获得{C:money}$#1#"
+                    "如果回合的{C:attention}第一次弃牌{}",
+                    "只有 {C:attention}1{}张牌，则将其",
+                    "摧毁并获得 {C:money}$#1#"
                 }
             },
             j_flash = {
-                name = "闪示卡",
+                name = "闪光卡",
                 text = {
                     "在商店中每{C:attention}重掷{}一次",
-                    "这张小丑牌获得{C:mult}+#1#{}倍率",
+                    "就可以获得{C:mult}+#1#{}倍率",
                     "{C:inactive}（当前为{C:mult}+#2#{C:inactive}倍率）"
                 }
             },
@@ -1360,42 +1357,42 @@ return {
                 name = "爆米花",
                 text = {
                     "{C:mult}+#1#{}倍率",
-                    "每回合结束时",
+                    "每进行一个回合",
                     "{C:mult}-#2#{}倍率"
                 }
             },
             j_trousers = {
                 name = "备用裤子",
                 text = {
-                    "如果打出的牌中包含",
-                    "{C:attention}#2#",
-                    "则这张小丑牌获得{C:mult}+#1#{}倍率",
+                    "如果出牌的牌型包含",
+                    "{C:attention}#2#，",
+                    "此牌获得 {C:mult}+#1#{}倍率",
                     "{C:inactive}（当前为{C:red}+#3#{C:inactive}倍率）"
                 }
             },
             j_ancient = {
                 name = "古老小丑",
                 text = {
-                    "打出的{V:1}#2#{}牌",
-                    "在计分时",
-                    "会给予{X:mult,C:white} X#1# {}倍率",
-                    "{s:0.8}回合结束时改变需求花色"
+                    "计分时，打出的每张{V:1}#2#{}",
+                    "均可获得",
+                    "{X:mult,C:white}X#1#{}倍率",
+                    "{s:0.8}回合结束时花色会变"
                 }
             },
             j_ramen = {
                 name = "拉面",
                 text = {
                     "{X:mult,C:white}X#1#{}倍率",
-                    "每{C:attention}弃掉一张牌{}",
+                    "每{C:attention}丢弃一张牌{}，",
                     "失去{X:mult,C:white}X#2#{}倍率"
                 }
             },
             j_walkie_talkie = {
                 name = "对讲机",
                 text = {
-                    "打出的每张{C:attention}10{}和{C:attention}4",
-                    "在计分时获得{C:chips}+#1#{}筹码",
-                    "以及{C:mult}+#2#{}倍率"
+                    "计分时，打出的每张{C:attention}10{}或{C:attention}4",
+                    "均可获得{C:chips}+#1#{}筹码以及",
+                    "{C:mult}+#2#{}倍率"
                 }
             },
             j_selzer = {
@@ -1409,8 +1406,8 @@ return {
             j_castle = {
                 name = "城堡",
                 text = {
-                    "每弃掉一张{V:1}#2#{}牌",
-                    "这张小丑牌获得{C:chips}+#1#{}筹码",
+                    "每次弃掉 {V:1}#2#{}牌，",
+                    "这张小丑牌均可获得{C:chips}+#1#{}筹码",
                     "每个回合花色都会变",
                     "{C:inactive}（当前为{C:chips}+#3#{C:inactive}筹码）"
                 }
@@ -1419,16 +1416,16 @@ return {
                 name = "微笑表情",
                 text = {
                     "打出的{C:attention}人头牌{}",
-                    "在计分时",
-                    "给予{C:mult}+#1#{}倍率"
+                    "计分时",
+                    "均可获得{C:mult}+#1#{}倍率"
                 }
             },
             j_campfire = {
                 name = "篝火",
                 text = {
-                    "每{C:attention}售出{}一张牌",
-                    "这张小丑牌获得{X:mult,C:white}X#1#{}倍率",
-                    "{C:attention}Boss盲注{}被击败时重置倍率",
+                    "每次{C:attention}卖掉{}一张牌",
+                    "这张小丑牌就增加{X:mult,C:white}X#1#{}倍率，",
+                    "当{C:attention}Boss盲注{}被击败时即重置倍率",
                     "{C:inactive}（当前为{X:mult,C:white}X#2#{C:inactive}倍率）"
                 }
             }
@@ -1437,39 +1434,39 @@ return {
             v_overstock_norm = {
                 name = "库存过剩",
                 text = {
-                    "商店內",
-                    "卡牌槽位{C:attention}+1{}"
+                    "店內卡牌槽位",
+                    "{C:attention}+1{}"
                 }
             },
             v_clearance_sale = {
                 name = "清仓特卖",
                 text = {
-                    "所有卡牌、补充包和优惠券",
-                    "在店内均可享受{C:attention}#1#%{}折扣"
+                    "所有卡牌和卡牌包",
+                    "在店内费用减{C:attention}#1#%{}"
                 }
             },
             v_tarot_merchant = {
                 name = "塔罗牌商人",
                 text = {
                     "商店内",
-                    "{C:tarot}塔罗牌{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:tarot}塔罗牌{}出现",
+                    "频率增加{C:attention}X#1#{}倍"
                 }
             },
             v_planet_merchant = {
                 name = "星球牌商人",
                 text = {
                     "商店内",
-                    "{C:planet}星球牌{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:planet}星球牌{}出现",
+                    "频率增加{C:attention}X#1#{}倍 "
                 }
             },
             v_hone = {
                 name = "打磨",
                 text = {
                     "{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}和",
-                    "{C:dark_edition}多彩卡{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:dark_edition}多彩{}卡",
+                    "出现频率{C:attention}X#1#{}倍"
                 }
             },
             v_reroll_surplus = {
@@ -1482,7 +1479,7 @@ return {
             v_crystal_ball = {
                 name = "水晶球",
                 text = {
-                    "消耗牌槽位{C:attention}+1{}"
+                    "{C:attention}+1{}消耗牌槽位"
                 }
             },
             v_telescope = {
@@ -1498,24 +1495,24 @@ return {
                 name = "抓手",
                 text = {
                     "每回合",
-                    "出牌次数",
-                    "永久{C:blue}+#1#{}"
+                    "永久增加",
+                    "{C:blue}+#1#{}次出牌"
                 }
             },
             v_wasteful = {
-                name = "常弃常新",
+                name = "废物",
                 text = {
                     "每回合",
-                    "弃牌次数",
-                    "永久{C:blue}+#1#{}"
+                    "永久增加",
+                    "{C:blue}+#1#{}次弃牌"
                 }
             },
             v_seed_money = {
                 name = "种子基金",
                 text = {
                     "每回合",
-                    "可获得利息的上限",
-                    "提高到{C:money}$#1#{}"
+                    "已获利息",
+                    "上限提高到{C:money}$#1#{}"
                 }
             },
             v_blank = {
@@ -1535,23 +1532,24 @@ return {
             v_hieroglyph = {
                 name = "象形文字",
                 text = {
-                    "底注{C:attention}-#1#{}",
+                    "{C:attention}-#1#{}底注",
                     "每回合",
-                    "出牌次数{C:blue}-#1#{}"
+                    "{C:blue}-#1#{}出牌次数",
+                    "每回合"
                 }
             },
             v_directors_cut = {
                 name = "导演剪辑版",
                 text = {
-                    "可以重掷Boss盲注",
-                    "每个底注限重掷{C:attention}1{}次",
-                    "每次花费{C:money}$#1#{}"
+                    "重掷Boss盲注",
+                    "每个底注重掷{C:attention}1{}次",
+                    "每次{C:money}$#1#{}"
                 }
             },
             v_pattern = {
                 name = "图案",
                 text = {
-                    "生成你最常用的",
+                    "产生你最常用的",
                     "{C:attention}消耗牌{}",
                     "{E:1,V:1}#1#",
                     "{C:inactive}（必须有空位）"
@@ -1560,8 +1558,8 @@ return {
             v_overstock_plus = {
                 name = "库存过剩加强版",
                 text = {
-                    "商店内",
-                    "卡牌槽位{C:attention}+1{}"
+                    "店內卡牌槽位",
+                    "{C:attention}+1{}"
                 },
                 unlock = {
                     "在商店内总共花费",
@@ -1572,7 +1570,7 @@ return {
             v_liquidation = {
                 name = "清算",
                 text = {
-                    "所有卡牌、补充包和优惠券",
+                    "所有卡牌和卡牌包",
                     "在店内均可享受{C:attention}#1#%{}折扣"
                 },
                 unlock = {
@@ -1585,8 +1583,8 @@ return {
                 name = "塔罗大亨",
                 text = {
                     "商店内",
-                    "{C:tarot}塔罗牌{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:tarot}星球牌{}出现",
+                    "频率增加{C:attention}X#1#{}倍"
                 },
                 unlock = {
                     "在商店",
@@ -1599,8 +1597,8 @@ return {
                 name = "星球大亨",
                 text = {
                     "商店内",
-                    "{C:tarot}星球牌{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:tarot}星球牌{}出现",
+                    "频率增加{C:attention}X#1#{}倍"
                 },
                 unlock = {
                     "在商店",
@@ -1613,13 +1611,14 @@ return {
                 name = "焕彩",
                 text = {
                     "{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}和",
-                    "{C:dark_edition}多彩卡{}",
-                    "出现频率{C:attention}X#1#{}"
+                    "{C:dark_edition}多彩{}卡",
+                    "出现频率{C:attention}X#1#{}倍"
                 },
                 unlock = {
-                    "同时拥有至少{C:attention}#1#张",
-                    "{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}、或",
-                    "{C:dark_edition}多彩卡{}版本的{C:attention}小丑牌{}"
+                    "手上的牌至少要有{C:attention}#1#张",
+                    "{C:attention}小丑牌{}且为",
+                    "{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}，或",
+                    "{C:dark_edition}多彩{}卡版型"
                 }
             },
             v_reroll_glut = {
@@ -1653,7 +1652,7 @@ return {
                 text = {
                     "在您{C:attention}消耗牌栏位{}中",
                     "的{C:planet}星球牌{}",
-                    "会使这一特定{C:attention}牌型",
+                    "为该特定{C:attention}手牌类型",
                     "给予{X:red,C:white}X#1#{}倍率"
                 },
                 unlock = {
@@ -1664,11 +1663,11 @@ return {
                 }
             },
             v_nacho_tong = {
-                name = "玉米片夹",
+                name = "纳乔之舌",
                 text = {
                     "每回合",
-                    "出牌次数",
-                    "永久{C:blue}+#1#{}"
+                    "永久",
+                    "增加{C:blue}+#1#{}次出牌"
                 },
                 unlock = {
                     "打出总共",
@@ -1680,11 +1679,11 @@ return {
                 name = "回收魔法",
                 text = {
                     "每回合",
-                    "弃牌次数",
-                    "永久{C:blue}+#1#{}"
+                    "永久",
+                    "增加{C:blue}+#1#{}次弃牌"
                 },
                 unlock = {
-                    "弃掉总共",
+                    "弃牌总数达到",
                     "{C:attention}#1#{}张卡牌",
                     "{C:inactive}(#2#)"
                 }
@@ -1693,20 +1692,20 @@ return {
                 name = "摇钱树",
                 text = {
                     "每回合",
-                    "可获得利息的上限",
-                    "提高到{C:money}$#1#{}"
+                    "已获利息",
+                    "上限提高到{C:money}$#1#{}"
                 },
                 unlock = {
-                    "连续{C:attention}#1#{}回合",
-                    "在计算收益时",
-                    "获得的利息到达上限",
+                    "每回合利息收入",
+                    "提升到最高，",
+                    "持续{C:attention}#1#{}回合",
                     "{C:inactive}(#2#)"
                 }
             },
             v_antimatter = {
                 name = "反物质",
                 text = {
-                    "小丑牌槽位{C:dark_edition}+1{}"
+                    "{C:dark_edition}+1{}小丑牌槽位"
                 },
                 unlock = {
                     "兑换{C:voucher}空白{}优惠券",
@@ -1715,11 +1714,11 @@ return {
                 }
             },
             v_illusion = {
-                name = "幻象",
+                name = "幻觉",
                 text = {
-                    "商店内的{C:attention}游戏牌{}",
+                    "{C:attention}游戏牌{}在店内",
                     "可以是{C:enhanced}增强卡牌{}、",
-                    "{C:dark_edition}不同版本{}、和/或{C:attention}蜡封{}"
+                    "{C:dark_edition}不同版本{}，和/或{C:attention}蜡封{}"
                 },
                 unlock = {
                     "在商店",
@@ -1735,9 +1734,9 @@ return {
                     "等级{E:1,C:attention}#1#"
                 },
                 text = {
-                    "底注{C:attention}-#1#{}",
+                    "{C:attention}-#1#{}底注",
                     "每回合",
-                    "弃牌次数{C:red}-#1#{}"
+                    "{C:red}-#1#{}次弃牌"
                 }
             },
             v_retcon = {
@@ -1745,7 +1744,7 @@ return {
                 text = {
                     "重掷Boss盲注",
                     "{C:attention}不限{}次数",
-                    "每次重掷花费{C:money}$#1#{}"
+                    "每次重掷获得{C:money}$#1#{}"
                 },
                 unlock = {
                     "发现",
@@ -1770,17 +1769,19 @@ return {
             v_palette = {
                 name = "调色板",
                 text = {
-                    "手牌上限{C:attention}+#1#{}"
+                    "手牌中持有的",
+                    "卡牌 {C:attention}+#1#{}",
+                    "{C:attention}+#1#{}手牌大小"
                 },
                 unlock = {
-                    "手牌上限减少",
-                    "至{C:attention}#1#{}张"
+                    "手牌大小减少",
+                    "至 {C:attention}#1#{}张"
                 }
             },
             v_paint_brush = {
                 name = "油漆刷",
                 text = {
-                    "手牌上限{C:attention}+#1#{}"
+                    "{C:attention}+#1#{}手牌大小"
                 }
             }
         },
@@ -1788,24 +1789,24 @@ return {
             c_fool = {
                 name = "愚者",
                 text = {
-                    "生成本赛局中",
+                    "产生本赛局中",
                     "上一次使用的",
                     "{C:tarot}塔罗牌{}或{C:planet}星球牌{}",
-                    "不包括{s:0.8,C:tarot}愚者{s:0.8}"
+                    "不包括{s:0.8,C:tarot}愚者牌{s:0.8}"
                 }
             },
             c_magician = {
                 name = "魔术师",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_high_priestess = {
                 name = "女祭司",
                 text = {
-                    "生成最多{C:attention}#1#张",
+                    "产生最多{C:attention}#1#张",
                     "张随机{C:planet}星球牌{}",
                     "{C:inactive}（必须有空位）"
                 }
@@ -1821,7 +1822,7 @@ return {
             c_emperor = {
                 name = "皇帝",
                 text = {
-                    "生成最多{C:attention}#1#张",
+                    "产生最多{C:attention}#1#张",
                     "随机{C:tarot}塔罗牌{}",
                     "{C:inactive}（必须有空位）"
                 }
@@ -1837,120 +1838,120 @@ return {
             c_lovers = {
                 name = "恋人",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_chariot = {
                 name = "战车",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_justice = {
                 name = "正义",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_hermit = {
-                name = "隐者",
+                name = "隐士",
                 text = {
-                    "资金加倍",
-                    "{C:inactive}（最高{C:money}$#1#{C:inactive}）"
+                    "金钱加倍",
+                    "{C:inactive}（最高 {C:money}$#1#{C:inactive}）"
                 }
             },
             c_wheel_of_fortune = {
                 name = "命运之轮",
                 text = {
-                    "有{C:green}#1#/#2#{}几率",
-                    "给一张随机{C:attention}小丑牌",
+                    "有{C:green}#1#/#2#{}的几率",
                     "添加{C:dark_edition}闪箔{}、{C:dark_edition}镭射{}",
-                    "或{C:dark_edition}多彩{}版本"
+                    "或{C:dark_edition}多彩{}版本",
+                    "添加给一张随机{C:attention}小丑牌"
                 }
             },
             c_strength = {
                 name = "力量",
                 text = {
-                    "将最多{C:attention}#1#{}张",
-                    "选定卡牌",
-                    "点数提高{C:attention}1"
+                    "将最多",
+                    "{C:attention}#1#{}张选定",
+                    "卡牌点数提高{C:attention}1"
                 }
             },
             c_hanged_man = {
                 name = "倒吊人",
                 text = {
-                    "摧毁最多{C:attention}#1#{}张",
-                    "选定卡牌"
+                    "最多可摧毁",
+                    "{C:attention}#1#{}张选定卡牌"
                 }
             },
             c_death = {
                 name = "死神",
                 text = {
                     "选定{C:attention}#1#{}张卡牌，",
-                    "将{C:attention}靠左{}的那张牌",
-                    "变成{C:attention}靠右{}的那张牌",
-                    "{C:inactive}（你可以拖动来改变位置）"
+                    "将{C:attention}左侧{}牌",
+                    "转换为{C:attention}右侧{}牌",
+                    "{C:inactive}（拖动重新排列）"
                 }
             },
             c_temperance = {
                 name = "节制",
                 text = {
-                    "获得拥有的小丑牌",
-                    "售出价格总和的",
-                    "资金{C:inactive}（最高{C:money}$#1#{C:inactive}）",
+                    "给出当前",
+                    "所有小丑牌{C:inactive}的",
+                    "总卖价（最高 {C:money}$#1#{C:inactive}）",
                     "{C:inactive}（当前{C:money}$#2#{C:inactive}）"
                 }
             },
             c_devil = {
-                name = "恶魔",
+                name = "魔鬼",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_tower = {
-                name = "塔",
+                name = "高塔",
                 text = {
-                    "增强{C:attention}#1#{}张",
-                    "选定卡牌成为",
+                    "增强{C:attention}#1#{}张选定",
+                    "卡牌成为",
                     "{C:attention}#2#"
                 }
             },
             c_star = {
                 name = "星星",
                 text = {
-                    "将最多{C:attention}#1#{}张",
-                    "选定卡牌",
-                    "转换为{V:1}#2#{}"
+                    "最多可转换",
+                    "{C:attention}#1#{}张选定卡牌",
+                    "至{V:1}#2#{}"
                 }
             },
             c_moon = {
                 name = "月亮",
                 text = {
-                    "将最多{C:attention}#1#{}张",
-                    "选定卡牌",
-                    "转换为{V:1}#2#{}"
+                    "最多可转换",
+                    "{C:attention}#1#{}张选定卡牌",
+                    "至{V:1}#2#{}"
                 }
             },
             c_sun = {
                 name = "太阳",
                 text = {
-                    "将最多{C:attention}#1#{}张",
-                    "选定卡牌",
-                    "转换为{V:1}#2#{}"
+                    "最多可转换",
+                    "{C:attention}#1#{}张选定卡牌",
+                    "至{V:1}#2#{}"
                 }
             },
             c_judgement = {
                 name = "审判",
                 text = {
-                    "生成一张随机的",
+                    "产生一张随机的",
                     "{C:attention}{}小丑牌",
                     "{C:inactive}（必须有空位）"
                 }
@@ -1958,9 +1959,9 @@ return {
             c_world = {
                 name = "世界",
                 text = {
-                    "将最多{C:attention}#1#{}张",
-                    "选定卡牌",
-                    "转换为{V:1}#2#{}"
+                    "最多可转换",
+                    "{C:attention}#1#{}张选定卡牌",
+                    "至{V:1}#2#{}"
                 }
             }
         },
@@ -1968,107 +1969,107 @@ return {
             c_mercury = {
                 name = "水星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_venus = {
                 name = "金星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_earth = {
                 name = "地球",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_mars = {
                 name = "火星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_jupiter = {
                 name = "木星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_saturn = {
                 name = "土星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_uranus = {
                 name = "天王星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_neptune = {
                 name = "海王星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_pluto = {
                 name = "冥王星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_ceres = {
                 name = "谷神星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_planet_x = {
                 name = "X行星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
-                    "{C:chips}+#4#{}筹码"
+                    "获得{C:chips}+#4#{}筹码"
                 }
             },
             c_eris = {
                 name = "阋神星",
                 text = {
-                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}",
-                    "升级{C:attention}#2#",
+                    "{S:0.8}（{S:0.8,V:1}等级#1#{S:0.8}）{}等级提升",
+                    "{C:attention}#2#",
                     "{C:mult}+#3#{}倍率并且",
                     "{C:chips}+#4#{}筹码"
                 }
@@ -2076,29 +2077,29 @@ return {
         },
         Spectral = {
             c_familiar = {
-                name = "使魔",
+                name = "熟知",
                 text = {
-                    "随机摧毁{C:attention}1{}张手牌",
+                    "随机摧毁{C:attention}1{}张手牌，",
                     "并添加{C:attention}#1#{}张",
-                    "随机{C:attention}增强的人头牌{}",
+                    "随机{C:attention}增强版人头牌{}",
                     "到手牌中"
                 }
             },
             c_grim = {
                 name = "严峻",
                 text = {
-                    "随机摧毁{C:attention}1{}张手牌",
+                    "随机摧毁{C:attention}1{}张手牌，",
                     "并添加{C:attention}#1#{}张",
-                    "随机{C:attention}增强的A{}",
+                    "随机{C:attention}增强版A{}",
                     "到手牌中"
                 }
             },
             c_incantation = {
                 name = "咒语",
                 text = {
-                    "随机摧毁{C:attention}1{}张手牌",
+                    "随机摧毁{C:attention}1{}张手牌，",
                     "并添加{C:attention}#1#{}张",
-                    "随机{C:attention}增强的数字牌{}",
+                    "随机{C:attention}增强版数字牌{}",
                     "到手牌中"
                 }
             },
@@ -2113,24 +2114,24 @@ return {
             c_aura = {
                 name = "光环",
                 text = {
-                    "选定{C:attention}1{}张手牌，为其添加",
-                    "{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}、或{C:dark_edition}多彩卡{}",
-                    "效果中的一种"
+                    "将{C:dark_edition}闪箔卡{}、{C:dark_edition}镭射卡{}，",
+                    "或{C:dark_edition}多彩卡{}效果添加至",
+                    "{C:attention}1{}张选定的手牌中"
                 }
             },
             c_wraith = {
                 name = "幽灵",
                 text = {
-                    "生成一张随机的",
-                    "{C:red}稀有{C:attention}小丑牌{}",
-                    "将资金变为{C:money}$0"
+                    "产生一张随机的",
+                    "{C:red}稀有{C:attention}小丑牌{}，",
+                    "设定金额至{C:money}$0"
                 }
             },
             c_sigil = {
                 name = "符印",
                 text = {
                     "将手中所有",
-                    "卡牌转换为同一种",
+                    "卡牌转换至一种",
                     "随机{C:attention}花色"
                 }
             },
@@ -2138,31 +2139,31 @@ return {
                 name = "占卜",
                 text = {
                     "将手中所有",
-                    "手持牌转换为同一个",
+                    "手持牌转换至一种",
                     "随机{C:attention}点数",
-                    "手牌上限{C:red}-1{}"
+                    "{C:red}-1{}手牌大小"
                 }
             },
             c_ectoplasm = {
                 name = "灵质",
                 text = {
                     "添加{C:dark_edition}负片{}效果到",
-                    "一张随机的{C:attention}小丑牌",
-                    "手牌上限{C:red}-#1#{}"
+                    "一张随机的{C:attention}小丑牌，",
+                    "{C:red}-1{}的手牌大小"
                 }
             },
             c_immolate = {
                 name = "火祭",
                 text = {
-                    "随机摧毁",
-                    "{C:attention}#1#{}张手牌",
+                    "随机摧毁{C:attention}#1#{}张",
+                    "手牌，",
                     "获得{C:money}$#2#"
                 }
             },
             c_soul = {
                 name = "灵魂",
                 text = {
-                    "生成一张",
+                    "创建一张",
                     "{C:legendary,E:1}传奇{}小丑牌",
                     "{C:inactive}（必须有空位）"
                 }
@@ -2170,7 +2171,8 @@ return {
             c_black_hole = {
                 name = "黑洞",
                 text = {
-                    "所有{C:legendary,E:1}牌型",
+                    "为每副",
+                    "{C:legendary,E:1}牌型",
                     "提升{C:attention}1{}级"
                 }
             },
@@ -2187,7 +2189,7 @@ return {
                 text = {
                     "给你手牌中的",
                     "{C:attention}1{}张所选卡牌",
-                    "加上{C:red}红色蜡封{}"
+                    "加上{C:red}红色蜡封+D1670{}"
                 }
             },
             c_hex = {
@@ -2217,8 +2219,9 @@ return {
             c_cryptid = {
                 name = "神秘生物",
                 text = {
-                    "选定手牌中的{C:attention}1{}张牌",
-                    "生成{C:attention}#1#{}张其复制牌"
+                    "复制{C:attention}#1#{}张",
+                    "建立{C:attention}#1#{}张",
+                    "选定牌的复制牌"
                 }
             }
         },
@@ -2281,17 +2284,17 @@ return {
             m_glass = {
                 name = "玻璃牌",
                 text = {
-                    "{X:mult,C:white}X#1#{}倍率",
-                    "有{C:green}#2#/#3#{}几率",
-                    "摧毁此牌"
+                    "{X:mult,C:white}X#1#{}倍率，",
+                    "有{C:green}#2#/#3#{}的几率",
+                    "摧毁牌卡"
                 }
             },
             m_steel = {
                 name = "钢铁牌",
                 text = {
-                    "这张牌被",
-                    "留在手牌中时",
-                    "将给予{X:mult,C:white} X#1# {}倍率"
+                    "当手中",
+                    "持有该牌时",
+                    "{X:mult,C:white}X#1#{}倍率"
                 }
             },
             m_stone = {
@@ -2305,16 +2308,16 @@ return {
                 name = "黄金牌",
                 text = {
                     "如果这张卡牌",
-                    "在回合结束时还在手牌中",
-                    "你获得{C:money}$#1#{}"
+                    "在回合结束时还在手中，",
+                    "获得{C:money}$#1#{}"
                 }
             },
             m_lucky = {
                 name = "幸运牌",
                 text = {
-                    "{C:green}#1#/#3#{}几率",
+                    "{C:green}#1#/#3#{}的几率",
                     "{C:mult}+#2#{}倍率",
-                    "{C:green}#1#/#5#{}几率",
+                    "{C:green}#1#/#5#{}的几率",
                     "获得{C:money}$#4#"
                 }
             }
@@ -2331,54 +2334,53 @@ return {
                 text = {
                     "{C:attention}小盲注{}",
                     "没有奖励金",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_green = {
                 name = "绿注",
                 text = {
-                    "{C:attention}底注{}提升时",
-                    "过关需求分数的增速更快",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "所需分数随每个底注{C:attention}变化",
+                    "速度更快",
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_blue = {
                 name = "蓝注",
                 text = {
-                    "弃牌次数{C:red}-1{}",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "弃牌数{C:red}-1{}",
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_black = {
                 name = "黑注",
                 text = {
-                    "商店可能会出现{C:attention}永恒{}小丑牌",
+                    "商店可以拥有{C:attention}永恒{}小丑牌",
                     "{C:inactive,s:0.8}(无法卖出或摧毁)",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_purple = {
                 name = "紫注",
                 text = {
-                    "{C:attention}底注{}提升时",
-                    "过关需求分数的增速更快",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "所需分数随每个底注{C:attention}变化",
+                    "速度更快",
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_orange = {
                 name = "橙注",
                 text = {
-                    "商店可能会出现{C:attention}易腐{}小丑牌",
-                    "{C:inactive,s:0.8}（经过5回合后被削弱）",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "{C:attention}补充包{}成本",
+                    "每个底注增加{C:money}$1{}",
+                    "{s:0.8}适用于之前的所有赌注"
                 }
             },
             stake_gold = {
                 name = "金注",
                 text = {
-                    "商店可能会出现{C:attention}租用{}小丑牌",
-                    "{C:inactive,s:0.8}（售价为$1，每回合花费{C:money,s:0.8}$3{C:inactive,s:0.8}）",
-                    "{s:0.8}之前所有赌注也都起效"
+                    "{C:attention}-1{}手牌大小",
+                    "{s:0.8}应用于此前所有赌注"
                 }
             }
         },
@@ -2386,54 +2388,50 @@ return {
             tag_uncommon = {
                 name = "罕见标签",
                 text = {
-                    "商店会有一张免费的",
+                    "下个商店内有一张",
                     "{C:green}罕见小丑牌"
                 }
             },
             tag_rare = {
                 name = "稀有标签",
                 text = {
-                    "商店会有一张免费的",
-                    "{C:red}稀有小丑牌"
+                    "下个商店内有一张",
+                    "{C:red}稀有小丑牌，"
                 }
             },
             tag_negative = {
                 name = "负片标签",
                 text = {
-                    "商店里的下一张",
-					"基础版本小丑牌",
-                    "将会免费且变为{C:dark_edition}负片"
+                    "下个商店内有一张",
+                    "{C:dark_edition}负片小丑牌"
                 }
             },
             tag_foil = {
                 name = "闪箔标签",
                 text = {
-                    "商店里的下一张",
-					"基础版本小丑牌",
-                    "将会免费且变为{C:dark_edition}闪箔"
+                    "下个商店内有一张",
+                    "{C:dark_edition}闪箔小丑牌"
                 }
             },
             tag_holo = {
                 name = "镭射标签",
                 text = {
-                    "商店里的下一张",
-					"基础版本小丑牌",
-                    "将会免费且变为{C:dark_edition}镭射"
+                    "下个商店内有一张",
+                    "{C:dark_edition}镭射小丑牌"
                 }
             },
             tag_polychrome = {
                 name = "多彩标签",
                 text = {
-                    "商店里的下一张",
-					"基础版本小丑牌",
-                    "将会免费且变为{C:dark_edition}多彩"
+                    "下个商店内有一张",
+                    "{C:dark_edition}多彩小丑牌"
                 }
             },
             tag_investment = {
                 name = "投资标签",
                 text = {
                     "击败",
-                    "Boss盲注后",
+                    "Boss盲注后，",
                     "获得{C:money}$#1#"
                 }
             },
@@ -2441,7 +2439,7 @@ return {
                 name = "优惠券标签",
                 text = {
                     "添加一张{C:voucher}优惠券",
-                    "到下一个商店"
+                    "到下一家商店"
                 }
             },
             tag_boss = {
@@ -2455,7 +2453,7 @@ return {
                 name = "标准标签",
                 text = {
                     "获得一个免费的",
-                    "{C:attention}超级标准包"
+                    "{C:attention}超大标准包"
                 }
             },
             tag_charm = {
@@ -2476,27 +2474,27 @@ return {
                 name = "小丑标签",
                 text = {
                     "获得一个免费的",
-                    "{C:attention}超级小丑包"
+                    "{C:attention}小丑包"
                 }
             },
             tag_handy = {
-                name = "顺手标签",
+                name = "便携式标签",
                 text = {
-                    "本赛局每打出过一次{C:blue}手牌{}",
+                    "本赛局每打出一次{C:blue}手牌{}",
                     "获得{C:money}$#1#{}",
-                    "{C:inactive}（将得到{C:money}$#2#{C:inactive}）"
+                    "{C:inactive}（将给 {C:money}$#2#{C:inactive}）"
                 }
             },
             tag_garbage = {
                 name = "垃圾标签",
                 text = {
-                    "本赛局每一次",
-                    "未使用的{C:red}弃牌{}得到{C:money}$#1#{}",
-                    "{C:inactive}（将得到{C:money}$#2#{C:inactive}）"
+                    "本赛局每一未使用的{C:red}弃牌数{}",
+                    "得到{C:money}$#1#{}",
+                    "{C:inactive}（将得到 {C:money}$#2#{C:inactive}）"
                 }
             },
             tag_coupon = {
-                name = "代金券标签",
+                name = "折扣券标签",
                 text = {
                     "下一家店内的",
                     "初始卡牌和补充包",
@@ -2506,29 +2504,29 @@ return {
             tag_double = {
                 name = "双倍标签",
                 text = {
-                    "下一次选定的{C:attention}标签{}",
-                    "会额外获得一个复制品",
+                    "复制下一个",
+                    "选定的{C:attention}标签{}",
                     "{s:0.8,C:attention}双倍标签{s:0.8}除外"
                 }
             },
             tag_juggle = {
-                name = "杂耍标签",
+                name = "戏法标签",
                 text = {
                     "下一回合",
-                    "{C:attention}+#1#{}手牌上限"
+                    "{C:attention}+#1#{}手牌大小"
                 }
             },
             tag_d_six = {
                 name = "D6标签",
                 text = {
-                    "下一个商店的",
-                    "重掷起价为{C:money}$0"
+                    "下一家商店重掷",
+                    "起价为{C:money}$0"
                 }
             },
             tag_top_up = {
                 name = "充值标签",
                 text = {
-                    "生成最多{C:attention}#1#张",
+                    "产生最多{C:attention}#1#张",
                     "{C:blue}普通{}小丑牌",
                     "{C:inactive}（必须有空位）"
                 }
@@ -2537,8 +2535,8 @@ return {
                 name = "速度标签",
                 text = {
                     "本赛局中每跳过",
-                    "一次盲注，可获得{C:money}$#1#{}",
-                    "{C:inactive}（将获得{C:money}$#2#{C:inactive}）"
+                    "一次盲注，获得{C:money}$#1#{}",
+                    "{C:inactive}（将获得 {C:money}$#2#{C:inactive}）"
                 }
             },
             tag_orbital = {
@@ -2552,7 +2550,7 @@ return {
                 name = "经济标签",
                 text = {
                     "资金翻倍",
-                    "{C:inactive}（最高{C:money}$#1#{C:inactive}）"
+                    "{C:inactive}（最高 {C:money}$#1#{C:inactive}）"
                 }
             },
             tag_ethereal = {
@@ -2588,14 +2586,14 @@ return {
             bl_wheel = {
                 name = "车轮",
                 text = {
-                    "/7几率，抽到的牌",
-                    "会是背面朝上"
+                    "/7的概率一张牌",
+                    "以背面朝上的方式抽取"
                 }
             },
             bl_arm = {
                 name = "手臂",
                 text = {
-                    "降低打出的",
+                    "降低已出",
                     "牌型等级"
                 }
             },
@@ -2609,14 +2607,14 @@ return {
                 name = "挑衅",
                 text = {
                     "所有黑桃牌",
-                    "都被削弱"
+                    "都不计分"
                 }
             },
             bl_water = {
                 name = "水",
                 text = {
-                    "初始弃牌",
-                    "次数为0"
+                    "以0弃牌",
+                    "次数开始"
                 }
             },
             bl_eye = {
@@ -2637,20 +2635,20 @@ return {
                 name = "植物",
                 text = {
                     "所有人头牌",
-                    "都被削弱"
+                    "都不计分"
                 }
             },
             bl_needle = {
                 name = "针",
                 text = {
-                    "本回合只能出一次牌"
+                    "这一回合只能出一次牌"
                 }
             },
             bl_head = {
                 name = "头部",
                 text = {
                     "所有红桃牌",
-                    "都被削弱"
+                    "都不计分"
                 }
             },
             bl_tooth = {
@@ -2661,14 +2659,14 @@ return {
                 }
             },
             bl_final_leaf = {
-                name = "翠绿之叶",
+                name = "绿叶",
                 text = {
-                    "所有卡牌都被削弱",
+                    "所有卡牌都不计分",
                     "直到售出1张小丑牌"
                 }
             },
             bl_final_vessel = {
-                name = "靛紫之杯",
+                name = "紫罗兰容器",
                 text = {
                     "超大盲注"
                 }
@@ -2676,7 +2674,7 @@ return {
             bl_ox = {
                 name = "公牛",
                 text = {
-                    "打出#1#牌型时",
+                    "打出#1#牌型时，",
                     "资金归$0"
                 }
             },
@@ -2691,41 +2689,41 @@ return {
                 name = "梅花",
                 text = {
                     "所有梅花牌",
-                    "都被削弱"
+                    "都不计分"
                 }
             },
             bl_fish = {
                 name = "鱼",
                 text = {
-                    "出牌后自动抽取的牌",
-                    "都是背面朝上"
+                    "在第一次出牌后",
+                    "抽的牌都是面朝下抽出"
                 }
             },
             bl_window = {
                 name = "窗口",
                 text = {
                     "所有方片牌",
-                    "都被削弱"
+                    "都不计分"
                 }
             },
             bl_manacle = {
                 name = "镣铐",
                 text = {
-                    "手牌上限-1"
+                    "手牌大小-1"
                 }
             },
             bl_serpent = {
                 name = "巨蟒",
                 text = {
-                    "出牌或弃牌后",
+                    "出牌或弃牌后，",
                     "总是抽 3 张牌"
                 }
             },
             bl_pillar = {
                 name = "支柱",
                 text = {
-                    "在这一底注中",
-                    "打出过的牌都被削弱"
+                    "上一次底注中",
+                    "打过的牌都不计分"
                 }
             },
             bl_flint = {
@@ -2743,7 +2741,7 @@ return {
                 }
             },
             bl_final_acorn = {
-                name = "琥珀之实",
+                name = "琥珀橡子",
                 text = {
                     "翻转并洗乱",
                     "所有小丑牌"
@@ -2753,11 +2751,11 @@ return {
                 name = "绯红之心",
                 text = {
                     "每次出牌",
-                    "使随机一张小丑牌失效"
+                    "使任一小丑牌功能失效"
                 }
             },
             bl_final_bell = {
-                name = "蔚蓝之铃",
+                name = "蔚蓝钟",
                 text = {
                     "迫使 1 张牌",
                     "总是被选中"
@@ -2782,7 +2780,7 @@ return {
             b_yellow = {
                 name = "黄色牌组",
                 text = {
-                    "开局时",
+                    "每回合开始",
                     "额外获得{C:money}$#1#"
                 }
             },
@@ -2798,26 +2796,28 @@ return {
             b_black = {
                 name = "黑色牌组",
                 text = {
-                    "小丑牌槽位{C:attention}+#1#{}",
-                    "",
                     "每回合",
-                    "出牌次数{C:blue}-#2#{}"
+                    "",
+                    "{C:attention}+#1#{}小丑牌槽位",
+                    "{C:blue}-#2#{}次出牌"
                 }
             },
             b_magic = {
                 name = "魔法牌组",
                 text = {
                     "开局时拥有",
-                    "{C:tarot,T:v_crystal_ball}#1#{}优惠券",
-                    "和{C:attention}2{}张{C:tarot,T:c_fool}#2#"
+                    "{C:tarot,T:v_crystal_ball}#1#{}张优惠券",
+                    "和{C:attention}2{}份",
+                    "{C:tarot,T:c_fool}#2#"
                 }
             },
             b_nebula = {
                 name = "星云牌组",
                 text = {
                     "开局时拥有",
-                    "{C:planet,T:v_telescope}#1#{}优惠券",
-                    "消耗牌槽位{C:red}#2#{}"
+                    "{C:planet,T:v_telescope}#1#{}张优惠券",
+                    "",
+                    "{C:red}#2#{}消耗牌槽位"
                 }
             },
             b_metal = {
@@ -2861,23 +2861,25 @@ return {
             b_anaglyph = {
                 name = "浮雕牌组",
                 text = {
-                    "每次击败{C:attention}Boss盲注{}后",
-                    "获得一个{C:attention,T:tag_double}#1#"
+                    "击败每个",
+                    "{C:attention}Boss盲注{}后，获得一个",
+                    "{C:attention,T:tag_double}#1#"
                 }
             },
             b_plasma = {
                 name = "等离子牌组",
                 text = {
                     "计算出牌分数时",
-                    "平衡{C:blue}筹码{}和{C:red}倍率{}",
+                    "平衡{C:blue}筹码{}和",
+                    "{C:red}倍率{}",
                     "盲注要求分数{C:red}X#1#{}"
                 }
             },
             b_erratic = {
                 name = "古怪牌组",
                 text = {
-                    "牌组中所有牌的",
-                    "{C:attention}点数{}和{C:attention}花色{}",
+                    "所有{C:attention}牌级{}和",
+                    "牌组的{C:attention}花色{}",
                     "都是随机的"
                 }
             },
@@ -2890,8 +2892,8 @@ return {
             b_ghost = {
                 name = "幽灵牌组",
                 text = {
-                    "商店中可能",
-                    "出现{C:spectral}幻灵牌{}",
+                    "{C:spectral}幻灵牌{}可能",
+                    "出现在商店中，",
                     "初始带有{C:spectral,T:c_hex}妖法{}牌"
                 }
             },
@@ -2907,8 +2909,8 @@ return {
             b_painted = {
                 name = "彩绘牌组",
                 text = {
-                    "手牌上限{C:attention}+#1#{}",
-                    "小丑牌槽位{C:red}#2#{}"
+                    "{C:attention}+#1#{}手牌大小",
+                    "{C:red}#2#{}小丑牌槽位"
                 }
             }
         },
@@ -2916,15 +2918,15 @@ return {
             gold_seal = {
                 name = "金色蜡封",
                 text = {
-                    "这张牌被打出",
-                    "并计分时",
+                    "打出这张牌",
+                    "并得分时",
                     "获得{C:money}$3{}"
                 }
             },
             white_sticker = {
                 name = "白标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}白注",
                     "难度下获胜"
                 }
@@ -2932,7 +2934,7 @@ return {
             red_sticker = {
                 name = "红标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}红注",
                     "难度下获胜"
                 }
@@ -2940,7 +2942,7 @@ return {
             green_sticker = {
                 name = "绿标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}绿注",
                     "难度下获胜"
                 }
@@ -2948,7 +2950,7 @@ return {
             blue_sticker = {
                 name = "蓝标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}蓝注",
                     "难度下获胜"
                 }
@@ -2956,7 +2958,7 @@ return {
             black_sticker = {
                 name = "黑标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}黑注",
                     "难度下获胜"
                 }
@@ -2964,7 +2966,7 @@ return {
             purple_sticker = {
                 name = "紫标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}紫注",
                     "难度下获胜"
                 }
@@ -2972,7 +2974,7 @@ return {
             orange_sticker = {
                 name = "橙标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}橙注",
                     "难度下获胜"
                 }
@@ -2980,7 +2982,7 @@ return {
             gold_sticker = {
                 name = "金色标贴",
                 text = {
-                    "使用这张小丑牌",
+                    "使用这个小丑牌",
                     "在{C:attention}金注",
                     "难度下获胜"
                 }
@@ -2997,13 +2999,7 @@ return {
             },
             card_extra_chips = {
                 text = {
-                    "{C:chips}+#1#{}额外筹码"
-                }
-            },
-            remove_negative = {
-                name = "n",
-                text = {
-                    "{C:inactive,s:0.9}（移除复制牌的{C:dark_edition,s:0.9}负片{C:inactive,s:0.9}）"
+                    "获得{C:chips}+#1#{}个额外筹码"
                 }
             },
             locked = {
@@ -3014,26 +3010,26 @@ return {
                 name = "被削弱",
                 text = {
                     "所有能力",
-                    "都不起效"
+                    "禁用"
                 }
             },
             debuffed_playing_card = {
                 name = "被削弱",
                 text = {
-                    "计分时不获得筹码，",
+                    "得分无筹码，",
                     "不能触发任何",
-                    "功能和效果"
+                    "功能或效果"
                 }
             },
             demo_locked = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "本试玩版",
                     "暂不可用"
                 }
             },
             demo_shop_locked = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "{C:attention}金宝的",
                     "个人卡牌收藏。",
@@ -3042,14 +3038,14 @@ return {
                 }
             },
             wip_locked = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "正在",
                     "制作中"
                 }
             },
             deck_locked_win = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "在任一难度下",
                     "以{C:attention}#1#{}",
@@ -3065,7 +3061,7 @@ return {
                 }
             },
             deck_locked_stake = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "在{V:1}#1#{}或以上",
                     "难度以任一牌组",
@@ -3073,10 +3069,10 @@ return {
                 }
             },
             joker_locked_legendary = {
-                name = "锁定",
+                name = "已锁定",
                 text = {
                     "通过{C:spectral}灵魂{}牌",
-                    "发现这张小丑牌"
+                    "找到这张小丑牌"
                 }
             },
             undiscovered_joker = {
@@ -3225,7 +3221,7 @@ return {
                 text = {
                     "从最多{C:attention}#2#张{C:attention}游戏牌{}中",
                     "选择{C:attention}#1#{}张",
-                    "添加到你的牌组"
+                    "到你的牌组"
                 }
             },
             p_standard_jumbo = {
@@ -3233,15 +3229,15 @@ return {
                 text = {
                     "从最多{C:attention}#2#张{C:attention}游戏牌{}中",
                     "选择{C:attention}#1#{}张",
-                    "添加到你的牌组"
+                    "到你的牌组"
                 }
             },
             p_standard_mega = {
-                name = "超级标准包",
+                name = "超大标准包",
                 text = {
                     "从最多{C:attention}#2#张{C:attention}游戏牌{}中",
                     "选择{C:attention}#1#{}张",
-                    "添加到你的牌组"
+                    "到你的牌组"
                 }
             },
             p_buffoon_normal = {
@@ -3276,24 +3272,23 @@ return {
             red_seal = {
                 name = "红色蜡封",
                 text = {
-                    "重新触发",
-                    "此卡牌{C:attention}1{}次"
+                    "重新触发{C:attention}1{}次",
+                    "此卡牌"
                 }
             },
             blue_seal = {
                 name = "蓝色蜡封",
                 text = {
-                    "如果在回合结束时",
-                    "这张牌还{C:attention}留在{}手牌中",
-                    "会生成最后一手牌型的{C:planet}星球牌{}",
-                    "{C:inactive}（必须有空位）"
+                    "当这张牌在回合结束时",
+                    "还{C:attention}保留{}在手牌中",
+                    "产生一张 {C:planet}星球卡{}"
                 }
             },
             purple_seal = {
                 name = "紫色蜡封",
                 text = {
-                    "被{C:attention}弃掉{}时",
-                    "生成一张{C:tarot}塔罗牌{}",
+                    "被{C:attention}弃掉时",
+                    "产生一张{C:tarot}塔罗牌{}",
                     "{C:inactive}（必须有空位）"
                 }
             },
@@ -3301,22 +3296,7 @@ return {
                 name = "永恒卡",
                 text = {
                     "不能出售",
-                    "或被摧毁"
-                }
-            },
-            perishable = {
-                name = "易腐",
-                text = {
-                    "经过{C:attention}#1#{}回合后",
-                    "会被削弱",
-                    "{C:inactive}（剩余{C:attention}#2#{C:inactive}回合）"
-                }
-            },
-            rental = {
-                name = "租用",
-                text = {
-                    "售价为$1，在回合",
-                    "结束时失去{C:money}$#1#{}"
+                    "或摧毁"
                 }
             },
             challenge_locked = {
@@ -3371,13 +3351,13 @@ return {
         high_scores = {
             hand = "最佳出牌",
             furthest_round = "最高回合",
-            furthest_ante = "最高底注",
+            furthest_ante = "最高投注额",
             most_money = "最多资金",
             boss_streak = "最多连续击败Boss",
             collection = "收藏",
             win_streak = "最佳连胜纪录",
             current_streak = "",
-            poker_hand = "最常用的牌型"
+            poker_hand = "最常用的出牌"
         },
         poker_hands = {
             ['Flush House'] = "同花葫芦",
@@ -3403,41 +3383,41 @@ return {
                 "5张相同点数的牌"
             },
             ['Royal Flush'] = {
-                "连续5张牌（点数连续），且",
+                "连续5张牌（连续数字），且",
                 "花色相同"
             },
             ['Straight Flush'] = {
-                "连续5张牌（点数连续），且",
+                "连续5张牌（连续数字），且",
                 "花色相同"
             },
             ['Four of a Kind'] = {
-                "4张相同点数的牌，可以与另外",
-                "一张不计分的牌一同打出"
+                "4张相同点数的牌",
+                "可以与其他一张未计分的牌一同打出"
             },
             ['Full House'] = {
-                "三条及对子"
+                "三条及对子，且"
             },
             ['Flush'] = {
                 "5张牌花色相同"
             },
             ['Straight'] = {
-                "连续5张牌（点数连续）"
+                "连续5张牌（连续数字）"
             },
             ['Three of a Kind'] = {
-                "3张点数相同的牌，可以与另外",
-                "最多2张不计分的牌一同打出"
+                "3张点数相同的牌可以与最多",
+                "2张其他未计分的牌一同打出"
             },
             ['Two Pair'] = {
-                "两对不同点数的牌，可以与另外",
-                "一张不计分的牌一同打出"
+                "两对不同点数的牌",
+                "可以与其他一张未计分的牌一同打出"
             },
             ['Pair'] = {
-                "两张点数相同的牌，可以与另外",
-                "最多3张不计分的牌一同打出"
+                "两张点数相同的牌可以与最多",
+                "3张其他未计分的牌一同打出"
             },
             ['High Card'] = {
                 "如果打出的牌不是以上任何一种",
-                "那么只有点数最高的牌会计分"
+                "那么只有点数最高的牌得分"
             },
             ['Flush Five'] = {
                 "5张相同点数和相同花色的牌"
@@ -3462,9 +3442,7 @@ return {
             red_seal = "红色蜡封",
             purple_seal = "紫色蜡封",
             eternal = "永恒卡",
-            perishable = "易腐",
-            rental = "租用",
-            pinned_left = "固定"
+            pinned_left = "已固定"
         },
         dictionary = {
             b_sell = "售出",
@@ -3593,9 +3571,9 @@ return {
             k_standard_pack = "标准包",
             k_buffoon_pack = "小丑包",
             k_enter_text = "输入文本",
-            k_defeated_by = "负于",
+            k_defeated_by = "击败",
             k_level_prefix = "等级",
-            k_also_applied = "同样起效",
+            k_also_applied = "同适用",
             k_base_cards = "基础卡牌",
             k_effective = "有效",
             k_aces = "A",
@@ -3618,7 +3596,7 @@ return {
             k_collection = "收藏",
             k_stake_level = "赌注等级",
             k_none = "无",
-            k_game_modifiers = "游戏规则变化",
+            k_game_modifiers = "游戏修改器",
             k_custom_rules = "自定义规则",
             k_banned_cards = "禁用卡",
             k_banned_tags = "禁用标签",
@@ -3627,24 +3605,22 @@ return {
             k_best_hand = "最佳出牌",
             k_seeded_run = "预设局",
             k_enter_seed = "输入种子",
-            k_lvl = "等级",
+            k_lvl = "级别",
             k_skipped_cap = "跳过",
             k_no_reward = "无奖励",
             k_reward = "奖励",
             k_nope_ex = "没有！",
-            k_not_allowed_ex = "不允许！",
             k_or = "或",
             k_balanced = "平衡",
-            ph_improve_run = "来变强吧！",
+            ph_improve_run = "提升你的成绩！",
             ph_sneak_peek = "抢先看",
             ph_deck_preview_stones = "石头",
-            ph_deck_preview_effective = "受小丑、盲注和卡牌强化影响而导致的有效总数",
+            ph_deck_preview_effective = "因小丑、盲注和卡牌强化而产生的有效总数",
             ph_blind_score_at_least = "至少得分",
             ph_blind_reward = "奖励：",
             ph_up_ante_1 = "提高底注",
             ph_up_ante_2 = "加注所有盲注",
             ph_up_ante_3 = "刷新盲注",
-            ph_select_challenge = "选择一项挑战",
             ph_stat_joker = "使用此卡完成的总回合数",
             ph_stat_consumable = "这张卡的使用次数",
             ph_stat_voucher = "兑换此优惠券的次数",
@@ -3653,8 +3629,8 @@ return {
             ph_game_over = "游戏结束",
             ph_vouchers_redeemed = "本赛局兑换的优惠券",
             ph_no_vouchers = "本赛局并未兑换任何优惠券",
-            ph_defeat_this_blind_1 = "打败这一盲注",
-            ph_defeat_this_blind_2 = "以发现它",
+            ph_defeat_this_blind_1 = "打败盲注",
+            ph_defeat_this_blind_2 = "发现它",
             ph_click_confirm = "再次点击确认",
             ph_choose_blind_1 = "选择你的",
             ph_choose_blind_2 = "下一个盲注",
@@ -3662,17 +3638,17 @@ return {
             ph_score_at_least = "至少得分",
             ph_all_poker_hand = "所有牌型",
             ph_1_level = "+1级",
-            ph_boss_disabled = "Boss限制条件失效！",
+            ph_boss_disabled = "Boss盲注限制条件失效",
             ph_most_played = "{最常出的牌型}",
             ml_demo_thanks_message = {
                 "请考虑将Balatro列入",
-                "Steam愿望单并注册",
+                "steam许愿清单并注册",
                 "playbalatro.com上的时事通讯"
             },
             ml_eternal = {
                 "永恒卡",
                 "不能出售",
-                "或被摧毁"
+                "或摧毁"
             },
             ml_gold_seal_desc = {
                 "黄金蜡封",
@@ -3723,7 +3699,7 @@ return {
             },
             ['$'] = "$",
             k_redeemed_ex = "兑换！",
-            k_duplicated_ex = "复制！",
+            k_duplicated_ex = "重复！",
             k_no_room_ex = "没有空间！",
             k_no_space_ex = "没有空间！",
             k_no_other_jokers = "没有其他小丑牌！",
@@ -3738,15 +3714,13 @@ return {
             k_val_up = "价值提升！",
             k_reset = "重置",
             k_extinct_ex = "已灭绝！",
-            k_disabled_ex = "已失效！",
             k_safe_ex = "安全！",
-            k_saved_ex = "被救了！",
-            k_swapped_ex = "已交换！",
+            k_saved_ex = "已储存！",
+            k_swapped_ex = "已切换！",
             k_copied_ex = "已复制！",
-            k_melted_ex = "融化了！",
+            k_melted_ex = "已融化！",
             b_copy = "复制",
             b_high_contrast_cards = "高对比度卡牌",
-			b_reduced_motion = "减少动态效果",
             b_set_rumble = "控制器震动",
             b_seals = "蜡封",
             b_new_challenge = "开始新挑战",
@@ -3774,7 +3748,7 @@ return {
             ph_score_furthest_ante = "底注",
             ph_score_furthest_round = "回合",
             ph_score_hand = "最佳出牌",
-            ph_score_poker_hand = "最常用牌型",
+            ph_score_poker_hand = "最常用出牌",
             ph_score_new_collection = "新发现",
             ph_score_cards_played = "已使用卡牌",
             ph_score_cards_discarded = "已弃掉卡牌",
@@ -3782,24 +3756,24 @@ return {
             ph_score_cards_purchased = "已购买卡牌",
             ml_edition_seal_enhancement_explanation = {
                 "每张游戏牌可能会有",
-                "增强、不同版本和蜡封"
+                "增强、版本和蜡封版本"
             },
             ml_unlock_all_explanation = {
                 "警告！解锁全部收藏道具",
-                "会禁用此存档配置的成就！"
+                "会禁用此账号的成就！"
             },
             k_plus_joker = "+1小丑",
-            k_eaten_ex = "吃完了！",
-            k_eroded_ex = "已腐蚀！",
+            k_eaten_ex = "被吃掉！",
+            k_eroded_ex = "被腐蚀！",
             k_achievement = "成就",
-            ph_unscored_hand = "出牌将不会得分",
+            ph_unscored_hand = "出牌将不会计分",
             ph_alert_debuff_confirm = "再次按下”出牌“确认",
-            k_drank_ex = "喝光了！",
+            k_drank_ex = "喝下去!",
             k_trophy = "奖杯",
             k_trophies_disabled = "奖杯被禁用",
             ml_unlock_all_trophies = {
                 "警告！解锁全部收藏道具",
-                "会禁用此存档配置的奖杯！"
+                "会禁用此账号的奖杯！"
             },
             k_poker_hand = "牌型",
             ph_4_7_of_clubs = "四张梅花7"
@@ -3809,13 +3783,13 @@ return {
             a_mult = "+#1#倍率",
             a_chips = "+#1#",
             a_chips_minus = "-#1#",
-            a_handsize = "手牌上限+#1#",
-            a_hands = "出牌次数+#1#",
+            a_handsize = "+#1#的手牌大小",
+            a_hands = "+#1#出牌次数",
             a_sold_tally = "#1#/#2#售出",
             a_remaining = "剩余#1#",
-            ante_x_voucher = "底注#1#优惠券",
+            ante_x_voucher = "底注#1#张优惠券",
             loyalty_active = "激活！",
-            loyalty_inactive = "#1#次后激活",
+            loyalty_inactive = "#1#剩余",
             deck_preview_wheel_singular = "由于抽出的#1#牌面朝下，数字可能较低",
             deck_preview_wheel_plural = "由于抽出的#1#牌面朝下，数字可能较低",
             challenges_completed = "已完成#1#/#2#挑战",
@@ -3832,14 +3806,14 @@ return {
             },
             ml_polychrome_desc = {
                 "多彩",
-                "X#1#倍率"
+                "+#1#倍率"
             },
             ml_negative_desc = {
                 "负片",
                 "+#1#小丑牌槽位"
             },
             a_mult_minus = "-#1#倍率",
-            a_handsize_minus = "-#1#手牌上限",
+            a_handsize_minus = "-#1#手牌大小",
             ml_negative_consumable_desc = {
                 "负片",
                 "+#1#消耗牌槽位"
@@ -3850,7 +3824,7 @@ return {
         },
         v_text = {
             ch_m_dollars = {
-                "初始拥有{C:money}$#1#"
+                "从{C:money}$#1#开始"
             },
             ch_m_hands = {
                 "每回合{C:blue}#1#{}次出牌"
@@ -3868,7 +3842,7 @@ return {
                 "{C:attention}#1#{}消耗牌槽位"
             },
             ch_m_hand_size = {
-                "{C:attention}#1#{}手牌上限"
+                "{C:attention}#1#{}手牌大小"
             },
             ch_m_none = {
                 "{C:inactive}无"
@@ -3877,10 +3851,10 @@ return {
                 "所有{C:attention}盲注{}均无奖励金"
             },
             ch_c_no_reward_specific = {
-                "{C:attention}#1#盲注{}均无奖励金"
+                "{C:attention}#1# 盲注{}均无奖励金"
             },
             ch_c_no_extra_hand_money = {
-                "额外的{C:blue}出牌次数{}不再赚取资金"
+                "额外的{C:blue}牌不再赚取资金"
             },
             ch_c_no_interest = {
                 "回合结束时不赚取{C:attention}利息{}"
@@ -3889,7 +3863,7 @@ return {
                 "{E:1,s:1.2,C:red}每日挑战！"
             },
             ch_c_set_seed = {
-                "使用固定种子进行1次性的挑战：{C:inactive}{Hidden}"
+                "使用设定的种子尝试1次：{C:inactive}{Hidden}"
             },
             ch_c_chips_dollar_cap = {
                 "{C:blue}筹码{}不能超过当前{C:money}$"
@@ -3898,31 +3872,31 @@ return {
                 "{C:inactive}无"
             },
             ch_c_inflation = {
-                "每次购买后所有物价永久上涨{C:money}$1{}"
+                "每次购买后价格永久上涨 {C:money}$1{}"
             },
             ch_c_discard_cost = {
-                "每次弃牌花费{C:money}$#1#{}"
+                "每次弃牌需花费 {C:money}$#1#{}"
             },
             ch_c_all_eternal = {
-                "所有小丑牌都是{C:eternal}永恒卡{}"
+                "所有商店里的小丑牌都是{C:eternal}永恒卡{}"
             },
             ch_c_flipped_cards = {
-                "{C:green}1/#1#{}的卡牌在抽取时背面朝上"
+                "{C:green}#1#中的1张{}卡牌以背面朝上的方式抽取"
             },
             ch_c_minus_hand_size_per_X_dollar = {
-                "你每拥有{C:money}$#1#{}，可持有的手牌数量{C:red}-1{}"
+                "你每拥有{C:money}$#1#{}，可持有的卡牌 {C:red}-1{}"
             },
             ch_c_no_shop_jokers = {
                 "小丑牌不再出现在{C:attention}商店{}中"
             },
             ch_c_debuff_played_cards = {
-                "所有{C:attention}打出{}的牌在计分后都会{C:attention}被削弱"
+                "所有{C:attention}已打出{}的牌在计分后都会{C:attention}被削弱"
             },
             ch_c_set_eternal_ante = {
-                "当底注{C:attention}#1#{}的Boss盲注被击败时，所有小丑牌变为{C:attention}永恒卡"
+                "当{C:attention}#1#{}Boss盲注被击败时，所有小丑牌变为{C:attention}永恒卡"
             },
             ch_c_set_joker_slots_ante = {
-                "当底注{C:attention}#1#{}的Boss盲注被击败时，将小丑牌槽位设置为{C:attention}0"
+                "当{C:attention}#1#{}Boss盲注被击败时，将小丑牌槽位设置为{C:attention}0"
             }
         },
         tutorial = {
@@ -3934,7 +3908,7 @@ return {
             sb_2 = {
                 "你的目标是赚取",
                 "{C:blue}筹码{}以击败",
-                "敌方的{C:attention}盲注"
+                "对手的{C:attention}盲注"
             },
             sb_3 = {
                 "这是{C:blue}小盲注{}，",
@@ -3947,12 +3921,12 @@ return {
             },
             bb_1 = {
                 "选择{C:attention}大盲注",
-                "可以赚到一点钱"
+                "可以让你赚钱"
             },
             bb_2 = {
-                "也可以选择{C:attention}跳过",
-                "来获得一个{C:attention}标签{}！",
-                "每个{C:attention}标签{}都有独特的效果"
+                "或选择{C:attention}跳过",
+                "可获得一个{C:attention}标签{}！每个",
+                "{C:attention}标签{}具有独特的效果"
             },
             bb_3 = {
                 "但要注意",
@@ -3962,94 +3936,94 @@ return {
             },
             bb_4 = {
                 "如果你战胜了它，那么",
-                "{C:attention}底注{}就会提升，然后",
-                "所有{C:attention}盲注{}都会变得更难"
+                "{C:attention}底注{}提升并且所有",
+                "{C:attention}盲注{}变得更难"
             },
             bb_5 = {
-                "通关{C:attention}底注{}#1#就可以获得胜利。",
-                "那么，来选择你的路线吧！"
+                "击败{C:attention}底注{}#1#以获胜。",
+                "现在做出你的选择！"
             },
             fh_1 = {
-                "你赚取筹码的方式是靠",
+                "你可以通过以下方式获得筹码",
                 "打出{C:attention}牌型"
             },
             fh_2 = {
-                "每一种{C:attention}牌型{}都可以获得",
-                "一定量的基础{C:blue}筹码",
-                "再乘上相应的{C:red}倍率"
+                "{C:attention}牌型{}可获得",
+                "基本{C:blue}筹码",
+                "再乘以某个数值的{C:red}倍率加成"
             },
             fh_3 = {
-                "你可以在{C:attention}比赛信息{}这里",
                 "查看你的{C:attention}牌型",
-                "同时也可以看到关于当前",
-                "这局游戏的一些其他信息"
+                "可通过{C:attention}比赛信息{}区操作，",
+                "同时可以查看其他",
+                "关于当前游戏的信息"
             },
             fh_4 = {
-                "卡牌也可以帮你",
-                "赚到一些{C:blue}筹码{}，",
-                "悬停到牌上来查看！"
+                "卡牌还可获得",
+                "一些{C:blue}筹码{}，",
+                "悬停此处查看！"
             },
             fh_5 = {
                 "现在选择最多",
                 "{C:attention}5{}张牌",
-                "并按下{C:blue}“出牌”"
+                "并按下{C:blue}“出牌键”"
             },
             fh_6 = {
-                "你也可以选择{C:red}“弃牌”{}，最多",
+                "还可以选择{C:red}“弃牌”{}，最多",
                 "可弃掉{C:attention}5{}张选定卡牌",
-                "以求能够组成更强的牌型。",
-                "试试吧！"
+                "以求组成",
+                "更强牌型。试试吧！"
             },
             fh_7 = {
                 "小心！每回合你的",
-                "{C:blue}出牌{}和{C:red}弃牌{}次数",
-                "都是有限的"
+                "{C:blue}出牌{}和{C:red}弃牌{}",
+                "次数有限"
             },
             fh_8 = {
-                "在使用完所有{C:blue}出牌{}次数前，",
-                "赚取{C:attention}300筹码{}，",
+                "在使用完所有{C:blue}出牌{}",
+                "次数前，赚取{C:attention}300筹码{}，",
                 "来赢得此回合。",
                 "祝你好运！"
             },
             sh_1 = {
                 "当你得到更多的卡牌时，",
-                "请记住你可以重新整理排序。",
-                "{C:attention}小丑牌{}的触发顺序是",
+                "请记住，你可以重新理牌。",
+                "{C:attention}小丑牌{}触发顺序为",
                 "从左至右"
             },
             sh_2 = {
-                "还有别忘了",
+                "确保你",
                 "{C:attention}使用{}消耗牌！"
             },
             sh_3 = {
-                "最多选择手牌中的{C:attention}2{}张",
-                "然后按下{C:attention}“使用”{}，",
-                "就可以打出{C:tarot}塔罗牌{}",
+                "最多选择{C:attention}2{}张",
+                "手持牌，并按下",
+                "{C:attention}“使用”{}键，打出{C:tarot}塔罗牌{}",
                 "施加增强效果！"
             },
             s_1 = {
                 "干得漂亮！现在",
-                "你有一些{C:money}资金{}了，",
-                "可以从{C:attention}商店{}里",
+                "你有一些{C:money}现金{}，",
+                "你可以从{C:attention}店内",
                 "买一些新的卡牌"
             },
             s_2 = {
-                "试试买下这张",
+                "试试买这个",
                 "超酷的小丑牌"
             },
             s_3 = {
-                "这是游戏中{C:attention}#1#张",
-                "{C:attention}小丑牌{}中的一张。",
-                "每张{C:attention}小丑牌都有",
-                "不同的效果"
+                "这是{C:attention}#1#张",
+                "{C:attention}小丑牌{}之一的卡牌，可以添加到",
+                "游戏中。每张{C:attention}小丑牌",
+                "效果不同"
             },
             s_4 = {
-                "比如这张可以让你每次",
-                "打出的牌获得{C:red}+4倍率{}"
+                "这个可以让你每次出牌",
+                "{C:red}+4倍率{}"
             },
             s_5 = {
-                "挑着点儿啊，",
-                "因为你同时只能携带",
+                "挑剔着点，",
+                "你一次只能带",
                 "{C:attention}5张小丑牌{}"
             },
             s_6 = {
@@ -4057,36 +4031,36 @@ return {
                 "购买另一张卡牌。"
             },
             s_7 = {
-                "这张{C:tarot}塔罗牌{}是一种",
-                "{C:attention}消耗牌{}。它可以",
-                "增强你要打出的卡牌！",
-                "好好留着这张牌"
+                "这张{C:tarot}塔罗牌{}是",
+                "{C:attention}消耗牌{}。此牌可",
+                "增强您在玩的",
+                "卡牌。好好留着这张牌"
             },
             s_8 = {
-                "您可以同时",
-                "携带最多",
+                "您一次最多",
+                "可以携带",
                 "{C:attention}2张消耗牌{}"
             },
             s_9 = {
-                "如果你攒够了钱，",
-                "还可以购买{C:attention}优惠券{}。",
-                "{C:attention}优惠券{}是在一局游戏里",
-                "被动强化你的物品！"
+                "如果你有足够的积蓄，",
+                "可以购买{C:attention}优惠券{}。",
+                "{C:attention}优惠券{}可以帮您",
+                "提升本局体验"
             },
             s_10 = {
                 "只要你打败",
                 "{C:attention}Boss盲注{}，",
-                "{C:attention}优惠券{}就会补货上架。"
+                "{C:attention}优惠券{}会重新上架。"
             },
             s_11 = {
-                "然后来看看这两个",
-                "所有商店都会有的",
-                "{C:booster}补充包{}，里面可是",
-                "有很多好东西的！"
+                "快来查看这两个",
+                "{C:booster}补充包{}，",
+                "所有商店均有售，",
+                "补充包内增益多多！"
             },
             s_12 = {
                 "让我们继续",
-                "{C:attention}下一回合{}吧。"
+                "{C:attention}下一回合{}。"
             }
         },
         achievement_names = {
@@ -4104,13 +4078,13 @@ return {
             roi = "投资回报率",
             shattered = "破碎",
             royale = "皇家",
-            retrograde = "逆行",
+            retrograde = "逆序",
             _10k = "1万",
             _1000k = "100万",
             _100000k = "1亿",
             tiny_hands = "小手",
             big_hands = "大手",
-            you_get_what_you_get = "有什么选什么",
+            you_get_what_you_get = "种瓜得瓜",
             rule_bender = "规则篡改者",
             rule_breaker = "规则破坏者",
             legendary = "传奇",
@@ -4183,7 +4157,7 @@ return {
             wq_7 = {
                 "幸好",
                 "我没有",
-                "赌你会输"
+                "和你打赌"
             },
             lq_1 = {
                 "可能消消乐",
@@ -4191,7 +4165,7 @@ return {
                 "我们的节奏……"
             },
             lq_2 = {
-                "我们的牌打得",
+                "我们的牌打的",
                 "相当潦草！"
             },
             lq_3 = {
@@ -4248,12 +4222,12 @@ return {
             c_non_perishable_1 = "不腐之物",
             c_medusa_1 = "美杜莎",
             c_double_nothing_1 = "孤注一掷",
-            c_typecast_1 = "角色固化",
+            c_typecast_1 = "模式转换",
             c_inflation_1 = "通货膨胀",
-            c_bram_poker_1 = "布莱姆·扑克",
+            c_bram_poker_1 = "布拉姆扑克",
             c_fragile_1 = "易碎品",
             c_monolith_1 = "巨石",
-            c_blast_off_1 = "点火升空",
+            c_blast_off_1 = "引燃",
             c_five_card_1 = "五连抽",
             c_golden_needle_1 = "金针",
             c_cruelty_1 = "残酷",

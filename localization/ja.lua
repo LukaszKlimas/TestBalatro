@@ -47,51 +47,11 @@ return {
                     "倍率 {C:red}+#1#{}"
                 }
             },
-            j_sly = {
-                name = "スライジョーカー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{} を含む場合",
-                    "チップ {C:chips}+#1#{}"
-                }
-            },
-            j_wily = {
-                name = "ウィリージョーカー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{} を含む場合",
-                    "チップ {C:chips}+#1#{}"
-                }
-            },
-            j_clever = {
-                name = "クレバージョーカー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{} を含む場合",
-                    "チップ {C:chips}+#1#{}"
-                }
-            },
-            j_devious = {
-                name = "ディヴィアスジョーカー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{} を含む場合",
-                    "チップ {C:chips}+#1#{}"
-                }
-            },
-            j_crafty = {
-                name = "クラフティジョーカー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{} を含む場合",
-                    "チップ {C:chips}+#1#{}"
-                }
-            },
             j_half = {
                 name = "ハーフジョーカー",
                 text = {
-                    "プレイしたハンドの枚数が{C:attention}#2#{} ",
-                    "以下なら",
+                    "プレイした手札が {C:attention}#2#{} を含むか",
+                    "カードの枚数が少ない場合",
                     "倍率 {C:red}+#1#{}"
                 }
             },
@@ -112,16 +72,15 @@ return {
             j_drunkard = {
                 name = "大酒飲み",
                 text = {
-                    "毎ラウンドで",
                     "ディスカード {C:red}+#1#{}"
                 }
             },
             j_stone = {
                 name = "ストーンジョーカー",
                 text = {
-                    "{C:attention}フルデッキ{} の",
-                    "{C:attention}ストーンカード",
-                    "1枚につきチップ {C:chips}+#1#",
+                    "このジョーカーは、フルデッキ内の",
+                    "{C:attention}ストーンカード{} 1枚につき",
+                    "チップを {C:chips}+#1#{} 与える",
                     "{C:inactive}（現在 チップ {C:chips}+#2#{C:inactive}）"
                 }
             },
@@ -152,7 +111,7 @@ return {
             j_mime = {
                 name = "マイム",
                 text = {
-                    "{C:attention}手札にある{}",
+                    "{C:attention}持っている{}",
                     "すべてのカードの能力を",
                     "再発動させる"
                 }
@@ -169,7 +128,7 @@ return {
                 text = {
                     "プレイされた {C:diamonds}#2#{} スーツの",
                     "カードがスコアされた時",
-                    "倍率 {C:mult}+#1#{}", 
+                    "倍率 {C:mult}+#1#{}"
                 }
             },
             j_lusty_joker = {
@@ -177,7 +136,7 @@ return {
                 text = {
                     "プレイされた {C:hearts}#2#{} スーツの",
                     "カードがスコアされた時",
-                    "倍率 {C:mult}+#1#{}", 
+                    "倍率 {C:mult}+#1#{}"
                 }
             },
             j_wrathful_joker = {
@@ -185,15 +144,15 @@ return {
                 text = {
                     "プレイされた {C:spades}#2#{} スーツの",
                     "カードがスコアされた時",
-                    "倍率 {C:mult}+#1#{}", 
+                    "倍率 {C:mult}+#1#{}"
                 }
             },
             j_gluttenous_joker = {
                 name = "グラトナスジョーカー",
                 text = {
                     "プレイされた {C:clubs}#2#{} スーツの",
-                    "カードがスコアされた時",
-                    "倍率 {C:mult}+#1#{}", 
+                    "カードがスコアされた時 ",
+                    "倍率 {C:mult}+#1#{}"
                 }
             },
             j_ceremonial = {
@@ -218,7 +177,7 @@ return {
                 name = "ミスティックサミット",
                 text = {
                     "{C:attention}#2#{} ディスカード",
-                    "が残っていない時",
+                    "が残っている時",
                     "倍率 {C:mult}+#1#{}"
                 }
             },
@@ -241,10 +200,16 @@ return {
             j_8_ball = {
                 name = "8ボール",
                 text = {
-                    "{C:attention}8{}がスコアされた時",
-                    "{C:green}#2#{} 分の #1#{} の確率で",
-                    "{C:tarot}タロット{}カードを作る",
+                    "プレイしたハンドに",
+                    "{C:attention}8{} が{C:attenetion}#1#{} 枚以上ある場合",
+                    "{C:planet}惑星{} カードを1枚作る",
                     "{C:inactive}（空きが必要）"
+                }
+            },
+            j_misprint = {
+                name = "ミスプリント",
+                text = {
+                    ""
                 }
             },
             j_dusk = {
@@ -255,25 +220,19 @@ return {
                     "再発動する"
                 }
             },
+            j_raised_fist = {
+                name = "レイズドフィスト",
+                text = {
+                    "手札の {C:attention}一番低い{}",
+                    "ランクのカードの",
+                    "{C:attention}2倍{} を倍率に加える"
+                }
+            },
             j_chaos = {
                 name = "カオス・ザ・クラウン",
                 text = {
                     "ショップに行くたびに",
                     "{C:attention}#1#{} 回無料で {C:green}リロール{} できる"
-                }
-            },
-            j_misprint = {
-                name = "ミスプリント",
-                text = {
-                    ""
-                }
-            },
-            j_raised_fist = {
-                name = "レイズドフィスト",
-                text = {
-                    "手札にある{C:attention}最も低い{}",
-                    "ランクのカードの{C:attention}2倍{}を",
-                    "倍率に加算する。"
                 }
             },
             j_fibonacci = {
@@ -287,16 +246,16 @@ return {
             j_steel_joker = {
                 name = "スチールジョーカー",
                 text = {
-                    "{C:attention}フルデッキ{}の",
-                    "{C:attention}スチールカード1枚につき、",
-                    "倍率 {X:mult,C:white}X#1#",
+                    "このジョーカーは、フルデッキ内の",
+                    "{C:attention}スチール{} カード1枚につき",
+                    "倍率 {X:mult,C:white}X#1#{} を与える",
                     "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 }
             },
             j_scary_face = {
                 name = "スケアリーフェイス",
                 text = {
-                    "プレイされた {C:attention}フェイス{} カードが",
+                    "プレイされた {C:attention}フェイス{} カードがスコアされた時",
                     "スコアされた時",
                     "チップを {C:chips}+#1#{} 与える"
                 }
@@ -314,15 +273,7 @@ return {
                 text = {
                     "ラウンド終了までに",
                     "ディスカードが使われなかった場合",
-                    "{C:attention}ディスカード{} ごとに {C:money}$#1#{} を得る"
-                }
-            },
-            j_pareidolia = {
-                name = "パレイドリア",
-                text = {
-                    "すべてのカードが",
-                    "{C:attention}フェイス{} カードと",
-                    "みなされる"
+                    "{C:attention}ディスカード{} するごとに {C:money}$#1#{} を得る"
                 }
             },
             j_hack = {
@@ -331,6 +282,14 @@ return {
                     "{C:attention}2{}、 {C:attention}3{}、 {C:attention}4{}、 {C:attention}5{} のカードが",
                     "プレイされるごとに",
                     "再発動する"
+                }
+            },
+            j_pareidolia = {
+                name = "パレイドリア",
+                text = {
+                    "すべてのカードが",
+                    "{C:attention}フェイス{} カードと",
+                    "みなされる"
                 }
             },
             j_gros_michel = {
@@ -380,28 +339,19 @@ return {
             j_supernova = {
                 name = "超新星",
                 text = {
-                    "このランでプレイした",
-                    "{C:attention}ポーカーハンド{}の回数を",
-                    "倍率に加算する"
-                }
-            },
-            j_superposition = {
-                name = "スーパーポジション",
-                text = {
-                    "ポーカーハンドに",
-                    "{C:attention}エース{} と {C:attention}ストレート{} を含む場合",
-                    "{C:tarot}タロット{} カードを1枚作る",
-                    "{C:inactive}（空きが必要）"
+                    "{C:attention}ポーカーハンド{} の",
+                    "プレイ回数を",
+                    "倍率に加える"
                 }
             },
             j_ride_the_bus = {
                 name = "ライド・ザ・バス",
                 text = {
-                    "スコアされる{C:attention}フェイス{}カードが",
-                    "ないハンドを{C:attention}連続{}で",
-                    "プレイするたびに、",
-                    "倍率{C:mult}+#1#{}",
-                    "{C:inactive}（現在 倍率{C:mult}+#2#{C:inactive}）"
+                    "スコアされる {C:attention}フェイス{}",
+                    "カードがないハンドが",
+                    "連続でプレイされるたびに",
+                    "倍率 {C:mult}+#1#{}",
+                    "{C:inactive}（現在 倍率 {C:mult}+#2#{C:inactive}）"
                 }
             },
             j_space = {
@@ -489,10 +439,9 @@ return {
             j_constellation = {
                 name = "星座",
                 text = {
-                    "{C:planet}惑星{}カードが",
-                    "使用されるたびに、",
-                    "倍率{X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
+                    "使用された {C:planet}惑星{} カード1枚につき",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 }
             },
             j_hiker = {
@@ -512,13 +461,30 @@ return {
                     "{C:money}$#1#{} を得る"
                 }
             },
+            j_green_joker = {
+                name = "グリーンジョーカー",
+                text = {
+                    "プレイされたハンドごとに倍率 {C:mult}+#1#{}",
+                    "ディスカードするごとに倍率 {C:mult}-#2#{}",
+                    "{C:inactive}（現在 倍率 {C:mult}+#3#{C:inactive}）"
+                }
+            },
+            j_superposition = {
+                name = "スーパーポジション",
+                text = {
+                    "ポーカーハンドに",
+                    "{C:attention}エース{} と {C:attention}ストレート{} を含む場合",
+                    "{C:tarot}タロット{} カードを1枚作る",
+                    "{C:inactive}（空きが必要）"
+                }
+            },
             j_todo_list = {
                 name = "ToDoリスト",
                 text = {
-                    "{C:attention}ポーカーハンド{}が{C:attention}#2#{}である場合に",
-                    "{C:money}$#1#{}を得る。",
-                    "ポーカーハンドはラウンド",
-                    "終了時に変化する"
+                    "{C:attention}ポーカーハンド {} が {C:attention}$#1# {} だった場合",
+                    "{C:money}$#1#{} を得る。",
+                    "ポーカーハンドは",
+                    "払い戻しのたびに変わる"
                 }
             },
             j_ticket = {
@@ -570,21 +536,13 @@ return {
                     "{C:inactive}（#2#）"
                 }
             },
-            j_green_joker = {
-                name = "グリーンジョーカー",
-                text = {
-                    "プレイされたハンドごとに倍率 {C:mult}+#1#{}",
-                    "ディスカードするごとに倍率 {C:mult}-#2#{}",
-                    "{C:inactive}（現在 倍率 {C:mult}+#3#{C:inactive}）"
-                }
-            },
             j_swashbuckler = {
                 name = "スワッシュバックラー",
                 text = {
-                    "他のすべての",
-                    "ジョーカーの{C:attention}セルバリュー{}を",
-                    "倍率に加算する",
-                    "{C:inactive}（現在 倍率{C:mult}+#1#{C:inactive}）"
+                    "このカードの左にある",
+                    "すべての所持している{C:attention}ジョーカー{} のセルバリューを",
+                    "倍率に追加する",
+                    "{C:inactive}（現在 倍率 {C:mult}+#1#{C:inactive}）"
                 },
                 unlock = {
                     "合計 {C:attention,E:1}#1#{} 枚の",
@@ -595,8 +553,8 @@ return {
             j_troubadour = {
                 name = "トルバドゥール",
                 text = {
-                    "ハンドサイズ {C:attention}+#1#{}、",
-                    "毎ラウンドのハンド{C:blue}-#2#{}"
+                    "ハンドサイズ {C:attention}+#1#{}",
+                    "ラウンドごとにハンド {C:red}-#2#{}"
                 },
                 unlock = {
                     "1ハンドだけで",
@@ -647,9 +605,8 @@ return {
             j_hanging_chad = {
                 name = "ハンギングチャド",
                 text = {
-                    "プレイしたカードで、",
-                    "{C:attention}最初に{}スコアされたものを",
-                    "{C:attention}#1#{}回追加で再発動する"
+                    "スコアリングに使用された",
+                    "{C:attention}最初の{} カードを再発動する"
                 },
                 unlock = {
                     "{E:1,C:attention}#1#{} で",
@@ -661,7 +618,7 @@ return {
                 text = {
                     "{C:diamonds}ダイヤ{} スーツでプレイされた",
                     "カードがスコアされた時",
-                    "{C:money}$#1#{}", 
+                    "{C:money}$#1#{}"
                 },
                 unlock = {
                     "デッキに",
@@ -673,9 +630,9 @@ return {
                 name = "ブラッドストーン",
                 text = {
                     "{C:green}#2#分の#1#{} の確率で",
-                    "{C:hearts}ハート{} スーツのカードがスコアされると",
+                    "{C:hearts}ハート{} スーツのカードがプレイされると",
                     "倍率 {C:mult}+#1#{} を与える",
-                    "倍率 {X:mult,C:white}X#3#{}", 
+                    "倍率 {X:mult,C:white}X#3#{}"
                 },
                 unlock = {
                     "デッキに",
@@ -701,7 +658,7 @@ return {
                 text = {
                     "プレイされた {C:clubs}クラブ{} スーツのカードが",
                     "スコアされた時",
-                    "倍率 {C:mult}+#1#{} ", 
+                    "倍率 {C:mult}+#1#{} "
                 },
                 unlock = {
                     "デッキに",
@@ -712,10 +669,10 @@ return {
             j_glass = {
                 name = "グラスジョーカー",
                 text = {
-                    "{C:attention}グラスカード",
-                    "が破壊されるたびに",
-                    "倍率 {X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
+                    "{C:attention}グラスカード{} が",
+                    "破壊されるたびに",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 },
                 unlock = {
                     "デッキに",
@@ -738,10 +695,10 @@ return {
             j_flower_pot = {
                 name = "フラワーポット",
                 text = {
-                    "ポーカーハンドに",
-                    "{C:diamonds}ダイヤ{}、{C:clubs}クラブ{}、",
-                    "{C:hearts}ハート{}、{C:spades}スペード{}を",
-                    "含む場合、倍率 {X:mult,C:white}X#1#{}"
+                    "プレイしたハンドに",
+                    "{C:diamonds}ダイヤ{} 、{C:clubs}クラブ{} 、",
+                    "{C:hearts}ハート{} 、{C:spades}スペード{} の",
+                    "スコアリングカードがあると倍率{X:mult,C:white}X#1#{}"
                 },
                 unlock = {
                     "アンティのレベルが",
@@ -774,9 +731,8 @@ return {
             j_merry_andy = {
                 name = "メリーアンディ",
                 text = {
-                    "毎ラウンドで",
-                    "ディスカード {C:red}+#1#{}",
-                    "ハンドサイズ{C:red}#2#{}"
+                    "次のラウンドで",
+                    "ディスカード {C:red}+#1#{}"
                 },
                 unlock = {
                     "{E:1,C:attention}#1# ラウンド以内に",
@@ -840,10 +796,10 @@ return {
             j_hit_the_road = {
                 name = "ヒット・ザ・ロード",
                 text = {
-                    "このラウンドで{C:attention}ジャック{}が",
-                    "ディスカードされるたびに",
-                    "倍率 {X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
+                    "このラウンドでディスカードされた",
+                    "{C:attention}ジャック{} 1枚につき",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 },
                 unlock = {
                     "同時に",
@@ -936,28 +892,27 @@ return {
             j_red_card = {
                 name = "レッドカード",
                 text = {
-                    "{C:attention}ブースターパック{}が",
-                    "スキップされた時、",
-                    "倍率{C:red}+#1#{}",
-                    "{C:inactive}（現在 倍率{C:red}+#2#{C:inactive}）"
+                    "{C:attention}ブースターパック{} がスキップされた時",
+                    "倍率 {C:red}+#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {C:red}+#2#{C:inactive}）"
                 }
             },
             j_madness = {
                 name = "マッドネス",
                 text = {
-                    "{C:attention}スモールブラインド{}または{C:attention}ビッグブラインド{}",
-                    "が選択された時、倍率 {X:mult,C:white}X#1#{}を得て、",
-                    "ランダムなジョーカー1枚を{C:attention}破壊{}する",
-                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
+                    "{C:attention}ブラインド{} が選択された時",
+                    "倍率 {X:mult,C:white}X#1#{} を得て",
+                    "ランダムなジョーカーを {C:attention}破壊{} する",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{}）"
                 }
             },
             j_square = {
                 name = "スクエアジョーカー",
                 text = {
-                    "プレイしたハンドが",
-                    "ちょうど{C:attention}4{}枚の場合、",
-                    "チップ {C:chips}+#2#{}を得る",
-                    "{C:inactive}（現在 チップ{C:chips}#1#{C:inactive}）"
+                    "プレイされたハンドに",
+                    "{C:attention}4{} のカードが含まれる場合",
+                    "チップを {C:chips}+#2#{} 得る",
+                    "{C:inactive}（現在 {C:chips}#1#{} チップ）"
                 }
             },
             j_seance = {
@@ -977,287 +932,6 @@ return {
                     "{C:inactive}（空きが必要）"
                 }
             },
-            j_vampire = {
-                name = "ヴァンパイア",
-                text = {
-                    "スコアされた{C:attention}強化カード{}が",
-                    "プレイされるたびに倍率 {X:mult,C:white}X#1#{}を得るが、",
-                    "カードの{C:attention}強化{}を解除する",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
-                }
-            },
-            j_shortcut = {
-                name = "ショートカット",
-                text = {
-                    "{C:attention}1ランク{}の差があっても",
-                    "{C:attention}ストレート{}を作ることができる",
-                    "{C:inactive}（例：{C:attention}10 8 6 5 3{C:inactive}）"
-                }
-            },
-            j_hologram = {
-                name = "ホログラム",
-                text = {
-                    "{C:attention}カード{}がデッキに",
-                    "追加されるたびに、",
-                    "倍率 {X:mult,C:white}X#1#{}を得る",
-                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
-                }
-            },
-            j_vagabond = {
-                name = "バガボンド",
-                text = {
-                    "{C:money}$#1#{} 以下の",
-                    "ハンドがプレイされた場合",
-                    "{C:purple}タロット{} カードを作る"
-                }
-            },
-            j_baron = {
-                name = "バロン",
-                text = {
-                    "手札にある {C:attention}キング{} 1枚につき",
-                    "倍率 {X:mult,C:white}X#1#{} を",
-                    "与える"
-
-                }
-            },
-            j_cloud_9 = {
-                name = "クラウド9",
-                text = {
-                    "ラウンド終了時に",
-                    "{C:attention}フルデッキ{} にある{C:attention} 9{} 1枚につき",
-                    "{C:money}$#1#{} を得る",
-                    "{C:inactive}（現在{C:money}$#2#{}{C:inactive}）"
-                }
-            },
-            j_rocket = {
-                name = "ロケット",
-                text = {
-                    "ラウンド終了時に{C:money}$#1#{}を得る",
-                    "{C:attention}ボスブラインド{}を倒すと、",
-                    "{C:money}$#2#{}増加する"
-                }
-            },
-            j_obelisk = {
-                name = "オベリスク",
-                text = {
-                    "最も多くプレイした",
-                    "{C:attention}ポーカーハンド{}以外を{C:attention}連続{}で",
-                    "プレイするたびに",
-                    "倍率{X:mult,C:white}X#1#",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
-                }
-            },
-            j_midas_mask = {
-                name = "ミダスマスク",
-                text = {
-                    "プレイした全ての{C:attention}フェイス{}カードが、",
-                    "スコアされた時に",
-                    "{C:attention}ゴールド{}カードになる"
-                }
-            },
-            j_luchador = {
-                name = "ルチャドール",
-                text = {
-                    "このカードを売ると",
-                    "現在の {C:attention}ボスブラインド{} を",
-                    "無効にする"
-                }
-            },
-            j_photograph = {
-                name = "フォトグラフ",
-                text = {
-                    "最初にプレイされた{C:attention}フェイス{} カードが",
-                    "スコアされた時",
-                    "倍率 {X:mult,C:white}X#1#{}"
-                }
-            },
-            j_gift = {
-                name = "ギフトカード",
-                text = {
-                    "ラウンド終了時に",
-                    "すべての {C:attention}ジョーカー{} と {C:attention}消耗{} カードの",
-                    "{C:attention}セルバリュー{} に",
-                    "{C:money}$#1#{} を加える"
-                }
-            },
-            j_turtle_bean = {
-                name = "タートルビーン",
-                text = {
-                    "ハンドサイズ {C:attention}+#1#{}",
-                    "ラウンドごとに",
-                    "{C:red}#2#{} 枚ずつ減らす"
-                }
-            },
-            j_erosion = {
-                name = "イロージョン",
-                text = {
-                    "フルデッキの {C:attention}#3#{} 枚を下回る",
-                    "カード1枚につき",
-                    "倍率 {C:red}+#1#{}",
-                    "{C:inactive}（現在 倍率 {C:red}+#2#{C:inactive}）"
-                }
-            },
-            j_reserved_parking = {
-                name = "リザーブドパーキング",
-                text = {
-                    "手札にある",
-                    "{C:attention}フェイス{} カード1枚につき",
-                    "{C:green}#3#分の#2#{} の確率で",
-                    "{C:money}$#1#{}を与える"
-                    
-                }
-            },
-            j_mail = {
-                name = "メールによる払い戻し",
-                text = {
-                    "{C:attention}#2#{} がディスカードされるたびに",
-                    "{C:money}$#1#{} を得る",
-                    "ランクはラウンドごとに変わる"
-                }
-            },
-            j_to_the_moon = {
-                name = "トゥ・ザ・ムーン",
-                text = {
-                    "ラウンド終了時の",
-                    "所持金 {C:money}$5{} ごとに",
-                    "追加の {C:attention}利息{} を{C:money}$#1#{} 得る"
-                }
-            },
-            j_hallucination = {
-                name = "ハルシネーション",
-                text = {
-                    "{C:attention}ブースターパック{} を開封するたびに",
-                    "{C:green}#2# 分の #1#{} の確率で",
-                    "{C:tarot}タロット{} カードを作る",
-                    "{C:inactive}（空きが必要）"
-                }
-            },
-            j_lucky_cat = {
-                name = "ラッキーキャット",
-                text = {
-                    "{C:attention}ラッキーカード{}が",
-                    "発動に{C:green}成功{}するたびに、",
-                    "倍率{X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
-                }
-            },
-            j_baseball = {
-                name = "ベースボールカード",
-                text = {
-                    "それぞれの {C:green}アンコモン{} ジョーカーが",
-                    "倍率 {X:mult,C:white}X#1#{} を与える"
-                }
-            },
-            j_bull = {
-                name = "ブル",
-                text = {
-                    "自分が持っている",
-                    "{C:money}$1{}につき、チップ {C:chips}+#1#{}",
-                    "{C:inactive}（現在 チップ{C:chips}+#2#{C:inactive}）"
-                }
-            },
-            j_diet_cola = {
-                name = "ダイエットコーラ",
-                text = {
-                    "このカードを売ると",
-                    "無料の {C:attention}#1#{} を",
-                    "作る"
-                }
-            },
-            j_trading = {
-                name = "トレーディングカード",
-                text = {
-                    "ラウンドの {C:attention}最初のディスカード{} が",
-                    "{C:attention}1{} 枚だった場合",
-                    "それを破壊して {C:money}$#1#{} を得る"
-                }
-            },
-            j_flash = {
-                name = "フラッシュカード",
-                text = {
-                    "ショップで{C:attention}リロール{}",
-                    "するたびに、倍率{C:mult}+#1#{}",
-                    "{C:inactive}（現在 倍率{C:mult}+#2#{C:inactive}）"
-                }
-            },
-            j_popcorn= {
-                name = "ポップコーン",
-                text = {
-                    "倍率 {C:mult}+#1#{}",
-                    "プレイされたラウンドごとに",
-                    "倍率 {C:mult}-#2#{}"
-                }
-            },
-            j_ramen= {
-                name = "ラーメン",
-                text = {
-                    "倍率 {X:mult,C:white}X#1#{}",
-                    "ディスカードされた {C:attention}カード{} 1枚につき",
-                    "倍率 {X:mult,C:white}X#2#{} を失う"
-                }
-            },
-            j_trousers= {
-                name = "スペアトラウザー",
-                text = {
-                    "プレイしたハンドが",
-                    "{C:attention}#2#{}を含む場合",
-                    "倍率 {C:mult}+#1#",
-                    "{C:inactive}（現在 倍率{C:red}+#3#{C:inactive}）"
-                }
-            },
-            j_ancient= {
-                name = "エンシェントジョーカー",
-                text = {
-                    "スコアされた時",
-                    "{V:1}#2#{} スーツでプレイされたカードごとに",
-                    "倍率 {X:mult,C:white}X#1#{}",
-                    "{s:0.8} スーツはラウンド終了時に変わる"
-                }
-            },
-            j_walkie_talkie = {
-                name = "ウォーキートーキー",
-                text = {
-                    "スコアされた時",
-                    "プレイされた {C:attention}10{} または {C:attention}4{} ごとに",
-                    "チップ {C:chips}+#1#{} を与え、倍率 {C:mult}+#2#{}"
-                },
-            },
-            j_selzer= {
-                name = "セルツァー",
-                text = {
-                    "次の {C:attention}#1#{} ハンドに",
-                    "プレイされたすべてのカードを",
-                    "再発動する"
-                }
-            },
-            j_castle = {
-                name = "キャッスル",
-                text = {
-                    "このジョーカーは、 {V:1}#2#{} のカードがディスカードされるたびに",
-                    "チップ {C:chips}+#1#{} を得る",
-                    "スーツはラウンドごとに変わる",
-                    "{C:inactive}（現在 チップ {C:chips}+#3#{C:inactive}）"
-                },
-            },
-            j_smiley = {
-                name = "スマイリーフェイス",
-                text = {
-                    "スコアされた時",
-                    "プレイされた {C:attention}フェイス{} カードが",
-                    "倍率 {C:mult}+#1#{} を与える"
-                }
-            },
-            j_campfire = {
-                name = "キャンプファイヤー",
-                text = {
-                    "このジョーカーは、カードが1枚 {C:attention}売れる{} たびに",
-                    "倍率 {X:mult,C:white}X#1#{} を得る",
-                    "{C:attention}ボスブラインド{} を倒すとリセットされる",
-                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
-                }
-            },
-
-
             j_stuntman = {
                 name = "スタントマン",
                 text = {
@@ -1267,7 +941,7 @@ return {
                 unlock = {
                     "1つのハンドで",
                     "チップを {E:1,C:attention}#1#{} 以上",
-                    "獲得する "
+                    "獲得する"
                 }
             },
             j_invisible = {
@@ -1299,7 +973,7 @@ return {
                 name = "サテライト",
                 text = {
                     "ラウンド終了時に",
-                    "このランで使われた {C:planet}惑星{} カード1種類ごとに",
+                    "このランで使われた唯一の {C:planet}惑星{} カード1枚ごとに",
                     "{C:money}$#1#{} を得る",
                     "{C:inactive}（現在 {C:money}$#2#{C:inactive}）"
                 },
@@ -1311,9 +985,9 @@ return {
             j_shoot_the_moon = {
                 name = "シュート・ザ・ムーン",
                 text = {
-                    "手札にある {C:attention}クイーン{}",
+                    "手札の{C:attention}クイーン{} ",
                     "1枚につき",
-                    "倍率 {C:mult}+#1#{}"
+                    "倍率{C:mult}+#1#{}"
                 },
                 unlock = {
                     "1ラウンドでデッキ内の",
@@ -1374,9 +1048,8 @@ return {
             j_bootstraps = {
                 name = "ブートストラップ",
                 text = {
-                    "自分が持っている",
-                    "{C:money}$#2#{}につき、倍率{C:mult}+#1#{}",
-                    "{C:inactive}（現在 倍率{C:mult}+#3#{C:inactive}）"
+                    "{C:money}$#2#{} 持つたびに",
+                    "倍率 {C:mult}+#1#{}"
                 },
                 unlock = {
                     "{E:1,C:attention}#1#{} 枚以上の",
@@ -1386,10 +1059,10 @@ return {
             j_caino = {
                 name = "カイーノ",
                 text = {
-                    "{C:attention}フェイス{}カードが",
-                    "破壊されるたびに、",
-                    "倍率{X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#2#{C:inactive}）"
+                    "{C:attention}フェイス{} カードが1枚",
+                    "破壊されると",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 },
                 unlock = {
                     "{E:1,s:1.3}？？？？？"
@@ -1409,10 +1082,9 @@ return {
             j_yorick = {
                 name = "ヨリック",
                 text = {
-                    "カードが{C:attention}#2#{C:inactive}[#3#]{}枚",
-                    "ディスカードされるたびに、",
-                    "倍率{X:mult,C:white}X#1#{}",
-                    "{C:inactive}（現在 倍率{X:mult,C:white}X#4#{C:inactive}）"
+                    "{C:attention}#2#{} 回ディスカードを使った場合のみ",
+                    "倍率 {X:mult,C:white}X#1#{}",
+                    "{C:inactive}（ディスカードの残り： {C:attention}#3#{C:inactive}）"
                 },
                 unlock = {
                     "{E:1,s:1.3}？？？？？"
@@ -1438,6 +1110,323 @@ return {
                 },
                 unlock = {
                     "{E:1,s:1.3}？？？？？"
+                }
+            },
+            j_sly = {
+                name = "スライジョーカー",
+                text = {
+                    "プレイしたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "チップ {C:chips}+#1#{}"
+                }
+            },
+            j_wily = {
+                name = "ウィリージョーカー",
+                text = {
+                    "プレイしたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "チップ {C:chips}+#1#{}"
+                }
+            },
+            j_clever = {
+                name = "クレバージョーカー",
+                text = {
+                    "プレイしたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "チップ {C:chips}+#1#{}"
+                }
+            },
+            j_devious = {
+                name = "ディヴィアスジョーカー",
+                text = {
+                    "プレイしたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "チップ {C:chips}+#1#{}"
+                }
+            },
+            j_crafty = {
+                name = "クラフティジョーカー",
+                text = {
+                    "プレイしたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "チップ {C:chips}+#1#{}"
+                }
+            },
+            j_vampire = {
+                name = "ヴァンパイア",
+                text = {
+                    "{C:attention}強化されたカード{} が使われるたびに",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "カードの {C:attention}強化{} は解除される",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
+                }
+            },
+            j_shortcut = {
+                name = "ショートカット",
+                text = {
+                    "{C:attention}1ランク{} の開きがあっても",
+                    "{C:attention}ストレート{} を作ることができる",
+                    "{C:inactive}（例： {C:attention}2 3 5 7 8{C:inactive}）"
+                }
+            },
+            j_hologram = {
+                name = "ホログラム",
+                text = {
+                    "デッキに {C:attention}カード{} が",
+                    "追加されるたびに",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
+                }
+            },
+            j_vagabond = {
+                name = "バガボンド",
+                text = {
+                    "{C:money}$#1#{} 以下の",
+                    "ハンドがプレイされた場合",
+                    "{C:purple}タロット{} カードを作る"
+                }
+            },
+            j_baron = {
+                name = "バロン",
+                text = {
+                    "手札にある {C:attention}キング{} 1枚につき",
+                    "倍率 {X:mult,C:white}X#1#{} を",
+                    "与える"
+                }
+            },
+            j_cloud_9 = {
+                name = "クラウド9",
+                text = {
+                    "ラウンド終了時に",
+                    "{C:attention}フルデッキ{} にある{C:attention} 9{} 1枚につき",
+                    "{C:money}$#1#{} を得る",
+                    "{C:inactive}（現在{C:money}$#2#{}{C:inactive}）"
+                }
+            },
+            j_rocket = {
+                name = "ロケット",
+                text = {
+                    "ラウンド終了時に {C:money}$#1#{} を得る",
+                    "{C:attention}ボスブラインド{} を倒すと",
+                    "{C:money}$#2#{} を得る"
+                }
+            },
+            j_obelisk = {
+                name = "オベリスク",
+                text = {
+                    "最も多くプレイした ",
+                    "{C:attention}ポーカーハンド{} をプレイしないまま",
+                    "連続でハンドがプレイされるたびに",
+                    "倍率 {X:mult,C:white}X#1#{}",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
+                }
+            },
+            j_midas_mask = {
+                name = "ミダスマスク",
+                text = {
+                    "プレイされた時",
+                    "すべての {C:attention}フェイス{} カードが",
+                    "{C:attention}ゴールド{} カードになる "
+                }
+            },
+            j_luchador = {
+                name = "ルチャドール",
+                text = {
+                    "このカードを売ると",
+                    "現在の {C:attention}ボスブラインド{} を",
+                    "無効にする"
+                }
+            },
+            j_photograph = {
+                name = "フォトグラフ",
+                text = {
+                    "最初にプレイされた{C:attention}フェイス{} カードが",
+                    "スコアされた時",
+                    "倍率 {X:mult,C:white}X#1#{}"
+                }
+            },
+            j_gift = {
+                name = "ギフトカード",
+                text = {
+                    "ラウンド終了時に",
+                    "すべての {C:attention}ジョーカー{} と {C:attention}消耗{} カードの",
+                    "{C:attention}セルバリュー{} に",
+                    "{C:money}$#1#{} を加える"
+                }
+            },
+            j_turtle_bean = {
+                name = "タートルビーン",
+                text = {
+                    "ハンドサイズ {C:attention}+#1#{}",
+                    "ラウンドごとに",
+                    "{C:red}#2#{} 枚ずつ減らす"
+                }
+            },
+            j_erosion = {
+                name = "イロージョン",
+                text = {
+                    "フルデッキの {C:attention}#3#{} 枚を下回る",
+                    "カード1枚につき",
+                    "倍率 {C:red}+#1#{}",
+                    "{C:inactive}（現在 倍率 {C:red}+#2#{C:inactive}）"
+                }
+            },
+            j_reserved_parking = {
+                name = "リザーブドパーキング",
+                text = {
+                    "手札にある",
+                    "{C:attention}フェイス{} カード1枚につき",
+                    "{C:green}#3#分の#2#{} の確率で",
+                    "{C:money}$#1#{}を与える"
+                }
+            },
+            j_mail = {
+                name = "メールによる払い戻し",
+                text = {
+                    "{C:attention}#2#{} がディスカードされるたびに",
+                    "{C:money}$#1#{} を得る",
+                    "ランクはラウンドごとに変わる"
+                }
+            },
+            j_to_the_moon = {
+                name = "トゥ・ザ・ムーン",
+                text = {
+                    "ラウンド終了時の",
+                    "所持金 {C:money}$5{} ごとに",
+                    "追加の {C:attention}利息{} を{C:money}$#1#{} 得る"
+                }
+            },
+            j_hallucination = {
+                name = "ハルシネーション",
+                text = {
+                    "{C:attention}ブースターパック{} を開封するたびに",
+                    "{C:green}#2# 分の #1#{} の確率で",
+                    "{C:tarot}タロット{} カードを作る",
+                    "{C:inactive}（空きが必要）"
+                }
+            },
+            j_lucky_cat = {
+                name = "ラッキーキャット",
+                text = {
+                    "{C:attention}ラッキー{} カードの発動が成功するたびに",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    " ",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
+                }
+            },
+            j_baseball = {
+                name = "ベースボールカード",
+                text = {
+                    "それぞれの {C:green}アンコモン{} ジョーカーが",
+                    "倍率 {X:mult,C:white}X#1#{} を与える"
+                }
+            },
+            j_bull = {
+                name = "ブル",
+                text = {
+                    "所持金 {C:money}1ドル{} につき",
+                    "チップ {C:chips}+#1#{}",
+                    "{C:inactive}（現在 チップ {C:chips}+#2#{C:inactive}）"
+                }
+            },
+            j_diet_cola = {
+                name = "ダイエットコーラ",
+                text = {
+                    "このカードを売ると",
+                    "無料の {C:attention}#1#{} を",
+                    "作る"
+                }
+            },
+            j_trading = {
+                name = "トレーディングカード",
+                text = {
+                    "ラウンドの {C:attention}最初のディスカード{} が",
+                    "{C:attention}1{} 枚だった場合",
+                    "それを破壊して {C:money}$#1#{} を得る"
+                }
+            },
+            j_flash = {
+                name = "フラッシュカード",
+                text = {
+                    "ショップで {C:attention}リロール{} するたびに",
+                    "倍率 {C:mult}+#1#{}",
+                    "{C:inactive}（現在 倍率 {C:mult}+#2#{C:inactive}）"
+                }
+            },
+            j_popcorn = {
+                name = "ポップコーン",
+                text = {
+                    "倍率 {C:mult}+#1#{}",
+                    "プレイされたラウンドごとに",
+                    "倍率 {C:mult}-#2#{}"
+                }
+            },
+            j_trousers = {
+                name = "スペアトラウザー",
+                text = {
+                    "プレイされたハンドが",
+                    "{C:attention}#2#{} を含む場合",
+                    "倍率 {C:mult}+#1#{}",
+                    "{C:inactive}（現在 倍率 {C:red}+#3#{C:inactive}）"
+                }
+            },
+            j_ancient = {
+                name = "エンシェントジョーカー",
+                text = {
+                    "スコアされた時",
+                    "{V:1}#2#{} スーツでプレイされたカードごとに",
+                    "倍率 {X:mult,C:white}X#1#{}",
+                    "{s:0.8} スーツはラウンド終了時に変わる"
+                }
+            },
+            j_ramen = {
+                name = "ラーメン",
+                text = {
+                    "倍率 {X:mult,C:white}X#1#{}",
+                    "ディスカードされた {C:attention}カード{} 1枚につき",
+                    "倍率 {X:mult,C:white}X#2#{} を失う"
+                }
+            },
+            j_walkie_talkie = {
+                name = "ウォーキートーキー",
+                text = {
+                    "スコアされた時",
+                    "プレイされた {C:attention}10{} または {C:attention}4{} ごとに",
+                    "チップ {C:chips}+#1#{} を与え、倍率 {C:mult}+#2#{}"
+                }
+            },
+            j_selzer = {
+                name = "セルツァー",
+                text = {
+                    "次の {C:attention}#1#{} ハンドに",
+                    "プレイされたすべてのカードを",
+                    "再発動する"
+                }
+            },
+            j_castle = {
+                name = "キャッスル",
+                text = {
+                    "このジョーカーは、カードを {V:1}#2#{} 枚ディスカードするたびに",
+                    "チップ {C:chips}+#1#{} を得る",
+                    "スーツはラウンドごとに変わる",
+                    "{C:inactive}（現在 チップ {C:chips}+#3#{C:inactive}）"
+                }
+            },
+            j_smiley = {
+                name = "スマイリーフェイス",
+                text = {
+                    "スコアされた時",
+                    "プレイされた {C:attention}フェイス{} カードが",
+                    "倍率 {C:mult}+#1#{} を与える"
+                }
+            },
+            j_campfire = {
+                name = "キャンプファイヤー",
+                text = {
+                    "このジョーカーは、カードが1枚 {C:attention}売れる{} たびに",
+                    "倍率 {X:mult,C:white}X#1#{} を得る",
+                    "{C:attention}ボスブラインド{} を倒すとリセットされる",
+                    "{C:inactive}（現在 倍率 {X:mult,C:white}X#2#{C:inactive}）"
                 }
             }
         },
@@ -1515,15 +1504,15 @@ return {
                 text = {
                     "ラウンドごとに",
                     "永久的に",
-                    "ディスカード {C:red}+#1#{}を得る"
+                    "ディスカード {C:blue}+#1#{} を得る"
                 }
             },
             v_seed_money = {
                 name = "シードマネー",
                 text = {
-                    "ラウンドごとの",
-                    "利息獲得量の",
-                    "上限を${C:money}#1#{}に増加する"
+                    "ラウンドごとに得られる",
+                    "利息の上限を",
+                    "{C:money}$#1#{} に引き上げる"
                 }
             },
             v_blank = {
@@ -1543,9 +1532,10 @@ return {
             v_hieroglyph = {
                 name = "ヒエログリフ",
                 text = {
-                    "アンティ {C:attention}-#1#{}、",
-                    "毎ラウンドの",
-                    "ハンド{C:blue}-#1#{}"
+                    "アンティ {C:attention}-#1#{}",
+                    "アンティ{C:attention}-#1#{}",
+                    "ハンド{C:blue}-#1#{}",
+                    "ラウンドごとに"
                 }
             },
             v_directors_cut = {
@@ -1556,12 +1546,13 @@ return {
                     "1ロールあたり {C:money}$#1#{}"
                 }
             },
-            v_paint_brush = {
-                name = "ペイント ブラシ",
+            v_pattern = {
+                name = "パターン",
                 text = {
-                    "ハンドにカードを",
-                    "{C:attention}+#1#{} 枚持てる",
-                    "ハンドサイズ {C:attention}+#1#{}"
+                    "最もよく使用される",
+                    "{C:attention}消耗{} カードを出現させる",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}（空きが必要）"
                 }
             },
             v_overstock_plus = {
@@ -1689,7 +1680,7 @@ return {
                 text = {
                     "ラウンドごとに",
                     "永久的に",
-                    "ディスカード {C:red}+#1#{}を得る"
+                    "ディスカード {C:blue}+#1#{} を得る"
                 },
                 unlock = {
                     "合計 {C:attention}#1#{} 枚の",
@@ -1700,9 +1691,9 @@ return {
             v_money_tree = {
                 name = "マネーツリー",
                 text = {
-                    "ラウンドごとの",
-                    "利息獲得量の",
-                    "上限を${C:money}#1#{}に増加する"
+                    "ラウンドごとに得られる",
+                    "利息の上限を",
+                    "{C:money}$#1#{} に引き上げる"
                 },
                 unlock = {
                     "{C:attention}#1#{} ラウンド連続で",
@@ -1738,14 +1729,14 @@ return {
             },
             v_petroglyph = {
                 name = "ペトログリフ",
-                text = {
-                    "アンティ {C:attention}-#1#{}、",
-                    "毎ラウンドの",
-                    "ディスカード {C:red}-#1#{}"
-                },
                 unlock = {
                     "アンティ {C:attention}-#1#{}",
                     "{E:1,C:attention}#1#{} に到達する"
+                },
+                text = {
+                    "アンティ {C:attention}-#1#{}",
+                    "アンティ{C:attention}-#1#{}",
+                    "ディスカード{C:red}-#1#{} "
                 }
             },
             v_retcon = {
@@ -1760,6 +1751,21 @@ return {
                     "発見する"
                 }
             },
+            v_tesselation = {
+                name = "テッセレーション",
+                text = {
+                    "最もよく使用される",
+                    "{C:attention}ジョーカー{} カードを出現させる",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}（空きが必要）"
+                },
+                unlock = {
+                    "最もよく使用する",
+                    "{C:attention}ジョーカー{} の",
+                    "{C:dark_edition}ポリクローム{} エディションを",
+                    "ショップで購入する"
+                }
+            },
             v_palette = {
                 name = "パレット",
                 text = {
@@ -1770,6 +1776,12 @@ return {
                 unlock = {
                     "ハンドサイズを",
                     "{C:attention}#1#{} 枚まで減らす"
+                }
+            },
+            v_paint_brush = {
+                name = "ペイント ブラシ",
+                text = {
+                    "ハンドサイズ {C:attention}+#1#{}"
                 }
             }
         },
@@ -1867,8 +1879,8 @@ return {
                 name = "強さ",
                 text = {
                     "最大 {C:attention}#1#{} 枚の",
-                    "選択されたカードを",
-                    "{C:attention}1{} つ大きい数字にする"
+                    "選択されたカードのランクを",
+                    "{C:attention}1{} 上げる"
                 }
             },
             c_hanged_man = {
@@ -2057,11 +2069,11 @@ return {
                 name = "エリス",
                 text = {
                     "{S:0.8}（{S:0.8,V:1}レベル#1#{S:0.8}）{} レベルアップ",
-                    "{C:attention}#2#{}",
+                    "{C:attention}#2#{} ",
                     "倍率 {C:mult}+#3#{} および",
                     "チップ {C:chips}+#4#{}"
                 }
-            },
+            }
         },
         Spectral = {
             c_familiar = {
@@ -2148,6 +2160,22 @@ return {
                     "{C:money}$#2#{} 得る"
                 }
             },
+            c_soul = {
+                name = "魂",
+                text = {
+                    "{C:legendary,E:1}レジェンド{} ジョーカーを",
+                    "作る",
+                    "{C:inactive}（空きが必要）"
+                }
+            },
+            c_black_hole = {
+                name = "ブラックホール",
+                text = {
+                    "すべての {C:legendary,E:1}ポーカーハンド{} を",
+                    "{C:attention}1{} レベル",
+                    "アップグレードする"
+                }
+            },
             c_ankh = {
                 name = "アンク",
                 text = {
@@ -2194,22 +2222,6 @@ return {
                     "手札から選んだ",
                     "カード {C:attention}1{} 枚の",
                     "コピーを {C:attention}#1#{} 枚作る"
-                }
-            },
-            c_soul = {
-                name = "魂",
-                text = {
-                    "{C:legendary,E:1}レジェンド{} ジョーカーを",
-                    "作る",
-                    "{C:inactive}（空きが必要）"
-                }
-            },
-            c_black_hole = {
-                name = "ブラックホール",
-                text = {
-                    "すべての {C:legendary,E:1}ポーカーハンド{} を",
-                    "{C:attention}1{} レベル",
-                    "アップグレードする"
                 }
             }
         },
@@ -2359,16 +2371,15 @@ return {
             stake_orange = {
                 name = "オレンジステーク",
                 text = {
-                    "ショップに{C:attention}摩耗{}ジョーカーが出現する",
-                    "{C:inactive,s:0.8}（5ラウンド後にデバフ状態になる）",
+                    "{C:attention}ブースターパック{} が",
+                    "各アンティごとに {C:money}$1{} 高くなる",
                     "{s:0.8}以前のすべてのステークに適用"
                 }
             },
             stake_gold = {
                 name = "ゴールドステーク",
                 text = {
-                    "ショップに{C:attention}レンタル{}ジョーカーが出現する",
-                    "{C:inactive,s:0.8}（ラウンドごとに{C:money,s:0.8}$3{C:inactive,s:0.8}消費）",
+                    "ハンドサイズ{C:red}-1{}",
                     "{s:0.8}以前のすべてのステークに適用"
                 }
             }
@@ -2377,47 +2388,43 @@ return {
             tag_uncommon = {
                 name = "アンコモンタグ",
                 text = {
-                    "ショップに出現：無料の",
-                    "{C:green}アンコモンジョーカー"
+                    "ショップが",
+                    "{C:green}アンコモンジョーカー{} を持つ"
                 }
             },
             tag_rare = {
                 name = "レアタグ",
                 text = {
-                    "ショップに出現：無料の",
-                    "{C:red}レアジョーカー"
+                    "ショップが",
+                    "{C:red}レアジョーカー{} を持つ"
                 }
             },
             tag_negative = {
                 name = "ネガティブタグ",
                 text = {
-                    "次のベースショップジョーカーが",
-                    "無料になり、以下の",
-                    "エディションになる：{C:dark_edition}ネガティブ"
+                    "ショップが",
+                    "{C:dark_edition}ネガティブジョーカー{} を持つ"
                 }
             },
             tag_foil = {
                 name = "フォイルタグ",
                 text = {
-                    "次のベースショップジョーカーが",
-                    "無料になり、以下の",
-                    "エディションになる：{C:dark_edition}フォイル"
+                    "ショップが",
+                    "{C:dark_edition}フォイルジョーカー{} を持つ"
                 }
             },
             tag_holo = {
                 name = "ホログラムタグ",
                 text = {
-                    "次のベースショップジョーカーが",
-                    "無料になり、以下の",
-                    "エディションになる：{C:dark_edition}ホログラム"
+                    "ショップが",
+                    "{C:dark_edition}ホログラムジョーカー{} を持つ"
                 }
             },
             tag_polychrome = {
                 name = "ポリクロームタグ",
                 text = {
-                    "次のベースショップジョーカーが",
-                    "無料になり、以下の",
-                    "エディションになる：{C:dark_edition}ポリクローム"
+                    "ショップが",
+                    "{C:dark_edition}ポリクロームジョーカー{} を持つ"
                 }
             },
             tag_investment = {
@@ -2473,7 +2480,7 @@ return {
             tag_handy = {
                 name = "ハンディタグ",
                 text = {
-                    "このランでプレイした{C:blue}ハンド{} ごとに",
+                    "このランで{C:blue}ハンド{} をプレイするごとに",
                     "{C:money}$#1#{} を与える",
                     "{C:inactive}（最高{C:money}$#2#{C:inactive}）"
                 }
@@ -2481,7 +2488,7 @@ return {
             tag_garbage = {
                 name = "ガーベジタグ",
                 text = {
-                    "このランで使わなかった{C:red}ディスカード{} につき",
+                    "このターンで使わなかった{C:red}ディスカード{} につき",
                     "{C:money}$#1#{} を与える",
                     "{C:inactive}（最高{C:money}$#2#{C:inactive}）"
                 }
@@ -2579,7 +2586,7 @@ return {
             bl_wheel = {
                 name = "ホイール",
                 text = {
-                    " 7枚のカードが",
+                    "/7枚のカードが",
                     "裏向きでドローされる"
                 }
             },
@@ -2813,12 +2820,12 @@ return {
                     "ランをスタートする"
                 }
             },
-            b_ghost = {
-                name = "ゴーストデッキ",
+            b_metal = {
+                name = "メタルデッキ",
                 text = {
-                    "{C:spectral}スペクトル{} カードが",
-                    "ショップに出現し",
-                    "{C:spectral,T:c_hex}ヘックス{} カードで始まる"
+                    "{C:attention}#1#{} 枚のトランプが",
+                    "{C:attention}スチールカード{} に強化された状態で",
+                    "ランをスタートする"
                 }
             },
             b_abandoned = {
@@ -2837,20 +2844,18 @@ return {
                     "ランをスタートする"
                 }
             },
-            b_zodiac = {
-                name = "ゾディアックデッキ",
+            b_rocky = {
+                name = "ロッキーデッキ",
                 text = {
-                    "{C:tarot,T:v_tarot_merchant}#1#{}、",
-                    "{C:planet,T:v_planet_merchant}#2#{}、",
-                    "{C:attention,T:v_overstock_norm}#3#{}で",
-                    "ランをスタートする"
+                    "{C:attention}#1#{} 枚の",
+                    "{C:attention}ストーンカード{} を追加してランをスタートする"
                 }
             },
-            b_painted = {
-                name = "ペインテッドデッキ",
+            b_braided = {
+                name = "ブレイデッドデッキ",
                 text = {
-                    "ハンドサイズ {C:attention}+#1#{}",
-                    "ジョーカースロット {C:red}#2#{}"
+                    "最初にプレイされたハンドが",
+                    "{C:attention}レベル3{} にアップグレードされる"
                 }
             },
             b_anaglyph = {
@@ -2883,6 +2888,30 @@ return {
                 text = {
                     ""
                 }
+            },
+            b_ghost = {
+                name = "ゴーストデッキ",
+                text = {
+                    "{C:spectral}スペクトル{} カードが",
+                    "ショップに出現し",
+                    "{C:spectral,T:c_hex}ヘックス{} カードで始まる"
+                }
+            },
+            b_zodiac = {
+                name = "ゾディアックデッキ",
+                text = {
+                    "{C:tarot,T:v_tarot_merchant}#1#{}、",
+                    "{C:planet,T:v_planet_merchant}#2#{}、",
+                    "{C:attention,T:v_overstock_norm}#3#{}で",
+                    "ランをスタートする"
+                }
+            },
+            b_painted = {
+                name = "ペインテッドデッキ",
+                text = {
+                    "ハンドサイズ {C:attention}+#1#{}",
+                    "ジョーカースロット {C:red}#2#{}"
+                }
             }
         },
         Other = {
@@ -2892,52 +2921,6 @@ return {
                     "このカードがプレイされた時",
                     "{C:money}$3{} を得て",
                     "スコアする"
-                }
-            },
-            red_seal = {
-                name = "レッドシール",
-                text = {
-                    "このカードを {C:attention}1{} 回",
-                    "再発動する"
-                }
-            },
-            blue_seal = {
-                name = "ブルーシール",
-                text = {
-                    "ハンドにこのシールが{C:attention}ある{}場合、",
-                    "ラウンドの最後にプレイした{C:attention}ポーカーハンド{}",
-                    "の{C:planet}惑星{}カードを作る",
-                    "{C:inactive}（空きが必要）"
-                }
-            },
-            purple_seal = {
-                name = "パープルシール",
-                text = {
-                    "{C:attention}ディスカード{} された時",
-                    "{C:tarot}タロット{} カードを作る",
-                    "{C:inactive}（空きが必要）"
-                }
-            },
-            eternal = {
-                name = "エターナル",
-                text = {
-                    "売ることも",
-                    "壊すこともできない"
-                }
-            },
-            perishable = {
-                name = "摩耗",
-                text = {
-                    "{C:attention}#1#{}ラウンド後に",
-                    "デバフ状態になる",
-                    "{C:inactive}（残り{C:attention}#2#{C:inactive}）"
-                }
-            },
-            rental = {
-                name = "レンタル",
-                text = {
-                    "ラウンド終了時に",
-                    "{C:money}$#1#{} を失う"
                 }
             },
             white_sticker = {
@@ -3006,7 +2989,7 @@ return {
             },
             playing_card = {
                 text = {
-                    " {V:1}#2# の {C:light_black}#1#{} "
+                    "{V:1}#2# の {C:light_black}#1#{}"
                 }
             },
             card_chips = {
@@ -3017,12 +3000,6 @@ return {
             card_extra_chips = {
                 text = {
                     "追加チップ {C:chips}+#1#{}"
-                }
-            },
-            remove_negative = {
-                name = "ネガティブ",
-                text = {
-                    "{C:inactive,s:0.9}(解除 {C:dark_edition,s:0.9}ネガティブ{C:inactive,s:0.9} コピーから)"
                 }
             },
             locked = {
@@ -3049,15 +3026,6 @@ return {
                 text = {
                     "この体験版では",
                     "利用できません"
-                }
-            },
-            challenge_locked = {
-                name = "ロック中",
-                text = {
-                    "チャレンジモードをアンロックするには",
-                    "#1#種類以上の異なるデッキで",
-                    "ランに勝利する",
-                    "{C:attention,s:2}#2#/#1#"
                 }
             },
             demo_shop_locked = {
@@ -3300,6 +3268,45 @@ return {
                     "一番左のポジションに",
                     "固定される"
                 }
+            },
+            red_seal = {
+                name = "レッドシール",
+                text = {
+                    "このカードを {C:attention}1{} 回",
+                    "再発動する"
+                }
+            },
+            blue_seal = {
+                name = "ブルーシール",
+                text = {
+                    "ラウンドの最後にこのカードが",
+                    "ハンドに{C:attention} ある{} 場合",
+                    "{C:planet}惑星{} カードを作る"
+                }
+            },
+            purple_seal = {
+                name = "パープルシール",
+                text = {
+                    "{C:attention}ディスカード{} された時",
+                    "{C:tarot}タロット{} カードを作る",
+                    "{C:inactive}（空きが必要）"
+                }
+            },
+            eternal = {
+                name = "エターナル",
+                text = {
+                    "売ることも",
+                    "壊すこともできない"
+                }
+            },
+            challenge_locked = {
+                name = "ロック中",
+                text = {
+                    "チャレンジモードをアンロックするには",
+                    "#1#種類以上の異なるデッキで",
+                    "ランに勝利する",
+                    "{C:attention,s:2}#2#/#1#"
+                }
             }
         }
     },
@@ -3352,96 +3359,7 @@ return {
             current_streak = "",
             poker_hand = "最もプレイされたハンド"
         },
-        achievement_names = {
-            ante_up = "アンティアップ！",
-            ante_upper = "アンティアッパー！",
-            heads_up = "ヘッドアップ",
-            low_stakes = "ローステーク",
-            mid_stakes = "ミッドステーク",
-            high_stakes = "ハイステーク",
-            card_player = "カードプレイヤー",
-            card_discarder = "カードディスカーダー",
-            nest_egg = "ネストエッグ",
-            flushed = "フラッシュ",
-            speedrunner = "スピードランナー",
-            roi = "ROI",
-            shattered = "シャッター",
-            royale = "ロワイヤル",
-            retrograde = "レトログレード",
-            _10k = "10K",
-            _1000k = "1,000K",
-            _100000k = "100,000K",
-            tiny_hands = "タイニーハンド",
-            big_hands = "ビッグハンド",
-            you_get_what_you_get = "得られるものを得よ",
-            rule_bender = "ルールベンダー",
-            rule_breaker = "ルールブレイカー",
-            legendary = "レジェンド",
-            astronomy = "天文学",
-            cartomancy = "カード占い",
-            clairvoyance = "透視能力",
-            extreme_couponer = "エクストリームクーポナー",
-            completionist = "完全主義者",
-            completionist_plus = "完全主義者+",
-            completionist_plus_plus = "完全主義者++", 
-        },
-        achievement_descriptions = {
-            ante_up = "アンティ4に到達する",
-            ante_upper = "アンティ8に到達する",
-            heads_up = "ランに勝利する",
-            low_stakes = "レッドステーク以上の難易度でランに勝利する",
-            mid_stakes = "ブラックステーク以上の難易度でランに勝利する",
-            high_stakes = "ゴールドステーク以上の難易度でランに勝利する",
-            card_player = "2500枚以上のカードをプレイする",
-            card_discarder = "2500枚以上のカードをディスカードする",
-            nest_egg = "1回のランで$400以上獲得する ",
-            flushed = "ワイルドカード5枚でフラッシュをプレイする",
-            speedrunner = "12ラウンド以内にランに勝利する",
-            roi = "アンティ4でバウチャーを5購入する",
-            shattered = "1回のハンドで2枚のグラスカードを割る",
-            royale = "ロイヤルフラッシュをプレイする",
-            retrograde = "いずれかのポーカーハンドをレベル10にする",
-            _10k = "1回のハンドでチップ10,000をスコアする",
-            _1000k = "1回のハンドでチップ1,000,000をスコアする",
-            _100000k = "1回のハンドでチップ100,000,000をスコアする",
-            tiny_hands = "デッキを20枚以下にする",
-            big_hands = "デッキを80枚以上にする",
-            you_get_what_you_get = "ショップをリロールせずにランに勝利する",
-            rule_bender = "いずれかのチャレンジランを完了する",
-            rule_breaker = "すべてのチャレンジランを完了する",
-            legendary = "レジェンドジョーカーを発見する",
-            astronomy = "すべての惑星カードを発見する",
-            cartomancy = "すべてのタロットカードを発見する",
-            clairvoyance = "すべてのスペクトルカードを発見する",
-            extreme_couponer = "すべてのバウチャーを発見する",
-            completionist = "コレクションを100%にする",
-            completionist_plus = "ゴールドステークの難易度ですべてのデッキで勝利する",
-            completionist_plus_plus = "すべてのジョーカーでゴールドステッカーを獲得する", 
-        },
-        challenge_names = {
-            c_omelette_1 = "オムレツ",
-            c_city_1 = "15分都市",
-            c_rich_1 = "大富豪",
-            c_knife_1 = "紙一重",
-            c_xray_1 = "透視能力",
-            c_mad_world_1 = "狂気の世界",
-            c_luxury_1 = "ぜいたく税",
-            c_non_perishable_1 = "保存食",
-            c_medusa_1 = "メデューサ",
-            c_double_nothing_1 = "一か八か",
-            c_typecast_1 = "はまり役",
-            c_inflation_1 = "インフレ",
-            c_bram_poker_1 = "ブラムポーカー",
-            c_fragile_1 = "フラジャイル",
-            c_monolith_1 = "一枚岩",
-            c_blast_off_1 = "吹き飛ばし",
-            c_five_card_1 = "ファイブカードドロー",
-            c_golden_needle_1 = "ゴールデンニードル",
-            c_cruelty_1 = "残虐",
-            c_jokerless_1 = "ジョーカーなし"
-        },
         poker_hands = {
-            ['Flush Five'] = "フラッシュファイブ",
             ['Flush House'] = "フラッシュハウス",
             ['Five of a Kind'] = "ファイブカード",
             ['Royal Flush'] = "ロイヤルフラッシュ",
@@ -3453,12 +3371,10 @@ return {
             ['Three of a Kind'] = "スリーカード",
             ['Two Pair'] = "ツーペア",
             ['Pair'] = "ワンペア",
-            ['High Card'] = "ハイカード"
+            ['High Card'] = "ハイカード",
+            ['Flush Five'] = "フラッシュファイブ"
         },
         poker_hand_descriptions = {
-            ['Flush Five'] = {
-                "同じランクとスーツのカード5枚"
-            },
             ['Flush House'] = {
                 "すべてのカードが同じスーツの",
                 "スリーカードとワンペア"
@@ -3502,6 +3418,9 @@ return {
             ['High Card'] = {
                 "プレイされたハンドが上記のハンドではない場合",
                 "最もランクの高いカードだけがスコアされる"
+            },
+            ['Flush Five'] = {
+                "同じランクとスーツのカード5枚"
             }
         },
         labels = {
@@ -3518,13 +3437,11 @@ return {
             polychrome = "ポリクローム",
             negative = "ネガティブ",
             gold_seal = "ゴールドシール",
+            locked = "ロック中",
             blue_seal = "ブルーシール",
             red_seal = "レッドシール",
             purple_seal = "パープルシール",
-            locked = "ロック中",
             eternal = "エターナル",
-            perishable = "摩耗",
-            rental = "レンタル",
             pinned_left = "ピン留め"
         },
         dictionary = {
@@ -3552,7 +3469,6 @@ return {
             b_collection = "コレクション",
             b_seed = "シード",
             b_copy_seed = "シードをコピー",
-            b_copy = "コピー",
             b_credits = "クレジット",
             b_stats = "統計",
             b_settings = "設定",
@@ -3563,9 +3479,6 @@ return {
             b_set_gamespeed = "ゲームスピード",
             b_set_play_discard_pos = "プレイ/ディスカード ボタンの位置",
             b_set_screenshake = "画面の揺れ",
-            b_high_contrast_cards = "ハイコントラストカード",
-            b_reduced_motion = "動作の軽減",
-            b_set_rumble = "コントローラーの振動",
             b_set_crash_reports = "クラッシュレポート",
             b_set_monitor = "ディスプレイモニター",
             b_set_windowmode = "ウィンドウモード",
@@ -3602,7 +3515,6 @@ return {
             b_booster_packs = "ブースターパック",
             b_tags = "タグ",
             b_decks = "デッキ",
-            b_seals = "シール",
             b_continue = "続ける",
             b_back = "戻る",
             b_music = "ミュージック",
@@ -3610,7 +3522,6 @@ return {
             b_imagery = "画像",
             b_new_run = "新しいラン",
             b_challenges = "チャレンジ",
-            b_new_challenge = "新しいチャレンジをスタート",
             b_current_profile = "現在のプロフィール",
             b_load_profile = "プロフィールをロード",
             b_create_profile = "プロフィールを作成",
@@ -3624,11 +3535,9 @@ return {
             b_collection_cap = "コレクション",
             b_quit_cap = "終了",
             b_cash_out = "清算",
-            b_unlock_all = "すべてをアンロック",
             k_unknown = "？？？？？",
             k_compatible = "適合",
             k_incompatible = "不適合",
-            k_active = "アクティブ",
             k_round = "ラウンド",
             k_ante = "アンティ",
             k_seed = "シード",
@@ -3648,7 +3557,6 @@ return {
             k_voucher = "バウチャー",
             k_tarot = "タロット",
             k_planet = "惑星",
-            k_deck = "デッキ",
             k_dwarf_planet = "小惑星",
             k_planet_q = "惑星？",
             k_spectral = "スペクトル",
@@ -3680,18 +3588,12 @@ return {
             k_x_base = "X ベース",
             k_not_discovered = "未発見",
             k_unlocked_ex = "アンロック！",
-            k_achievement = "実績",
-            k_trophy = "トロフィー",
             k_challenge_mode = "チャレンジモード",
             k_daily_run = "デイリーラン",
             k_profile = "プロフィール",
             k_wins = "勝利",
             k_empty_caps = "なし",
             k_collection = "コレクション",
-            k_progress = "進行状況",
-            k_challenges = "チャレンジ",
-            k_joker_stickers = "ジョーカーステッカー",
-            k_deck_stake_wins = "デッキステーク勝利数",
             k_stake_level = "ステークレベル",
             k_none = "なし",
             k_game_modifiers = "ゲーム編集",
@@ -3703,46 +3605,28 @@ return {
             k_best_hand = "ベストハンド",
             k_seeded_run = "シードされたラン",
             k_enter_seed = "シードを入力",
-            k_enter_name = "名前を入力",
             k_lvl = "レベル",
             k_skipped_cap = "スキップ",
             k_no_reward = "報酬なし",
             k_reward = "報酬",
             k_nope_ex = "いいえ！",
-            k_not_allowed_ex = "禁止！",
             k_or = "または",
-            k_poker_hand = "ポーカーハンド",
-            k_gold = "ゴールド",
-            k_card_stats = "カード統計",
             k_balanced = "バランス",
-            k_view = "表示",
-            k_all_hands = "すべてのハンド",
-            k_high_score_ex = "ハイスコア！",
-            k_demo_version_ex = "体験版！",
-            k_playing_as = "プレイヤー",
-            k_choose = "選択",
-            k_achievements_disabled = "実績が無効化",
-            k_trophies_disabled = "トロフィーの無効化",
             ph_improve_run = "ランを改善しよう！",
-            ph_no_boss_active = "アクティブなボスなし",
             ph_sneak_peek = "プレビュー",
             ph_deck_preview_stones = "ストーン",
             ph_deck_preview_effective = "ジョーカー、ブラインド、カード強化による実質合計",
             ph_blind_score_at_least = "最低スコア",
-            ph_blind_reward = "報酬： ",
-            ph_4_7_of_clubs = "4x クラブの7",
+            ph_blind_reward = "報酬：",
             ph_up_ante_1 = "アンティを上げる",
             ph_up_ante_2 = "すべてのブラインドをレイズ",
             ph_up_ante_3 = "ブラインドを更新",
-            ph_select_challenge = "チャレンジを選択",
             ph_stat_joker = "そのカードで完了した合計ラウンド数",
             ph_stat_consumable = "そのカードの使用回数",
             ph_stat_voucher = "そのバウチャーが引き換えられた回数",
             ph_demo_thanks_1 = "プレイして頂きありがとうございます",
             ph_demo_thanks_2 = "BALATRO 体験版",
             ph_game_over = "ゲームオーバー",
-            ph_you_win = "勝利！",
-            ph_you_win_demo = "体験版に勝利！",
             ph_vouchers_redeemed = "このランで引き換えられたバウチャーの数",
             ph_no_vouchers = "このランで引き換えられたバウチャーなし",
             ph_defeat_this_blind_1 = "それを見つけるために",
@@ -3756,18 +3640,6 @@ return {
             ph_1_level = "+1レベル",
             ph_boss_disabled = "ボスは無効！",
             ph_most_played = "(最もプレイされたハンド)",
-            ph_defeat_the_boss = "ボスブラインドを倒す",
-            ph_score_furthest_ante = "アンティ",
-            ph_score_furthest_round = "ラウンド",
-            ph_score_hand = "ベストハンド",
-            ph_score_poker_hand = "最もプレイされたハンド",
-            ph_score_new_collection = "新発見",
-            ph_score_cards_played = "プレイしたカードの枚数",
-            ph_score_cards_discarded = "ディスカードしたカードの枚数",
-            ph_score_times_rerolled = "リロールした回数",
-            ph_score_cards_purchased = "購入したカードの枚数",
-            ph_unscored_hand = "ハンドがスコアされない",
-            ph_alert_debuff_confirm = "もう一度「プレイ」を押して確認",
             ml_demo_thanks_message = {
                 "BalatroをSteamのウィッシュリストに登録し",
                 "playbalatro.comにサインアップして",
@@ -3825,18 +3697,6 @@ return {
                 "すべてのアンロックと",
                 "発見が無効化"
             },
-            ml_edition_seal_enhancement_explanation = {
-                "カードはそれぞれ、強化、エディション、",
-                "シールを1つずつ持つことができます"
-            },
-            ml_unlock_all_explanation = {
-                "警告！ コンプリートコレクションをアンロックすると",
-                "このプロフィールの実績が無効になります！"
-            },
-            ml_unlock_all_trophies = {
-                "警告！ コンプリートコレクションをアンロックすると",
-                "このプロフィールのトロフィーが無効になります！"
-            },
             ['$'] = "$",
             k_redeemed_ex = "引き換え！",
             k_duplicated_ex = "重複！",
@@ -3847,33 +3707,83 @@ return {
             k_plus_stone = "+1 ストーン",
             k_plus_planet = "+1 惑星",
             k_plus_spectral = "+1 スペクトル",
-            k_plus_joker = "+1 ジョーカー",
             k_active_ex = "アクティブ！",
             k_level_up_ex = "レベルアップ！",
             k_upgrade_ex = "アップグレード！",
             k_again_ex = "再び！",
             k_val_up = "バリューアップ！",
             k_reset = "リセット",
-            k_extinct_ex = "消滅！",
-            k_disabled_ex = "無効！",
+            k_extinct_ex = "全滅！",
             k_safe_ex = "セーフ！",
             k_saved_ex = "セーブ！",
             k_swapped_ex = "スワップ！",
             k_copied_ex = "コピー！",
             k_melted_ex = "メルト！",
+            b_copy = "コピー",
+            b_high_contrast_cards = "ハイコントラストカード",
+            b_set_rumble = "コントローラーの振動",
+            b_seals = "シール",
+            b_new_challenge = "新しいチャレンジをスタート",
+            b_unlock_all = "すべてをアンロック",
+            k_active = "アクティブ",
+            k_deck = "デッキ",
+            k_progress = "進行状況",
+            k_challenges = "チャレンジ",
+            k_joker_stickers = "ジョーカーステッカー",
+            k_deck_stake_wins = "デッキステーク勝利数",
+            k_enter_name = "名前を入力",
+            k_gold = "ゴールド",
+            k_card_stats = "カード統計",
+            k_view = "表示",
+            k_all_hands = "すべてのハンド",
+            k_high_score_ex = "ハイスコア！",
+            k_demo_version_ex = "体験版！",
+            k_playing_as = "プレイヤー",
+            k_choose = "選択",
+            k_achievements_disabled = "実績が無効化",
+            ph_no_boss_active = "アクティブなボスなし",
+            ph_you_win = "勝利！",
+            ph_you_win_demo = "体験版に勝利！",
+            ph_defeat_the_boss = "ボスブラインドを倒す",
+            ph_score_furthest_ante = "アンティ",
+            ph_score_furthest_round = "ラウンド",
+            ph_score_hand = "ベストハンド",
+            ph_score_poker_hand = "最もプレイされたハンド",
+            ph_score_new_collection = "新発見",
+            ph_score_cards_played = "プレイしたカードの枚数",
+            ph_score_cards_discarded = "ディスカードしたカードの枚数",
+            ph_score_times_rerolled = "リロールした回数",
+            ph_score_cards_purchased = "購入したカードの枚数",
+            ml_edition_seal_enhancement_explanation = {
+                "カードはそれぞれ、強化、エディション、",
+                "シールを1つずつ持つことができます"
+            },
+            ml_unlock_all_explanation = {
+                "警告！ コンプリートコレクションをアンロックすると",
+                "このプロフィールの実績が無効になります！"
+            },
+            k_plus_joker = "+1 ジョーカー",
             k_eaten_ex = "食べられた！",
+            k_eroded_ex = "横取りされた！",
+            k_achievement = "実績",
+            ph_unscored_hand = "ハンドがスコアされない",
+            ph_alert_debuff_confirm = "もう一度「プレイ」を押して確認",
             k_drank_ex = "ドランク！",
-            k_eroded_ex = "横取りされた！"
+            k_trophy = "トロフィー",
+            k_trophies_disabled = "トロフィーの無効化",
+            ml_unlock_all_trophies = {
+                "警告！ コンプリートコレクションをアンロックすると",
+                "このプロフィールのトロフィーが無効になります！"
+            },
+            k_poker_hand = "ポーカーハンド",
+            ph_4_7_of_clubs = "4x クラブの7"
         },
         v_dictionary = {
             a_xmult = "倍率 X#1#",
-            a_xmult_minus = "倍率 -X#1#",
             a_mult = "倍率 +#1#",
-            a_mult_minus = "倍率 -#1#",
             a_chips = "+#1#",
             a_chips_minus = "-#1#",
             a_handsize = "+#1# ハンドサイズ",
-            a_handsize_minus = "ハンドサイズ -#1#",
             a_hands = "+#1# ハンド",
             a_sold_tally = "#1#/#2# 売却済",
             a_remaining = "残り #1#",
@@ -3883,8 +3793,6 @@ return {
             deck_preview_wheel_singular = "#1# 枚が裏向きでドローされたため、数字が小さくなる可能性があります",
             deck_preview_wheel_plural = "#1# 枚が裏向きでドローされたため、数字が小さくなる可能性があります",
             challenges_completed = "チャレンジ完了 #1#/#2#",
-            unlocked = "アンロック済#1#/#2#",
-            completed = "完了#1#/#2#",
             interest = "$#2# につき利息 #1# （最大 #3#）",
             remaining_hand_money = "残りのハンド（各$#1# ）",
             remaining_discard_money = "残りのディスカード（各$#1# ）",
@@ -3904,10 +3812,15 @@ return {
                 "ネガティブ",
                 "すべてのラウンドで"
             },
+            a_mult_minus = "倍率 -#1#",
+            a_handsize_minus = "ハンドサイズ -#1#",
             ml_negative_consumable_desc = {
                 "ネガティブ",
                 "+#1# 消耗スロット"
-            }
+            },
+            a_xmult_minus = "倍率 -X#1#",
+            unlocked = "アンロック済#1#/#2#",
+            completed = "完了#1#/#2#"
         },
         v_text = {
             ch_m_dollars = {
@@ -3958,9 +3871,6 @@ return {
             ch_c_none = {
                 "{C:inactive}なし"
             },
-            ch_c_no_shop_jokers = {
-                "ジョーカーが今後{C:attention}ショップ{} に出現しない"
-            },
             ch_c_inflation = {
                 "永久的に、購入するたびに{C:money}$1{} 値上がりする"
             },
@@ -3973,11 +3883,14 @@ return {
             ch_c_flipped_cards = {
                 "{C:green}#1#枚につき1枚{} は裏向きでドローされる"
             },
-            ch_c_debuff_played_cards = {
-                "{C:attention}プレイした{} すべてのカードに、スコア後{C:attention}デバフ{} がかかる"
-            },
             ch_c_minus_hand_size_per_X_dollar = {
                 "所持金 {C:money}$#1#{} ごとにハンド {C:red}-1{} 枚"
+            },
+            ch_c_no_shop_jokers = {
+                "ジョーカーが今後{C:attention}ショップ{} に出現しない"
+            },
+            ch_c_debuff_played_cards = {
+                "{C:attention}プレイした{} すべてのカードに、スコア後{C:attention}デバフ{} がかかる"
             },
             ch_c_set_eternal_ante = {
                 "アンティが{C:attention}#1#{} の時にボスを倒すと、すべてのジョーカーが{C:attention}エターナルになる{}"
@@ -3985,26 +3898,6 @@ return {
             ch_c_set_joker_slots_ante = {
                 "アンティが{C:attention}#1#{} の時にボスを倒すと、ジョーカーのスロットが{C:attention}0{} になる"
             }
-        },
-        quips = {
-            wq_1 = {"カンペキだ！"},
-            wq_2 = {"うまく対応したね！"," "},
-            wq_3 = {"どうやらブラフじゃ","なかったようだね！"},
-            wq_4 = {"残念だけど","このチップはすべて","バーチャルなんだ…"},
-            wq_5 = {"私が教えたことを","しっかり覚えているね！"},
-            wq_6 = {"すばらしいプレイが", "いくつもあったよ！"},
-            wq_7 = {"きみに賭けなくて","よかったよ！", " "},
-            lq_1 = {"もっと簡単なカードゲームの方が", "私たちのスピードには", "合っているのかもしれない…"},
-            lq_2 = {"楽な相手だ！", " "},
-            lq_3 = {"いったん引いて", "再挑戦しよう！", " "},
-            lq_4 = {"ギャンブルでは", "そう簡単には", "勝てないんだ！"},
-            lq_5 = {"どうやら本物の", "ジョーカーが誰なのか", "わかったぞ！"},
-            lq_6 = {"おっと、きみも", "ブラフだったのか？"},
-            lq_7 = {"どうやら冗談は","通じないらしい！"},
-            lq_8 = {"もし私に手があったら","目を覆うところだったよ！", " "},
-            lq_9 = {"私は文字通りの", "愚か者なんだ", "そうだろう？"},
-            lq_10 = {"大失敗だ！"},
-            dq_1 = {"マズイぞ！ この","ファイナルチャレンジ","のために何か対策を","打たなければ！"}
         },
         tutorial = {
             sb_1 = {
@@ -4039,7 +3932,7 @@ return {
                 "しかし {C:attention}ボスブラインド{} には",
                 "気をつけよう。",
                 "ボスブラインドの能力に対抗するには",
-                    "戦略が必要になる。"
+                "戦略が必要になる。"
             },
             bb_4 = {
                 "ボスブラインドを倒すと",
@@ -4063,7 +3956,7 @@ return {
                 "{C:attention}ラン情報{} エリアで",
                 "{C:attention}ポーカーハンド{} を確認しよう。",
                 "現在のランに関する",
-                    "その他の情報もある。"
+                "その他の情報もある。"
             },
             fh_4 = {
                 "カードでも {C:blue}チップ{} を",
@@ -4079,7 +3972,7 @@ return {
                 "選択したカードを{C:attention}5{}枚まで",
                 "{C:red}「ディスカード」{} することもできる。",
                 "さらに強いハンドを作れるかもしれない。",
-                    "やってみよう！"
+                "やってみよう！"
             },
             fh_7 = {
                 "ラウンドごとに使用できる {C:blue}ハンド{} と",
@@ -4090,13 +3983,13 @@ return {
                 "{C:blue}ハンド{} がなくなる前に",
                 "{C:attention}300チップ{} 獲得して",
                 "このラウンドに勝利しよう。",
-                    "応援しているよ！"
+                "応援しているよ！"
             },
             sh_1 = {
                 "カードが増えた時には",
                 "それらを並べ替えることができる。",
                 "{C:attention}ジョーカー{} は左から右の順に",
-                    "発動する。"
+                "発動する。"
             },
             sh_2 = {
                 "そして消耗カードは",
@@ -4106,13 +3999,13 @@ return {
                 "手札を {C:attention}2{} 枚まで選んだら",
                 "{C:tarot}タロット{} カードの",
                 "{C:attention}「使用」{} を押して",
-                    "それらを強化しよう！"
+                "それらを強化しよう！"
             },
             s_1 = {
                 "うまくいったね！さあ 次は",
                 "{C:money}キャッシュ{} が{E:1}たまった{} から",
                 "{C:attention}ショップ{} で新しいカードを",
-                    "購入しよう。"
+                "購入しよう。"
             },
             s_2 = {
                 "このハンサムな",
@@ -4122,7 +4015,7 @@ return {
                 "これはきみのランに加えることができる",
                 "{C:attention}#1#{} 種類の {C:attention}ジョーカー{} のうちの1つだ。",
                 "それぞれの {C:attention}ジョーカー{} は",
-                    "異なる効果を持っている。"
+                "異なる効果を持っている。"
             },
             s_4 = {
                 "これはきみがプレイするハンドに",
@@ -4141,7 +4034,7 @@ return {
                 "この {C:tarot}タロット{} カードは",
                 "{C:attention}消耗{} カードだ。",
                 "きみのトランプを強化してくれるから",
-                    "持っておこう。"
+                "持っておこう。"
             },
             s_8 = {
                 "{C:attention}消耗{} カードは",
@@ -4152,7 +4045,7 @@ return {
                 "十分な資金があれば",
                 "{C:attention}バウチャー{} を買うことができる。",
                 "{C:attention}バウチャー{} を使用すると",
-                    "ランをアップグレードできるんだ！"
+                "ランをアップグレードできるんだ！"
             },
             s_10 = {
                 "{C:attention}バウチャー{} は",
@@ -4163,12 +4056,182 @@ return {
                 "各ショップにある {C:booster}ブースターパック{} も",
                 "チェックしておこう。",
                 "{C:booster}ブースターパック{} には",
-                    "いろいろなグッズが入っているんだ！"
+                "いろいろなグッズが入っているんだ！"
             },
             s_12 = {
                 "準備ができたら",
                 "{C:attention}次のラウンド{} に進もう。"
             }
+        },
+        achievement_names = {
+            ante_up = "アンティアップ！",
+            ante_upper = "アンティアッパー！",
+            heads_up = "ヘッドアップ",
+            low_stakes = "ローステーク",
+            mid_stakes = "ミッドステーク",
+            high_stakes = "ハイステーク",
+            card_player = "カードプレイヤー",
+            card_discarder = "カードディスカーダー",
+            nest_egg = "ネストエッグ",
+            flushed = "フラッシュ",
+            speedrunner = "スピードランナー",
+            roi = "ROI",
+            shattered = "シャッター",
+            royale = "ロワイヤル",
+            retrograde = "レトログレード",
+            _10k = "10K",
+            _1000k = "1,000K",
+            _100000k = "100,000K",
+            tiny_hands = "タイニーハンド",
+            big_hands = "ビッグハンド",
+            you_get_what_you_get = "得られるものを得よ",
+            rule_bender = "ルールベンダー",
+            rule_breaker = "ルールブレイカー",
+            legendary = "レジェンド",
+            astronomy = "天文学",
+            cartomancy = "カード占い",
+            clairvoyance = "透視能力",
+            extreme_couponer = "エクストリームクーポナー",
+            completionist = "完全主義者",
+            completionist_plus = "完全主義者+",
+            completionist_plus_plus = "完全主義者++"
+        },
+        achievement_descriptions = {
+            ante_up = "アンティ4に到達する",
+            ante_upper = "アンティ8に到達する",
+            heads_up = "ランに勝利する",
+            low_stakes = "レッドステーク以上の難易度でランに勝利する",
+            mid_stakes = "ブラックステーク以上の難易度でランに勝利する",
+            high_stakes = "ゴールドステーク以上の難易度でランに勝利する",
+            card_player = "2500枚以上のカードをプレイする",
+            card_discarder = "2500枚以上のカードをディスカードする",
+            nest_egg = "1回のランで$400以上獲得する ",
+            flushed = "ワイルドカード5枚でフラッシュをプレイする",
+            speedrunner = "12ラウンド以内にランに勝利する",
+            roi = "アンティ4でバウチャーを5購入する",
+            shattered = "1回のハンドで2枚のグラスカードを割る",
+            royale = "ロイヤルフラッシュをプレイする",
+            retrograde = "いずれかのポーカーハンドをレベル10にする",
+            _10k = "1回のハンドでチップ10,000をスコアする",
+            _1000k = "1回のハンドでチップ1,000,000をスコアする",
+            _100000k = "1回のハンドでチップ100,000,000をスコアする",
+            tiny_hands = "デッキを20枚以下にする",
+            big_hands = "デッキを80枚以上にする",
+            you_get_what_you_get = "ショップをリロールせずにランに勝利する",
+            rule_bender = "いずれかのチャレンジランを完了する",
+            rule_breaker = "すべてのチャレンジランを完了する",
+            legendary = "レジェンドジョーカーを発見する",
+            astronomy = "すべての惑星カードを発見する",
+            cartomancy = "すべてのタロットカードを発見する",
+            clairvoyance = "すべてのスペクトルカードを発見する",
+            extreme_couponer = "すべてのバウチャーを発見する",
+            completionist = "コレクションを100%にする",
+            completionist_plus = "ゴールドステークの難易度ですべてのデッキで勝利する",
+            completionist_plus_plus = "すべてのジョーカーでゴールドステッカーを獲得する"
+        },
+        quips = {
+            wq_1 = {
+                "カンペキだ！"
+            },
+            wq_2 = {
+                "うまく対応したね！",
+                " "
+            },
+            wq_3 = {
+                "どうやらブラフじゃ",
+                "なかったようだね！"
+            },
+            wq_4 = {
+                "残念だけど",
+                "このチップはすべて",
+                "バーチャルなんだ…"
+            },
+            wq_5 = {
+                "私が教えたことを",
+                "しっかり覚えているね！"
+            },
+            wq_6 = {
+                "すばらしいプレイが",
+                "いくつもあったよ！"
+            },
+            wq_7 = {
+                "きみに賭けなくて",
+                "よかったよ！",
+                " "
+            },
+            lq_1 = {
+                "もっと簡単なカードゲームの方が",
+                "私たちのスピードには",
+                "合っているのかもしれない…"
+            },
+            lq_2 = {
+                "楽な相手だ！",
+                " "
+            },
+            lq_3 = {
+                "いったん引いて",
+                "再挑戦しよう！",
+                " "
+            },
+            lq_4 = {
+                "ギャンブルでは",
+                "そう簡単には",
+                "勝てないんだ！"
+            },
+            lq_5 = {
+                "どうやら本物の",
+                "ジョーカーが誰なのか",
+                "わかったぞ！"
+            },
+            lq_6 = {
+                "おっと、きみも",
+                "ブラフだったのか？"
+            },
+            lq_7 = {
+                "どうやら冗談は",
+                "通じないらしい！"
+            },
+            lq_8 = {
+                "もし私に手があったら",
+                "目を覆うところだったよ！",
+                " "
+            },
+            lq_9 = {
+                "私は文字通りの",
+                "愚か者なんだ",
+                "そうだろう？"
+            },
+            lq_10 = {
+                "大失敗だ！"
+            },
+            dq_1 = {
+                "マズイぞ！ この",
+                "ファイナルチャレンジ",
+                "のために何か対策を",
+                "打たなければ！"
+            }
+        },
+        challenge_names = {
+            c_omelette_1 = "オムレツ",
+            c_city_1 = "15分都市",
+            c_rich_1 = "大富豪",
+            c_knife_1 = "紙一重",
+            c_xray_1 = "透視能力",
+            c_mad_world_1 = "狂気の世界",
+            c_luxury_1 = "ぜいたく税",
+            c_non_perishable_1 = "保存食",
+            c_medusa_1 = "メデューサ",
+            c_double_nothing_1 = "一か八か",
+            c_typecast_1 = "はまり役",
+            c_inflation_1 = "インフレ",
+            c_bram_poker_1 = "ブラムポーカー",
+            c_fragile_1 = "フラジャイル",
+            c_monolith_1 = "一枚岩",
+            c_blast_off_1 = "吹き飛ばし",
+            c_five_card_1 = "ファイブカードドロー",
+            c_golden_needle_1 = "ゴールデンニードル",
+            c_cruelty_1 = "残虐",
+            c_jokerless_1 = "ジョーカーなし"
         }
     }
 }

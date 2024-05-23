@@ -101,8 +101,6 @@ function end_round()
                     end
                     card_eval_status_text(G.jokers.cards[i], 'jokers', nil, nil, nil, eval)
                 end
-                G.jokers.cards[i]:calculate_rental()
-                G.jokers.cards[i]:calculate_perishable()
             end
             if G.GAME.round_resets.ante == G.GAME.win_ante and G.GAME.blind:get_type() == 'Boss' then
                 game_won = true
@@ -738,7 +736,6 @@ G.FUNCS.evaluate_play = function(e)
                                 hand_chips = mod_chips(old_mult)
                                 extras.hand_chips = true; extras.mult = true
                             end
-                            if effects[ii].extra.func then effects[ii].extra.func() end
                             update_hand_text({delay = 0}, {chips = extras.hand_chips and hand_chips, mult = extras.mult and mult})
                             card_eval_status_text(scoring_hand[i], 'extra', nil, percent, nil, effects[ii].extra)
                         end

@@ -1,4 +1,4 @@
-﻿return {
+return {
     descriptions = {
         Joker = {
             j_joker = {
@@ -112,16 +112,15 @@
             j_drunkard = {
                 name = "Drunkard",
                 text = {
-                    "{C:red}+#1#{} discard",
-                    "each round"
+                    "{C:red}+#1#{} discard"
                 }
             },
             j_stone = {
                 name = "Stone Joker",
                 text = {
-                    "Gives {C:chips}+#1#{} Chips for",
-                    "each {C:attention}Stone Card",
-                    "in your {C:attention}full deck",
+                    "This Joker gains {C:chips}+#1#{} Chips",
+                    "for each {C:attention}Stone Card",
+                    "in your full deck",
                     "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
                 }
             },
@@ -241,9 +240,9 @@
             j_8_ball = {
                 name = "8 Ball",
                 text = {
-                    "{C:green}#1# in #2#{} chance for each",
-                    "played {C:attention}8{} to create a",
-                    "{C:tarot}Tarot{} card when scored",
+                    "Create a {C:planet}Planet{} card",
+                    "if played hand contains",
+                    "{C:attenetion}#1#{} or more {C:attention}8s{}",
                     "{C:inactive}(Must have room)"
                 }
             },
@@ -272,8 +271,8 @@
                 name = "Raised Fist",
                 text = {
                     "Adds {C:attention}double{} the rank",
-                    "of {C:attention}lowest{} ranked card",
-                    "held in hand to Mult"
+                    "of {C:attention}lowest{} card held",
+                    "in hand to Mult"
                 }
             },
             j_fibonacci = {
@@ -287,9 +286,9 @@
             j_steel_joker = {
                 name = "Steel Joker",
                 text = {
-                    "Gives {X:mult,C:white} X#1# {} Mult",
+                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
                     "for each {C:attention}Steel Card",
-                    "in your {C:attention}full deck",
+                    "in your full deck",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
                 }
             },
@@ -380,9 +379,9 @@
             j_supernova = {
                 name = "Supernova",
                 text = {
-                    "Adds the number of times",
-                    "{C:attention}poker hand{} has been",
-                    "played this run to Mult"
+                    "Adds the number of",
+                    "times {C:attention}poker hand{} has",
+                    "been played to Mult"
                 }
             },
             j_superposition = {
@@ -397,8 +396,8 @@
             j_ride_the_bus = {
                 name = "Ride the Bus",
                 text = {
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "per {C:attention}consecutive{} hand",
+                    "{C:mult}+#1#{} Mult per",
+                    "consecutive hand",
                     "played without a",
                     "scoring {C:attention}face{} card",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
@@ -489,9 +488,8 @@
             j_constellation = {
                 name = "Constellation",
                 text = {
-                    "This Joker gains",
-                    "{X:mult,C:white} X#1# {} Mult every time",
-                    "a {C:planet}Planet{} card is used",
+                    "Gains {X:mult,C:white} X#1# {} Mult",
+                    "per {C:planet}Planet{} card used",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 }
             },
@@ -518,7 +516,7 @@
                     "Earn {C:money}$#1#{} if {C:attention}poker hand{}",
                     "is a {C:attention}#2#{},",
                     "poker hand changes",
-                    "at end of round"
+                    "on every payout"
                 }
             },
             j_ticket = {
@@ -581,9 +579,9 @@
             j_swashbuckler = {
                 name = "Swashbuckler",
                 text = {
-                    "Adds the sell value",
-                    "of all other owned",
-                    "{C:attention}Jokers{} to Mult",
+                    "Adds the sell value of",
+                    "all owned {C:attention}Jokers{} left",
+                    "of this card to Mult",
                     "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
                 },
                 unlock = {
@@ -596,7 +594,7 @@
                 name = "Troubadour",
                 text = {
                     "{C:attention}+#1#{} hand size,",
-                    "{C:blue}-#2#{} hand each round"
+                    "{C:red}-#2#{} hands per round"
                 },
                 unlock = {
                     "Win {C:attention,E:1}#1#{} consecutive",
@@ -648,8 +646,7 @@
                 name = "Hanging Chad",
                 text = {
                     "Retrigger {C:attention}first{} played",
-                    "card used in scoring",
-                    "{C:attention}#1#{} additional times"
+                    "card used in scoring"
                 },
                 unlock = {
                     "Beat a Boss Blind",
@@ -712,7 +709,7 @@
             j_glass = {
                 name = "Glass Joker",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
+                    "Gains {X:mult,C:white} X#1# {} Mult",
                     "for every {C:attention}Glass Card",
                     "that is destroyed",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
@@ -738,8 +735,8 @@
             j_flower_pot = {
                 name = "Flower Pot",
                 text = {
-                    "{X:mult,C:white} X#1# {} Mult if poker",
-                    "hand contains a",
+                    "{X:mult,C:white} X#1# {} Mult if played",
+                    "hand has a scoring",
                     "{C:diamonds}Diamond{} card, {C:clubs}Club{} card,",
                     "{C:hearts}Heart{} card, and {C:spades}Spade{} card"
                 },
@@ -774,8 +771,7 @@
             j_merry_andy = {
                 name = "Merry Andy",
                 text = {
-                    "{C:red}+#1#{} discards",
-                    "each round,",
+                    "{C:red}+#1#{} discards,",
                     "{C:red}#2#{} hand size"
                 },
                 unlock = {
@@ -840,9 +836,9 @@
             j_hit_the_road = {
                 name = "Hit the Road",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "for every {C:attention}Jack{}",
-                    "discarded this round",
+                    "Gains {X:mult,C:white} X#1# {} Mult",
+                    "per discarded",
+                    "{C:attention}Jack{} this round",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 },
                 unlock = {
@@ -936,8 +932,7 @@
             j_red_card = {
                 name = "Red Card",
                 text = {
-                    "This Joker gains",
-                    "{C:red}+#1#{} Mult when any",
+                    "Gains {C:red}+#1#{} Mult when any",
                     "{C:attention}Booster Pack{} is skipped",
                     "{C:inactive}(Currently {C:red}+#2#{C:inactive} Mult)"
                 }
@@ -945,19 +940,19 @@
             j_madness = {
                 name = "Madness",
                 text = {
-                    "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
-                    "is selected, gain {X:mult,C:white} X#1# {} Mult",
-                    "and {C:attention}destroy{} a random Joker",
-                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
+                    "When {C:attention}Blind{} is selected,",
+                    "gain {X:mult,C:white} X#1# {} Mult and",
+                    "{C:attention}destroy{} a random Joker",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {} Mult)"
                 }
             },
             j_square = {
                 name = "Square Joker",
                 text = {
-                    "This Joker gains {C:chips}+#2#{} Chips",
-                    "if played hand has",
+                    "Gains {C:chips}+#2#{} Chips if",
+                    "played hand has",
                     "exactly {C:attention}4{} cards",
-                    "{C:inactive}(Currently {C:chips}#1#{C:inactive} Chips)"
+                    "{C:inactive}(Currently {C:chips}#1#{} Chips)"
                 }
             },
             j_seance = {
@@ -980,8 +975,8 @@
             j_vampire = {
                 name = "Vampire",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "per scoring {C:attention}Enhanced card{} played,",
+                    "Gains {X:mult,C:white} X#1# {} Mult per",
+                    "{C:attention}Enhanced card{} played,",
                     "removes card {C:attention}Enhancement",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 }
@@ -991,15 +986,15 @@
                 text = {
                     "Allows {C:attention}Straights{} to be",
                     "made with gaps of {C:attention}1 rank",
-                    "{C:inactive}(ex: {C:attention}10 8 6 5 3{C:inactive})"
+                    "{C:inactive}(ex: {C:attention}2 3 5 7 8{C:inactive})"
                 }
             },
             j_hologram = {
                 name = "Hologram",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "every time a {C:attention}playing card{}",
-                    "is added to your deck",
+                    "Gains {X:mult,C:white} X#1# {} Mult",
+                    "per {C:attention}playing card{} added",
+                    "to your deck",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 }
             },
@@ -1032,16 +1027,16 @@
             j_rocket = {
                 name = "Rocket",
                 text = {
-                    "Earn {C:money}$#1#{} at end of round",
-                    "Payout increases by {C:money}$#2#{}",
-                    "when {C:attention}Boss Blind{} is defeated",
+                    "Earn {C:money}$#1#{} at end of",
+                    "round. Gains {C:money}$#2#{} when",
+                    "{C:attention}Boss Blind{} is defeated",
                 }
             },
             j_obelisk = {
                 name = "Obelisk",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "per {C:attention}consecutive{} hand played",
+                    "{X:mult,C:white} X#1# {} Mult per",
+                    "consecutive hand played",
                     "without playing your",
                     "most played {C:attention}poker hand",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
@@ -1050,9 +1045,9 @@
             j_midas_mask = {
                 name = "Midas Mask",
                 text = {
-                    "All played {C:attention}face{} cards",
+                    "All {C:attention}face{} cards",
                     "become {C:attention}Gold{} cards",
-                    "when scored",
+                    "when played",
                 }
             },
             j_luchador = {
@@ -1135,8 +1130,8 @@
             j_lucky_cat = {
                 name = "Lucky Cat",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "every time a {C:attention}Lucky{} card",
+                    "Gains {X:mult,C:white} X#1# {} Mult each",
+                    "time a {C:attention}Lucky{} card",
                     "{C:green}successfully{} triggers",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 }
@@ -1145,14 +1140,14 @@
                 name = "Baseball Card",
                 text = {
                     "{C:green}Uncommon{} Jokers",
-                    "each give {X:mult,C:white} X#1# {} Mult",
+                    "each give {X:mult,C:white} X#1# {} Mult"
                 }
             },
             j_bull = {
                 name = "Bull",
                 text = {
-                    "{C:chips}+#1#{} Chips for",
-                    "each {C:money}$1{} you have",
+                    "{C:chips}+#1#{} Chips for each",
+                    "{C:money}dollar{} you have",
                     "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)"
                 }
             },
@@ -1175,8 +1170,8 @@
             j_flash = {
                 name = "Flash Card",
                 text = {
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "per {C:attention}reroll{} in the shop",
+                    "{C:mult}+#1#{} Mult per",
+                    "{C:attention}reroll{} in the shop",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
@@ -1185,7 +1180,10 @@
                 text = {
                     "{C:mult}+#1#{} Mult",
                     "{C:mult}-#2#{} Mult per",
-                    "round played"
+                    "round played",
+					"Create a {C:spectral}Spectral{} card",
+                    "when {C:attention}Blind{} is selected",
+                    "{C:inactive}(Must have room)"
                 }
             },
             j_ramen= {
@@ -1199,8 +1197,8 @@
             j_trousers= {
                 name = "Spare Trousers",
                 text = {
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "if played hand contains",
+                    "Gains {C:mult}+#1#{} Mult if",
+                    "played hand contains",
                     "a {C:attention}#2#",
                     "{C:inactive}(Currently {C:red}+#3#{C:inactive} Mult)"
                 }
@@ -1251,8 +1249,7 @@
                 name = "Campfire",
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "for each card {C:attention}sold{}, resets",
-                    "when {C:attention}Boss Blind{} is defeated",
+                    "for each card {C:attention}sold{}",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 }
             },
@@ -1311,9 +1308,9 @@
             j_shoot_the_moon = {
                 name = "Shoot the Moon",
                 text = {
-                    "Each {C:attention}Queen{}",
-                    "held in hand",
-                    "gives {C:mult}+#1#{} Mult",
+                    "{C:mult}+#1#{} Mult for",
+                    "each {C:attention}Queen{}",
+                    "held in hand"
                 },
                 unlock = {
                     "Play every {E:1,C:attention}Heart",
@@ -1375,8 +1372,7 @@
                 name = "Bootstraps",
                 text = {
                     "{C:mult}+#1#{} Mult for every",
-                    "{C:money}$#2#{} you have",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                    "{C:money}$#2#{} you have"
                 },
                 unlock = {
                     "Have at least {E:1,C:attention}#1#",
@@ -1386,8 +1382,8 @@
             j_caino = {
                 name = "Canio",
                 text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "when a {C:attention}face{} card",
+                    "Gains {X:mult,C:white} X#1# {} Mult when",
+                    "a {C:attention}face{} card",
                     "is destroyed",
                     "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)"
                 },
@@ -1409,10 +1405,8 @@
             j_yorick = {
                 name = "Yorick",
                 text = {
-                    "This Joker gains",
-                    "{X:mult,C:white} X#1# {} Mult every {C:attention}#2#{C:inactive} [#3#]{}",
-                    "cards discarded",
-                    "{C:inactive}(Currently {X:mult,C:white} X#4# {C:inactive} Mult)"
+                    "{C:red}Rare{} Jokers",
+                    "each give {X:mult,C:white} X#1# {} Mult"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1515,15 +1509,15 @@
                 text = {
                     "Permanently",
                     "gain {C:red}+#1#{} discard",
-                    "each round"
+                    "per round"
                 }
             },
             v_seed_money = {
                 name = "Seed Money",
                 text = {
                     "Raise the cap on",
-                    "interest earned in",
-                    "each round to {C:money}$#1#{}"
+                    "interest earned",
+                    "per round to {C:money}$#1#{}"
                 }
             },
             v_blank = {
@@ -1545,7 +1539,7 @@
                 text = {
                     "{C:attention}-#1#{} Ante,",
                     "{C:blue}-#1#{} hand",
-                    "each round"
+                    "per round"
                 }
             },
             v_directors_cut = {
@@ -1687,7 +1681,7 @@
                 text = {
                     "Permanently",
                     "gain {C:red}+#1#{} discard",
-                    "each round"
+                    "per round"
                 },
                 unlock = {
                     "Discard a total",
@@ -1699,8 +1693,8 @@
                 name = "Money Tree",
                 text = {
                     "Raise the cap on",
-                    "interest earned in",
-                    "each round to {C:money}$#1#{}"
+                    "interest earned",
+                    "per round to {C:money}$#1#{}"
                 },
                 unlock = {
                     "Max out the interest",
@@ -1739,7 +1733,7 @@
                 text = {
                     "{C:attention}-#1#{} Ante,",
                     "{C:red}-#1#{} discard",
-                    "each round"
+                    "per round"
                 },
                 unlock = {
                     "Reach Ante",
@@ -1782,9 +1776,9 @@
             c_magician = {
                 name = "The Magician",
                 text = {
-                    "Enhances {C:attention}#1#{}",
-                    "selected cards to",
-                    "{C:attention}#2#s"
+                    "Enhances {C:attention}#1#{} selected",
+                    "card into a",
+                    "{C:attention}#2#"
                 }
             },
             c_high_priestess = {
@@ -1878,8 +1872,8 @@
                 name = "Death",
                 text = {
                     "Select {C:attention}#1#{} cards,",
-                    "convert the {C:attention}left{} card",
-                    "into the {C:attention}right{} card",
+                    "convert the {C:attention}right{} cards",
+                    "into the {C:attention}left{} card",
                     "{C:inactive}(Drag to rearrange)"
                 }
             },
@@ -2063,26 +2057,21 @@
             c_familiar = {
                 name = "Familiar",
                 text = {
-                    "Destroy {C:attention}1{} random",
-                    "card in your hand, add",
-                    "{C:attention}#1#{} random {C:attention}Enhanced face",
+                    "Add {C:attention}#1#{} random {C:attention}Enhanced face",
                     "{C:attention}cards{} to your hand"
                 }
             },
             c_grim = {
                 name = "Grim",
                 text = {
-                    "Destroy {C:attention}1{} random",
-                    "card in your hand,",
-                    "add {C:attention}#1#{} random {C:attention}Enhanced",
+                    "Add {C:attention}#1#{} random {C:attention}Enhanced",
                     "{C:attention}Aces{} to your hand"
                 }
             },
             c_incantation = {
                 name = "Incantation",
                 text = {
-                    "Destroy {C:attention}1{} random",
-                    "card in your hand, add {C:attention}#1#",
+                    "Add {C:attention}#1#",
                     "random {C:attention}Enhanced numbered",
                     "{C:attention}cards{} to your hand"
                 }
@@ -2107,8 +2096,7 @@
                 name = "Wraith",
                 text = {
                     "Creates a random",
-                    "{C:red}Rare{C:attention} Joker{},",
-                    "sets money to {C:money}$0"
+                    "{C:red}Rare{C:attention} Joker{},"
                 }
             },
             c_sigil = {
@@ -2125,7 +2113,7 @@
                     "Converts all cards",
                     "in hand to a single",
                     "random {C:attention}rank",
-                    "{C:red}-1{} hand size"
+                    "{C:blue}+2{} hand size"
                 }
             },
             c_ectoplasm = {
@@ -2133,7 +2121,7 @@
                 text = {
                     "Add {C:dark_edition}Negative{} to",
                     "a random {C:attention}Joker,",
-                    "{C:red}-#1#{} hand size"
+                    "{C:blue}+#1#{} hand size"
                 }
             },
             c_immolate = {
@@ -2148,8 +2136,7 @@
                 name = "Ankh",
                 text = {
                     "Create a copy of a",
-                    "random {C:attention}Joker{}, destroy",
-                    "all other Jokers"
+                    "random {C:attention}Joker{}"
                 }
             },
             c_deja_vu = {
@@ -2164,8 +2151,7 @@
                 name = "Hex",
                 text = {
                     "Add {C:dark_edition}Polychrome{} to a",
-                    "random {C:attention}Joker{}, destroy",
-                    "all other Jokers"
+                    "random {C:attention}Joker{}"
                 }
             },
             c_trance = {
@@ -2205,7 +2191,7 @@
                 text = {
                     "Upgrade every",
                     "{C:legendary,E:1}poker hand",
-                    "by {C:attention}1{} level"
+                    "by {C:attention}5{} levels"
                 }
             }
         },
@@ -2219,13 +2205,13 @@
             e_foil = {
                 name = "Foil",
                 text = {
-                    "{C:chips}+#1#{} chips"
+                    "{X:mult,C:white} X#1# {} Mult"
                 }
             },
             e_holo = {
                 name = "Holographic",
                 text = {
-                    "{C:mult}+#1#{} Mult"
+                    "{X:mult,C:white} X#1# {} Mult"
                 }
             },
             e_polychrome = {
@@ -2355,16 +2341,15 @@
             stake_orange = {
                 name = "Orange Stake",
                 text = {
-                    "Shop can have {C:attention}Perishable{} Jokers",
-                    "{C:inactive,s:0.8}(Debuffed after 5 Rounds)",
+                    "{C:attention}Booster Packs{} cost",
+                    "{C:money}$1{} more per Ante",
                     "{s:0.8}Applies all previous Stakes"
                 }
             },
             stake_gold = {
                 name = "Gold Stake",
                 text = {
-                    "Shop can have {C:attention}Rental{} Jokers",
-                    "{C:inactive,s:0.8}(Costs {C:money,s:0.8}$3{C:inactive,s:0.8} per round)",
+                    "{C:red}-1{} hand size",
                     "{s:0.8}Applies all previous Stakes"
                 }
             }
@@ -2373,14 +2358,14 @@
             tag_uncommon = {
                 name = "Uncommon Tag",
                 text = {
-                    "Shop has a free",
+                    "Shop has an",
                     "{C:green}Uncommon Joker"
                 }
             },
             tag_rare = {
                 name = "Rare Tag",
                 text = {
-                    "Shop has a free",
+                    "Shop has a",
                     "{C:red}Rare Joker"
                 }
             },
@@ -2388,32 +2373,28 @@
                 name = "Negative Tag",
                 text = {
                     "Next base edition shop",
-                    "Joker is free and",
-                    "becomes {C:dark_edition}Negative"
+                    "Joker becomes {C:dark_edition}Negative"
                 }
             },
             tag_foil = {
                 name = "Foil Tag",
                 text = {
                     "Next base edition shop",
-                    "Joker is free and",
-                    "becomes {C:dark_edition}Foil"
+                    "Joker becomes {C:dark_edition}Foil"
                 }
             },
             tag_holo = {
                 name = "Holographic Tag",
                 text = {
                     "Next base edition shop",
-                    "Joker is free and",
-                    "becomes {C:dark_edition}Holographic"
+                    "Joker becomes {C:dark_edition}Holographic"
                 }
             },
             tag_polychrome = {
                 name = "Polychrome Tag",
                 text = {
                     "Next base edition shop",
-                    "Joker is free and",
-                    "becomes {C:dark_edition}Polychrome"
+                    "Joker becomes {C:dark_edition}Polychrome"
                 }
             },
             tag_investment = {
@@ -2501,8 +2482,7 @@
             tag_juggle = {
                 name = "Juggle Tag",
                 text = {
-                    "{C:attention}+#1#{} hand size",
-                    "next round"
+                    "{C:attention}+#1#{} hand size"
                 }
             },
             tag_d_six = {
@@ -2900,10 +2880,9 @@
             blue_seal = {
                 name = "Blue Seal",
                 text = {
-                    "Creates the {C:planet}Planet{} card",
-                    "for final played {C:attention}poker hand{}",
-                    "of round if {C:attention}held{} in hand",
-                    "{C:inactive}(Must have room)"
+                    "Creates a {C:planet}Planet{} card",
+                    "if this card is {C:attention}held{} in",
+                    "hand at end of round"
                 }
             },
             purple_seal = {
@@ -2919,21 +2898,6 @@
                 text = {
                     "Can't be sold",
                     "or destroyed"
-                }
-            },
-            perishable = {
-                name = "Perishable",
-                text = {
-                    "Debuffed after",
-                    "{C:attention}#1#{} rounds",
-                    "{C:inactive}({C:attention}#2#{C:inactive} remaining)"
-                }
-            },
-            rental = {
-                name = "Rental",
-                text = {
-                    "Lose {C:money}$#1#{} at",
-                    "end of round"
                 }
             },
             white_sticker = {
@@ -3519,8 +3483,6 @@
             purple_seal = "Purple Seal",
             locked = "Locked",
             eternal = "Eternal",
-            perishable = "Perishable",
-            rental = "Rental",
             pinned_left = "Pinned",
         },
         dictionary = {
@@ -3560,7 +3522,6 @@
             b_set_play_discard_pos = "Play/Discard Button Position",
             b_set_screenshake = "Screenshake",
             b_high_contrast_cards = "High Contrast Cards",
-            b_reduced_motion = "Reduced Motion",
             b_set_rumble = "Controller Rumble",
             b_set_crash_reports = "Crash Reports",
             b_set_monitor = "Display Monitor",
@@ -3851,7 +3812,6 @@
             k_val_up = "Value Up!",
             k_reset = "Reset",
             k_extinct_ex = "Extinct!",
-            k_disabled_ex = "Disabled!",
             k_safe_ex = "Safe!",
             k_saved_ex = "Saved!",
             k_swapped_ex = "Swapped!",

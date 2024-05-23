@@ -108,7 +108,6 @@ function Moveable:set_alignment(args)
         args.offset = nil
     end
     self.alignment.offset = args.offset or self.alignment.offset
-    self.alignment.lr_clamp = args.lr_clamp
 end
 
 function Moveable:align_to_major()
@@ -248,7 +247,6 @@ function Moveable:drag(offset)
 end
 
 function Moveable:juice_up(amount, rot_amt)
-    if G.SETTINGS.reduced_motion then return end
     local amount = amount or 0.4
 
     local end_time = G.TIMERS.REAL + 0.4
@@ -277,14 +275,13 @@ end
 
 function Moveable:move(dt)
     if self.FRAME.MOVE >= G.FRAMES.MOVE then return end
-    self.FRAME.OLD_MAJOR = self.FRAME.MAJOR
     self.FRAME.MAJOR = nil
     self.FRAME.MOVE = G.FRAMES.MOVE
     if not self.created_on_pause and G.SETTINGS.paused then return end
 
     --WHY ON EARTH DOES THIS LINE MAKE IT RUN 2X AS FAST???
     -------------------------------------------------------
-    --local timestart = love.timer.getTime()
+    local timestart = love.timer.getTime()
     -------------------------------------------------------
     
     self:align_to_major()
@@ -312,18 +309,7 @@ function Moveable:move(dt)
         self:move_wh(dt)
         self:calculate_parrallax()
     end
-    if self.alignment and self.alignment.lr_clamp then
-        self:lr_clamp()
-    end
-
     self.NEW_ALIGNMENT = false
-end
-
-function Moveable:lr_clamp()
-    if self.T.x < 0 then self.T.x = 0 end
-    if self.VT.x < 0 then self.VT.x = 0 end
-    if (self.T.x + self.T.w) > G.ROOM.T.w then self.T.x = G.ROOM.T.w - self.T.w end
-    if (self.VT.x + self.VT.w) > G.ROOM.T.w  then self.VT.x = G.ROOM.T.w - self.VT.w end
 end
 
 function Moveable:glue_to_major(major_tab)
@@ -340,18 +326,20 @@ function Moveable:glue_to_major(major_tab)
     self.shadow_parrallax = major_tab.shadow_parrallax
 end
 
-MWM = {
-    rotated_offset = {},
-    angles = {},
-    WH = {},
-    offs = {},
-}
-
 function Moveable:move_with_major(dt)
     if self.role.role_type ~= 'Minor' then return end
     local major_tab = self.role.major:get_major()
 
     self:move_juice(dt)
+
+    if not MWM then
+        MWM = {
+            rotated_offset = {},
+            angles = {},
+            WH = {},
+            offs = {},
+        }
+    end 
 
     if self.role.r_bond == 'Weak' then 
         MWM.rotated_offset.x, MWM.rotated_offset.y = self.role.offset.x + major_tab.offset.x,self.role.offset.y+major_tab.offset.y
@@ -483,11 +471,10 @@ function Moveable:get_major()
     if ( self.role.role_type ~= 'Major' and self.role.major ~= self) and (self.role.xy_bond ~= 'Weak' and self.role.r_bond ~= 'Weak') then
         --First, does the major already have their offset precalculated for this frame?
         if not self.FRAME.MAJOR or (G.REFRESH_FRAME_MAJOR_CACHE) then
-            self.FRAME.MAJOR = self.FRAME.MAJOR or EMPTY(self.FRAME.OLD_MAJOR)
-            self.temp_offs = EMPTY(self.temp_offs)
+            self.FRAME.MAJOR = EMPTY(self.FRAME.MAJOR)
             local major = self.role.major:get_major()
             self.FRAME.MAJOR.major = major.major
-            self.FRAME.MAJOR.offset = self.FRAME.MAJOR.offset or self.temp_offs
+            self.FRAME.MAJOR.offset = self.FRAME.MAJOR.offset or {}
             self.FRAME.MAJOR.offset.x, self.FRAME.MAJOR.offset.y = major.offset.x + self.role.offset.x + self.layered_parallax.x, major.offset.y + self.role.offset.y + self.layered_parallax.y
         end 
         return self.FRAME.MAJOR
@@ -501,16 +488,14 @@ function Moveable:get_major()
 end
 
 function Moveable:remove()
-    for k, v in pairs(G.MOVEABLES) do
+    for k, v in ipairs(G.MOVEABLES) do
         if v == self then
             table.remove(G.MOVEABLES, k)
-            break;
         end
     end
-    for k, v in pairs(G.I.MOVEABLE) do
+    for k, v in ipairs(G.I.MOVEABLE) do
         if v == self then
             table.remove(G.I.MOVEABLE, k)
-            break;
         end
     end
     Node.remove(self)

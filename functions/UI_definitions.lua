@@ -303,7 +303,7 @@ function G.UIDEF.card_focus_ui(card)
   playing_card_colour[4] = 1.5
   if G.hand and card.area == G.hand then ease_value(playing_card_colour, 4, -1.5, nil, 'REAL',nil, 0.2, 'quad') end
 
-  local tcnx, tcny = card.T.x + card.T.w/2 - G.ROOM.T.w/2, card.T.y + card.T.h/2 - G.ROOM.T.h/2
+  local t_card_norm = {x = card.T.x + card.T.w/2 - G.ROOM.T.w/2, y = card.T.y + card.T.h/2 - G.ROOM.T.h/2}
 
   local base_background = UIBox{
     T = {card.VT.x,card.VT.y,0,0},
@@ -316,15 +316,15 @@ function G.UIDEF.card_focus_ui(card)
       }},
     config = {
         align = 'cm',
-        offset = {x= 0.007*tcnx*card.T.w, y = 0.007*tcny*card.T.h}, 
+        offset = {x= 0.007*t_card_norm.x*card.T.w, y = 0.007*t_card_norm.y*card.T.h}, 
         parent = card,
         r_bond = (not G.hand or card.area ~= G.hand) and 'Weak' or 'Strong'
       }
   }
 
   base_background.set_alignment = function()
-    local cnx, cny = card.T.x + card.T.w/2 - G.ROOM.T.w/2, card.T.y + card.T.h/2 - G.ROOM.T.h/2
-    Moveable.set_alignment(card.children.focused_ui, {offset = {x= 0.007*cnx*card.T.w, y = 0.007*cny*card.T.h}})
+    local card_norm = {x = card.T.x + card.T.w/2 - G.ROOM.T.w/2, y = card.T.y + card.T.h/2 - G.ROOM.T.h/2}
+    Moveable.set_alignment(card.children.focused_ui, {offset = {x= 0.007*card_norm.x*card.T.w, y = 0.007*card_norm.y*card.T.h}})
   end
 
   local base_attach = base_background:get_UIE_by_ID('ATTACH_TO_ME')
@@ -1135,8 +1135,6 @@ end
   function get_badge_colour(key)
     G.BADGE_COL = G.BADGE_COL or {
       eternal = G.C.ETERNAL,
-      perishable = G.C.PERISHABLE,
-      rental = G.C.RENTAL,
       foil = G.C.DARK_EDITION,
       holographic = G.C.DARK_EDITION,
       polychrome = G.C.DARK_EDITION,
@@ -2314,7 +2312,6 @@ function G.UIDEF.settings_tab(tab)
           end
         end
       )}),
-      create_toggle({label = localize('b_reduced_motion'), ref_table = G.SETTINGS, ref_value = 'reduced_motion'}),
       G.F_CRASH_REPORTS and create_toggle({label = localize('b_set_crash_reports'), ref_table = G.SETTINGS, ref_value = 'crashreports', info = localize('ml_crash_report_info')}) or nil,
     }}
   elseif tab == 'Video' then
@@ -4774,24 +4771,19 @@ function G.UIDEF.run_setup(from_game_over)
                 tab_definition_function = G.UIDEF.run_setup_option,
                 tab_definition_function_args = 'New Run'
             },
-            G.STAGE == G.STAGES.MAIN_MENU and {
+            {
                 label = localize('b_continue'),
                 chosen = (not _challenge_chosen) and _can_continue,
                 tab_definition_function = G.UIDEF.run_setup_option,
                 tab_definition_function_args = 'Continue',
                 func = 'can_continue'
-            } or {
+            },
+            {
               label = localize('b_challenges'),
               tab_definition_function = G.UIDEF.challenges,
               tab_definition_function_args = from_game_over,
               chosen = _challenge_chosen
             },
-            G.STAGE == G.STAGES.MAIN_MENU and {
-              label = localize('b_challenges'),
-              tab_definition_function = G.UIDEF.challenges,
-              tab_definition_function_args = from_game_over,
-              chosen = _challenge_chosen
-            } or nil,
         },
         snap_to_nav = true}),
       }},
@@ -5029,7 +5021,7 @@ end
 
 function G.UIDEF.challenge_description(_id, daily, is_row)
   local challenge = G.CHALLENGES[_id]
-  if not challenge then return {n=G.UIT.ROOT, config={align = "cm", colour = G.C.BLACK, minh = 8.82, minw = 11.5, r = 0.1}, nodes={{n=G.UIT.T, config={text = localize('ph_select_challenge'), scale = 0.3, colour = G.C.UI.TEXT_LIGHT}}}} end
+  if not challenge then return {n=G.UIT.ROOT, config={align = "cm", colour = G.C.BLACK, minh = 8.82, minw = 11.5, r = 0.1}, nodes={{n=G.UIT.T, config={text = "Select a Challenge", scale = 0.3, colour = G.C.UI.TEXT_LIGHT}}}} end
 
   local joker_size = 0.6
   local jokers = CardArea(0,0,
@@ -5269,49 +5261,6 @@ function G.UIDEF.challenge_description_tab(args)
           table.insert(banned_tags, 
           {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
             temp_tag_ui
-          }}
-          )
-        end
-      end
-      if challenge.restrictions.banned_other then
-        local other_tab = {}
-        for k, v in pairs(challenge.restrictions.banned_other) do
-          if v.type == 'blind' then
-            other_tab[#other_tab+1] = G.P_BLINDS[v.id]
-          end
-        end
-      
-        table.sort(other_tab, function (a, b) return a.order < b.order end)
-
-        for k, v in ipairs(other_tab) do
-          local temp_blind = AnimatedSprite(0,0,1,1, G.ANIMATION_ATLAS['blind_chips'], v.pos)
-          temp_blind:define_draw_steps({
-            {shader = 'dissolve', shadow_height = 0.05},
-            {shader = 'dissolve'}
-          })
-          temp_blind.float = true
-          temp_blind.states.hover.can = true
-          temp_blind.states.drag.can = false
-          temp_blind.states.collide.can = true
-          temp_blind.config = {blind = v, force_focus = true}
-          temp_blind.hover = function()
-            if not G.CONTROLLER.dragging.target or G.CONTROLLER.using_touch then 
-                if not temp_blind.hovering and temp_blind.states.visible then
-                  temp_blind.hovering = true
-                  temp_blind.hover_tilt = 3
-                  temp_blind:juice_up(0.05, 0.02)
-                  play_sound('chips1', math.random()*0.1 + 0.55, 0.12)
-                  temp_blind.config.h_popup = create_UIBox_blind_popup(v, true)
-                  temp_blind.config.h_popup_config ={align = 'cl', offset = {x=-0.1,y=0},parent = temp_blind}
-                  Node.hover(temp_blind)
-                end
-            end
-          end
-          temp_blind.stop_hover = function() temp_blind.hovering = false; Node.stop_hover(temp_blind); temp_blind.hover_tilt = 0 end
-
-          table.insert(banned_other, 
-          {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
-            {n=G.UIT.O, config={object = temp_blind}}
           }}
           )
         end
@@ -5733,13 +5682,11 @@ function G.UIDEF.language_selector()
   table.sort(langs, (function(a, b) return a.label < b.label end))
   local _row = {}
   for k, v in ipairs(langs) do
-    if not G.F_HIDE_BETA_LANGS or (not v.beta) then
-      _row[#_row+1] = {n=G.UIT.C, config={align = "cm", func = 'beta_lang_alert', padding = 0.05, r = 0.1, minh = 0.7, minw = 4.5, button = v.beta and 'warn_lang' or 'change_lang', ref_table = v, colour = v.beta and G.C.RED or G.C.BLUE, hover = true, shadow = true, focus_args = {snap_to = (k == 1)}}, nodes={
-        {n=G.UIT.R, config={align = "cm"}, nodes={
-          {n=G.UIT.T, config={text = v.label, lang = v, scale = 0.45, colour = G.C.UI.TEXT_LIGHT, shadow = true}}
-        }}
+    _row[#_row+1] = {n=G.UIT.C, config={align = "cm", func = 'beta_lang_alert', padding = 0.05, r = 0.1, minh = 0.7, minw = 4.5, button = v.beta and 'warn_lang' or 'change_lang', ref_table = v, colour = v.beta and G.C.RED or G.C.BLUE, hover = true, shadow = true, focus_args = {snap_to = (k == 1)}}, nodes={
+      {n=G.UIT.R, config={align = "cm"}, nodes={
+        {n=G.UIT.T, config={text = v.label, lang = v, scale = 0.45, colour = G.C.UI.TEXT_LIGHT, shadow = true}}
       }}
-    end
+    }}
     if _row[3] or (k == #langs) then 
       rows[#rows+1] = {n=G.UIT.R, config={align = "cm", padding = 0.1}, nodes=_row}
       _row = {}
@@ -5752,12 +5699,12 @@ function G.UIDEF.language_selector()
 
   local t = create_UIBox_generic_options({contents ={
     {n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes=rows},
-    G.F_EXTERNAL_LINKS and {n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+    {n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
       {n=G.UIT.C, config={align = "cm", padding = 0.1, minw = 4, maxw = 4, r = 0.1, minh = 0.8, hover = true, colour = mix_colours(G.C.GREEN, G.C.GREY, 0.4), button = 'loc_survey', shadow = true}, nodes={
         {n=G.UIT.O, config={object = discord}},
         {n=G.UIT.T, config={text = G.LANG.button, scale = 0.45, colour = G.C.UI.TEXT_LIGHT, shadow = true}}
       }},
-    }} or nil
+    }}
   }})
   return t
 end

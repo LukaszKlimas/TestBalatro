@@ -61,7 +61,6 @@ function GET_DISPLAYINFO(screenmode, display)
 end
 
 function timer_checkpoint(label, type, reset)
-  G.PREV_GARB = G.PREV_GARB or 0
   if not G.F_ENABLE_PERF_OVERLAY then return end
   G.check = G.check or {
     draw = {
@@ -84,7 +83,7 @@ function timer_checkpoint(label, type, reset)
   
   cp.checkpoint_list[cp.checkpoints+1] = cp.checkpoint_list[cp.checkpoints+1] or {}
   cp.checkpoints = cp.checkpoints+1
-  cp.checkpoint_list[cp.checkpoints].label = label..': '..(collectgarbage( "count" ) - G.PREV_GARB)
+  cp.checkpoint_list[cp.checkpoints].label = label
   cp.checkpoint_list[cp.checkpoints].time = love.timer.getTime()
   cp.checkpoint_list[cp.checkpoints].TTC = cp.checkpoint_list[cp.checkpoints].time - cp.last_time
   cp.checkpoint_list[cp.checkpoints].trend = cp.checkpoint_list[cp.checkpoints].trend or {}
@@ -94,7 +93,7 @@ function timer_checkpoint(label, type, reset)
   cp.checkpoint_list[cp.checkpoints].trend[401] = nil
   cp.checkpoint_list[cp.checkpoints].states[401] = nil
   cp.last_time = cp.checkpoint_list[cp.checkpoints].time
-  G.PREV_GARB = collectgarbage( "count" )
+
   local av = 0
   for k, v in ipairs(cp.checkpoint_list[cp.checkpoints].trend) do
     av = av + v/#cp.checkpoint_list[cp.checkpoints].trend
@@ -216,40 +215,6 @@ function pseudoshuffle(list, seed)
 	end
 end
 
-function generate_starting_seed()
-  if G.GAME.stake >= 8 then
-    local r_leg, r_tally = {}, 0
-    local g_leg, g_tally = {}, 0
-    for k, v in pairs(G.P_JOKER_RARITY_POOLS[4]) do
-      local win_ante = get_joker_win_sticker(v, true)
-      if win_ante and (win_ante >= 8) then 
-        g_leg[v.key] = true
-        g_tally = g_tally + 1
-      else
-        r_leg[v.key] = true
-        r_tally = r_tally + 1
-      end
-    end
-    if r_tally > 0 and g_tally > 0 then
-      local seed_found = nil
-      local extra_num = 0
-      while not seed_found do
-        extra_num = extra_num + 0.561892350821
-        seed_found = random_string(8, extra_num + G.CONTROLLER.cursor_hover.T.x*0.33411983 + G.CONTROLLER.cursor_hover.T.y*0.874146 + 0.412311010*G.CONTROLLER.cursor_hover.time)
-        if not r_leg[get_first_legendary(seed_found)] then seed_found = nil end
-      end
-      return seed_found
-    end
-  end
-
-  return random_string(8, G.CONTROLLER.cursor_hover.T.x*0.33411983 + G.CONTROLLER.cursor_hover.T.y*0.874146 + 0.412311010*G.CONTROLLER.cursor_hover.time)
-end
-
-function get_first_legendary(_key)
-  local _t, key = pseudorandom_element(G.P_JOKER_RARITY_POOLS[4], pseudoseed('Joker4', _key))
-  return _t.key
-end
-
 function pseudorandom_element(_t, seed)
   if seed then math.randomseed(seed) end
   local keys = {}
@@ -295,14 +260,8 @@ function pseudohash(str)
   end
 end
 
-function pseudoseed(key, predict_seed)
+function pseudoseed(key)
   if key == 'seed' then return math.random() end
-
-  if predict_seed then 
-    local _pseed = pseudohash(key..(predict_seed or ''))
-    _pseed = math.abs(tonumber(string.format("%.13f", (2.134453429141+_pseed*1.72431234)%1)))
-    return (_pseed + (pseudohash(predict_seed) or 0))/2
-  end
   
   if not G.GAME.pseudorandom[key] then 
     G.GAME.pseudorandom[key] = pseudohash(key..(G.GAME.pseudorandom.seed or ''))
@@ -391,25 +350,15 @@ function evaluate_poker_hand(hand)
     top = nil
   }
 
-  local parts = {
-    _5 = get_X_same(5,hand),
-    _4 = get_X_same(4,hand),
-    _3 = get_X_same(3,hand),
-    _2 = get_X_same(2,hand),
-    _flush = get_flush(hand),
-    _straight = get_straight(hand),
-    _highest = get_highest(hand)
-  }
-
-  if next(parts._5) and next(parts._flush) then
-    results["Flush Five"] = parts._5
+  if next(get_X_same(5,hand)) and next(get_flush(hand)) then
+    results["Flush Five"] = get_X_same(5,hand)
     if not results.top then results.top = results["Flush Five"] end
   end
 
-  if next(parts._3) and next(parts._2) and next(parts._flush) then
+  if next(get_X_same(3,hand)) and next(get_X_same(2,hand)) and next(get_flush(hand)) then
     local fh_hand = {}
-    local fh_3 = parts._3[1]
-    local fh_2 = parts._2[1]
+    local fh_3 = get_X_same(3,hand)[1]
+    local fh_2 = get_X_same(2,hand)[1]
     for i=1, #fh_3 do
       fh_hand[#fh_hand+1] = fh_3[i]
     end
@@ -420,13 +369,13 @@ function evaluate_poker_hand(hand)
     if not results.top then results.top = results["Flush House"] end
   end
 
-  if next(parts._5) then
-    results["Five of a Kind"] = parts._5
+  if next(get_X_same(5,hand)) then
+    results["Five of a Kind"] = get_X_same(5,hand)
     if not results.top then results.top = results["Five of a Kind"] end
   end
 
-  if next(parts._flush) and next(parts._straight) then
-    local _s, _f, ret = parts._straight, parts._flush, {}
+  if next(get_flush(hand)) and next(get_straight(hand)) then
+    local _s, _f, ret = get_straight(hand), get_flush(hand), {}
     for _, v in ipairs(_f[1]) do
       ret[#ret+1] = v
     end
@@ -442,15 +391,15 @@ function evaluate_poker_hand(hand)
     if not results.top then results.top = results["Straight Flush"] end
   end
 
-  if next(parts._4) then
-    results["Four of a Kind"] = parts._4
+  if next(get_X_same(4,hand)) then
+    results["Four of a Kind"] = get_X_same(4,hand)
     if not results.top then results.top = results["Four of a Kind"] end
   end
 
-  if next(parts._3) and next(parts._2) then
+  if next(get_X_same(3,hand)) and next(get_X_same(2,hand)) then
     local fh_hand = {}
-    local fh_3 = parts._3[1]
-    local fh_2 = parts._2[1]
+    local fh_3 = get_X_same(3,hand)[1]
+    local fh_2 = get_X_same(2,hand)[1]
     for i=1, #fh_3 do
       fh_hand[#fh_hand+1] = fh_3[i]
     end
@@ -461,29 +410,26 @@ function evaluate_poker_hand(hand)
     if not results.top then results.top = results["Full House"] end
   end
 
-  if next(parts._flush) then
-    results["Flush"] = parts._flush
+  if next(get_flush(hand)) then
+    results["Flush"] = get_flush(hand)
     if not results.top then results.top = results["Flush"] end
   end
 
-  if next(parts._straight) then
-    results["Straight"] = parts._straight
+  if next(get_straight(hand)) then
+    results["Straight"] = get_straight(hand)
     if not results.top then results.top = results["Straight"] end
   end
 
-  if next(parts._3) then
-    results["Three of a Kind"] = parts._3
+  if next(get_X_same(3,hand)) then
+    results["Three of a Kind"] = get_X_same(3,hand)
     if not results.top then results.top = results["Three of a Kind"] end
   end
 
-  if (#parts._2 == 2) or (#parts._3 == 1 and #parts._2 == 1) then
+  if #get_X_same(2,hand) == 2 then
     local fh_hand = {}
-    local r = parts._2
+    local r = get_X_same(2,hand)
     local fh_2a = r[1]
     local fh_2b = r[2]
-    if not fh_2b then 
-      fh_2b = parts._3[1]
-    end
     for i=1, #fh_2a do
       fh_hand[#fh_hand+1] = fh_2a[i]
     end
@@ -494,13 +440,13 @@ function evaluate_poker_hand(hand)
     if not results.top then results.top = results["Two Pair"] end
   end
 
-  if next(parts._2) then
-    results["Pair"] = parts._2
+  if next(get_X_same(2,hand)) then
+    results["Pair"] = get_X_same(2,hand)
     if not results.top then results.top = results["Pair"] end
   end
 
-  if next(parts._highest) then
-    results["High Card"] = parts._highest
+  if next(get_highest(hand)) then
+    results["High Card"] = get_highest(hand)
     if not results.top then results.top = results["High Card"] end
   end
 
@@ -624,47 +570,6 @@ function reset_drawhash()
   G.DRAW_HASH = EMPTY(G.DRAW_HASH)
 end
 
---Copyright 2021 Max Cahill (Zlib license)
---
---This software is provided 'as-is', without any express or implied
---warranty. In no event will the authors be held liable for any damages
---arising from the use of this software.
---
---Permission is granted to anyone to use this software for any purpose,
---including commercial applications, and to alter it and redistribute it
---freely, subject to the following restrictions:
---
---1. The origin of this software must not be misrepresented; you must not
---   claim that you wrote the original software. If you use this software
---   in a product, an acknowledgment in the product documentation would be
---   appreciated but is not required.
---2. Altered source versions must be plainly marked as such, and must not be
---   misrepresented as being the original software.
---3. This notice may not be removed or altered from any source distribution.
---This function was slightly modified from it's original state
-function nuGC(time_budget, memory_ceiling, disable_otherwise)
-	time_budget = time_budget or 3e-4
-	memory_ceiling = memory_ceiling or 300
-	local max_steps = 1000
-	local steps = 0
-	local start_time = love.timer.getTime()
-	while
-		love.timer.getTime() - start_time < time_budget and
-		steps < max_steps
-	do
-		collectgarbage("step", 1)
-		steps = steps + 1
-	end
-	--safety net
-	if collectgarbage("count") / 1024 > memory_ceiling then
-		collectgarbage("collect")
-	end
-	--don't collect gc outside this margin
-	if disable_otherwise then
-		collectgarbage("stop")
-	end
-end
-
 --The drawhash is a hash table of all drawn nodes and all nodes that may be invisible but still collide with the cursor
 function add_to_drawhash(obj)
   if obj then 
@@ -694,7 +599,7 @@ end
 
 function play_sound(sound_code, per, vol)
   if G.F_MUTE then return end
-  if sound_code and G.SETTINGS.SOUND.volume > 0.001 then
+  if sound_code and not G.muted and G.SETTINGS.SOUND.volume > 0 then
     G.ARGS.play_sound = G.ARGS.play_sound or {}
     G.ARGS.play_sound.type = 'sound'
     G.ARGS.play_sound.time = G.TIMERS.REAL
@@ -920,7 +825,7 @@ function get_blind_amount(ante)
   local k = 0.75
   if not G.GAME.modifiers.scaling or G.GAME.modifiers.scaling == 1 then 
     local amounts = {
-      300,  800, 2000,  5000,  11000,  20000,   35000,  50000
+      300,  800, 2800,  6000,  11000,  20000,   35000,  50000
     }
     if ante < 1 then return 100 end
     if ante <= 8 then return amounts[ante] end
@@ -930,8 +835,7 @@ function get_blind_amount(ante)
     return amount
   elseif G.GAME.modifiers.scaling == 2 then 
     local amounts = {
-      300,  900, 2600,  8000,  20000,  36000,  60000,  100000
-      --300,  900, 2400,  7000,  18000,  32000,  56000,  90000
+      300,  1000, 3200,  9000,  18000,  32000,  56000,  90000
     }
     if ante < 1 then return 100 end
     if ante <= 8 then return amounts[ante] end
@@ -941,8 +845,7 @@ function get_blind_amount(ante)
     return amount
   elseif G.GAME.modifiers.scaling == 3 then 
     local amounts = {
-      300,  1000, 3200,  9000,  25000,  60000,  110000,  200000
-      --300,  1000, 3000,  8000,  22000,  50000,  90000,  180000
+      300,  1200, 3600,  10000,  25000,  50000,  90000,  180000
     }
     if ante < 1 then return 100 end
     if ante <= 8 then return amounts[ante] end
@@ -1444,6 +1347,7 @@ function recursive_table_cull(t)
 end
 
 function save_with_action(action)
+  print('SAVE WITH ACTION')
   G.action = action
   save_run()
   G.action = nil
@@ -1556,7 +1460,6 @@ function init_localization()
       for _, set in pairs(group) do
         for _, center in pairs(set) do
           center.text_parsed = {}
-          if not center.text then else
           for _, line in ipairs(center.text) do
             center.text_parsed[#center.text_parsed+1] = loc_parse_string(line)
           end
@@ -1570,7 +1473,6 @@ function init_localization()
               center.unlock_parsed[#center.unlock_parsed+1] = loc_parse_string(line)
             end
           end
-        end
         end
       end
     end
@@ -1759,7 +1661,6 @@ function localize(args, misc_cat)
           assembled_string = assembled_string..(type(subpart) == 'string' and subpart or args.vars[tonumber(subpart[1])] or 'ERROR')
         end
         local desc_scale = G.LANG.font.DESCSCALE
-        if G.F_MOBILE_UI then desc_scale = desc_scale*1.5 end
         if args.type == 'name' then
           final_line[#final_line+1] = {n=G.UIT.O, config={
             object = DynaText({string = {assembled_string},
@@ -1772,7 +1673,7 @@ function localize(args, misc_cat)
               shadow = true,
               y_offset = -0.6,
               spacing = math.max(0, 0.32*(17 - #assembled_string)),
-              scale =  (0.55 - 0.004*#assembled_string)*(part.control.s and tonumber(part.control.s) or 1)
+              scale =  (0.55 - 0.004*#assembled_string)*(part.control.s and tonumber(part.control.s) or 1)*desc_scale
             })
           }}
         elseif part.control.E then
@@ -1856,12 +1757,12 @@ function get_starting_params()
 return {
     dollars = 4,
     hand_size = 8,
-    discards = 3,
+    discards = 4,
     hands = 4,
     reroll_cost = 5,
     joker_slots = 5,
     ante_scaling = 1,
-    consumable_slots = 2,
+    consumable_slots = 4,
     no_faces = false,
     erratic_suits_and_ranks = false,
   }

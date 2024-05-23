@@ -187,12 +187,10 @@ function Controller:update(dt)
 
     --parse all locks and set
     self.locked = false
-    if G.screenwipe then self.locks.wipe = true else self.locks.wipe = false end
-
+    
     for k, v in pairs(self.locks) do
         if v then self.locked = true end
     end
-    
     if self.locks.frame_set then 
         self.locks.frame_set = nil
         self.overlay_timer = 0

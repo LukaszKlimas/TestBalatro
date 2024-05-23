@@ -274,7 +274,10 @@ function love.errhand(msg)
 	love.graphics.reset()
 	local font = love.graphics.setNewFont("resources/fonts/m6x11plus.ttf", 20)
 
-	love.graphics.clear(G.C.BLACK)
+	love.graphics.setBackgroundColor(G.C.BLACK)
+	love.graphics.setColor(255, 255, 255, 255)
+
+	love.graphics.clear(love.graphics.getBackgroundColor())
 	love.graphics.origin()
 
 
@@ -284,13 +287,9 @@ function love.errhand(msg)
 
 	local function draw()
 		local pos = love.window.toPixels(70)
-		love.graphics.push()
-		love.graphics.clear(G.C.BLACK)
-		love.graphics.setColor(1., 1., 1., 1.)
-		love.graphics.printf(p, font, pos, pos, love.graphics.getWidth() - pos)
-		love.graphics.pop()
+		love.graphics.clear(love.graphics.getBackgroundColor())
+		love.graphics.printf(p, pos, pos, love.graphics.getWidth() - pos)
 		love.graphics.present()
-
 	end
 
 	while true do
@@ -364,24 +363,7 @@ function love.resize(w, h)
 		real_window_w = w,
 		real_window_h = h
 	}
-
 	G.CANV_SCALE = 1
-
-	if love.system.getOS() == 'Windows' and false then --implement later if needed
-		local render_w, render_h = love.window.getDesktopDimensions(G.SETTINGS.WINDOW.selcted_display)
-		local unscaled_dims = love.window.getFullscreenModes(G.SETTINGS.WINDOW.selcted_display)[1]
-
-		local DPI_scale = math.floor((0.5*unscaled_dims.width/render_w + 0.5*unscaled_dims.height/render_h)*500 + 0.5)/500
-
-		if DPI_scale > 1.1 then
-			G.CANV_SCALE = 1.5
-
-			G.AA_CANVAS = love.graphics.newCanvas(G.WINDOWTRANS.real_window_w*G.CANV_SCALE, G.WINDOWTRANS.real_window_h*G.CANV_SCALE, {type = '2d', readable = true})
-			G.AA_CANVAS:setFilter('linear', 'linear')
-		else
-			G.AA_CANVAS = nil
-		end
-	end
 
 	G.CANVAS = love.graphics.newCanvas(w*G.CANV_SCALE, h*G.CANV_SCALE, {type = '2d', readable = true})
 	G.CANVAS:setFilter('linear', 'linear')

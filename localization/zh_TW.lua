@@ -47,46 +47,6 @@ return {
                     "倍數{C:red}+#1#{}"
                 }
             },
-            j_sly = {
-                name = "狡詐小丑",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#，",
-                    "{C:chips}+#1#{}籌碼"
-                }
-            },
-            j_wily = {
-                name = "狡猾小丑",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#，",
-                    "{C:chips}+#1#{}籌碼"
-                }
-            },
-            j_clever = {
-                name = "機靈小丑",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#，",
-                    "{C:chips}+#1#{}籌碼"
-                }
-            },
-            j_devious = {
-                name = "心機小丑",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#，",
-                    "{C:chips}+#1#{}籌碼"
-                }
-            },
-            j_crafty = {
-                name = "鬼靈精小丑",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#，",
-                    "{C:chips}+#1#{}籌碼"
-                }
-            },
             j_half = {
                 name = "半個小丑",
                 text = {
@@ -106,23 +66,22 @@ return {
             j_juggler = {
                 name = "雜耍小丑",
                 text = {
-                    "{C:attention}+#1#{}手牌數量"
+                    "{C:attention}+#1#{}手牌大小"
                 }
             },
             j_drunkard = {
                 name = "喝掛小丑",
                 text = {
-                    "每一回合",
-                    "{C:red}+#1#{}次棄牌"
+                    "{C:red}+#1#{}次棄牌數"
                 }
             },
             j_stone = {
                 name = "石頭小丑",
                 text = {
-                    "完整{C:attention}牌組中",
-                    "每有一張{C:attention}石頭牌，",
-                    "給予{C:chips}+#1#{}張籌碼",
-                    "{C:inactive}(目前{C:chips}+#2#{C:inactive}張籌碼)"
+                    "為牌組內的",
+                    "每張{C:attention}石頭牌{}",
+                    "{C:chips}+#1#{}籌碼",
+                    "{C:inactive}(目前為{C:chips}+#2#{C:inactive}籌碼)"
                 }
             },
             j_golden = {
@@ -169,7 +128,7 @@ return {
                 text = {
                     "每打出一張",
                     "{C:diamonds}#2#{}花色的牌，",
-                    "倍數{C:red}+#1#{}", 
+                    "倍數{C:red}+#1#{}"
                 }
             },
             j_lusty_joker = {
@@ -177,7 +136,7 @@ return {
                 text = {
                     "每打出一張",
                     "{C:hearts}#2#{}花色的牌，",
-                    "倍數{C:red}+#1#{}", 
+                    "倍數{C:red}+#1#{}"
                 }
             },
             j_wrathful_joker = {
@@ -185,7 +144,7 @@ return {
                 text = {
                     "每打出一張",
                     "{C:spades}#2#{}花色的牌，",
-                    "倍數{C:red}+#1#{}", 
+                    "倍數{C:red}+#1#{}"
                 }
             },
             j_gluttenous_joker = {
@@ -193,7 +152,7 @@ return {
                 text = {
                     "每打出一張",
                     "{C:clubs}#2#{}花色的牌，",
-                    "倍數{C:red}+#1#{}", 
+                    "倍數{C:red}+#1#{}"
                 }
             },
             j_ceremonial = {
@@ -241,10 +200,16 @@ return {
             j_8_ball = {
                 name = "八號球",
                 text = {
-                    "每次打出{C:attention}8{}時，",
-                    "若得分，則有{C:green}#1#/#2#{}機率",
-                    "產生一張{C:tarot}塔羅{}牌",
+                    "每打出{C:attenetion}#1#{}張",
+                    "或更多張數字{C:attention}8{}，",
+                    "獲得一張{C:planet}行星牌{}",
                     "{C:inactive}(必須有空位)"
+                }
+            },
+            j_misprint = {
+                name = "印錯小丑",
+                text = {
+                    ""
                 }
             },
             j_dusk = {
@@ -255,25 +220,19 @@ return {
                     "該手牌會被觸發兩次"
                 }
             },
+            j_raised_fist = {
+                name = "致勝之拳",
+                text = {
+                    "將手牌中的{C:attention}最小{}牌的",
+                    "點數{C:attention}翻倍{}",
+                    "加到倍數中"
+                }
+            },
             j_chaos = {
                 name = "慌亂小丑",
                 text = {
                     "每回合在商店可",
-                    "{C:green}免費{}重摋{C:attention}#1#{}次"
-                }
-            },
-            j_misprint = {
-                name = "印錯小丑",
-                text = {
-                    ""
-                }
-            },
-            j_raised_fist = {
-                name = "致勝之拳",
-                text = {
-                    "按照手中點數{C:attention}最低{}",
-                    "的牌，向倍數追加",
-                    "其點數的{C:attention}兩倍{}"
+                    "{C:green}免費{}重新洗牌{C:attention}#1#{}次"
                 }
             },
             j_fibonacci = {
@@ -287,18 +246,18 @@ return {
             j_steel_joker = {
                 name = "鋼鐵小丑",
                 text = {
-                    "在你的{C:attention}牌組中{C:attention}",
-                    "每張鋼鐵牌",
-                    "均可獲得{X:mult,C:white} X#1# {}倍數",
-                    "{C:inactive}(目前為{X:mult,C:white} X#2# {C:inactive}倍)"
+                    "每次{C:attention}鋼鐵牌",
+                    "你的牌組裡的",
+                    "{C:chips}+#1#{}籌碼",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
                 }
             },
             j_scary_face = {
                 name = "駭人的臉",
                 text = {
-                    "打出{C:attention}人頭牌{}時，",
+                    "打出{C:attention}花牌{}時，",
                     "得分時",
-                    "{C:chips}+#1#{}籌碼"
+                    "給予{C:chips}+#1#{}"
                 }
             },
             j_abstract = {
@@ -317,20 +276,20 @@ return {
                     "獲得{C:money}$#1#{}"
                 }
             },
-            j_pareidolia = {
-                name = "迷幻錯覺",
-                text = {
-                    "所有牌",
-                    "一律會被視為",
-                    "{C:attention}人頭牌{}"
-                }
-            },
             j_hack = {
                 name = "爛脫口秀演員",
                 text = {
                     "重新觸發",
                     "所有打出的",
                     "{C:attention}2{}、{C:attention}3{}、{C:attention}4{}、或{C:attention}5{}"
+                }
+            },
+            j_pareidolia = {
+                name = "迷幻錯覺",
+                text = {
+                    "所有牌",
+                    "一律會被視為",
+                    "{C:attention}花牌{}"
                 }
             },
             j_gros_michel = {
@@ -372,7 +331,7 @@ return {
             j_business = {
                 name = "名片",
                 text = {
-                    "打出的{C:attention}人頭牌{}有",
+                    "打出的{C:attention}花牌{}有",
                     "{C:green}#1#/#2#{}的機率",
                     "在得分時獲得{C:money}$2{}"
                 }
@@ -380,28 +339,19 @@ return {
             j_supernova = {
                 name = "超新星",
                 text = {
-                    "向倍數追加本次比賽中",
-                    "打出的{C:attention}牌型{}手數相等的",
-                    "數值"
-                }
-            },
-            j_superposition = {
-                name = "完美位置",
-                text = {
-                    "如果計分手牌包含",
-                    "一張{C:attention}A{}及{C:attention}順子{}",
-                    "即產生一張{C:tarot}塔羅牌{}",
-                    "{C:inactive}(必須有空位)"
+                    "將{C:attention}牌型{}的",
+                    "出牌次數",
+                    "增加到得分倍數"
                 }
             },
             j_ride_the_bus = {
                 name = "公車卡",
                 text = {
-                    "每{C:attention}連續{}打出一手",
-                    "未得分的{C:attention}人頭{}牌手牌，",
-                    "這個小丑可獲得",
-                    "{C:mult}+#1#{}倍數",
-                    "{C:inactive}(目前{C:mult}+#2#{C:inactive}倍)"
+                    "若連續打出",
+                    "沒有{C:attention}花牌{}的",
+                    "計分手牌，",
+                    "每次倍數{C:mult}+#1#",
+                    "{C:inactive}(目前為{C:mult}+#2#{C:inactive}倍)"
                 }
             },
             j_space = {
@@ -489,10 +439,9 @@ return {
             j_constellation = {
                 name = "星空小丑",
                 text = {
-                    "每使用一張{C:planet}行星{}牌，",
-                    "這個小丑獲得",
-                    "{X:mult,C:white} X#1# {}倍數",
-                    "{C:inactive}(目前{X:mult,C:white} X#2# {C:inactive}倍)"
+                    "每張已使用的{C:planet}行星牌{}",
+                    "可獲得{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
                 }
             },
             j_hiker = {
@@ -508,17 +457,34 @@ return {
                 text = {
                     "如果同時捨棄",
                     "{C:attention}#2#{}張或更多張",
-                    "{C:attention}人頭牌{}",
+                    "{C:attention}花牌{}",
                     "獲得{C:money}$#1#{}"
+                }
+            },
+            j_green_joker = {
+                name = "綠色小丑",
+                text = {
+                    "每次出牌，{C:mult}+#1#{}倍數",
+                    "每次棄牌，{C:mult}-#2#{}倍數",
+                    "{C:inactive}(目前為{C:mult}+#3#{C:inactive}倍)"
+                }
+            },
+            j_superposition = {
+                name = "完美位置",
+                text = {
+                    "如果計分手牌包含",
+                    "一張{C:attention}A{}及{C:attention}順子{}",
+                    "即產生一張{C:tarot}塔羅牌{}",
+                    "{C:inactive}(必須有空位)"
                 }
             },
             j_todo_list = {
                 name = "待辦事項",
                 text = {
-                    "若{C:attention}牌型{}為{C:attention}#2#{}",
-                    "則在回合結束時，",
-                    "贏得{C:money}$#1#{}，",
-                    "隨後牌型變更"
+                    "如果{C:attention}出牌牌型{}為{C:attention}#2#{}，",
+                    "獲得{C:money}$#1#{}",
+                    "每次支付時",
+                    "牌型都會改變"
                 }
             },
             j_ticket = {
@@ -554,37 +520,29 @@ return {
                     "可得到{X:red,C:white}X#1#{}倍數"
                 },
                 unlock = {
-                    "出牌{C:attention,E:1}#1#{}次",
+                    "打{C:attention,E:1}#1#{}手牌",
                     "{C:inactive}(#2#)"
                 }
             },
             j_sock_and_buskin = {
-                name = "悲與喜",
+                name = "花牌小丑",
                 text = {
                     "重新觸發全部",
-                    "打出的{C:attention}人頭牌{}"
+                    "打出的{C:attention}花牌{}"
                 },
                 unlock = {
                     "總共打出",
-                    "{C:attention,E:1}#1#{}張人頭牌",
+                    "{C:attention,E:1}#1#{}張花牌",
                     "{C:inactive}(#2#)"
-                }
-            },
-            j_green_joker = {
-                name = "綠色小丑",
-                text = {
-                    "每次出牌，{C:mult}+#1#{}倍數",
-                    "每次棄牌，{C:mult}-#2#{}倍數",
-                    "{C:inactive}(目前為{C:mult}+#3#{C:inactive}倍)"
                 }
             },
             j_swashbuckler = {
                 name = "盜賊小丑",
                 text = {
-                    "根據持有的其他",
-                    "{C:attention}小丑{}，",
-                    "追加其全體賣出價格至倍數",
-                    "{C:inactive}(目前{C:mult}+#1#{C:inactive}倍)"
+                    "將這張卡左邊所有",
+                    "{C:attention}小丑牌{}的總售價",
+                    "增加至倍數",
+                    "{C:inactive}(目前為{C:mult}+#1#{C:inactive}倍)"
                 },
                 unlock = {
                     "賣出總共",
@@ -595,8 +553,8 @@ return {
             j_troubadour = {
                 name = "吟遊詩人",
                 text = {
-                    "{C:attention}+#1#{}手牌數量，",
-                    "每回合{C:blue}-#2#{}次出牌次數"
+                    "手牌大小{C:attention}+#1#{}，",
+                    "每回合出牌次數{C:red}-#2#{}次"
                 },
                 unlock = {
                     "透過只打出",
@@ -627,9 +585,9 @@ return {
                     "視為相同花色"
                 },
                 unlock = {
-                    "牌組中至少",
-                    "要有{C:attention}#1#張",
-                    "{E:1,C:attention}#2#{}"
+                    "手上的牌至少要有{C:attention}#1#",
+                    "{E:1,C:attention}#2#{}",
+                    "出現"
                 }
             },
             j_throwback = {
@@ -647,9 +605,8 @@ return {
             j_hanging_chad = {
                 name = "懸孔票",
                 text = {
-                    "重新觸發得分中",
-                    "{C:attention}最先{}打出的牌",
-                    "額外{C:attention}#1#{}次"
+                    "重新觸發{C:attention}第一張{}打出的",
+                    "記入計分的牌"
                 },
                 unlock = {
                     "贏得Boss盲注",
@@ -661,12 +618,12 @@ return {
                 text = {
                     "只要每次打出",
                     "{C:diamonds}方塊{}花色牌，",
-                    "得分時{C:money}$#1#{}", 
+                    "得分時{C:money}$#1#{}"
                 },
                 unlock = {
-                    "牌組中至少要有",
-                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#{}",
-                    "花色的牌"
+                    "手上的牌至少要有{E:1,C:attention}#1#",
+                    "{E:1,C:attention}#2#",
+                    "花色"
                 }
             },
             j_bloodstone = {
@@ -675,12 +632,12 @@ return {
                     "每次打出的",
                     "{C:hearts}紅心{}花色牌",
                     "有{C:green}#1#/#2#{}的機率",
-                    "獲得{X:mult,C:white}X#3#{}倍數", 
+                    "獲得{X:mult,C:white}X#3#{}倍數"
                 },
                 unlock = {
-                    "牌組中至少要有",
-                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#{}",
-                    "花色的牌"
+                    "手上的牌至少要有{E:1,C:attention}#1#",
+                    "{E:1,C:attention}#2#",
+                    "花色"
                 }
             },
             j_arrowhead = {
@@ -692,7 +649,7 @@ return {
                 },
                 unlock = {
                     "牌組中至少要有",
-                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#{}",
+                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#",
                     "花色的牌"
                 }
             },
@@ -701,26 +658,26 @@ return {
                 text = {
                     "只要每次打出",
                     "{C:clubs}梅花{}花色牌，",
-                    "得分時，{C:mult}+#1#{}倍數", 
+                    "得分時，{C:mult}+#1#{}倍數"
                 },
                 unlock = {
-                    "牌組中至少要有",
-                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#{}",
-                    "花色的牌"
+                    "在你的牌組中",
+                    "至少要有{E:1,C:attention}#1#張",
+                    "{E:1,C:attention}#2#花色的牌"
                 }
             },
             j_glass = {
                 name = "玻璃小丑",
                 text = {
-                    "每有一張{C:attention}玻璃牌",
-                    "被銷毀，此小丑獲得",
+                    "每摧毀一張",
+                    "{C:attention}玻璃牌{}，",
                     "{X:mult,C:white}X#1#{}倍數",
                     "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
                 },
                 unlock = {
-                    "牌組中至少",
-                    "要有{E:1,C:attention}#1#張",
-                    "{E:1,C:attention}#2#"
+                    "牌組中至少要有",
+                    "{E:1,C:attention}#1#張{E:1,C:attention}#2#",
+                    "花色的牌"
                 }
             },
             j_ring_master = {
@@ -738,10 +695,10 @@ return {
             j_flower_pot = {
                 name = "盆栽",
                 text = {
-                    "若牌型包含有",
-                    "一張{C:diamonds}方塊{}、{C:clubs}梅花{}、",
-                    "{C:hearts}紅心{}和{C:spades}黑桃{}牌，",
-                    "則倍數{X:mult,C:white}X#1#{}"
+                    "如果出牌中有計分的牌",
+                    "包含{C:diamonds}方塊{}、{C:clubs}梅花{}、",
+                    "{C:hearts}紅心{}及{C:spades}黑桃{}，",
+                    "{X:mult,C:white}X#1#{}倍數"
                 },
                 unlock = {
                     "達到底注",
@@ -774,9 +731,8 @@ return {
             j_merry_andy = {
                 name = "快樂小丑",
                 text = {
-                    "每一回合",
-                    "{C:red}+#1#{}次棄牌，",
-                    "{C:red}#2#{}手牌數量"
+                    "{C:red}+#1#{}棄牌次數",
+                    "{C:red}#2#{}手牌大小"
                 },
                 unlock = {
                     "在{E:1,C:attention}#1#回合或",
@@ -791,8 +747,8 @@ return {
                     "{C:inactive}(例：{C:green}1/3{C:inactive} -> {C:green}2/3{C:inactive})"
                 },
                 unlock = {
-                    "在一次出牌中",
-                    "得到至少",
+                    "在一手牌中",
+                    "得到最少",
                     "{E:1,C:attention}#1#{}籌碼"
                 }
             },
@@ -805,8 +761,8 @@ return {
                     "{s:0.8}每個回合牌都會變"
                 },
                 unlock = {
-                    "在一次出牌中",
-                    "得到至少",
+                    "在一手牌中",
+                    "得到最少",
                     "{E:1,C:attention}#1#{}籌碼"
                 }
             },
@@ -819,9 +775,9 @@ return {
                     "{X:mult,C:white}X#1#{}倍數"
                 },
                 unlock = {
-                    "在一次出牌中",
-                    "打出的牌包含",
-                    "{E:1,C:attention}#1#"
+                    "打一手",
+                    "要包含",
+                    "{E:1,C:attention}#1#的牌"
                 }
             },
             j_matador = {
@@ -832,7 +788,7 @@ return {
                     "獲得{C:money}$#1#{}"
                 },
                 unlock = {
-                    "在{E:1,C:attention}一手之內",
+                    "在{E:1,C:attention}一手之内{}且没有",
                     "且不使用棄牌次數",
                     "戰勝Boss盲注"
                 }
@@ -840,14 +796,14 @@ return {
             j_hit_the_road = {
                 name = "一路暢通",
                 text = {
-                    "本回合每有一張{C:attention}J{}",
-                    "被棄牌，此小丑獲得",
-                    "{X:mult,C:white}X#1#{}倍數",
+                    "每捨棄一張",
+                    "{C:attention}J{}，本回合",
+                    "獲得{X:mult,C:white}X#1#{}倍數",
                     "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
                 },
                 unlock = {
-                    "同時將",
-                    "{E:1,C:attention}5張J{}",
+                    "同時將{E:1,C:attention}5張",
+                    "{E:1,C:attention}J{}",
                     "全部棄掉"
                 }
             },
@@ -936,28 +892,27 @@ return {
             j_red_card = {
                 name = "紅牌",
                 text = {
-                    "任意{C:attention}擴充包{}被略過時",
-                    "此小丑獲得",
-                    "{C:red}+#1#{}倍數",
+                    "當跳過任一{C:attention}擴充包{}時",
+                    "獲得{C:red}+#1#{}倍數",
                     "{C:inactive}(目前為{C:red}+#2#{C:inactive}倍)"
                 }
             },
             j_madness = {
                 name = "瘋狂小丑",
                 text = {
-                    "選擇{C:attention}小盲注{}或{C:attention}大盲注{}時",
-                    "獲得{X:mult,C:white}X#1#{}倍數",
-                    "並{C:attention}銷毀{}一個隨機小丑",
-                    "{C:inactive}(目前{X:mult,C:white}X#2#{C:inactive}倍)"
+                    "在{C:attention}盲注{}選擇後，",
+                    "獲得{X:mult,C:white}X#1#{}倍數並",
+                    "{C:attention}摧毀{}隨機一張小丑牌",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{}倍)"
                 }
             },
             j_square = {
                 name = "方塊小丑",
                 text = {
-                    "若打出牌型",
-                    "恰好為{C:attention}4{}張牌，",
-                    "此小丑獲得{C:chips}+#2#{}張籌碼",
-                    "{C:inactive}(目前為{C:chips}#1#{C:inactive}張籌碼)"
+                    "每打出{C:attention}4{}張牌",
+                    "則可獲得",
+                    "{C:chips}+#1#{}籌碼",
+                    "{C:inactive}(目前{C:chips}#1#{}籌碼)"
                 }
             },
             j_seance = {
@@ -977,296 +932,15 @@ return {
                     "{C:inactive}(必須有空位)"
                 }
             },
-            j_vampire = {
-                name = "吸血鬼小丑",
-                text = {
-                    "本回合每打出一張得分的{C:attention}加強牌{}，",
-                    "此小丑獲得{X:mult,C:white}X#1#{}倍數，",
-                    "移除牌的{C:attention}加強",
-                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
-                }
-            },
-            j_shortcut = {
-                name = "捷徑",
-                text = {
-                    "允許{C:attention}順子{}可跨",
-                    "{C:attention}1點達成",
-                    "{C:inactive}(如：{C:attention}10 8 6 5 3{C:inactive})"
-                }
-            },
-            j_hologram = {
-                name = "全像",
-                text = {
-                    "{C:attention}遊戲牌{}追加到牌組時，",
-                    "此小丑獲得",
-                    "{X:mult,C:white}X#1#{}倍數",
-                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
-                }
-            },
-            j_vagabond = {
-                name = "流浪者",
-                text = {
-                    "若在出牌時當下",
-                    "擁有{C:money}$#1#{}或更少的金錢",
-                    "產生一張{C:purple}塔羅牌{}"
-                }
-            },
-            j_baron = {
-                name = "男爵",
-                text = {
-                    "手牌中，每",
-                    "持有一張{C:attention}K{}，",
-                    "給予{X:mult,C:white}X#1#{}倍數"
-
-                }
-            },
-            j_cloud_9 = {
-                name = "9霄雲外",
-                text = {
-                    "每張牌組內的數字{C:attention}9{}",
-                    "在每回合結束時",
-                    "獲得{C:money}$#1#{}",
-                    "{C:inactive}(目前{C:money}$#2#{}{C:inactive})"
-                }
-            },
-            j_rocket = {
-                name = "火箭",
-                text = {
-                    "於回合結束時獲得{C:money}$#1#{}",
-                    "{C:attention}Boss盲註{}",
-                    "被擊敗時獎金提升{C:money}$#2#{}"
-                }
-            },
-            j_obelisk = {
-                name = "方尖碑",
-                text = {
-                    "不打出最常使用的{C:attention}牌型，",
-                    "{C:attention}連續{}打出每次出牌，",
-                    "此小丑獲得",
-                    "{X:mult,C:white}X#1#{}倍數",
-                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
-                }
-            },
-            j_midas_mask = {
-                name = "邁達斯面具",
-                text = {
-                    "打出的全部{C:attention}人頭牌{}",
-                    "在得分時",
-                    "變為{C:attention}金色{}牌"
-                }
-            },
-            j_luchador = {
-                name = "鬥士",
-                text = {
-                    "賣出這張牌卡以",
-                    "消除目前的",
-                    "{C:attention}Boss盲注{}限制功能"
-                }
-            },
-            j_photograph = {
-                name = "攝影",
-                text = {
-                    "得分時，第一張",
-                    "打出的{C:attention}人頭牌{}",
-                    "獲得{X:mult,C:white}X#1#{}倍數"
-                }
-            },
-            j_gift = {
-                name = "禮物卡",
-                text = {
-                    "在每回合結束時",
-                    "每張擁有的{C:attention}小丑牌{}",
-                    "及{C:attention}消耗卡{}",
-                    "{C:attention}售價{}加{C:money}$#1#{}"
-                }
-            },
-            j_turtle_bean = {
-                name = "烏龜豆",
-                text = {
-                    "手牌數量{C:attention}+#1#{}",
-                    "每一回合",
-                    "減少{C:red}#2#{}"
-                }
-            },
-            j_erosion = {
-                name = "侵蝕",
-                text = {
-                    "在你的牌組中",
-                    "每張小於{C:attention}#3#{}的牌",
-                    "均可獲得{C:red}+#1#{}倍數",
-                    "{C:inactive}(目前為{C:red}+#2#{C:inactive}倍)"
-                }
-            },
-            j_reserved_parking = {
-                name = "私人車位",
-                text = {
-                    "手牌中",
-                    "每張持有的{C:attention}人頭牌{}",
-                    "有{C:green}#2#/#3#{}的機率",
-                    "給予{C:money}$#1#{}"
-                    
-                }
-            },
-            j_mail = {
-                name = "郵件",
-                text = {
-                    "每棄掉一張{C:attention}#2#{}，",
-                    "獲得{C:money}$#1#{}，",
-                    "每回合數字都會變更"
-                }
-            },
-            j_to_the_moon = {
-                name = "登月",
-                text = {
-                    "每回合結束時，",
-                    "每擁有{C:money}$5{}，",
-                    "皆可獲得額外{C:money}$#1#{}利息"
-                }
-            },
-            j_hallucination = {
-                name = "產生幻覺",
-                text = {
-                    "當開啟任一{C:attention}擴充包{}時，",
-                    "有{C:green}#1#/#2#{}的機會",
-                    "產生一張{C:tarot}塔羅牌{}",
-                    "{C:inactive}(必須有空位)"
-                }
-            },
-            j_lucky_cat = {
-                name = "幸運貓",
-                text = {
-                    "{C:attention}幸運{}牌",
-                    "{C:green}成功{}觸發時，",
-                    "此小丑牌獲得{X:mult,C:white}X#1#{}倍數",
-                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
-                }
-            },
-            j_baseball = {
-                name = "棒球牌",
-                text = {
-                    "每張擁有的{C:green}罕見{}小丑牌",
-                    "給予{X:mult,C:white}X#1#{}倍數"
-                }
-            },
-            j_bull = {
-                name = "鬥牛",
-                text = {
-                    "每持有{C:money}$1{}，",
-                    "籌碼{C:chips}+#1#{}張",
-                    "{C:inactive}(目前{C:chips}+#2#{C:inactive}張籌碼)"
-                }
-            },
-            j_diet_cola = {
-                name = "低卡可樂",
-                text = {
-                    "賣出這張牌卡以",
-                    "建立一個免費",
-                    "{C:attention}#1#"
-                }
-            },
-            j_trading = {
-                name = "交換卡",
-                text = {
-                    "每回合的{C:attention}第一次棄牌{}",
-                    "如果只有棄{C:attention}1{}張牌",
-                    "摧毀那張牌並獲得{C:money}$#1#"
-                }
-            },
-            j_flash = {
-                name = "閃卡",
-                text = {
-                    "每次商店{C:attention}重摋{}",
-                    "此小丑獲得{C:mult}+#1#{}倍數",
-                    "{C:inactive}(目前{C:mult}+#2#{C:inactive} 倍)"
-                }
-            },
-            j_popcorn= {
-                name = "爆米花",
-                text = {
-                    "{C:mult}+#1#{}倍數，",
-                    "每結束一回合",
-                    "{C:mult}-#2#{}倍數"
-                }
-            },
-            j_ramen= {
-                name = "拉麵",
-                text = {
-                    "擁有{X:mult,C:white}X#1#{}倍數",
-                    "每{C:attention}丟棄一張牌{}，",
-                    "失去{X:mult,C:white}X#2#{}倍數"
-                }
-            },
-            j_trousers= {
-                name = "備用長褲",
-                text = {
-                    "如果打出的牌包含",
-                    "{C:attention}#2#",
-                    "{C:inactive}",
-                    "此小丑獲得{C:mult}+#1#{}倍數(目前{C:red}+#3#{C:inactive}倍)"
-                }
-            },
-            j_ancient= {
-                name = "古代小丑",
-                text = {
-                    "每次打出",
-                    "{V:1}#2#{}花色的牌，",
-                    "得分時獲得{X:mult,C:white}X#1#{}倍數",
-                    "{s:0.8}花色於每回合結束時變更"
-                }
-            },
-            j_walkie_talkie = {
-                name = "對講機",
-                text = {
-                    "每打出數字{C:attention}10{}或{C:attention}4，",
-                    "得分時給予{C:chips}+#1#{}籌碼及",
-                    "{C:mult}+#2#{}倍數"
-                },
-            },
-            j_selzer= {
-                name = "氣泡水",
-                text = {
-                    "未來{C:attention}#1#{}次出牌",
-                    "重新觸發所有",
-                    "打出的牌"
-                }
-            },
-            j_castle = {
-                name = "城堡",
-                text = {
-                    "每次丟棄{V:1}#2#{}花色牌，",
-                    "此小丑牌獲得{C:chips}+#1#{}籌碼",
-                    "每回合花色都會變更",
-                    "{C:inactive}(目前為{C:chips}+#3#{C:inactive}籌碼)"
-                },
-            },
-            j_smiley = {
-                name = "笑臉",
-                text = {
-                    "得分時，",
-                    "打出的{C:attention}人頭牌{}",
-                    "給予{C:mult}+#1#{}倍數"
-                }
-            },
-            j_campfire = {
-                name = "營火",
-                text = {
-                    "每{C:attention}賣出{}一張牌卡",
-                    "此小丑獲得{X:mult,C:white}X#1#{}倍數，",
-                    "每戰勝{C:attention}Boss盲注{}時重置",
-                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
-                }
-            },
-
-
             j_stuntman = {
                 name = "特技演員",
                 text = {
                     "{C:chips}+#1#{}籌碼",
-                    "{C:attention}-#2#{}手牌數量"
+                    "{C:attention}-#2#{}手牌大小"
                 },
                 unlock = {
-                    "在一次出牌中",
-                    "得到至少",
+                    "在一手牌中",
+                    "至少獲得",
                     "{E:1,C:attention}#1#{}籌碼"
                 }
             },
@@ -1298,7 +972,7 @@ return {
             j_satellite = {
                 name = "衛星",
                 text = {
-                    "本賽局每使用一張",
+                    "本赛局每使用一張",
                     "{C:planet}行星牌{}，每回合結束時",
                     "可得到{C:money}$#1#{}",
                     "{C:inactive}(目前為{C:money}$#2#{C:inactive})"
@@ -1311,9 +985,9 @@ return {
             j_shoot_the_moon = {
                 name = "射月亮",
                 text = {
-                    "手牌中，每",
-                    "持有一張{C:attention}Q{}，",
-                    "給予{C:mult}+#1#{}倍數"
+                    "手上每張持有的",
+                    "{C:attention}黑桃Q",
+                    "{C:mult}+#1#{}倍數"
                 },
                 unlock = {
                     "在一個回合中",
@@ -1324,8 +998,8 @@ return {
             j_drivers_license = {
                 name = "駕照",
                 text = {
-                    "如果牌組中至少有",
-                    "{C:attention}16{}張加強牌",
+                    "如果手上的牌至少有{C:attention}16",
+                    "張加強牌",
                     "{X:mult,C:white}X#1#{}倍數",
                     "{C:inactive}(目前為{C:attention}#2#{C:inactive})"
                 },
@@ -1343,7 +1017,7 @@ return {
                 },
                 unlock = {
                     "發現每張",
-                    "{E:1,C:tarot}塔羅牌{}"
+                    "{E:1,C:attention}#1#{C:tarot}塔羅牌{}"
                 }
             },
             j_astronomer = {
@@ -1367,27 +1041,26 @@ return {
                 },
                 unlock = {
                     "共賣出",
-                    "{E:1,C:attention}#1#{}張牌",
+                    "{E:1,C:attention}#1#{}牌",
                     "{C:inactive}(#2#)"
                 }
             },
             j_bootstraps = {
                 name = "拔靴帶",
                 text = {
-                    "每持有{C:money}$#2#{}",
-                    "倍數{C:mult}+#1#{}",
-                    "{C:inactive}(目前{C:mult}+#3#{C:inactive}倍)"
+                    "每擁有{C:money}$#2#{}，",
+                    "{C:mult}+#1#{}倍數"
                 },
                 unlock = {
-                    "至少擁有{E:1,C:attention}#1#{}張",
+                    "手上的牌至少要有{E:1,C:attention}#1#",
                     "{C:dark_edition}彩色{}小丑"
                 }
             },
             j_caino = {
                 name = "白臉小丑",
                 text = {
-                    "每有一張{C:attention}人頭{}牌",
-                    "被銷毀，此小丑獲得",
+                    "每張{C:attention}花牌{}被摧毀時",
+                    "永久獲得",
                     "{X:mult,C:white}X#1#{}倍數",
                     "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
                 },
@@ -1409,10 +1082,9 @@ return {
             j_yorick = {
                 name = "約里克",
                 text = {
-                    "每捨棄一張{C:attention}#2#{C:inactive} [#3#]{}牌，",
-                    "這個小丑獲得",
-                    "{X:mult,C:white} X#1# {}倍數",
-                    "{C:inactive}(目前{X:mult,C:white} X#4# {C:inactive}倍)"
+                    "使用{C:attention}#2#{}次棄牌後",
+                    "獲得{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(剩下棄牌數：{C:attention}#3#{C:inactive})"
                 },
                 unlock = {
                     "{E:1,s:1.3}?????"
@@ -1439,6 +1111,323 @@ return {
                 unlock = {
                     "{E:1,s:1.3}?????"
                 }
+            },
+            j_sly = {
+                name = "狡詐小丑",
+                text = {
+                    "如果打出的牌包含",
+                    "{C:attention}#2#，",
+                    "{C:chips}+#1#{}籌碼"
+                }
+            },
+            j_wily = {
+                name = "狡猾小丑",
+                text = {
+                    "如果打出的牌包含",
+                    "{C:attention}#2#，",
+                    "{C:chips}+#1#{}籌碼"
+                }
+            },
+            j_clever = {
+                name = "機靈小丑",
+                text = {
+                    "如果打出的牌包含",
+                    "{C:attention}#2#，",
+                    "{C:chips}+#1#{}籌碼"
+                }
+            },
+            j_devious = {
+                name = "心機小丑",
+                text = {
+                    "如果打出的牌包含",
+                    "{C:attention}#2#，",
+                    "{C:chips}+#1#{}籌碼"
+                }
+            },
+            j_crafty = {
+                name = "鬼靈精小丑",
+                text = {
+                    "如果打出的牌包含",
+                    "{C:attention}#2#，",
+                    "{C:chips}+#1#{}籌碼"
+                }
+            },
+            j_vampire = {
+                name = "吸血鬼小丑",
+                text = {
+                    "每次打出{C:attention}加強牌{}，",
+                    "移除牌卡{C:attention}加強效果",
+                    "並獲得{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
+                }
+            },
+            j_shortcut = {
+                name = "捷徑",
+                text = {
+                    "允許{C:attention}順子{}能以",
+                    "相差1點的牌{C:attention}組成",
+                    "{C:inactive}(例如：{C:attention}2 3 5 7 8{C:inactive})"
+                }
+            },
+            j_hologram = {
+                name = "全像",
+                text = {
+                    "每次新增{C:attention}牌卡{}",
+                    "至牌組時，",
+                    "{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
+                }
+            },
+            j_vagabond = {
+                name = "流浪者",
+                text = {
+                    "若在出牌時當下",
+                    "擁有{C:money}$#1#{}或更少的金錢",
+                    "產生一張{C:purple}塔羅牌{}"
+                }
+            },
+            j_baron = {
+                name = "男爵",
+                text = {
+                    "手牌中，每",
+                    "持有一張{C:attention}K{}，",
+                    "給予{X:mult,C:white}X#1#{}倍數"
+                }
+            },
+            j_cloud_9 = {
+                name = "9霄雲外",
+                text = {
+                    "每張牌組內的數字{C:attention}9{}",
+                    "在每回合結束時",
+                    "獲得{C:money}$#1#{}",
+                    "{C:inactive}(目前{C:money}$#2#{}{C:inactive})"
+                }
+            },
+            j_rocket = {
+                name = "火箭",
+                text = {
+                    "每回合結束時獲得{C:money}$#1#{}。",
+                    "每次打敗{C:attention}Boss盲注{}時",
+                    "獲得{C:money}$#2#"
+                }
+            },
+            j_obelisk = {
+                name = "方尖碑",
+                text = {
+                    "每次連續打出的牌",
+                    "若非最常打出的",
+                    "{C:attention}牌型{}，就給予",
+                    "{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
+                }
+            },
+            j_midas_mask = {
+                name = "邁達斯面具",
+                text = {
+                    "出牌時，",
+                    "將所有打出的{C:attention}花牌{}",
+                    "變成{C:attention}黃金牌{}"
+                }
+            },
+            j_luchador = {
+                name = "鬥士",
+                text = {
+                    "賣出這張牌卡以",
+                    "消除目前的",
+                    "{C:attention}Boss盲注{}限制功能"
+                }
+            },
+            j_photograph = {
+                name = "攝影",
+                text = {
+                    "出牌時",
+                    "第一張記分的{C:attention}花牌{}",
+                    "獲得{X:mult,C:white}X#1#{}倍數"
+                }
+            },
+            j_gift = {
+                name = "禮物卡",
+                text = {
+                    "在每回合結束時",
+                    "每張擁有的{C:attention}小丑牌{}",
+                    "及{C:attention}消耗卡{}",
+                    "{C:attention}售價{}加{C:money}$#1#{}"
+                }
+            },
+            j_turtle_bean = {
+                name = "烏龜豆",
+                text = {
+                    "手牌大小{C:attention}+#1#{}",
+                    "每一回合",
+                    "減少{C:red}#2#{}"
+                }
+            },
+            j_erosion = {
+                name = "侵蝕",
+                text = {
+                    "在你的牌組中",
+                    "每張低於{C:attention}#3#{}張的牌卡",
+                    "均可獲得{C:red}+#1#{}倍數",
+                    "{C:inactive}(目前為{C:red}+#2#{C:inactive}倍)"
+                }
+            },
+            j_reserved_parking = {
+                name = "私人車位",
+                text = {
+                    "手牌中",
+                    "每張持有的{C:attention}花牌{}",
+                    "有{C:green}#2#/#3#{}的機率",
+                    "給予{C:money}$#1#{}"
+                }
+            },
+            j_mail = {
+                name = "郵件",
+                text = {
+                    "每棄牌一張{C:attention}#2#{}",
+                    "獲得{C:money}$#1#{}，",
+                    "每回合數字都會變更"
+                }
+            },
+            j_to_the_moon = {
+                name = "登月",
+                text = {
+                    "每回合結束時，",
+                    "每擁有{C:money}$5{}，",
+                    "皆可獲得額外{C:money}$#1#{}利息"
+                }
+            },
+            j_hallucination = {
+                name = "產生幻覺",
+                text = {
+                    "當開啟任一{C:attention}擴充包{}時，",
+                    "有{C:green}#1#/#2#{}的機會",
+                    "產生一張{C:tarot}塔羅牌{}",
+                    "{C:inactive}(必須有空位)"
+                }
+            },
+            j_lucky_cat = {
+                name = "幸運貓",
+                text = {
+                    "每次{C:green}成功{}觸發",
+                    "{C:attention}幸運牌{}時",
+                    "獲得{X:mult,C:white}X#1#{}倍數",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
+                }
+            },
+            j_baseball = {
+                name = "棒球牌",
+                text = {
+                    "每張擁有的{C:green}罕見{}小丑牌",
+                    "給予{X:mult,C:white}X#1#{}倍數"
+                }
+            },
+            j_bull = {
+                name = "鬥牛",
+                text = {
+                    "每擁有{C:money}$1{}",
+                    "{C:chips}+#1#{}籌碼",
+                    "{C:inactive}(目前為{C:chips}+#2#{C:inactive}籌碼)"
+                }
+            },
+            j_diet_cola = {
+                name = "低卡可樂",
+                text = {
+                    "賣出這張牌卡以",
+                    "建立一個免費",
+                    "{C:attention}#1#"
+                }
+            },
+            j_trading = {
+                name = "交換卡",
+                text = {
+                    "每回合的{C:attention}第一次棄牌{}",
+                    "如果只有棄{C:attention}1{}張牌",
+                    "摧毀那張牌並獲得{C:money}$#1#"
+                }
+            },
+            j_flash = {
+                name = "閃卡",
+                text = {
+                    "在商店內每{C:attention}重摋{}一次",
+                    "獲得{C:mult}+#1#{}倍數",
+                    "{C:inactive}(目前為{C:mult}+#2#{C:inactive}倍)"
+                }
+            },
+            j_popcorn = {
+                name = "爆米花",
+                text = {
+                    "{C:mult}+#1#{}倍數，",
+                    "每結束一回合",
+                    "{C:mult}-#2#{}倍數"
+                }
+            },
+            j_trousers = {
+                name = "備用長褲",
+                text = {
+                    "如果出牌的牌型包含",
+                    "{C:attention}#2#，",
+                    "獲得{C:mult}+#1#{}倍數",
+                    "{C:inactive}(目前為{C:red}+#3#{C:inactive}倍)"
+                }
+            },
+            j_ancient = {
+                name = "古代小丑",
+                text = {
+                    "每次打出",
+                    "{V:1}#2#{}花色的牌，",
+                    "得分時獲得{X:mult,C:white}X#1#{}倍數",
+                    "{s:0.8}花色於每回合結束時變更"
+                }
+            },
+            j_ramen = {
+                name = "拉麵",
+                text = {
+                    "擁有{X:mult,C:white}X#1#{}倍數",
+                    "每{C:attention}丟棄一張牌{}，",
+                    "失去{X:mult,C:white}X#2#{}倍數"
+                }
+            },
+            j_walkie_talkie = {
+                name = "對講機",
+                text = {
+                    "每打出數字{C:attention}10{}或{C:attention}4，",
+                    "得分時給予{C:chips}+#1#{}籌碼及",
+                    "{C:mult}+#2#{}倍數"
+                }
+            },
+            j_selzer = {
+                name = "氣泡水",
+                text = {
+                    "未來{C:attention}#1#{}次出牌",
+                    "重新觸發所有",
+                    "打出的牌"
+                }
+            },
+            j_castle = {
+                name = "城堡",
+                text = {
+                    "每次丟棄{V:1}#2#{}花色牌，",
+                    "此小丑牌獲得{C:chips}+#1#{}籌碼",
+                    "每回合花色都會變更",
+                    "{C:inactive}(目前為{C:chips}+#3#{C:inactive}籌碼)"
+                }
+            },
+            j_smiley = {
+                name = "笑臉",
+                text = {
+                    "打出{C:attention}花牌{}",
+                    "得分時",
+                    "給予{C:mult}+#1#{}倍數"
+                }
+            },
+            j_campfire = {
+                name = "營火",
+                text = {
+                    "每{C:attention}賣出{}一張牌卡",
+                    "此小丑獲得{X:mult,C:white}X#1#{}倍數，",
+                    "每戰勝{C:attention}Boss盲注{}時重置",
+                    "{C:inactive}(目前為{X:mult,C:white}X#2#{C:inactive}倍)"
+                }
             }
         },
         Voucher = {
@@ -1452,24 +1441,24 @@ return {
             v_clearance_sale = {
                 name = "清倉拍賣",
                 text = {
-                    "店內的所有牌卡和禮包",
+                    "店內的所有牌卡和套組",
                     "費用減{C:attention}#1#%{}"
                 }
             },
             v_tarot_merchant = {
                 name = "塔羅牌商家",
                 text = {
-                    "商店內出現",
-                    "{C:tarot}塔羅牌{}的頻率",
-                    "{C:attention}X#1#{}倍"
+                    "在商店出現{C:tarot}塔羅牌{}",
+                    "的頻率增加",
+                    "{C:attention}#1#X{}倍"
                 }
             },
             v_planet_merchant = {
                 name = "行星牌商家",
                 text = {
-                    "商店內出現",
-                    "{C:planet}行星牌{}的頻率",
-                    "{C:attention}X#1#{}倍"
+                    "在商店出現{C:planet}行星牌{}",
+                    "的頻率增加",
+                    "{C:attention}#1#X{}倍"
                 }
             },
             v_hone = {
@@ -1513,17 +1502,17 @@ return {
             v_wasteful = {
                 name = "浪費",
                 text = {
-                    "每一回合",
-                    "永久{C:red}+#1#{}次",
-                    "棄牌"
+                    "每回合",
+                    "永久增加",
+                    "{C:red}+#1#{}次棄牌"
                 }
             },
             v_seed_money = {
                 name = "種子資金",
                 text = {
-                    "將每回合收益",
-                    "利息上限提升至",
-                    "{C:money}$#1#{}"
+                    "提高每回合",
+                    "利息收入的",
+                    "上限至{C:money}$#1#{}"
                 }
             },
             v_blank = {
@@ -1543,9 +1532,10 @@ return {
             v_hieroglyph = {
                 name = "象形文字",
                 text = {
+                    "{C:attention}-#1#{}底注",
                     "每回合",
-                    "{C:attention}-#1#{}底注，",
-                    "{C:blue}-#1#{}出牌次數"
+                    "{C:blue}-#1#{}出牌次數",
+                    "每回合"
                 }
             },
             v_directors_cut = {
@@ -1556,10 +1546,13 @@ return {
                     "每次{C:money}$#1#{}"
                 }
             },
-            v_paint_brush = {
-                name = "油漆刷",
+            v_pattern = {
+                name = "圖案",
                 text = {
-                    "{C:attention}+#1#{}手牌數量"
+                    "召喚出您最常",
+                    "使用的{C:attention}消耗牌{}",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(必須有空位)"
                 }
             },
             v_overstock_plus = {
@@ -1577,11 +1570,11 @@ return {
             v_liquidation = {
                 name = "清算",
                 text = {
-                    "店內的所有牌卡和禮包",
-                    "皆享{C:attention}#1#%{}折扣優惠  "
+                    "店內的所有牌卡和套組",
+                    "皆享{C:attention}#1#%{}折扣優惠"
                 },
                 unlock = {
-                    "在一場比賽中",
+                    "在一場賽局中",
                     "至少兌換",
                     "{C:attention}#1#{C:voucher}張禮券{}"
                 }
@@ -1589,9 +1582,9 @@ return {
             v_tarot_tycoon = {
                 name = "塔羅大亨",
                 text = {
-                    "商店內出現",
-                    "{C:tarot}塔羅牌{}的頻率",
-                    "{C:attention}X#1#{}倍"
+                    "在商店出現{C:tarot}塔羅牌{}",
+                    "的頻率增加",
+                    "{C:attention}#1#X{}倍"
                 },
                 unlock = {
                     "在商店",
@@ -1603,9 +1596,9 @@ return {
             v_planet_tycoon = {
                 name = "行星大亨",
                 text = {
-                    "商店內出現",
-                    "{C:planet}行星牌{}的頻率",
-                    "{C:attention}X#1#{}倍"
+                    "在商店出現{C:planet}行星牌{}",
+                    "的頻率增加",
+                    "{C:attention}#1#X{}倍"
                 },
                 unlock = {
                     "在商店",
@@ -1622,7 +1615,7 @@ return {
                     "出現頻率{C:attention}X#1#倍"
                 },
                 unlock = {
-                    "至少擁有{C:attention}#1#{}張",
+                    "手上的牌至少要有{C:attention}#1#張",
                     "{C:attention}小丑牌{}有",
                     "{C:dark_edition}銀箔{}、{C:dark_edition}全像攝影{}或",
                     "{C:dark_edition}彩色{}版本"
@@ -1648,7 +1641,7 @@ return {
                     "{C:attention}奧秘禮包中"
                 },
                 unlock = {
-                    "從任一{C:tarot}奧秘禮包{}中",
+                    "從任一{C:tarot}奧秘禮包中",
                     "使用總計{C:attention}#1#張",
                     "{C:tarot}塔羅牌{}",
                     "{C:inactive}(#2#)"
@@ -1673,7 +1666,7 @@ return {
                 name = "唐納喬",
                 text = {
                     "每回合",
-                    "永久增加",
+                    "永久獲得",
                     "{C:blue}+#1#{}次出牌"
                 },
                 unlock = {
@@ -1685,9 +1678,9 @@ return {
             v_recyclomancy = {
                 name = "回收魔法",
                 text = {
-                    "每一回合",
-                    "永久{C:red}+#1#{}次",
-                    "棄牌"
+                    "每回合",
+                    "永久獲得",
+                    "{C:red}+#1#{}次棄牌"
                 },
                 unlock = {
                     "棄牌總數達到",
@@ -1698,9 +1691,9 @@ return {
             v_money_tree = {
                 name = "金錢樹",
                 text = {
-                    "將每回合收益",
-                    "利息上限提升至",
-                    "{C:money}$#1#{}"
+                    "提高每回合",
+                    "利息收入的",
+                    "上限至{C:money}$#1#{}"
                 },
                 unlock = {
                     "連續{C:attention}#1#{}回合",
@@ -1736,36 +1729,59 @@ return {
             },
             v_petroglyph = {
                 name = "岩石雕刻",
-                text = {
-                    "每回合",
-                    "{C:attention}-#1#{}底注，",
-                    "{C:red}-#1#{}棄牌"
-                },
                 unlock = {
                     "達到底注",
                     "級別{E:1,C:attention}#1#"
+                },
+                text = {
+                    "{C:attention}-#1#{}底注",
+                    "每回合",
+                    "{C:red}-#1#{}棄牌次數"
                 }
             },
             v_retcon = {
                 name = "修訂佳作",
                 text = {
-                    "重摋Boss盲注",
+                    "重開Boss盲注",
                     "{C:attention}無限次{}",
                     "每次花費{C:money}$#1#{}"
                 },
                 unlock = {
                     "發現",
-                    "{C:attention}#1#{}個盲注"
+                    "{C:attention}#1#{}盲注"
+                }
+            },
+            v_tesselation = {
+                name = "棋盤佈置",
+                text = {
+                    "產生您最常",
+                    "使用的{C:attention}小丑牌{}",
+                    "{E:1,V:1}#1#",
+                    "{C:inactive}(必須有空位)"
+                },
+                unlock = {
+                    "在商店購買",
+                    "你最常使用的{C:attention}小丑牌",
+                    "並且是",
+                    "{C:dark_edition}彩色版本"
                 }
             },
             v_palette = {
                 name = "調色板",
                 text = {
-                    "{C:attention}+#1#{}手牌數量"
+                    "手上持有{C:attention}+#1#{}",
+                    "牌",
+                    "{C:attention}+#1#{}手牌大小"
                 },
                 unlock = {
-                    "縮減手牌數量",
-                    "至{C:attention}#1#{}張"
+                    "縮減手牌大小",
+                    "至{C:attention}#1#{}牌"
+                }
+            },
+            v_paint_brush = {
+                name = "油漆刷",
+                text = {
+                    "{C:attention}+#1#{}手牌大小"
                 }
             }
         },
@@ -1783,7 +1799,7 @@ return {
                 name = "魔術師",
                 text = {
                     "加強{C:attention}#1#{}張",
-                    "所選的牌卡至",
+                    "所選的牌成為",
                     "{C:attention}#2#"
                 }
             },
@@ -2057,7 +2073,7 @@ return {
                     "{C:mult}+#3#{}倍數和",
                     "{C:chips}+#4#{}籌碼"
                 }
-            },
+            }
         },
         Spectral = {
             c_familiar = {
@@ -2065,7 +2081,7 @@ return {
                 text = {
                     "摧毀隨機{C:attention}1{}張手牌，",
                     "再新增{C:attention}#1#{}張",
-                    "隨機{C:attention}加強人頭牌{}",
+                    "隨機{C:attention}加強花牌{}",
                     "到手牌中"
                 }
             },
@@ -2125,7 +2141,7 @@ return {
                     "轉換手牌中",
                     "所有牌卡成一種",
                     "隨機{C:attention}點數",
-                    "{C:red}-1{}手牌數量"
+                    "{C:red}-1{}手牌大小"
                 }
             },
             c_ectoplasm = {
@@ -2133,7 +2149,7 @@ return {
                 text = {
                     "新增{C:dark_edition}負片{}效果到",
                     "一張隨機的{C:attention}小丑牌，",
-                    "{C:red}-1{}的手牌數量"
+                    "{C:red}-1{}的手牌大小"
                 }
             },
             c_immolate = {
@@ -2142,6 +2158,22 @@ return {
                     "隨機摧毀",
                     "{C:attention}#1#{}張手牌",
                     "獲得{C:money}$#2#"
+                }
+            },
+            c_soul = {
+                name = "靈魂",
+                text = {
+                    "產生一張",
+                    "{C:legendary,E:1}傳奇{}小丑牌",
+                    "{C:inactive}(必須有空位)"
+                }
+            },
+            c_black_hole = {
+                name = "黑洞",
+                text = {
+                    "升級每個",
+                    "{C:legendary,E:1}牌型",
+                    "{C:attention}1{}個等級"
                 }
             },
             c_ankh = {
@@ -2190,22 +2222,6 @@ return {
                     "選擇{C:attention}1{}張手牌",
                     "建立{C:attention}#1#{}張",
                     "選定牌的複製牌"
-                }
-            },
-            c_soul = {
-                name = "靈魂",
-                text = {
-                    "產生一張",
-                    "{C:legendary,E:1}傳奇{}小丑牌",
-                    "{C:inactive}(必須有空位)"
-                }
-            },
-            c_black_hole = {
-                name = "黑洞",
-                text = {
-                    "升級每個",
-                    "{C:legendary,E:1}牌型",
-                    "{C:attention}1{}個等級"
                 }
             }
         },
@@ -2355,16 +2371,15 @@ return {
             stake_orange = {
                 name = "橘色賭注",
                 text = {
-                    "商店可出現{C:attention}非保久{}小丑",
-                    "{C:inactive,s:0.8}(5回合後遭減益)",
+                    "{C:attention}擴充包{}費用",
+                    "會在每底注多貴{C:money}$1{}",
                     "{s:0.8}適用於所有先前的賭注"
                 }
             },
             stake_gold = {
                 name = "金色賭注",
                 text = {
-                    "商店可出現{C:attention}租賃{}小丑",
-                    "{C:inactive,s:0.8}(每回合花費{C:money,s:0.8}$3{C:inactive,s:0.8})",
+                    "手牌大小{C:red}-1{}",
                     "{s:0.8}適用於所有先前的賭注"
                 }
             }
@@ -2373,47 +2388,43 @@ return {
             tag_uncommon = {
                 name = "罕見標籤",
                 text = {
-                    "商店有一個",
-                    "免費的{C:green}罕見小丑"
+                    "下個商店內有一張",
+                    "{C:green}罕見小丑牌"
                 }
             },
             tag_rare = {
                 name = "稀有標籤",
                 text = {
-                    "商店有一個",
-                    "免費的{C:red}稀有小丑"
+                    "下個商店內有一張",
+                    "{C:red}稀有小丑牌"
                 }
             },
             tag_negative = {
                 name = "負片標籤",
                 text = {
-                    "下個基本版商店",
-                    "小丑免費並",
-                    "變為{C:dark_edition}負片"
+                    "下個商店內有一張",
+                    "{C:dark_edition}負片小丑牌"
                 }
             },
             tag_foil = {
                 name = "銀箔標籤",
                 text = {
-                    "下個基本版商店",
-                    "小丑免費並",
-                    "變為{C:dark_edition}銀箔"
+                    "下個商店內有一張",
+                    "{C:dark_edition}銀箔小丑牌"
                 }
             },
             tag_holo = {
                 name = "全像攝影標籤",
                 text = {
-                    "下個基本版商店",
-                    "小丑免費並",
-                    "變為{C:dark_edition}全像攝影"
+                    "下個商店內有一張",
+                    "{C:dark_edition}全像攝影小丑牌"
                 }
             },
             tag_polychrome = {
                 name = "彩色標籤",
                 text = {
-                    "下個基本版商店",
-                    "小丑免費並",
-                    "變為{C:dark_edition}彩色"
+                    "下個商店內有一張",
+                    "{C:dark_edition}彩色小丑牌"
                 }
             },
             tag_investment = {
@@ -2477,7 +2488,7 @@ return {
             tag_garbage = {
                 name = "垃圾標籤",
                 text = {
-                    "本賽局每一未使用的{C:red}棄牌次數{}",
+                    "本賽局每一未使用的{C:red}弃牌次数{}",
                     "得到{C:money}$#1#{}",
                     "{C:inactive}(將得到{C:money}$#2#{C:inactive})"
                 }
@@ -2502,7 +2513,7 @@ return {
                 name = "雜耍標籤",
                 text = {
                     "下一回合",
-                    "{C:attention}+#1#{}手牌數量"
+                    "{C:attention}+#1#{}手牌大小"
                 }
             },
             tag_d_six = {
@@ -2575,7 +2586,7 @@ return {
             bl_wheel = {
                 name = "巨輪",
                 text = {
-                    " 7機率一張牌",
+                    "/7機率一張牌",
                     "以面朝下方式抽出"
                 }
             },
@@ -2623,14 +2634,14 @@ return {
             bl_plant = {
                 name = "星球",
                 text = {
-                    "所有人頭牌",
+                    "所有花牌",
                     "都不計分"
                 }
             },
             bl_needle = {
                 name = "細針",
                 text = {
-                    "此回合只能進行一次出牌"
+                    "此回合只能打出一種手牌類型"
                 }
             },
             bl_head = {
@@ -2698,7 +2709,7 @@ return {
             bl_manacle = {
                 name = "手銬",
                 text = {
-                    "手牌數量-1"
+                    "手牌大小-1"
                 }
             },
             bl_serpent = {
@@ -2711,7 +2722,7 @@ return {
             bl_pillar = {
                 name = "支柱",
                 text = {
-                    "於本次底注中",
+                    "上一次底注中",
                     "打過的牌都不計分"
                 }
             },
@@ -2725,7 +2736,7 @@ return {
             bl_mark = {
                 name = "標記",
                 text = {
-                    "所有人頭牌",
+                    "所有花牌",
                     "面朝下抽出"
                 }
             },
@@ -2809,12 +2820,12 @@ return {
                     "及{C:red}#2#{}消耗牌欄位"
                 }
             },
-            b_ghost = {
-                name = "幽靈牌組",
+            b_metal = {
+                name = "金屬牌組",
                 text = {
-                    "商店內可能會有",
-                    "{C:spectral}幻靈牌{}",
-                    "開始時擁有{C:spectral,T:c_hex}妖術{}卡"
+                    "開局時，將牌組內",
+                    "{C:attention}#1#張遊戲牌",
+                    "加強為{C:attention}鋼鐵牌卡"
                 }
             },
             b_abandoned = {
@@ -2822,7 +2833,7 @@ return {
                 text = {
                     "開局時",
                     "玩家牌組中",
-                    "沒有{C:attention}人頭牌"
+                    "沒有{C:attention}花牌"
                 }
             },
             b_checkered = {
@@ -2833,20 +2844,18 @@ return {
                     "{C:attention}26張{C:hearts}紅心{}"
                 }
             },
-            b_zodiac = {
-                name = "星座牌組",
+            b_rocky = {
+                name = "岩石牌組",
                 text = {
-                    "開局時即擁有",
-                    "{C:tarot,T:v_tarot_merchant}#1#{}、",
-                    "{C:planet,T:v_planet_merchant}#2#{}",
-                    "和{C:attention,T:v_overstock_norm}#3#"
+                    "開局時得到{C:attention}#1#張",
+                    "額外的{C:attention}石頭牌"
                 }
             },
-            b_painted = {
-                name = "彩繪牌組",
+            b_braided = {
+                name = "編織牌組",
                 text = {
-                    "{C:attention}+#1#{}手牌數量",
-                    "{C:red}#2#{}小丑牌欄位"
+                    "第一個出牌的牌型",
+                    "升級到{C:attention}第3級"
                 }
             },
             b_anaglyph = {
@@ -2879,6 +2888,30 @@ return {
                 text = {
                     ""
                 }
+            },
+            b_ghost = {
+                name = "幽靈牌組",
+                text = {
+                    "商店內可能會有",
+                    "{C:spectral}幻靈牌{}",
+                    "開始時擁有{C:spectral,T:c_hex}妖術{}卡"
+                }
+            },
+            b_zodiac = {
+                name = "星座牌組",
+                text = {
+                    "開局時即擁有",
+                    "{C:tarot,T:v_tarot_merchant}#1#{}、",
+                    "{C:planet,T:v_planet_merchant}#2#{}",
+                    "和{C:attention,T:v_overstock_norm}#3#"
+                }
+            },
+            b_painted = {
+                name = "彩繪牌組",
+                text = {
+                    "{C:attention}+#1#{}手牌大小",
+                    "{C:red}#2#{}小丑牌欄位"
+                }
             }
         },
         Other = {
@@ -2888,52 +2921,6 @@ return {
                     "打出這張牌",
                     "且此牌計分，",
                     "獲得{C:money}$3{}"
-                }
-            },
-            red_seal = {
-                name = "紅色封蠟章",
-                text = {
-                    "重新觸發",
-                    "{C:attention}1{}次這張牌"
-                }
-            },
-            blue_seal = {
-                name = "藍色封蠟章",
-                text = {
-                    "若{C:attention}持於{}手中，產生回合中",
-                    "最後打出{C:attention}牌型{}的",
-                    "{C:planet}行星{}牌",
-                    "{C:inactive}(必須有空位)"
-                }
-            },
-            purple_seal = {
-                name = "紫色封蠟章",
-                text = {
-                    "{C:attention}棄此牌時",
-                    "產生一張{C:tarot}塔羅牌{}",
-                    "{C:inactive}(必須有空位)"
-                }
-            },
-            eternal = {
-                name = "永恆",
-                text = {
-                    "不能賣出",
-                    "或催毀"
-                }
-            },
-            perishable = {
-                name = "非保久",
-                text = {
-                    "",
-                    "{C:attention}#1#{}回合後遭減益",
-                    "{C:inactive}({C:attention}#2#{C:inactive}剩餘)"
-                }
-            },
-            rental = {
-                name = "租賃",
-                text = {
-                    "回合結束時",
-                    "損失{C:money}$#1#{}"
                 }
             },
             white_sticker = {
@@ -3002,7 +2989,7 @@ return {
             },
             playing_card = {
                 text = {
-                    " {C:light_black}#1#的{V:1}#2# "
+                    "{V:1}#2#{C:light_black}#1#"
                 }
             },
             card_chips = {
@@ -3012,13 +2999,7 @@ return {
             },
             card_extra_chips = {
                 text = {
-                    "{C:chips}+#1#{}額外籌碼"
-                }
-            },
-            remove_negative = {
-                name = "負片",
-                text = {
-                    "{C:inactive,s:0.9}(從複製牌中移除{C:dark_edition,s:0.9}負片{C:inactive,s:0.9})"
+                    "{C:chips}+#1#{}個額外籌碼"
                 }
             },
             locked = {
@@ -3045,15 +3026,6 @@ return {
                 text = {
                     "本試玩版",
                     "暫不適用"
-                }
-            },
-            challenge_locked = {
-                name = "已鎖定",
-                text = {
-                    "用至少#1#個不同牌組",
-                    "贏得一場比賽以解鎖",
-                    "挑戰模式",
-                    "{C:attention,s:2}#2#/#1#"
                 }
             },
             demo_shop_locked = {
@@ -3296,6 +3268,45 @@ return {
                     "已釘選在",
                     "最左邊位置"
                 }
+            },
+            red_seal = {
+                name = "紅色封蠟章",
+                text = {
+                    "重新觸發",
+                    "{C:attention}1{}次這張牌"
+                }
+            },
+            blue_seal = {
+                name = "藍色封蠟章",
+                text = {
+                    "當這張牌在回合結束時",
+                    "還{C:attention}保留{}在手牌中",
+                    "產生一張{C:planet}行星牌{}"
+                }
+            },
+            purple_seal = {
+                name = "紫色封蠟章",
+                text = {
+                    "{C:attention}棄此牌時",
+                    "產生一張{C:tarot}塔羅牌{}",
+                    "{C:inactive}(必須有空位)"
+                }
+            },
+            eternal = {
+                name = "永恆",
+                text = {
+                    "不能賣出",
+                    "或催毀"
+                }
+            },
+            challenge_locked = {
+                name = "已鎖定",
+                text = {
+                    "用至少#1#個不同牌組",
+                    "贏得一場比賽以解鎖",
+                    "挑戰模式",
+                    "{C:attention,s:2}#2#/#1#"
+                }
             }
         }
     },
@@ -3348,96 +3359,7 @@ return {
             current_streak = "",
             poker_hand = "最常出的牌"
         },
-        achievement_names = {
-            ante_up = "底注上升！",
-            ante_upper = "底注再上升！",
-            heads_up = "注意",
-            low_stakes = "低賭注",
-            mid_stakes = "中賭注",
-            high_stakes = "高賭注",
-            card_player = "牌卡玩家",
-            card_discarder = "棄牌者",
-            nest_egg = "儲備金",
-            flushed = "同花",
-            speedrunner = "快速破關者",
-            roi = "投報率",
-            shattered = "粉碎",
-            royale = "王室",
-            retrograde = "逆行",
-            _10k = "10K",
-            _1000k = "1,000K",
-            _100000k = "100,000K",
-            tiny_hands = "小手牌",
-            big_hands = "大手牌",
-            you_get_what_you_get = "接受現況",
-            rule_bender = "規則突破者",
-            rule_breaker = "規則破壞者",
-            legendary = "傳奇",
-            astronomy = "天文學",
-            cartomancy = "卜卦",
-            clairvoyance = "未卜先知",
-            extreme_couponer = "精打細算者",
-            completionist = "完美主義者",
-            completionist_plus = "完美主義者+",
-            completionist_plus_plus = "完美主義者++", 
-        },
-        achievement_descriptions = {
-            ante_up = "達到底注4",
-            ante_upper = "達到底注8",
-            heads_up = "贏得比賽",
-            low_stakes = "至少在紅色賭注難度贏得比賽",
-            mid_stakes = "至少在藍色賭注難度贏得比賽",
-            high_stakes = "至少在金色賭注難度贏得比賽",
-            card_player = "打出至少2500張牌",
-            card_discarder = "丟棄至少2500張牌",
-            nest_egg = "在單一回合中擁有$400以上",
-            flushed = "用5張萬能牌打出一次同花",
-            speedrunner = "在12回合以內贏得比賽",
-            roi = "在底注4的遊戲中購買5禮券",
-            shattered = "在單一手牌中破壞2玻璃牌",
-            royale = "打出同花大順",
-            retrograde = "將任一手牌提升至等級10",
-            _10k = "在一次出牌中獲得10,000籌碼",
-            _1000k = "在一次出牌中獲得1,000,000籌碼",
-            _100000k = "在一次出牌中獲得100,000,000籌碼",
-            tiny_hands = "將你的牌組縮減至20張或以下",
-            big_hands = "牌組中擁有80張以上牌卡",
-            you_get_what_you_get = "在不使用商店重摋的情況下贏得比賽",
-            rule_bender = "完成任一挑戰賽",
-            rule_breaker = "完成所有挑戰賽",
-            legendary = "找到傳奇小丑",
-            astronomy = "找到所有行星牌",
-            cartomancy = "找到所有塔羅牌",
-            clairvoyance = "找到所有幻靈牌",
-            extreme_couponer = "找到所有禮券",
-            completionist = "找到100%個人收藏牌卡",
-            completionist_plus = "在金色賭注難度中，使用每副牌組贏得勝利",
-            completionist_plus_plus = "每張小丑牌都獲得金色貼紙", 
-        },
-        challenge_names = {
-            c_omelette_1 = "煎蛋捲",
-            c_city_1 = "一刻鐘城市",
-            c_rich_1 = "富者愈富",
-            c_knife_1 = "刀鋒之上",
-            c_xray_1 = "透視眼",
-            c_mad_world_1 = "瘋狂世界",
-            c_luxury_1 = "奢侈稅",
-            c_non_perishable_1 = "保久物資",
-            c_medusa_1 = "梅杜莎",
-            c_double_nothing_1 = "孤注一擲",
-            c_typecast_1 = "定型角色",
-            c_inflation_1 = "通貨膨脹",
-            c_bram_poker_1 = "布蘭撲克",
-            c_fragile_1 = "脆弱不堪",
-            c_monolith_1 = "巨石柱",
-            c_blast_off_1 = "一飛沖天",
-            c_five_card_1 = "五張換牌",
-            c_golden_needle_1 = "黃金針",
-            c_cruelty_1 = "殘忍無情",
-            c_jokerless_1 = "小丑不再"
-        },
         poker_hands = {
-            ['Flush Five'] = "同花五條",
             ['Flush House'] = "同花葫蘆",
             ['Five of a Kind'] = "五條",
             ['Royal Flush'] = "皇家同花順",
@@ -3449,12 +3371,10 @@ return {
             ['Three of a Kind'] = "三條",
             ['Two Pair'] = "兩對",
             ['Pair'] = "對子",
-            ['High Card'] = "高牌"
+            ['High Card'] = "高牌",
+            ['Flush Five'] = "同花五條"
         },
         poker_hand_descriptions = {
-            ['Flush Five'] = {
-                "5張相同點數與花色的牌"
-            },
             ['Flush House'] = {
                 "三條和對子與",
                 "所有牌分享相同花色"
@@ -3498,6 +3418,9 @@ return {
             ['High Card'] = {
                 "如果玩的手牌不屬於上述任一種，",
                 "只有最高點數的牌可以計入分數"
+            },
+            ['Flush Five'] = {
+                "5張相同點數與花色的牌"
             }
         },
         labels = {
@@ -3514,13 +3437,11 @@ return {
             polychrome = "彩色",
             negative = "負片",
             gold_seal = "金色封蠟章",
+            locked = "已鎖定",
             blue_seal = "藍色封蠟章",
             red_seal = "紅色封蠟章",
             purple_seal = "紫色封蠟章",
-            locked = "已鎖定",
             eternal = "永恆",
-            perishable = "非保久",
-            rental = "租賃",
             pinned_left = "已釘選"
         },
         dictionary = {
@@ -3539,7 +3460,7 @@ return {
             b_run_info_1 = "比賽",
             b_run_info_2 = "資訊",
             b_options = "選項",
-            b_reroll_boss = "重摋Boss盲注",
+            b_reroll_boss = "重開Boss盲注",
             b_skip_blind = "跳過盲注",
             b_skip_reward = "跳過獎勵",
             b_skip = "跳過",
@@ -3548,7 +3469,6 @@ return {
             b_collection = "收藏",
             b_seed = "種子",
             b_copy_seed = "複製種子",
-            b_copy = "複製",
             b_credits = "製作人員",
             b_stats = "統計數據",
             b_settings = "設定",
@@ -3559,9 +3479,6 @@ return {
             b_set_gamespeed = "遊戲速度",
             b_set_play_discard_pos = "出牌/棄牌按鈕位置",
             b_set_screenshake = "螢幕抖動",
-            b_high_contrast_cards = "高對比牌",
-            b_reduced_motion = "減少動作",
-            b_set_rumble = "控制器震動",
             b_set_crash_reports = "當機報告",
             b_set_monitor = "顯示螢幕",
             b_set_windowmode = "視窗模式",
@@ -3598,7 +3515,6 @@ return {
             b_booster_packs = "擴充包",
             b_tags = "標籤",
             b_decks = "牌組",
-            b_seals = "封蠟章",
             b_continue = "繼續",
             b_back = "返回",
             b_music = "音樂",
@@ -3606,7 +3522,6 @@ return {
             b_imagery = "影像",
             b_new_run = "新一回合",
             b_challenges = "挑戰",
-            b_new_challenge = "開始新挑戰",
             b_current_profile = "目前資料",
             b_load_profile = "載入個人檔案",
             b_create_profile = "建立個人檔案",
@@ -3620,15 +3535,13 @@ return {
             b_collection_cap = "收藏",
             b_quit_cap = "退出",
             b_cash_out = "兌現",
-            b_unlock_all = "解鎖全部",
             k_unknown = "?????",
             k_compatible = "相容",
             k_incompatible = "不相容",
-            k_active = "使用中",
             k_round = "回合",
             k_ante = "底注",
             k_seed = "種子",
-            k_reroll = "重摋",
+            k_reroll = "重開牌",
             k_mult = "倍數",
             k_rank = "點數",
             k_suit = "花色",
@@ -3644,7 +3557,6 @@ return {
             k_voucher = "禮券",
             k_tarot = "塔羅牌",
             k_planet = "行星牌",
-            k_deck = "牌組",
             k_dwarf_planet = "矮行星",
             k_planet_q = "行星?",
             k_spectral = "幻靈",
@@ -3665,10 +3577,10 @@ return {
             k_base_cards = "基本牌卡",
             k_effective = "有效",
             k_aces = "A",
-            k_face_cards = "人頭牌",
+            k_face_cards = "花牌",
             k_numbered_cards = "數字牌",
             k_cap_consumables = "消耗牌",
-            k_page = "頁面",
+            k_page = "頁",
             k_ante_cap = "底注",
             k_base_cap = "基本",
             k_jokers_cap = "小丑",
@@ -3676,18 +3588,12 @@ return {
             k_x_base = "X基本",
             k_not_discovered = "未發現",
             k_unlocked_ex = "已解鎖！",
-            k_achievement = "成就",
-            k_trophy = "獎盃",
             k_challenge_mode = "挑戰模式",
             k_daily_run = "每日比賽",
             k_profile = "個人檔案",
             k_wins = "獲勝數",
             k_empty_caps = "空",
             k_collection = "收藏",
-            k_progress = "進度",
-            k_challenges = "挑戰",
-            k_joker_stickers = "小丑貼紙",
-            k_deck_stake_wins = "牌組賭注完成度",
             k_stake_level = "賭注等級",
             k_none = "無",
             k_game_modifiers = "遊戲修改者",
@@ -3699,46 +3605,28 @@ return {
             k_best_hand = "最好的一手",
             k_seeded_run = "種子比賽",
             k_enter_seed = "進入種子",
-            k_enter_name = "輸入名稱",
             k_lvl = "等級",
             k_skipped_cap = "已跳過",
             k_no_reward = "無獎勵",
             k_reward = "獎勵",
             k_nope_ex = "不！",
-            k_not_allowed_ex = "禁止!",
             k_or = "或",
-            k_poker_hand = "牌型",
-            k_gold = "金色",
-            k_card_stats = "牌卡統計數據",
             k_balanced = "已平衡",
-            k_view = "檢視",
-            k_all_hands = "所有手牌",
-            k_high_score_ex = "高分！",
-            k_demo_version_ex = "試玩版",
-            k_playing_as = "角色名稱",
-            k_choose = "選擇",
-            k_achievements_disabled = "禁用成就",
-            k_trophies_disabled = "獎盃停用",
             ph_improve_run = "順順手氣！",
-            ph_no_boss_active = "無使用中的好牌",
             ph_sneak_peek = "先睹為快",
             ph_deck_preview_stones = "石頭",
             ph_deck_preview_effective = "因小丑、盲注和卡牌增強而產生的有效總數量",
             ph_blind_score_at_least = "至少得分",
-            ph_blind_reward = "獎勵： ",
-            ph_4_7_of_clubs = "四張梅花7",
+            ph_blind_reward = "獎勵：",
             ph_up_ante_1 = "提高底注",
             ph_up_ante_2 = "提高所有盲注",
             ph_up_ante_3 = "重洗盲注",
-            ph_select_challenge = "選擇一個挑戰",
             ph_stat_joker = "這張牌卡總共完成的回合數",
             ph_stat_consumable = "這張牌卡使用過的次數",
             ph_stat_voucher = "這張禮券兌換過的次數",
             ph_demo_thanks_1 = "感謝您體驗",
             ph_demo_thanks_2 = "BALATRO試玩版",
             ph_game_over = "遊戲結束",
-            ph_you_win = "你獲勝了！",
-            ph_you_win_demo = "你在試玩版中獲勝了！",
             ph_vouchers_redeemed = "本賽局兌換的禮券",
             ph_no_vouchers = "本賽局沒有兌換禮券",
             ph_defeat_this_blind_1 = "戰勝盲注",
@@ -3747,23 +3635,11 @@ return {
             ph_choose_blind_1 = "選擇您的",
             ph_choose_blind_2 = "下一個盲注",
             ph_mr_bones = "已被骷髏頭救出",
-            ph_score_at_least = "分數達到",
+            ph_score_at_least = "分數最少",
             ph_all_poker_hand = "所有手牌",
             ph_1_level = "+1級",
             ph_boss_disabled = "Boss盲注限制條件失效",
             ph_most_played = "{最常出的牌型}",
-            ph_defeat_the_boss = "戰勝Boss盲注",
-            ph_score_furthest_ante = "底注",
-            ph_score_furthest_round = "回合",
-            ph_score_hand = "最好的一手",
-            ph_score_poker_hand = "玩得最多的一局",
-            ph_score_new_collection = "新發現",
-            ph_score_cards_played = "打出的牌",
-            ph_score_cards_discarded = "丟棄的牌",
-            ph_score_times_rerolled = "重摋次數",
-            ph_score_cards_purchased = "已選購的牌",
-            ph_unscored_hand = "出牌將不會得分",
-            ph_alert_debuff_confirm = "再按一次「出牌」確認",
             ml_demo_thanks_message = {
                 "不妨到",
                 "Steam將Balatro加入願望清單",
@@ -3821,18 +3697,6 @@ return {
                 "全部解鎖及",
                 "發現均被禁用"
             },
-            ml_edition_seal_enhancement_explanation = {
-                "每張遊戲牌可能會有",
-                "加強、版本與封蠟章版本"
-            },
-            ml_unlock_all_explanation = {
-                "警告！解鎖完整收藏",
-                "將禁用此個人檔案的成就！"
-            },
-            ml_unlock_all_trophies = {
-                "警告！解鎖完整收藏",
-                "將停用此個人檔案的獎盃！"
-            },
             ['$'] = "$",
             k_redeemed_ex = "已兌換！",
             k_duplicated_ex = "複製！",
@@ -3843,7 +3707,6 @@ return {
             k_plus_stone = "+1石頭牌",
             k_plus_planet = "+1行星牌",
             k_plus_spectral = "+1幻靈牌",
-            k_plus_joker = "+1小丑",
             k_active_ex = "使用中！",
             k_level_up_ex = "升級！",
             k_upgrade_ex = "升級！",
@@ -3851,25 +3714,76 @@ return {
             k_val_up = "提高價值！",
             k_reset = "重設",
             k_extinct_ex = "消滅了！",
-            k_disabled_ex = "已失效！",
             k_safe_ex = "安全！",
             k_saved_ex = "已儲存！",
             k_swapped_ex = "已切換！",
             k_copied_ex = "已複製！",
             k_melted_ex = "已融化！",
+            b_copy = "複製",
+            b_high_contrast_cards = "高對比牌",
+            b_set_rumble = "控制器振動",
+            b_seals = "封蠟章",
+            b_new_challenge = "開始新挑戰",
+            b_unlock_all = "解鎖全部",
+            k_active = "使用中",
+            k_deck = "牌組",
+            k_progress = "進度",
+            k_challenges = "挑戰",
+            k_joker_stickers = "小丑貼紙",
+            k_deck_stake_wins = "牌組賭注完成度",
+            k_enter_name = "輸入名稱",
+            k_gold = "金色",
+            k_card_stats = "牌卡統計數據",
+            k_view = "檢視",
+            k_all_hands = "所有手牌",
+            k_high_score_ex = "高分！",
+            k_demo_version_ex = "試玩版",
+            k_playing_as = "角色名稱",
+            k_choose = "選擇",
+            k_achievements_disabled = "禁用成就",
+            ph_no_boss_active = "無使用中的好牌",
+            ph_you_win = "你獲勝了！",
+            ph_you_win_demo = "你在試玩版中獲勝了！",
+            ph_defeat_the_boss = "戰勝Boss盲注",
+            ph_score_furthest_ante = "底注",
+            ph_score_furthest_round = "回合",
+            ph_score_hand = "最好的一手",
+            ph_score_poker_hand = "玩得最多的一局",
+            ph_score_new_collection = "新發現",
+            ph_score_cards_played = "打出的牌",
+            ph_score_cards_discarded = "丟棄的牌",
+            ph_score_times_rerolled = "已重開時間",
+            ph_score_cards_purchased = "已選購的牌",
+            ml_edition_seal_enhancement_explanation = {
+                "每張遊戲牌可能會有",
+                "加強、版本與封蠟章版本"
+            },
+            ml_unlock_all_explanation = {
+                "警告！解鎖完整收藏",
+                "將禁用此個人檔案的成就！"
+            },
+            k_plus_joker = "+1小丑",
             k_eaten_ex = "吞噬！",
+            k_eroded_ex = "侵蝕！",
+            k_achievement = "成就",
+            ph_unscored_hand = "出牌將不會得分",
+            ph_alert_debuff_confirm = "再按一次「出牌」確認",
             k_drank_ex = "大喝一口！",
-            k_eroded_ex = "侵蝕！"
+            k_trophy = "獎盃",
+            k_trophies_disabled = "獎盃停用",
+            ml_unlock_all_trophies = {
+                "警告！解鎖完整收藏",
+                "將停用此個人檔案的獎盃！"
+            },
+            k_poker_hand = "牌型",
+            ph_4_7_of_clubs = "四張梅花7"
         },
         v_dictionary = {
             a_xmult = "X#1#倍數",
-            a_xmult_minus = "-X#1#倍數",
             a_mult = "+#1#倍數",
-            a_mult_minus = "-#1#倍數",
             a_chips = "+#1#",
             a_chips_minus = "-#1#",
-            a_handsize = "+#1#的手牌數量",
-            a_handsize_minus = "-#1#手牌數量",
+            a_handsize = "+#1#的手牌大小",
             a_hands = "+#1# 出牌次數",
             a_sold_tally = "#1#/#2#賣出",
             a_remaining = "剩下#1#",
@@ -3879,11 +3793,9 @@ return {
             deck_preview_wheel_singular = "因#1#牌面朝下，數字可能較小",
             deck_preview_wheel_plural = "因#1#牌面朝下，數字可能較小",
             challenges_completed = "已完成#1#/#2#個挑戰",
-            unlocked = "已解鎖#1#/#2#",
-            completed = "已完成#1#/#2#",
             interest = "每$#2#獲得#1#利息(上限為#3#)",
-            remaining_hand_money = "剩餘出牌次數(每次$#1#)",
-            remaining_discard_money = "剩餘棄牌次數(每次$#1#)",
+            remaining_hand_money = "剩下出牌次數(每次$#1#)",
+            remaining_discard_money = "剩下棄牌次數(每次$#1#)",
             ml_foil_desc = {
                 "銀箔",
                 "+#1#籌碼"
@@ -3900,10 +3812,15 @@ return {
                 "負片",
                 "+#1#小丑牌欄位"
             },
+            a_mult_minus = "-#1#倍數",
+            a_handsize_minus = "-#1#手牌大小",
             ml_negative_consumable_desc = {
                 "負片",
                 "+#1#消耗牌欄位"
-            }
+            },
+            a_xmult_minus = "-X#1#倍數",
+            unlocked = "已解鎖#1#/#2#",
+            completed = "已完成#1#/#2#"
         },
         v_text = {
             ch_m_dollars = {
@@ -3925,7 +3842,7 @@ return {
                 "{C:attention}#1#{}消耗牌欄位"
             },
             ch_m_hand_size = {
-                "{C:attention}#1#{}手牌數量"
+                "{C:attention}#1#{}手牌大小"
             },
             ch_m_none = {
                 "{C:inactive}無"
@@ -3954,9 +3871,6 @@ return {
             ch_c_none = {
                 "{C:inactive}無"
             },
-            ch_c_no_shop_jokers = {
-                "{C:attention}商店{}中不再出現小丑牌"
-            },
             ch_c_inflation = {
                 "每次選購永久提高價格{C:money}$1{}"
             },
@@ -3969,11 +3883,14 @@ return {
             ch_c_flipped_cards = {
                 "每{C:green}#1#{}張牌中有1張會是面朝下抽出"
             },
-            ch_c_debuff_played_cards = {
-                "所有{C:attention}打出過的{}牌在計分後會遭到{C:attention}減益{}"
-            },
             ch_c_minus_hand_size_per_X_dollar = {
                 "每擁有{C:money}$#1#{}，就{C:red}-1{}張能持有的手牌"
+            },
+            ch_c_no_shop_jokers = {
+                "{C:attention}商店{}中不再出現小丑牌"
+            },
+            ch_c_debuff_played_cards = {
+                "所有{C:attention}打出過的{}牌在計分後會遭到{C:attention}減益{}"
             },
             ch_c_set_eternal_ante = {
                 "當{C:attention}#1#{}Boss盲注被擊敗後，所有的小丑牌都會成為{C:attention}永恆狀態"
@@ -3981,26 +3898,6 @@ return {
             ch_c_set_joker_slots_ante = {
                 "當{C:attention}#1#{}Boss盲注被擊敗後，將小丑牌欄位數變為{C:attention}0"
             }
-        },
-        quips = {
-            wq_1 = {"你的表現超出色！"},
-            wq_2 = {"你超讚","很棒呢！"},
-            wq_3 = {"看來","你不是在吹牛！"},
-            wq_4 = {"這些籌碼","要是都是真錢","該有多好啊……"},
-            wq_5 = {"看來我已經","把你教得很好嘛！"},
-            wq_6 = {"你的決策", "非常明智！"},
-            wq_7 = {"幸好","我不打賭", "不是你！"},
-            lq_1 = {"感覺", "我們更適合玩", "Go Fish……"},
-            lq_2 = {"我們放棄得", "有點輕易欸！"},
-            lq_3 = {"是時候該", "重新洗牌", "然後重新開局了！"},
-            lq_4 = {"人家不是常說那句話嗎？", "就是", "贏的永遠是莊家！"},
-            lq_5 = {"看來我們", "找到誰才是", "真正的「小丑」了！"},
-            lq_6 = {"天啊，難道", "你也是在吹牛？"},
-            lq_7 = {"沒想到","我們讓人看笑話了！"},
-            lq_8 = {"這種情況，","只要有手的人都想", "把眼睛遮起來吧！"},
-            lq_9 = {"我確實是個", "傻瓜，但你的", "藉口是什麼？"},
-            lq_10 = {"真是糗到不行！"},
-            dq_1 = {"唉！我希望","你有什麼妙計","能應付這","最後的挑戰！"}
         },
         tutorial = {
             sb_1 = {
@@ -4011,7 +3908,7 @@ return {
             sb_2 = {
                 "您的目標是要賺取",
                 "{C:blue}籌碼{}來擊敗",
-                "對手{C:attention}盲注"
+                "對手的{C:attention}盲注"
             },
             sb_3 = {
                 "這裡是{C:blue}小盲注{}，",
@@ -4165,6 +4062,176 @@ return {
                 "我們現在進入",
                 "{C:attention}下一回合{}。"
             }
+        },
+        achievement_names = {
+            ante_up = "底注上升！",
+            ante_upper = "底注再上升！",
+            heads_up = "注意",
+            low_stakes = "低賭注",
+            mid_stakes = "中賭注",
+            high_stakes = "高賭注",
+            card_player = "牌卡玩家",
+            card_discarder = "棄牌者",
+            nest_egg = "儲備金",
+            flushed = "同花",
+            speedrunner = "快速破關者",
+            roi = "投報率",
+            shattered = "粉碎",
+            royale = "王室",
+            retrograde = "逆行",
+            _10k = "10K",
+            _1000k = "1,000K",
+            _100000k = "100,000K",
+            tiny_hands = "小手牌",
+            big_hands = "大手牌",
+            you_get_what_you_get = "接受現況",
+            rule_bender = "規則突破者",
+            rule_breaker = "規則破壞者",
+            legendary = "傳奇",
+            astronomy = "天文學",
+            cartomancy = "卜卦",
+            clairvoyance = "未卜先知",
+            extreme_couponer = "精打細算者",
+            completionist = "完美主義者",
+            completionist_plus = "完美主義者+",
+            completionist_plus_plus = "完美主義者++"
+        },
+        achievement_descriptions = {
+            ante_up = "達到底注4",
+            ante_upper = "達到底注8",
+            heads_up = "贏得比賽",
+            low_stakes = "至少在紅色賭注難度贏得比賽",
+            mid_stakes = "至少在藍色賭注難度贏得比賽",
+            high_stakes = "至少在金色賭注難度贏得比賽",
+            card_player = "打出至少2500張牌",
+            card_discarder = "丟棄至少2500張牌",
+            nest_egg = "在單一回合中擁有$400以上",
+            flushed = "用5張萬能牌打出一次同花",
+            speedrunner = "在12回合以內贏得比賽",
+            roi = "在底注4的遊戲中購買5禮券",
+            shattered = "在單一手牌中破壞2玻璃牌",
+            royale = "打出同花大順",
+            retrograde = "將任一手牌提升至等級10",
+            _10k = "在單一手牌中獲得10,000籌碼",
+            _1000k = "在單一手牌中獲得1,000,000籌碼",
+            _100000k = "在單一手牌中獲得100,000,000籌碼",
+            tiny_hands = "將你的牌組縮減至20張或以下",
+            big_hands = "牌組中擁有80張以上牌卡",
+            you_get_what_you_get = "在不使用商店重開牌的情況下贏得比賽",
+            rule_bender = "完成任一挑戰賽",
+            rule_breaker = "完成所有挑戰賽",
+            legendary = "找到傳奇小丑",
+            astronomy = "找到所有行星牌",
+            cartomancy = "找到所有塔羅牌",
+            clairvoyance = "找到所有幻靈牌",
+            extreme_couponer = "找到所有禮券",
+            completionist = "找到100%個人收藏牌卡",
+            completionist_plus = "在金色賭注難度中，使用每副牌組贏得勝利",
+            completionist_plus_plus = "每張小丑牌都獲得金色貼紙"
+        },
+        quips = {
+            wq_1 = {
+                "你的表現超出色！"
+            },
+            wq_2 = {
+                "你超讚",
+                "很棒呢！"
+            },
+            wq_3 = {
+                "看來",
+                "你不是在吹牛！"
+            },
+            wq_4 = {
+                "這些籌碼",
+                "要是都是真錢",
+                "該有多好啊……"
+            },
+            wq_5 = {
+                "看來我已",
+                "我把你教得很好嘛！"
+            },
+            wq_6 = {
+                "你的決策",
+                "非常明智！"
+            },
+            wq_7 = {
+                "幸好",
+                "我不打賭",
+                "不是你！"
+            },
+            lq_1 = {
+                "感覺",
+                "我們更適合玩",
+                "Go Fish……"
+            },
+            lq_2 = {
+                "我們放棄得",
+                "有點輕易欸！"
+            },
+            lq_3 = {
+                "是時候該",
+                "重新洗牌",
+                "然後重新開局了！"
+            },
+            lq_4 = {
+                "人家不是常說那句話嗎？",
+                "就是",
+                "贏的永遠是莊家！"
+            },
+            lq_5 = {
+                "看來",
+                "我們找到",
+                "誰才是真正的「小丑」了！"
+            },
+            lq_6 = {
+                "天啊，難到",
+                "你也是在吹牛？"
+            },
+            lq_7 = {
+                "沒想到",
+                "我們讓人看笑話了！"
+            },
+            lq_8 = {
+                "這種情況，",
+                "只要有手的人都想",
+                "把眼睛遮起來吧！"
+            },
+            lq_9 = {
+                "我是",
+                "真的傻，但你",
+                "的藉口是什麼？"
+            },
+            lq_10 = {
+                "真是糗到不行！"
+            },
+            dq_1 = {
+                "唉！我希望",
+                "你有什麼妙計",
+                "能應付這",
+                "最後的挑戰！"
+            }
+        },
+        challenge_names = {
+            c_omelette_1 = "煎蛋捲",
+            c_city_1 = "一刻鐘城市",
+            c_rich_1 = "富者愈富",
+            c_knife_1 = "刀鋒之上",
+            c_xray_1 = "透視眼",
+            c_mad_world_1 = "瘋狂世界",
+            c_luxury_1 = "奢侈稅",
+            c_non_perishable_1 = "保久物資",
+            c_medusa_1 = "梅杜莎",
+            c_double_nothing_1 = "孤注一擲",
+            c_typecast_1 = "定型角色",
+            c_inflation_1 = "通貨膨脹",
+            c_bram_poker_1 = "布蘭撲克",
+            c_fragile_1 = "脆弱不堪",
+            c_monolith_1 = "巨石柱",
+            c_blast_off_1 = "一飛沖天",
+            c_five_card_1 = "五張換牌",
+            c_golden_needle_1 = "黃金針",
+            c_cruelty_1 = "殘忍無情",
+            c_jokerless_1 = "小丑不再"
         }
     }
 }

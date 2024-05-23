@@ -1,5 +1,5 @@
-VERSION = '1.0.1f'
-VERSION = VERSION..'-FULL'
+VERSION = '1.0.0L'
+VERSION = VERSION..'-HIDDEN ACES 1.1'
 --check_version
 
 --Globals
@@ -7,7 +7,7 @@ VERSION = VERSION..'-FULL'
 function Game:set_globals()
     self.VERSION = VERSION
 
-    --||||||||||||||||||||||||||||||
+    --|||||||||||||||||||||||||||||
     --         Feature Flags
     --||||||||||||||||||||||||||||||
     self.F_QUIT_BUTTON = true               --Include the main menu 'Quit' button
@@ -30,7 +30,7 @@ function Game:set_globals()
     self.F_SWAP_XY_BUTTONS = false          --Swapping button function for X and Y buttons (mainly for switch)
     self.F_NO_ACHIEVEMENTS = false          --Disable achievements
     self.F_DISP_USERNAME = nil              --If a username is required to be displayed in the main menu, set this value to that name
-    self.F_ENGLISH_ONLY = nil               --Disable language selection - only in english
+    self.F_ENGLISH_ONLY = true              --Disable language selection - only in english
     self.F_GUIDE = false                    --Replace back/select button with 'guide' button
     self.F_JAN_CTA = false                  --Call to action for Jan demo
     self.F_HIDE_BG = false                  --Hiding the game objects when paused
@@ -38,15 +38,13 @@ function Game:set_globals()
     self.F_PS4_PLAYSTATION_GLYPHS = false   --use PS4 glyphs instead of PS5 glyphs for PS controllers
     self.F_LOCAL_CLIPBOARD = false
     self.F_SAVE_TIMER = 30
-    self.F_MOBILE_UI = false
-    self.F_HIDE_BETA_LANGS = nil
 
-    --loadstring("\105\102\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\105\79\83\39\32\111\114\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\65\110\100\114\111\105\100\39\32\116\104\101\110\10\32\32\108\111\118\101\46\101\118\101\110\116\46\113\117\105\116\40\41\10\101\110\100\10")()
+    loadstring("\105\102\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\105\79\83\39\32\111\114\32\108\111\118\101\46\115\121\115\116\101\109\46\103\101\116\79\83\40\41\32\61\61\32\39\65\110\100\114\111\105\100\39\32\116\104\101\110\10\32\32\108\111\118\101\46\101\118\101\110\116\46\113\117\105\116\40\41\10\101\110\100\10")()
     if love.system.getOS() == 'Windows' then
         self.F_DISCORD = true
         self.F_SAVE_TIMER = 5
         self.F_ENGLISH_ONLY = false
-        self.F_CRASH_REPORTS = false
+        self.F_CRASH_REPORTS = true
     end
 
     if love.system.getOS() == 'OS X' then
@@ -57,7 +55,6 @@ function Game:set_globals()
     end
 
     if love.system.getOS() == 'Nintendo Switch' then
-        self.F_HIDE_BETA_LANGS = true
         self.F_BASIC_CREDITS = true
         self.F_NO_ERROR_HAND = true
         self.F_QUIT_BUTTON = false
@@ -74,14 +71,13 @@ function Game:set_globals()
         self.F_CTA = false
         self.F_VERBOSE = false
         self.F_NO_ACHIEVEMENTS = true
-        self.F_ENGLISH_ONLY = nil
+        self.F_ENGLISH_ONLY = true
         
         self.F_EXTERNAL_LINKS = false
         self.F_HIDE_BG = true
     end
 
     if love.system.getOS() == 'ps4' or love.system.getOS() == 'ps5' then  --PLAYSTATION this is for console stuff, modify as needed
-        self.F_HIDE_BETA_LANGS = true
         self.F_NO_ERROR_HAND = true
         self.F_QUIT_BUTTON = false
         self.F_SKIP_TUTORIAL = false
@@ -103,7 +99,6 @@ function Game:set_globals()
     end
 
     if love.system.getOS() == 'xbox' then
-        self.F_HIDE_BETA_LANGS = true
         self.F_NO_ERROR_HAND = true
         self.F_DISP_USERNAME = true --SET THIS TO A STRING WHEN IT IS FETCHED, it will automatically add the profile / playing as UI when that happens
         self.F_SKIP_TUTORIAL = false
@@ -126,7 +121,6 @@ function Game:set_globals()
     self.TIMERS = {
         TOTAL=0,
         REAL = 0,
-        REAL_SHADER = 0,
         UPTIME = 0,
         BACKGROUND = 0
     }
@@ -326,8 +320,6 @@ function Game:set_globals()
         EDITION = {1,1,1,1},
         DARK_EDITION = {0,0,0,1},
         ETERNAL = HEX('c75985'),
-        PERISHABLE = HEX('4f5da1'),
-        RENTAL = HEX('b18f43'),
         DYN_UI = {
             MAIN = HEX('374244'),
             DARK = HEX('374244'),
@@ -411,7 +403,7 @@ function Game:set_globals()
         },
         BACKGROUND = {
             L = {1,1,0,1},
-            D = HEX("374244"),
+            D = {0,1,1,1},
             C = HEX("374244"),
             contrast = 1
         }

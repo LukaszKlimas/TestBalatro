@@ -318,19 +318,19 @@ end
 --Also calls the remove method of all children to have them do the same
 function Node:remove() 
 
-    for k, v in pairs(G.I.POPUP) do
+    for k, v in ipairs(G.I.POPUP) do
         if v == self then
             table.remove(G.I.POPUP, k)
             break;
         end
     end
-    for k, v in pairs(G.I.NODE) do
+    for k, v in ipairs(G.I.NODE) do
         if v == self then
             table.remove(G.I.NODE, k)
             break;
         end
     end
-    for k, v in pairs(G.STAGE_OBJECTS[G.STAGE]) do
+    for k, v in ipairs(G.STAGE_OBJECTS[G.STAGE]) do
         if v == self then
             table.remove(G.STAGE_OBJECTS[G.STAGE], k)
             break;

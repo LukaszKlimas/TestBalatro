@@ -212,27 +212,27 @@ function DynaText:align_letters()
         end
         letter.r = 0
         letter.scale = 1
-        if self.config.rotate then letter.r = (self.config.rotate == 2 and -1 or 1)*(0.2*(-#self.strings[self.focused_string].letters/2 - 0.5 + k)/(#self.strings[self.focused_string].letters)+ (G.SETTINGS.reduced_motion and 0 or 1)*0.02*math.sin(2*G.TIMERS.REAL+k)) end
+        if self.config.rotate then letter.r = (self.config.rotate == 2 and -1 or 1)*(0.2*(-#self.strings[self.focused_string].letters/2 - 0.5 + k)/(#self.strings[self.focused_string].letters)+ 0.02*math.sin(2*G.TIMERS.REAL+k)) end
         if self.config.pulse then
-            letter.scale = letter.scale + (G.SETTINGS.reduced_motion and 0 or 1)*(1/self.config.pulse.width)*self.config.pulse.amount*(math.max(
+            letter.scale = letter.scale + (1/self.config.pulse.width)*self.config.pulse.amount*(math.max(
                     math.min((self.config.pulse.start - G.TIMERS.REAL)*self.config.pulse.speed + k + self.config.pulse.width,
                             (G.TIMERS.REAL - self.config.pulse.start)*self.config.pulse.speed  - k + self.config.pulse.width+ 2),
                     0))
-            letter.r = letter.r + (G.SETTINGS.reduced_motion and 0 or 1)*(letter.scale - 1)*(0.02*(-#self.strings[self.focused_string].letters/2 - 0.5 + k))
+            letter.r = letter.r + (letter.scale - 1)*(0.02*(-#self.strings[self.focused_string].letters/2 - 0.5 + k))
             if self.config.pulse.start > G.TIMERS.REAL + 2*self.config.pulse.speed*#self.strings[self.focused_string].letters then 
                 self.config.pulse = nil
             end
         end
         if self.config.quiver then
-            letter.scale = letter.scale + (G.SETTINGS.reduced_motion and 0 or 1)*(0.1*self.config.quiver.amount)
-            letter.r = letter.r + (G.SETTINGS.reduced_motion and 0 or 1)*0.3*self.config.quiver.amount*(
+            letter.scale = letter.scale + (0.1*self.config.quiver.amount)
+            letter.r = letter.r + 0.3*self.config.quiver.amount*(
                 math.sin(41.12342*G.TIMERS.REAL*self.config.quiver.speed + k*1223.2) + 
                 math.cos(63.21231*G.TIMERS.REAL*self.config.quiver.speed + k*1112.2)*math.sin(36.1231*G.TIMERS.REAL*self.config.quiver.speed) + 
                 math.cos(95.123*G.TIMERS.REAL*self.config.quiver.speed + k*1233.2) - 
                 math.sin(30.133421*G.TIMERS.REAL*self.config.quiver.speed + k*123.2))
             end
-        if self.config.float then letter.offset.y = (G.SETTINGS.reduced_motion and 0 or 1)*math.sqrt(self.scale)*(2+(self.font.FONTSCALE/G.TILESIZE)*2000*math.sin(2.666*G.TIMERS.REAL+200*k)) + 60*(letter.scale-1) end
-        if self.config.bump then letter.offset.y = (G.SETTINGS.reduced_motion and 0 or 1)*self.bump_amount*math.sqrt(self.scale)*7*math.max(0, (5+self.bump_rate)*math.sin(self.bump_rate*G.TIMERS.REAL+200*k) - 3 - self.bump_rate) end
+        if self.config.float then letter.offset.y = math.sqrt(self.scale)*(2+(self.font.FONTSCALE/G.TILESIZE)*2000*math.sin(2.666*G.TIMERS.REAL+200*k)) + 60*(letter.scale-1) end
+        if self.config.bump then letter.offset.y = self.bump_amount*math.sqrt(self.scale)*7*math.max(0, (5+self.bump_rate)*math.sin(self.bump_rate*G.TIMERS.REAL+200*k) - 3 - self.bump_rate) end
     end
 end
 

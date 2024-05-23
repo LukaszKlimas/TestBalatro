@@ -396,6 +396,7 @@ G.FUNCS.beta_lang_alert = function(e)
           offset = {x = 0.07, y = -0.07},
           major = e, parent = e}
       }
+      G.DEBUG_VALUE = e.children.alert
       e.children.alert.states.collide.can = false
     end
   end
@@ -1168,8 +1169,7 @@ G.FUNCS.apply_window_changes = function(_initial)
     fullscreentype = (G.SETTINGS.WINDOW.screenmode == 'Borderless' and 'desktop') or (G.SETTINGS.WINDOW.screenmode == 'Fullscreen' and 'exclusive') or nil,
     vsync = G.SETTINGS.WINDOW.vsync,
     resizable = true,
-    display = G.SETTINGS.WINDOW.selected_display,
-    highdpi = (love.system.getOS() == 'OS X')
+    display = G.SETTINGS.WINDOW.selected_display
     })
   G.SETTINGS.QUEUED_CHANGE = {}
   if _initial ~= true then
@@ -1215,7 +1215,7 @@ G.FUNCS.RUN_SETUP_check_back = function(e)
 end
 
 G.FUNCS.RUN_SETUP_check_back_name = function(e)
-  if e.config.object and G.GAME.viewed_back.name ~= e.config.id then 
+  if G.GAME.viewed_back.name ~= e.config.id then 
     --removes the UI from the previously selected back and adds the new one
 
     e.config.object:remove() 
@@ -2085,8 +2085,8 @@ end
   end
 
   G.FUNCS.can_skip_booster = function(e)
-    if G.pack_cards and (G.pack_cards.cards[1]) and 
-    (G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.STANDARD_PACK or G.STATE == G.STATES.BUFFOON_PACK or (G.hand and (G.hand.cards[1] or (G.hand.config.card_limit <= 0)))) then 
+    if G.pack_cards and G.pack_cards.cards[1] and 
+    (G.STATE == G.STATES.PLANET_PACK or G.STATE == G.STATES.STANDARD_PACK or G.STATE == G.STATES.BUFFOON_PACK or (G.hand and G.hand.cards[1])) then 
         e.config.colour = G.C.GREY
         e.config.button = 'skip_booster'
     else
@@ -2458,6 +2458,11 @@ end
           G.SHOP_SIGN = nil
           G.STATE_COMPLETE = false
           G.STATE = G.STATES.BLIND_SELECT
+          if G.GAME.round_resets.blind_states.Boss == 'Defeated' then 
+            G.GAME.round_resets.blind_ante = G.GAME.round_resets.ante
+            G.GAME.round_resets.blind_tags.Small = get_next_tag_key()
+            G.GAME.round_resets.blind_tags.Big = get_next_tag_key()
+          end
           G.CONTROLLER.locks.toggle_shop = nil
           return true
         end
@@ -2901,12 +2906,6 @@ G.FUNCS.cash_out = function(e)
         G.VIBRATION = G.VIBRATION + 1
       end
       ease_chips(0)
-      if G.GAME.round_resets.blind_states.Boss == 'Defeated' then 
-        G.GAME.round_resets.blind_ante = G.GAME.round_resets.ante
-        G.GAME.round_resets.blind_tags.Small = get_next_tag_key()
-        G.GAME.round_resets.blind_tags.Big = get_next_tag_key()
-      end
-      reset_blinds()
       delay(0.6)
 end
 
@@ -3142,6 +3141,7 @@ G.FUNCS.wipe_off = function()
       G.screenwipe.children.particles = nil
       G.screenwipe = nil
       G.screenwipecard = nil
+      G.CONTROLLER.locks.wipe = false
       return true
     end
   }))
